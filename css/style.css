@@ -1,0 +1,345 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,400;0,600;0,700;1,700&family=Lilita+One&family=Luckiest+Guy&family=Outfit:wght@400;600;800;900&family=Press+Start+2P&display=swap');
+
+:root {
+  --fn-storm-deep: #0e071e;
+  --fn-storm-mid: #1b113a;
+  --fn-storm-purple: #7a22ff;
+  --fn-slurp-cyan: #00f0ff;
+  --fn-legendary-gold: #f4c430;
+  --fn-amber: #e69e24;
+  --fn-mythic-red: #f43f5e;
+}
+
+/* ========================================================
+   POPPY PLAYTIME CUSTOM GRABPACK CURSORS
+   ======================================================== */
+body.grabpack-cursor-active,
+body.grabpack-cursor-active * {
+  cursor: url('../assets/images/grabpack-blue.svg') 16 6, auto !important;
+}
+
+body.grabpack-cursor-active a,
+body.grabpack-cursor-active button,
+body.grabpack-cursor-active input,
+body.grabpack-cursor-active select,
+body.grabpack-cursor-active textarea,
+body.grabpack-cursor-active .cursor-pointer,
+body.grabpack-cursor-active [role="button"] {
+  cursor: url('../assets/images/grabpack-red.svg') 16 6, pointer !important;
+}
+
+/* Global Smoothness & Selection */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--fn-storm-deep);
+  color: #f8fafc;
+  font-family: 'Outfit', sans-serif;
+  overflow-x: hidden;
+  user-select: none;
+}
+
+/* Custom Burbank-inspired and Gaming Fonts */
+.font-burbank {
+  font-family: 'Luckiest Guy', 'Lilita One', 'Impact', sans-serif;
+  letter-spacing: 0.04em;
+}
+
+.font-gaming {
+  font-family: 'Lilita One', sans-serif;
+}
+
+.font-hud {
+  font-family: 'Chakra Petch', monospace, sans-serif;
+}
+
+.font-minecraft {
+  font-family: 'Press Start 2P', monospace;
+}
+
+/* ========================================================
+   LOBBY BACKGROUND & GRID EFFECTS
+   ======================================================== */
+.fortnite-lobby-bg {
+  background: 
+    radial-gradient(ellipse at 50% 15%, rgba(122, 34, 255, 0.45) 0%, rgba(27, 17, 58, 0.8) 50%, rgba(14, 7, 30, 0.98) 100%),
+    linear-gradient(180deg, #180933 0%, #0d041c 100%);
+  background-attachment: fixed;
+}
+
+.lobby-grid-lines {
+  background-image: 
+    linear-gradient(to right, rgba(122, 34, 255, 0.08) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(122, 34, 255, 0.08) 1px, transparent 1px);
+  background-size: 40px 40px;
+  mask-image: radial-gradient(circle at 50% 30%, black 30%, transparent 80%);
+  -webkit-mask-image: radial-gradient(circle at 50% 30%, black 30%, transparent 80%);
+}
+
+/* ========================================================
+   FORTNITE BATTLE PASS & LOBBY UI BUTTONS
+   ======================================================== */
+/* Fortnite "LISTO" (Ready Up) Button */
+.btn-fortnite-ready {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(180deg, #fff380 0%, #f4c430 45%, #d97706 100%);
+  color: #110726;
+  font-family: 'Luckiest Guy', sans-serif;
+  font-size: 1.35rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  transform: skewX(-8deg);
+  border: 3px solid #ffffff;
+  border-radius: 10px;
+  box-shadow: 
+    0 6px 0 #92400e, 
+    0 12px 25px rgba(244, 196, 48, 0.4),
+    inset 0 2px 0 rgba(255, 255, 255, 0.8);
+  transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+}
+
+.btn-fortnite-ready:hover {
+  transform: skewX(-8deg) translateY(-2px);
+  box-shadow: 
+    0 8px 0 #92400e, 
+    0 16px 30px rgba(244, 196, 48, 0.6),
+    inset 0 2px 0 rgba(255, 255, 255, 0.9);
+}
+
+.btn-fortnite-ready:active {
+  transform: skewX(-8deg) translateY(4px);
+  box-shadow: 
+    0 2px 0 #92400e, 
+    0 6px 15px rgba(244, 196, 48, 0.4);
+}
+
+.btn-fortnite-ready .btn-content {
+  transform: skewX(8deg); /* unskew text */
+}
+
+/* Shine sweep animation across Ready button */
+.btn-fortnite-ready::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -100%;
+  width: 50%;
+  height: 200%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.7), transparent);
+  transform: rotate(25deg);
+  animation: fortniteShine 3.5s infinite;
+}
+
+@keyframes fortniteShine {
+  0% { left: -100%; }
+  20% { left: 180%; }
+  100% { left: 180%; }
+}
+
+/* Secondary Slurp/Purple Battle Royale Button */
+.btn-fortnite-slurp {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(180deg, #67e8f9 0%, #06b6d4 45%, #0e7490 100%);
+  color: #042f2e;
+  font-family: 'Luckiest Guy', sans-serif;
+  text-transform: uppercase;
+  transform: skewX(-8deg);
+  border: 3px solid #e0f2fe;
+  border-radius: 10px;
+  box-shadow: 0 5px 0 #155e75, 0 8px 20px rgba(6, 182, 212, 0.4);
+  transition: all 0.15s ease;
+}
+
+.btn-fortnite-slurp:hover {
+  transform: skewX(-8deg) translateY(-2px);
+  box-shadow: 0 7px 0 #155e75, 0 12px 25px rgba(6, 182, 212, 0.6);
+}
+
+.btn-fortnite-slurp:active {
+  transform: skewX(-8deg) translateY(3px);
+  box-shadow: 0 2px 0 #155e75;
+}
+
+/* ========================================================
+   VICTORIA CAMPAL (VICTORY ROYALE) BANNER
+   ======================================================== */
+.victory-royale-banner {
+  position: relative;
+  background: linear-gradient(180deg, #fef08a 0%, #f4c430 40%, #b45309 100%);
+  clip-path: polygon(4% 0%, 96% 0%, 100% 50%, 96% 100%, 4% 100%, 0% 50%);
+  padding: 12px 36px;
+  box-shadow: 
+    0 10px 30px rgba(244, 196, 48, 0.5),
+    inset 0 3px 0 rgba(255, 255, 255, 0.9);
+  border-top: 3px solid #fffbeb;
+  border-bottom: 3px solid #78350f;
+}
+
+.text-stroke-black {
+  -webkit-text-stroke: 2px #000;
+  text-shadow: 3px 3px 0 #000, 0 0 25px rgba(244, 196, 48, 0.8);
+}
+
+.text-stroke-thick {
+  -webkit-text-stroke: 3px #0f051d;
+  text-shadow: 4px 4px 0 #000, 0 0 30px rgba(122, 34, 255, 0.8);
+}
+
+/* Angled Card Cut corners */
+.angled-card {
+  clip-path: polygon(
+    0 14px, 
+    14px 0, 
+    100% 0, 
+    100% calc(100% - 14px), 
+    calc(100% - 14px) 100%, 
+    0 100%
+  );
+}
+
+/* ========================================================
+   PARTICLES & EASTER EGG ANIMATIONS
+   ======================================================== */
+/* Minecraft XP Orb Particle */
+.minecraft-xp-orb {
+  position: fixed;
+  width: 16px;
+  height: 16px;
+  background: url('../assets/images/minecraft-xp.svg') no-repeat center;
+  background-size: contain;
+  pointer-events: none;
+  z-index: 9999;
+  image-rendering: pixelated;
+  animation: floatMinecraftXP 0.9s cubic-bezier(0.1, 0.8, 0.3, 1) forwards;
+}
+
+@keyframes floatMinecraftXP {
+  0% {
+    opacity: 1;
+    transform: translate(0, 0) scale(1) rotate(0deg);
+  }
+  50% {
+    opacity: 1;
+    transform: translate(var(--tx), var(--ty)) scale(1.4) rotate(180deg);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(var(--tx), calc(var(--ty) - 50px)) scale(0.6) rotate(360deg);
+  }
+}
+
+/* Floating Reaction Crown */
+.floating-reaction-crown {
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  animation: floatCrown 1.1s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+@keyframes floatCrown {
+  0% {
+    opacity: 0;
+    transform: scale(0.4) translateY(10px);
+  }
+  20% {
+    opacity: 1;
+    transform: scale(1.3) translateY(-10px);
+  }
+  80% {
+    opacity: 1;
+    transform: scale(1) translateY(-40px);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.8) translateY(-70px);
+  }
+}
+
+/* Slurp Splash Drop */
+.slurp-splash-drop {
+  position: fixed;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #00f0ff;
+  box-shadow: 0 0 10px #00f0ff;
+  pointer-events: none;
+  z-index: 9999;
+  animation: slurpSplash 0.7s ease-out forwards;
+}
+
+@keyframes slurpSplash {
+  0% {
+    opacity: 1;
+    transform: translate(0, 0) scale(1.2);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(var(--dx), var(--dy)) scale(0.2);
+  }
+}
+
+/* Clash Royale Legendary Spinning Rays */
+.legendary-rays {
+  background: conic-gradient(
+    from 0deg,
+    rgba(255, 230, 0, 0.5),
+    rgba(168, 85, 247, 0.5),
+    rgba(6, 182, 212, 0.5),
+    rgba(244, 63, 94, 0.5),
+    rgba(255, 230, 0, 0.5)
+  );
+  animation: spinRays 8s linear infinite;
+}
+
+@keyframes spinRays {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Shaking Chest on hover */
+.chest-shake:hover {
+  animation: chestWiggle 0.6s ease-in-out infinite;
+}
+
+@keyframes chestWiggle {
+  0%, 100% { transform: rotate(0deg) scale(1); }
+  25% { transform: rotate(-5deg) scale(1.05); }
+  75% { transform: rotate(5deg) scale(1.05); }
+}
+
+/* Equalizer Bars */
+.eq-bar {
+  animation: eqBounce 0.8s ease-in-out infinite alternate;
+}
+.eq-bar:nth-child(2) { animation-delay: 0.2s; }
+.eq-bar:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes eqBounce {
+  0% { height: 4px; }
+  100% { height: 16px; }
+}
+
+/* Smooth custom scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0e071e;
+}
+::-webkit-scrollbar-thumb {
+  background: #7a22ff;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #a855f7;
+}

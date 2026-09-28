@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48">
+  <defs>
+    <linearGradient id="vbuck-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e0f2fe" />
+      <stop offset="50%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#0284c7" />
+    </linearGradient>
+  </defs>
+  <!-- Outer Rim -->
+  <circle cx="24" cy="24" r="22" fill="#0f172a" stroke="#38bdf8" stroke-width="2.5" />
+  <circle cx="24" cy="24" r="19" fill="url(#vbuck-grad)" stroke="#0284c7" stroke-width="2" />
+  <circle cx="24" cy="24" r="14" fill="#0369a1" />
+  <!-- V letter -->
+  <path d="M16 15 L22 33 L26 33 L32 15 L28 15 L24 28 L20 15 Z" fill="#ffffff" stroke="#0c4a6e" stroke-width="1"/>
+</svg>

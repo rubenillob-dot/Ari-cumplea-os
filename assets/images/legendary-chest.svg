@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <radialGradient id="rainbow-ray" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fff" />
+      <stop offset="40%" stop-color="#a855f7" />
+      <stop offset="70%" stop-color="#3b82f6" />
+      <stop offset="100%" stop-color="#eab308" />
+    </radialGradient>
+    <linearGradient id="gold-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fef08a" />
+      <stop offset="50%" stop-color="#eab308" />
+      <stop offset="100%" stop-color="#a16207" />
+    </linearGradient>
+    <linearGradient id="chest-wood" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#475569" />
+      <stop offset="100%" stop-color="#1e293b" />
+    </linearGradient>
+  </defs>
+
+  <!-- Aura Glow -->
+  <circle cx="32" cy="34" r="26" fill="url(#rainbow-ray)" opacity="0.35" filter="blur(4px)" />
+
+  <!-- Chest Body Base -->
+  <path d="M12 28 L52 28 L48 54 L16 54 Z" fill="url(#chest-wood)" stroke="#0f172a" stroke-width="2.5" />
+  
+  <!-- Chest Lid (Curved Dome) -->
+  <path d="M10 28 C10 16 20 12 32 12 C44 12 54 16 54 28 Z" fill="#334155" stroke="#0f172a" stroke-width="2.5" />
+
+  <!-- Gold Trims and Rivets -->
+  <path d="M10 25 L54 25 L54 29 L10 29 Z" fill="url(#gold-grad)" stroke="#0f172a" stroke-width="1.5" />
+  <!-- Arch trim -->
+  <path d="M26 12 C28 12 30 14 30 25 L24 25 C24 16 25 12 26 12 Z" fill="url(#gold-grad)" stroke="#0f172a" stroke-width="1"/>
+  <path d="M38 12 C36 12 34 14 34 25 L40 25 C40 16 39 12 38 12 Z" fill="url(#gold-grad)" stroke="#0f172a" stroke-width="1"/>
+  
+  <!-- Side Corner Brackets -->
+  <path d="M12 29 L18 29 L16 54 L12 54 Z" fill="url(#gold-grad)" stroke="#0f172a" stroke-width="1.5"/>
+  <path d="M52 29 L46 29 L48 54 L52 54 Z" fill="url(#gold-grad)" stroke="#0f172a" stroke-width="1.5"/>
+  <path d="M16 50 L48 50 L47 54 L17 54 Z" fill="url(#gold-grad)" stroke="#0f172a" stroke-width="1.5"/>
+
+  <!-- Center Legendary Lock / Jewel Spike -->
+  <!-- Purple Legendary Hexagon Gem -->
+  <polygon points="32,22 38,26 38,34 32,38 26,34 26,26" fill="#a855f7" stroke="#fbbf24" stroke-width="2" />
+  <polygon points="32,25 35,27 35,32 32,34 29,32 29,27" fill="#c084fc" />
+  <circle cx="32" cy="30" r="2" fill="#ffffff" />
+  
+  <!-- Spikes on Top / Corners (Clash Royale Legendary Chest style) -->
+  <polygon points="14,14 18,17 12,20" fill="url(#gold-grad)" stroke="#0f172a" stroke-width="1.5" />
+  <polygon points="50,14 46,17 52,20" fill="url(#gold-grad)" stroke="#0f172a" stroke-width="1.5" />
+  <polygon points="32,8 35,12 29,12" fill="url(#gold-grad)" stroke="#0f172a" stroke-width="1.5" />
+</svg>

@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="crown-gold" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fffbeb" />
+      <stop offset="25%" stop-color="#fde047" />
+      <stop offset="70%" stop-color="#eab308" />
+      <stop offset="100%" stop-color="#b45309" />
+    </linearGradient>
+    <radialGradient id="ruby" cx="35%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#fca5a5" />
+      <stop offset="60%" stop-color="#ef4444" />
+      <stop offset="100%" stop-color="#7f1d1d" />
+    </radialGradient>
+    <radialGradient id="sapphire" cx="35%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#93c5fd" />
+      <stop offset="60%" stop-color="#3b82f6" />
+      <stop offset="100%" stop-color="#1e3a8a" />
+    </radialGradient>
+  </defs>
+
+  <!-- Crown Base & Spikes -->
+  <path d="M8 46 L12 20 L24 32 L32 10 L40 32 L52 20 L56 46 Z" 
+        fill="url(#crown-gold)" stroke="#78350f" stroke-width="2.5" stroke-linejoin="round" />
+
+  <!-- Crown Headband Base -->
+  <rect x="8" y="44" width="48" height="10" rx="3" fill="url(#crown-gold)" stroke="#78350f" stroke-width="2.5" />
+  
+  <!-- Spire Pearls -->
+  <circle cx="12" cy="19" r="3.5" fill="#fef08a" stroke="#78350f" stroke-width="1.5" />
+  <circle cx="32" cy="9" r="4.5" fill="#fef08a" stroke="#78350f" stroke-width="1.5" />
+  <circle cx="52" cy="19" r="3.5" fill="#fef08a" stroke="#78350f" stroke-width="1.5" />
+
+  <!-- Jewels on headband -->
+  <circle cx="20" cy="49" r="3" fill="url(#sapphire)" stroke="#1e293b" stroke-width="1" />
+  <circle cx="32" cy="49" r="3.8" fill="url(#ruby)" stroke="#1e293b" stroke-width="1" />
+  <circle cx="44" cy="49" r="3" fill="url(#sapphire)" stroke="#1e293b" stroke-width="1" />
+</svg>

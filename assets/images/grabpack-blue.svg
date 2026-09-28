@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48">
+  <!-- Poppy Playtime Blue GrabPack Hand -->
+  <defs>
+    <filter id="blue-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="1" dy="2" stdDeviation="1.5" flood-color="#002b5c" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+  <g filter="url(#blue-glow)">
+    <!-- Wrist Base / Wire Plug -->
+    <rect x="20" y="38" width="8" height="8" rx="2" fill="#2d3748" stroke="#1a202c" stroke-width="1.5" />
+    <path d="M22 46 L22 48 M26 46 L26 48" stroke="#718096" stroke-width="1.5" stroke-linecap="round"/>
+    <rect x="18" y="34" width="12" height="5" rx="1.5" fill="#e53e3e" stroke="#9b2c2c" stroke-width="1"/>
+    
+    <!-- Palm -->
+    <path d="M15 22 C15 19 18 17 24 17 C30 17 33 19 33 22 L33 32 C33 34.5 31 35.5 24 35.5 C17 35.5 15 34.5 15 32 Z" 
+          fill="#0077e6" stroke="#004499" stroke-width="1.5" />
+    
+    <!-- Palm suction/speaker pad -->
+    <ellipse cx="24" cy="26" rx="4.5" ry="3.5" fill="#0099ff" stroke="#004499" stroke-width="1"/>
+    <circle cx="24" cy="26" r="1.5" fill="#003366"/>
+
+    <!-- Thumb -->
+    <path d="M15 27 C11 26 8 23 9 19 C9.8 15.5 13 18 15 21" 
+          fill="#0077e6" stroke="#004499" stroke-width="1.5" stroke-linejoin="round"/>
+    
+    <!-- Index Finger (Point) -->
+    <path d="M16 18 C16 11 17 4 19.5 4 C22 4 22 11 22 17" 
+          fill="#0088ff" stroke="#004499" stroke-width="1.5" stroke-linejoin="round"/>
+    
+    <!-- Middle Finger -->
+    <path d="M22.5 17 C22.5 10 23.5 3 26 3 C28.5 3 28.5 10 28.5 17" 
+          fill="#0077e6" stroke="#004499" stroke-width="1.5" stroke-linejoin="round"/>
+    
+    <!-- Ring Finger -->
+    <path d="M29 17 C29 11 30 5 32 5 C34 5 34 11 33.5 18" 
+          fill="#0066cc" stroke="#004499" stroke-width="1.5" stroke-linejoin="round"/>
+    
+    <!-- Little Finger -->
+    <path d="M33.5 20 C35 15 37 10 38.5 11 C40 12 38 18 35 24" 
+          fill="#0055b3" stroke="#003d80" stroke-width="1.5" stroke-linejoin="round"/>
+
+    <!-- Joint details -->
+    <line x1="18" y1="11" x2="21" y2="11" stroke="#004499" stroke-width="1"/>
+    <line x1="24" y1="10" x2="27" y2="10" stroke="#004499" stroke-width="1"/>
+    <line x1="30" y1="11" x2="33" y2="11" stroke="#004499" stroke-width="1"/>
+  </g>
+</svg>

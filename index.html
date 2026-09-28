@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>¡Feliz Cumpleaños ImArixu! 👑 Victoria Campal</title>
+  <meta name="description" content="Página web sorpresa de cumpleaños para la streamer ImArixu - Victoria Campal, Resumen de Temporada y Muro de Dedicatorias.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/crown.svg">
+
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            fnStorm: {
+              deep: '#0e071e',
+              dark: '#1b113a',
+              purple: '#7a22ff',
+              light: '#9d4edd',
+            },
+            fnGold: {
+              DEFAULT: '#f4c430',
+              amber: '#e69e24',
+              dark: '#b45309'
+            },
+            fnSlurp: {
+              DEFAULT: '#00f0ff',
+              dark: '#0284c7'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom Stylesheet (Burbank Fonts, Cursors, Gaming Effects) -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="fortnite-lobby-bg text-white min-h-screen relative flex flex-col grabpack-cursor-active">
+
+  <!-- Canvas for celebration confetti & streamers -->
+  <canvas id="confetti-canvas" class="fixed inset-0 pointer-events-none z-50 w-full h-full"></canvas>
+
+  <!-- ========================================================
+       TOP NAVIGATION BAR (Fortnite Lobby UI Style)
+       ======================================================== -->
+  <header class="sticky top-0 z-40 bg-[#0e071e]/90 backdrop-blur-md border-b-2 border-purple-900/60 shadow-xl">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Streamer Tag & Badge -->
+      <a href="#hero" class="flex items-center gap-3 group">
+        <div class="relative">
+          <div class="w-12 h-12 rounded-xl p-0.5 bg-gradient-to-tr from-yellow-400 via-purple-500 to-cyan-400 shadow-lg group-hover:scale-105 transition-transform">
+            <img src="https://images.unsplash.com/photo-1578632767115-351597cf2477?w=150&auto=format&fit=crop&q=80" alt="ImArixu Avatar" class="w-full h-full object-cover rounded-[10px]">
+          </div>
+          <!-- Clash Royale Golden Crown Badge -->
+          <img src="assets/images/crown.svg" class="w-5 h-5 absolute -top-2 -right-1 drop-shadow" alt="Crown">
+        </div>
+        <div>
+          <div class="flex items-center gap-1.5">
+            <span class="font-burbank text-xl sm:text-2xl text-yellow-300 tracking-wide drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">IMARIXU</span>
+            <span class="bg-purple-600 text-white text-[10px] font-black px-1.5 py-0.5 rounded shadow">LIVE</span>
+          </div>
+          <p class="text-xs text-purple-300/80 font-mono tracking-wider hidden sm:block">TEMPORADA DE CUMPLEAÑOS</p>
+        </div>
+      </a>
+
+      <!-- Center Nav Links -->
+      <nav class="hidden md:flex items-center gap-1 font-gaming tracking-wide">
+        <a href="#hero" class="px-4 py-2 rounded-lg text-sm text-gray-300 hover:text-yellow-300 hover:bg-purple-900/40 transition-all">LOBBY</a>
+        <a href="#year-in-review" class="px-4 py-2 rounded-lg text-sm text-gray-300 hover:text-yellow-300 hover:bg-purple-900/40 transition-all">PASE DE TEMPORADA</a>
+        <a href="#muro-comunidad" class="px-4 py-2 rounded-lg text-sm text-gray-300 hover:text-yellow-300 hover:bg-purple-900/40 transition-all">MURO DEDICATORIAS</a>
+      </nav>
+
+      <!-- Gaming Balances & Controls -->
+      <div class="flex items-center gap-2 sm:gap-3">
+        
+        <!-- V-Bucks & Crowns Display (Fortnite & Clash Royale) -->
+        <div class="hidden lg:flex items-center gap-2 bg-[#1b113a] px-3 py-1.5 rounded-xl border border-purple-800/80 shadow-inner">
+          <div class="flex items-center gap-1.5" title="V-Bucks de cumpleaños">
+            <img src="assets/images/vbuck.svg" class="w-5 h-5" alt="V-Bucks">
+            <span class="font-hud font-bold text-xs text-cyan-300">100.000</span>
+          </div>
+          <span class="text-purple-600 font-bold">|</span>
+          <div class="flex items-center gap-1.5" title="Coronas de Victoria">
+            <img src="assets/images/crown.svg" class="w-4 h-4" alt="Coronas">
+            <span class="font-hud font-bold text-xs text-yellow-300">3</span>
+          </div>
+        </div>
+
+        <!-- Poppy Playtime GrabPack Cursor Toggle -->
+        <button id="grabpack-toggle-btn" class="flex items-center gap-1.5 px-2.5 py-1.5 rounded-xl bg-purple-950/80 hover:bg-purple-900 border border-purple-700/60 text-xs font-bold transition-all" title="Activar/Desactivar Puntero Manos GrabPack de Poppy Playtime">
+          <img src="assets/images/grabpack-blue.svg" class="w-5 h-5 drop-shadow" alt="GrabPack">
+          <span class="hidden xl:inline">GrabPack: <strong class="text-cyan-400">ON</strong></span>
+        </button>
+
+        <!-- Clash Royale Legendary Chest Shortcut -->
+        <button id="open-legendary-chest-btn" class="chest-shake relative p-2 rounded-xl bg-gradient-to-b from-purple-800 to-indigo-950 border border-yellow-400/80 shadow-[0_0_12px_rgba(244,196,48,0.3)] transition-all" title="Abrir Cofre Legendario de Cumpleaños">
+          <img src="assets/images/legendary-chest.svg" class="w-6 h-6" alt="Cofre Legendario">
+          <span class="absolute -top-1 -right-1 w-3 h-3 rounded-full bg-yellow-400 animate-ping"></span>
+        </button>
+
+        <!-- Audio & BGM Toggle with Equalizer -->
+        <button id="music-toggle-btn" class="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-[#1b113a] hover:bg-purple-900 border border-purple-700/80 transition-all text-xs font-hud font-bold text-yellow-300" title="Activar/Desactivar Música de Lobby & Efectos">
+          <div id="audio-visualizer" class="flex items-end gap-0.5 h-4 opacity-30">
+            <div class="eq-bar w-1 bg-yellow-400 rounded-full h-3"></div>
+            <div class="eq-bar w-1 bg-cyan-400 rounded-full h-4"></div>
+            <div class="eq-bar w-1 bg-purple-400 rounded-full h-2"></div>
+          </div>
+          <span id="sound-status-text" class="hidden sm:inline">Música</span>
+        </button>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================================================
+       1. HERO SECTION (Bienvenida y Celebración)
+       ======================================================== -->
+  <section id="hero" class="relative min-h-[calc(100vh-5rem)] flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8 overflow-hidden lobby-grid-lines">
+    
+    <!-- Ambient Background Radial Flares -->
+    <div class="absolute -top-40 left-1/2 -translate-x-1/2 w-[700px] h-[500px] bg-purple-600/25 blur-[120px] rounded-full pointer-events-none"></div>
+    <div class="absolute bottom-10 right-10 w-96 h-96 bg-cyan-500/15 blur-[100px] rounded-full pointer-events-none"></div>
+
+    <div class="max-w-5xl mx-auto w-full text-center relative z-10">
+      
+      <!-- Top Victoria Campal Golden Ribbon -->
+      <div class="inline-flex items-center justify-center mb-6 animate-bounce-subtle">
+        <div class="victory-royale-banner flex items-center gap-3">
+          <img src="assets/images/victory-crown.svg" class="w-8 h-8 sm:w-10 sm:h-10" alt="Victory Crown">
+          <span class="font-burbank text-2xl sm:text-4xl text-black uppercase tracking-wider drop-shadow-[0_2px_0_rgba(255,255,255,0.7)]">
+            VICTORIA CAMPAL #1
+          </span>
+          <img src="assets/images/victory-crown.svg" class="w-8 h-8 sm:w-10 sm:h-10 transform scale-x-[-1]" alt="Victory Crown">
+        </div>
+      </div>
+
+      <!-- Main Epic Title: "¡FELIZ CUMPLEAÑOS IMARIXU!" -->
+      <h1 class="font-burbank text-4xl sm:text-6xl md:text-7xl lg:text-8xl uppercase tracking-wider text-stroke-thick mb-4">
+        <span class="bg-gradient-to-b from-yellow-200 via-yellow-400 to-amber-500 bg-clip-text text-transparent">
+          ¡FELIZ CUMPLEAÑOS
+        </span>
+        <br>
+        <span class="bg-gradient-to-b from-cyan-300 via-cyan-400 to-blue-500 bg-clip-text text-transparent">
+          IMARIXU!
+        </span>
+      </h1>
+
+      <!-- Epic Subtitle -->
+      <div class="inline-block bg-[#1b113a]/90 backdrop-blur border-2 border-purple-500/60 rounded-2xl px-6 py-3 shadow-2xl mb-8 transform -rotate-1">
+        <p class="font-hud font-bold text-base sm:text-xl text-yellow-300 flex items-center justify-center gap-2 flex-wrap">
+          <span>🏆</span>
+          <span>NIVEL DE TEMPORADA DESBLOQUEADO:</span>
+          <span class="text-white font-normal">¡Un año más repartiendo clips y risas!</span>
+        </p>
+      </div>
+
+      <!-- Interactive Streamer HUD Card (Health & Shield 50/100) -->
+      <div class="max-w-xl mx-auto bg-[#130b28]/95 backdrop-blur-md rounded-2xl p-6 border-2 border-purple-600/80 shadow-[0_0_30px_rgba(122,34,255,0.4)] mb-10 text-left">
+        
+        <div class="flex items-center justify-between mb-4 flex-wrap gap-2">
+          <!-- Streamer Info -->
+          <div class="flex items-center gap-3">
+            <div class="relative">
+              <img src="https://images.unsplash.com/photo-1578632767115-351597cf2477?w=150&auto=format&fit=crop&q=80" class="w-12 h-12 rounded-xl object-cover border-2 border-yellow-400" alt="ImArixu">
+              <span class="absolute -bottom-1 -right-1 bg-yellow-400 text-black font-burbank text-[10px] px-1 rounded font-black">NV. 2X</span>
+            </div>
+            <div>
+              <div class="font-burbank text-lg text-white flex items-center gap-1.5">
+                ImArixu 
+                <span class="text-yellow-400" title="Pase de Batalla Premium">👑</span>
+              </div>
+              <span class="text-xs text-purple-300/80 font-mono">Streamer Élite • Tryhard & Risas</span>
+            </div>
+          </div>
+
+          <!-- Quick Mini Potion Drinking Trigger -->
+          <button id="drink-mini-trigger" class="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-cyan-950/80 hover:bg-cyan-900 border border-cyan-400 text-cyan-300 text-xs font-bold transition-all active:scale-95 group" title="Beber Mini Escudo de 50">
+            <img src="assets/images/shield-potion.svg" class="w-5 h-5 group-hover:rotate-12 transition-transform" alt="Mini">
+            <span>Tomar Mini (+50)</span>
+          </button>
+        </div>
+
+        <!-- HUD Bars (Fortnite Slurp Shield & Health) -->
+        <div class="space-y-3 font-hud text-xs font-bold">
+          
+          <!-- Shield Bar (50/100 initial) -->
+          <div>
+            <div class="flex justify-between mb-1">
+              <span class="text-cyan-400 flex items-center gap-1">
+                <img src="assets/images/shield-potion.svg" class="w-3.5 h-3.5 inline" alt="Shield">
+                ESCUDO SLURP
+              </span>
+              <span id="shield-val-text" class="text-cyan-300">50 / 100</span>
+            </div>
+            <div class="w-full h-4 bg-slate-900 rounded-full overflow-hidden p-0.5 border border-cyan-700/60 shadow-inner">
+              <div id="shield-bar-fill" class="h-full bg-gradient-to-r from-cyan-400 via-sky-400 to-blue-500 rounded-full transition-all duration-700 shadow-[0_0_12px_#00f0ff]" style="width: 50%;"></div>
+            </div>
+          </div>
+
+          <!-- Health Bar (100/100) -->
+          <div>
+            <div class="flex justify-between mb-1">
+              <span class="text-emerald-400 flex items-center gap-1">
+                <span class="text-xs">💚</span> SALUD
+              </span>
+              <span class="text-emerald-300">100 / 100</span>
+            </div>
+            <div class="w-full h-4 bg-slate-900 rounded-full overflow-hidden p-0.5 border border-emerald-700/60 shadow-inner">
+              <div class="h-full bg-gradient-to-r from-emerald-400 to-green-500 rounded-full shadow-[0_0_10px_#10b981]" style="width: 100%;"></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Main Action Button: Fortnite "LISTO" Style with 3D Bevel & Sheen -->
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <button id="hero-shield-action-btn" class="btn-fortnite-ready px-8 py-4 w-full sm:w-auto text-xl shadow-2xl">
+          <div class="btn-content flex items-center justify-center gap-3">
+            <img src="assets/images/shield-potion.svg" class="w-7 h-7 drop-shadow" alt="Poción">
+            <span>VER RESUMEN DE LA TEMPORADA</span>
+            <svg class="w-6 h-6 text-black stroke-[3]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+          </div>
+        </button>
+
+        <a href="#muro-comunidad" class="btn-fortnite-slurp px-6 py-4 w-full sm:w-auto text-lg shadow-xl">
+          <div class="transform skew-x-[8deg] flex items-center justify-center gap-2">
+            <span>💌</span>
+            <span>LEER DEDICATORIAS</span>
+          </div>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================
+       2. SECCIÓN: "YEAR IN REVIEW: EL MEJOR AÑO DE IMARIXU"
+       ======================================================== -->
+  <section id="year-in-review" class="py-20 px-4 sm:px-6 lg:px-8 relative bg-[#0d051c]/90 border-t-2 border-b-2 border-purple-900/60">
+    
+    <div class="max-w-7xl mx-auto">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <div class="inline-flex items-center gap-2 bg-yellow-400 text-black font-burbank text-xs uppercase px-3 py-1 rounded-md transform -skew-x-12 mb-3 shadow-md">
+          <span>⭐</span> PASE DE BATALLA ANUAL DESBLOQUEADO
+        </div>
+        <h2 class="font-burbank text-4xl sm:text-5xl md:text-6xl text-yellow-300 text-stroke-black uppercase tracking-wider mb-4">
+          EL MEJOR AÑO DE IMARIXU
+        </h2>
+        <p class="text-gray-300 text-base sm:text-lg font-sans">
+          Un repaso por las mejores jugadas, las risas más contagiosas y las estadísticas que demuestran que eres una auténtica campeona.
+        </p>
+      </div>
+
+      <!-- Stats de Campeona (4 Big Cards) -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+        
+        <!-- Stat 1: Tiradora de Élite -->
+        <div class="angled-card relative bg-gradient-to-b from-[#2a1458] to-[#14082c] p-6 border-2 border-amber-400/80 shadow-[0_0_20px_rgba(245,158,11,0.25)] hover:border-amber-300 transition-all group">
+          <div class="absolute top-3 right-3 bg-amber-500 text-black font-black text-[10px] px-2 py-0.5 rounded uppercase">MÍTICO</div>
+          <div class="w-12 h-12 rounded-xl bg-amber-500/20 border border-amber-400/50 flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition-transform">
+            🎯
+          </div>
+          <div class="font-hud font-bold text-3xl text-yellow-300 mb-1">+9,999</div>
+          <div class="font-burbank text-lg text-white mb-2">Tiradora de Élite</div>
+          <p class="text-xs text-gray-300 leading-relaxed">
+            Headshots con sniper a más de 200m y jugadas que dejaron a todos con la boca abierta.
+          </p>
+        </div>
+
+        <!-- Stat 2: Victorias Campales -->
+        <div class="angled-card relative bg-gradient-to-b from-[#2a1458] to-[#14082c] p-6 border-2 border-yellow-400/80 shadow-[0_0_20px_rgba(234,179,8,0.25)] hover:border-yellow-300 transition-all group">
+          <div class="absolute top-3 right-3 bg-yellow-400 text-black font-black text-[10px] px-2 py-0.5 rounded uppercase">LEGENDARIO</div>
+          <div class="w-12 h-12 rounded-xl bg-yellow-400/20 border border-yellow-400/50 flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition-transform">
+            👑
+          </div>
+          <div class="font-hud font-bold text-3xl text-yellow-300 mb-1">+365 Días</div>
+          <div class="font-burbank text-lg text-white mb-2">Victorias Campales</div>
+          <p class="text-xs text-gray-300 leading-relaxed">
+            De sonrisas, directos inolvidables y momentos épicos compartidos con la comunidad.
+          </p>
+        </div>
+
+        <!-- Stat 3: Minis en Zona -->
+        <div class="angled-card relative bg-gradient-to-b from-[#2a1458] to-[#14082c] p-6 border-2 border-cyan-400/80 shadow-[0_0_20px_rgba(6,182,212,0.25)] hover:border-cyan-300 transition-all group">
+          <div class="absolute top-3 right-3 bg-cyan-400 text-black font-black text-[10px] px-2 py-0.5 rounded uppercase">EXÓTICO</div>
+          <div class="w-12 h-12 rounded-xl bg-cyan-400/20 border border-cyan-400/50 flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition-transform">
+            🛡️
+          </div>
+          <div class="font-hud font-bold text-3xl text-cyan-300 mb-1">Incontables</div>
+          <div class="font-burbank text-lg text-white mb-2">Minis Bebidos en Zona</div>
+          <p class="text-xs text-gray-300 leading-relaxed">
+            Curándose a 1 segundo del tick de la tormenta para salvar la squad entera.
+          </p>
+        </div>
+
+        <!-- Stat 4: Clips Legendarios -->
+        <div class="angled-card relative bg-gradient-to-b from-[#2a1458] to-[#14082c] p-6 border-2 border-purple-500/80 shadow-[0_0_20px_rgba(168,85,247,0.25)] hover:border-purple-300 transition-all group">
+          <div class="absolute top-3 right-3 bg-purple-500 text-white font-black text-[10px] px-2 py-0.5 rounded uppercase">ÉPICO</div>
+          <div class="w-12 h-12 rounded-xl bg-purple-500/20 border border-purple-400/50 flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition-transform">
+            ⚡
+          </div>
+          <div class="font-hud font-bold text-3xl text-purple-300 mb-1">+500</div>
+          <div class="font-burbank text-lg text-white mb-2">Clips Legendarios</div>
+          <p class="text-xs text-gray-300 leading-relaxed">
+            Gritos de susto genuinos, risas descontroladas y momentos virales irrepetibles.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Frases Icónicas y Momentos Cumbre -->
+      <div class="mb-16 bg-[#160c30] rounded-3xl p-6 sm:p-8 border-2 border-purple-700/60 shadow-2xl relative overflow-hidden">
+        <div class="absolute -right-10 -bottom-10 w-60 h-60 bg-yellow-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="flex items-center gap-3 mb-6">
+          <span class="text-2xl">💬</span>
+          <h3 class="font-burbank text-2xl sm:text-3xl text-yellow-300 uppercase tracking-wide">
+            Frases Icónicas de la Temporada
+          </h3>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          
+          <!-- Frase 1 (Mítica) -->
+          <div class="p-4 rounded-2xl bg-purple-950/60 border-l-4 border-amber-400 flex items-start gap-3 hover:bg-purple-900/40 transition-colors">
+            <span class="font-hud font-black text-amber-400 text-xs px-2 py-1 rounded bg-amber-950/80 border border-amber-500/50">MÍTICO</span>
+            <div>
+              <p class="font-semibold text-gray-100 text-sm italic mb-1">
+                "¡No me lo puedo creer, me ha rusheado con un arbusto y un lanzacohetes!"
+              </p>
+              <span class="text-xs text-purple-300/80 font-mono">Dicho tras quedar top 2 en una partida épica</span>
+            </div>
+          </div>
+
+          <!-- Frase 2 (Legendaria) -->
+          <div class="p-4 rounded-2xl bg-purple-950/60 border-l-4 border-yellow-400 flex items-start gap-3 hover:bg-purple-900/40 transition-colors">
+            <span class="font-hud font-black text-yellow-400 text-xs px-2 py-1 rounded bg-yellow-950/80 border border-yellow-500/50">LEGENDARIO</span>
+            <div>
+              <p class="font-semibold text-gray-100 text-sm italic mb-1">
+                "¡Al lobby con corona, chavales! ¿Quién decía que no se ganaba esta?"
+              </p>
+              <span class="text-xs text-purple-300/80 font-mono">Celebración oficial de cada Victoria Magistral</span>
+            </div>
+          </div>
+
+          <!-- Frase 3 (Exótica) -->
+          <div class="p-4 rounded-2xl bg-purple-950/60 border-l-4 border-cyan-400 flex items-start gap-3 hover:bg-purple-900/40 transition-colors">
+            <span class="font-hud font-black text-cyan-400 text-xs px-2 py-1 rounded bg-cyan-950/80 border border-cyan-500/50">EXÓTICO</span>
+            <div>
+              <p class="font-semibold text-gray-100 text-sm italic mb-1">
+                "Me tomo este mini, recargo la escopeta y nos vamos a por la squad entera."
+              </p>
+              <span class="text-xs text-purple-300/80 font-mono">Momento de máxima concentración tryhard</span>
+            </div>
+          </div>
+
+          <!-- Frase 4 (Poppy Playtime Easter Egg) -->
+          <div class="p-4 rounded-2xl bg-purple-950/60 border-l-4 border-rose-500 flex items-start gap-3 hover:bg-purple-900/40 transition-colors">
+            <span class="font-hud font-black text-rose-400 text-xs px-2 py-1 rounded bg-rose-950/80 border border-rose-500/50">POPPY EASTER EGG</span>
+            <div>
+              <p class="font-semibold text-gray-100 text-sm italic mb-1">
+                "¡El susto que me ha pegado el GrabPack no está escrito en ningún libro!"
+              </p>
+              <span class="text-xs text-purple-300/80 font-mono">Casi rompe los cascos en directo con el jumpscare</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Hitos & Clips Interactivos (Grid con Filtros) -->
+      <div>
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-4 mb-8">
+          <div>
+            <h3 class="font-burbank text-2xl sm:text-3xl text-white uppercase tracking-wide">
+              Hitos & Clips del Año
+            </h3>
+            <p class="text-sm text-gray-400">Selecciona una categoría para revivir sus mejores momentos</p>
+          </div>
+
+          <!-- Filter Tabs -->
+          <div class="flex items-center gap-1.5 p-1 bg-[#160b2d] rounded-xl border border-purple-800/80 flex-wrap">
+            <button data-filter="all" class="review-filter-btn px-3 py-1.5 rounded-lg text-xs font-gaming bg-yellow-400 text-black border border-yellow-300 shadow-[0_0_15px_rgba(244,196,48,0.5)]">
+              TODOS
+            </button>
+            <button data-filter="clips" class="review-filter-btn px-3 py-1.5 rounded-lg text-xs font-gaming bg-purple-950/70 text-gray-300 border border-purple-800 hover:text-white">
+              CLIPS MÍTICOS
+            </button>
+            <button data-filter="tryhard" class="review-filter-btn px-3 py-1.5 rounded-lg text-xs font-gaming bg-purple-950/70 text-gray-300 border border-purple-800 hover:text-white">
+              PARTIDAS TRYHARD
+            </button>
+            <button data-filter="fails" class="review-filter-btn px-3 py-1.5 rounded-lg text-xs font-gaming bg-purple-950/70 text-gray-300 border border-purple-800 hover:text-white">
+              RISAS & FAILS
+            </button>
+          </div>
+        </div>
+
+        <!-- Grid of Moments -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          
+          <!-- Card 1: 1v4 Final Circle Clutch (Tryhard) -->
+          <div class="review-card group bg-[#160c30] rounded-2xl overflow-hidden border-2 border-amber-400/60 hover:border-amber-400 shadow-xl transition-all duration-300 hover:-translate-y-1.5" data-category="tryhard">
+            <div class="relative h-48 overflow-hidden cursor-pointer" onclick="openClipModal('Clutch 1v4 en zona final con 1 de vida', 'https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1')">
+              <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?w=800&auto=format&fit=crop&q=80" alt="Clutch 1v4" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+              <span class="absolute top-3 left-3 bg-amber-500 text-black font-black text-[10px] px-2 py-0.5 rounded uppercase">PARTIDA TRYHARD</span>
+              <div class="absolute inset-0 flex items-center justify-center">
+                <div class="w-12 h-12 rounded-full bg-yellow-400 text-black flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                  <svg class="w-6 h-6 ml-1" fill="currentColor" viewBox="0 0 20 20"><polygon points="5 3 19 10 5 17 5 3"/></svg>
+                </div>
+              </div>
+            </div>
+            <div class="p-5">
+              <h4 class="font-burbank text-lg text-white mb-1 group-hover:text-yellow-300 transition-colors">
+                El Clutch Imposible 1v4 en Zona
+              </h4>
+              <p class="text-xs text-gray-300 leading-relaxed mb-3">
+                Sin materiales, rodeada por 4 enemigos y con una escopeta gris. La definición absoluta de sangre fría.
+              </p>
+              <div class="flex items-center justify-between text-[11px] text-gray-400 font-mono border-t border-purple-900/60 pt-3">
+                <span>Partida de Temporada</span>
+                <span class="text-yellow-400 font-bold">👑 Victoria Magistral</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: El Jumpscare de Poppy Playtime (Risas/Fails) -->
+          <div class="review-card group bg-[#160c30] rounded-2xl overflow-hidden border-2 border-rose-500/60 hover:border-rose-400 shadow-xl transition-all duration-300 hover:-translate-y-1.5" data-category="fails">
+            <div class="relative h-48 overflow-hidden cursor-pointer" onclick="openClipModal('El susto del GrabPack en Poppy Playtime', 'https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1')">
+              <img src="https://images.unsplash.com/photo-1579373903781-fd5c0c30c4cd?w=800&auto=format&fit=crop&q=80" alt="Poppy Playtime Fail" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+              <span class="absolute top-3 left-3 bg-rose-500 text-white font-black text-[10px] px-2 py-0.5 rounded uppercase">RISAS & FAILS</span>
+              <div class="absolute inset-0 flex items-center justify-center">
+                <div class="w-12 h-12 rounded-full bg-rose-500 text-white flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                  <svg class="w-6 h-6 ml-1" fill="currentColor" viewBox="0 0 20 20"><polygon points="5 3 19 10 5 17 5 3"/></svg>
+                </div>
+              </div>
+            </div>
+            <div class="p-5">
+              <h4 class="font-burbank text-lg text-white mb-1 group-hover:text-rose-300 transition-colors">
+                El Jumpscare del GrabPack
+              </h4>
+              <p class="text-xs text-gray-300 leading-relaxed mb-3">
+                Disparó la mano azul al interruptor equivocado y el grito se escuchó en 3 servidores de Discord a la vez.
+              </p>
+              <div class="flex items-center justify-between text-[11px] text-gray-400 font-mono border-t border-purple-900/60 pt-3">
+                <span>Especial Halloween</span>
+                <span class="text-rose-400 font-bold">😂 Clip Más Votado</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3: Tiro de francotirador en el aire (Clips Míticos) -->
+          <div class="review-card group bg-[#160c30] rounded-2xl overflow-hidden border-2 border-cyan-400/60 hover:border-cyan-400 shadow-xl transition-all duration-300 hover:-translate-y-1.5" data-category="clips">
+            <div class="relative h-48 overflow-hidden cursor-pointer" onclick="openClipModal('No-scope aéreo desde la lanzadera', 'https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1')">
+              <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?w=800&auto=format&fit=crop&q=80" alt="Sniper Clip" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+              <span class="absolute top-3 left-3 bg-cyan-400 text-black font-black text-[10px] px-2 py-0.5 rounded uppercase">CLIP MÍTICO</span>
+              <div class="absolute inset-0 flex items-center justify-center">
+                <div class="w-12 h-12 rounded-full bg-cyan-400 text-black flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                  <svg class="w-6 h-6 ml-1" fill="currentColor" viewBox="0 0 20 20"><polygon points="5 3 19 10 5 17 5 3"/></svg>
+                </div>
+              </div>
+            </div>
+            <div class="p-5">
+              <h4 class="font-burbank text-lg text-white mb-1 group-hover:text-cyan-300 transition-colors">
+                No-Scope Aéreo desde la Lanzadera
+              </h4>
+              <p class="text-xs text-gray-300 leading-relaxed mb-3">
+                Saltando en pleno vuelo, apuntó sin mirar y derribó al líder enemigo en el aire. ¡Puro cine!
+              </p>
+              <div class="flex items-center justify-between text-[11px] text-gray-400 font-mono border-t border-purple-900/60 pt-3">
+                <span>Torneo de Creadores</span>
+                <span class="text-cyan-400 font-bold">🎯 250m Distancia</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================
+       3. SECCIÓN: "MURO DE DEDICATORIAS DE LA COMUNIDAD"
+       ======================================================== -->
+  <section id="muro-comunidad" class="py-20 px-4 sm:px-6 lg:px-8 relative bg-[#0e071e]">
+    
+    <div class="max-w-4xl mx-auto">
+      
+      <!-- Section Title & CTA Button -->
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-6 mb-12">
+        <div>
+          <div class="inline-flex items-center gap-2 bg-purple-600/30 text-purple-300 border border-purple-500/40 text-xs font-bold px-3 py-1 rounded-full mb-2">
+            <span>💌</span> FEED DE LA COMUNIDAD EN VIVO
+          </div>
+          <h2 class="font-burbank text-3xl sm:text-5xl text-yellow-300 text-stroke-black uppercase tracking-wider">
+            MURO DE DEDICATORIAS
+          </h2>
+          <p class="text-sm text-gray-400 mt-1">
+            Los mensajes, fanarts y felicitaciones de tu chat y amigos para este día tan especial.
+          </p>
+        </div>
+
+        <!-- Add Dedication Trigger Button -->
+        <button id="open-dedication-modal-btn" class="btn-fortnite-ready px-6 py-3 text-base shadow-lg shrink-0">
+          <div class="btn-content flex items-center gap-2">
+            <span>✨</span>
+            <span>DEJAR DEDICATORIA</span>
+          </div>
+        </button>
+      </div>
+
+      <!-- Feed Container (Vertical Timeline) -->
+      <div id="dedications-feed" class="space-y-6">
+        <!-- Rendered dynamically by js/dedications.js -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================
+       EASTER EGG MODAL: CLASH ROYALE COFRE LEGENDARIO
+       ======================================================== -->
+  <div id="chest-modal" class="fixed inset-0 z-50 bg-black/85 backdrop-blur-md hidden items-center justify-center p-4">
+    <div class="relative max-w-lg w-full bg-[#180b33] rounded-3xl p-8 border-4 border-yellow-400/90 shadow-[0_0_50px_rgba(244,196,48,0.5)] text-center overflow-hidden">
+      
+      <!-- Close Button -->
+      <button id="close-chest-modal-btn" class="absolute top-4 right-4 text-gray-400 hover:text-white text-2xl font-black z-20">
+        &times;
+      </button>
+
+      <!-- Legendary Background Glow Rays -->
+      <div class="legendary-rays absolute inset-0 opacity-20 pointer-events-none"></div>
+
+      <!-- Stage 1: Closed Chest Waiting to Open -->
+      <div id="chest-animated-box" class="cursor-pointer group py-6 relative z-10">
+        <div class="w-36 h-36 mx-auto mb-4 relative">
+          <img src="assets/images/legendary-chest.svg" class="w-full h-full object-contain filter drop-shadow-[0_0_25px_rgba(244,196,48,0.6)] group-hover:scale-110 transition-transform" alt="Cofre">
+        </div>
+        <h3 class="font-burbank text-2xl sm:text-3xl text-yellow-300 uppercase mb-2">
+          ¡COFRE LEGENDARIO DE CUMPLEAÑOS!
+        </h3>
+        <p class="text-sm text-cyan-300 font-hud animate-pulse">
+          👉 ¡TOCA EL COFRE PARA ABRIRLO Y REVELAR TU CARTA! 👈
+        </p>
+      </div>
+
+      <!-- Stage 2: Revealed Birthday Card (Hidden initially) -->
+      <div id="chest-reward-content" class="hidden relative z-10 text-center py-2">
+        <div class="inline-block bg-yellow-400 text-black font-black text-xs px-3 py-1 rounded uppercase tracking-wider mb-3 skew-x-[-8deg]">
+          👑 CARTA CAMPEONA DESBLOQUEADA
+        </div>
+
+        <div class="w-48 mx-auto bg-gradient-to-b from-yellow-300 via-amber-500 to-purple-900 p-1.5 rounded-2xl shadow-2xl mb-4 border-2 border-white">
+          <div class="bg-[#120726] rounded-xl p-3 text-center">
+            <img src="https://images.unsplash.com/photo-1578632767115-351597cf2477?w=300&auto=format&fit=crop&q=80" class="w-full h-40 object-cover rounded-lg mb-2 border border-yellow-400" alt="ImArixu Carta">
+            <h4 class="font-burbank text-xl text-yellow-300">IMARIXU</h4>
+            <div class="text-[10px] font-mono text-purple-300">Nivel Máximo • Rango Diosa</div>
+          </div>
+        </div>
+
+        <!-- Attributes -->
+        <div class="grid grid-cols-2 gap-2 text-xs font-hud max-w-sm mx-auto mb-4 text-left">
+          <div class="bg-purple-950/80 p-2 rounded-lg border border-purple-800">
+            <span class="text-gray-400 block text-[10px]">DAÑO POR RISA</span>
+            <span class="text-yellow-300 font-bold">999.999 DPS</span>
+          </div>
+          <div class="bg-purple-950/80 p-2 rounded-lg border border-purple-800">
+            <span class="text-gray-400 block text-[10px]">PUNTERÍA CON SNIPER</span>
+            <span class="text-cyan-300 font-bold">100% Precisión</span>
+          </div>
+          <div class="bg-purple-950/80 p-2 rounded-lg border border-purple-800 col-span-2">
+            <span class="text-gray-400 block text-[10px]">HABILIDAD ESPECIAL</span>
+            <span class="text-emerald-300 font-bold">Hacer sonreír a miles de personas cada día</span>
+          </div>
+        </div>
+
+        <p class="font-burbank text-base text-yellow-200">
+          ¡Gracias por ser tan auténtica y regalarnos momentos inolvidables! 💖
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ========================================================
+       MODAL: FORMULARIO DE NUEVA DEDICATORIA
+       ======================================================== -->
+  <div id="dedication-modal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4">
+    <div class="relative max-w-lg w-full bg-[#160b33] rounded-3xl p-6 sm:p-8 border-2 border-yellow-400 shadow-2xl">
+      
+      <button id="close-dedication-modal-btn" class="absolute top-4 right-4 text-gray-400 hover:text-white text-2xl font-black">
+        &times;
+      </button>
+
+      <div class="flex items-center gap-2 mb-4">
+        <span class="text-2xl">📝</span>
+        <h3 class="font-burbank text-2xl text-yellow-300 uppercase">
+          Escribir Dedicatoria para Ari
+        </h3>
+      </div>
+      <p class="text-xs text-gray-400 mb-6">
+        Tu mensaje se publicará directamente en el muro con efectos y reacciones en directo.
+      </p>
+
+      <form id="new-dedication-form" class="space-y-4">
+        <div>
+          <label class="block text-xs font-hud font-bold text-purple-300 uppercase mb-1">Tu Nombre / Nick de Twitch o Discord *</label>
+          <input type="text" id="form-user" required placeholder="Ej: Tryharder_Fan" class="w-full bg-[#0d051e] border border-purple-700 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-yellow-400">
+        </div>
+
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label class="block text-xs font-hud font-bold text-purple-300 uppercase mb-1">Tu Rol / Rango</label>
+            <input type="text" id="form-role" placeholder="Ej: Mod, Sub, Dúo" class="w-full bg-[#0d051e] border border-purple-700 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-yellow-400">
+          </div>
+          <div>
+            <label class="block text-xs font-hud font-bold text-purple-300 uppercase mb-1">Plataforma</label>
+            <select id="form-platform" class="w-full bg-[#0d051e] border border-purple-700 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-yellow-400">
+              <option value="twitch">Twitch</option>
+              <option value="discord">Discord</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label class="block text-xs font-hud font-bold text-purple-300 uppercase mb-1">Rareza de Tarjeta</label>
+            <select id="form-rarity" class="w-full bg-[#0d051e] border border-purple-700 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-yellow-400">
+              <option value="legendary">Legendario (Dorado)</option>
+              <option value="mythic">Mítico (Ámbar/Rojo)</option>
+              <option value="epic">Épico (Morado)</option>
+              <option value="rare">Raro (Cian Slurp)</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-xs font-hud font-bold text-purple-300 uppercase mb-1">Tipo de Mensaje</label>
+            <select id="form-type" class="w-full bg-[#0d051e] border border-purple-700 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-yellow-400">
+              <option value="text">Solo Texto</option>
+              <option value="image">Con Fanart / Foto (URL)</option>
+              <option value="clip">Con Clip / Vídeo (URL)</option>
+            </select>
+          </div>
+        </div>
+
+        <div id="media-url-container">
+          <label class="block text-xs font-hud font-bold text-purple-300 uppercase mb-1">URL de Imagen o Vídeo (Opcional)</label>
+          <input type="url" id="form-media-url" placeholder="https://..." class="w-full bg-[#0d051e] border border-purple-700 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-yellow-400">
+        </div>
+
+        <div>
+          <label class="block text-xs font-hud font-bold text-purple-300 uppercase mb-1">Tu Mensaje Emotivo o Divertido *</label>
+          <textarea id="form-message" rows="3" required placeholder="¡Feliz cumpleaños Arixu! Que este año..." class="w-full bg-[#0d051e] border border-purple-700 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-yellow-400"></textarea>
+        </div>
+
+        <button type="submit" class="btn-fortnite-ready w-full py-3 text-lg">
+          <div class="btn-content flex items-center justify-center gap-2">
+            <span>🚀</span>
+            <span>PUBLICAR EN EL MURO</span>
+          </div>
+        </button>
+      </form>
+
+    </div>
+  </div>
+
+  <!-- ========================================================
+       MODAL: LIGHTBOX PARA VER FANARTS
+       ======================================================== -->
+  <div id="lightbox-modal" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-md hidden items-center justify-center p-4 cursor-pointer" onclick="closeLightbox()">
+    <div class="max-w-4xl w-full text-center relative" onclick="event.stopPropagation()">
+      <button onclick="closeLightbox()" class="absolute -top-10 right-0 text-white text-3xl font-black hover:text-yellow-400">
+        &times;
+      </button>
+      <img id="lightbox-img" src="" alt="Fanart preview" class="max-h-[80vh] mx-auto rounded-2xl border-2 border-yellow-400 shadow-2xl object-contain">
+      <p id="lightbox-caption" class="text-sm text-yellow-300 mt-3 font-semibold"></p>
+    </div>
+  </div>
+
+  <!-- ========================================================
+       MODAL: REPRODUCTOR DE CLIPS
+       ======================================================== -->
+  <div id="clip-player-modal" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-md hidden items-center justify-center p-4 cursor-pointer" onclick="closeClipModal()">
+    <div class="max-w-3xl w-full bg-[#180b33] rounded-2xl border-2 border-purple-500 overflow-hidden shadow-2xl relative" onclick="event.stopPropagation()">
+      <div class="flex items-center justify-between p-4 bg-[#110726] border-b border-purple-800">
+        <h4 id="modal-clip-title" class="font-burbank text-lg text-yellow-300 truncate">Clip de ImArixu</h4>
+        <button onclick="closeClipModal()" class="text-white hover:text-yellow-400 font-bold text-xl ml-2">
+          &times;
+        </button>
+      </div>
+      <div class="aspect-video w-full bg-black">
+        <iframe id="modal-clip-iframe" class="w-full h-full" src="" title="Clip" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================
+       FOOTER (Minecraft 1% Hardcore Hearts & Birthday Message)
+       ======================================================== -->
+  <footer class="mt-auto py-12 px-4 sm:px-6 lg:px-8 border-t-2 border-purple-900/60 bg-[#07030e] text-center relative z-20">
+    <div class="max-w-4xl mx-auto">
+      
+      <!-- Minecraft Hardcore 10 Hearts Bar -->
+      <div class="flex items-center justify-center gap-1.5 sm:gap-2 mb-4 cursor-pointer" title="Modo Hardcore de Minecraft: ¡Sobrevivido un año más!">
+        <!-- 10 Interactive Minecraft Hearts -->
+        <img src="assets/images/minecraft-heart.svg" class="minecraft-heart-el w-5 h-5 sm:w-6 sm:h-6 transition-transform hover:scale-125" alt="Heart">
+        <img src="assets/images/minecraft-heart.svg" class="minecraft-heart-el w-5 h-5 sm:w-6 sm:h-6 transition-transform hover:scale-125" alt="Heart">
+        <img src="assets/images/minecraft-heart.svg" class="minecraft-heart-el w-5 h-5 sm:w-6 sm:h-6 transition-transform hover:scale-125" alt="Heart">
+        <img src="assets/images/minecraft-heart.svg" class="minecraft-heart-el w-5 h-5 sm:w-6 sm:h-6 transition-transform hover:scale-125" alt="Heart">
+        <img src="assets/images/minecraft-heart.svg" class="minecraft-heart-el w-5 h-5 sm:w-6 sm:h-6 transition-transform hover:scale-125" alt="Heart">
+        <img src="assets/images/minecraft-heart.svg" class="minecraft-heart-el w-5 h-5 sm:w-6 sm:h-6 transition-transform hover:scale-125" alt="Heart">
+        <img src="assets/images/minecraft-heart.svg" class="minecraft-heart-el w-5 h-5 sm:w-6 sm:h-6 transition-transform hover:scale-125" alt="Heart">
+        <img src="assets/images/minecraft-heart.svg" class="minecraft-heart-el w-5 h-5 sm:w-6 sm:h-6 transition-transform hover:scale-125" alt="Heart">
+        <img src="assets/images/minecraft-heart.svg" class="minecraft-heart-el w-5 h-5 sm:w-6 sm:h-6 transition-transform hover:scale-125" alt="Heart">
+        <img src="assets/images/minecraft-heart.svg" class="minecraft-heart-el w-5 h-5 sm:w-6 sm:h-6 transition-transform hover:scale-125" alt="Heart">
+      </div>
+
+      <p class="font-minecraft text-[11px] sm:text-xs text-emerald-400 mb-4 tracking-wider">
+        [HARDCORE MODE]: Sobrevivido un año más sin perder vidas • Nivel 2X alcanzado
+      </p>
+
+      <!-- Credits and Community Love -->
+      <p class="text-sm text-gray-300 font-sans mb-3">
+        Hecho con cariño por tu <strong class="text-yellow-400">Comunidad y Moderadores</strong> para celebrar el cumpleaños de <strong class="text-cyan-400">ImArixu</strong> 🎉
+      </p>
+
+      <p class="text-xs text-purple-400/60 font-mono">
+        Fortnite 90% • Clash Royale 5% • Poppy Playtime 4% • Minecraft 1%
+      </p>
+
+      <!-- XP sound trigger Easter Egg in footer -->
+      <button class="mc-xp-trigger mt-4 text-[11px] font-minecraft text-gray-500 hover:text-green-400 transition-colors">
+        🔊 [Click para recoger Orbes de Experiencia XP]
+      </button>
+
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/audio.js"></script>
+  <script src="js/particles.js"></script>
+  <script src="js/dedications.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
