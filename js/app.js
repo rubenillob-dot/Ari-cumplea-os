@@ -21,22 +21,25 @@ document.addEventListener('DOMContentLoaded', () => {
   // 3. Setup sound & audio toggle
   setupAudioControls();
 
-  // 4. Setup GrabPack cursor toggle
-  setupGrabPackToggle();
+  // 4. Setup Fortnite Pickaxe cursor toggle
+  setupFortniteCursorToggle();
 
-  // 5. Setup Shield Potion HUD mechanic
+  // 5. Setup Level 25 Battle Pass Celebration
+  setupLevel25Celebration();
+
+  // 6. Setup Shield Potion HUD mechanic
   setupShieldMechanic();
 
-  // 6. Setup Year in Review filter tabs
+  // 7. Setup Year in Review filter tabs
   setupYearInReviewFilters();
 
-  // 7. Setup dedication modal form
+  // 8. Setup dedication modal form
   setupDedicationModal();
 
-  // 8. Setup Legendary Chest Easter Egg
+  // 9. Setup Legendary Chest Easter Egg
   setupLegendaryChest();
 
-  // 9. Setup Minecraft XP interactions
+  // 10. Setup Minecraft XP interactions
   setupMinecraftEasterEggs();
 
   // Enable sound on first interaction
@@ -84,34 +87,67 @@ function setupAudioControls() {
 }
 
 /* ========================================================
-   2. POPPY PLAYTIME GRABPACK TOGGLE & EASTER EGG
+   2. FORTNITE PICKAXE CURSOR TOGGLE
    ======================================================== */
-function setupGrabPackToggle() {
-  const grabpackToggleBtn = document.getElementById('grabpack-toggle-btn');
-  let isGrabpackActive = true;
+function setupFortniteCursorToggle() {
+  const cursorToggleBtn = document.getElementById('grabpack-toggle-btn') || document.getElementById('cursor-toggle-btn');
+  let isCursorActive = true;
 
-  // Active by default for the playful theme
+  // Active by default for the gaming theme
+  document.body.classList.add('fortnite-cursor-active');
   document.body.classList.add('grabpack-cursor-active');
 
-  if (grabpackToggleBtn) {
-    grabpackToggleBtn.addEventListener('click', () => {
-      isGrabpackActive = !isGrabpackActive;
-      if (isGrabpackActive) {
+  if (cursorToggleBtn) {
+    cursorToggleBtn.addEventListener('click', () => {
+      isCursorActive = !isCursorActive;
+      if (isCursorActive) {
+        document.body.classList.add('fortnite-cursor-active');
         document.body.classList.add('grabpack-cursor-active');
-        grabpackToggleBtn.innerHTML = `
-          <img src="assets/images/grabpack-blue.svg" class="w-5 h-5 drop-shadow" alt="GrabPack">
-          <span class="hidden sm:inline">GrabPack Cursor: <strong class="text-cyan-400">ON</strong></span>
+        cursorToggleBtn.innerHTML = `
+          <img src="assets/images/fortnite-pickaxe.svg" class="w-5 h-5 drop-shadow" alt="Pico Fortnite">
+          <span class="hidden sm:inline">Pico: <strong class="text-yellow-400">ON</strong></span>
         `;
       } else {
+        document.body.classList.remove('fortnite-cursor-active');
         document.body.classList.remove('grabpack-cursor-active');
-        grabpackToggleBtn.innerHTML = `
-          <img src="assets/images/grabpack-blue.svg" class="w-5 h-5 opacity-40" alt="GrabPack">
-          <span class="hidden sm:inline">GrabPack Cursor: <strong class="text-gray-400">OFF</strong></span>
+        cursorToggleBtn.innerHTML = `
+          <img src="assets/images/fortnite-pickaxe.svg" class="w-5 h-5 opacity-40 grayscale" alt="Pico Fortnite">
+          <span class="hidden sm:inline">Pico: <strong class="text-gray-400">OFF</strong></span>
         `;
       }
       if (window.soundFX) window.soundFX.playFortniteClick();
     });
   }
+}
+
+/* ========================================================
+   2.1. LEVEL 25 BATTLE PASS CELEBRATION
+   ======================================================== */
+function setupLevel25Celebration() {
+  const levelTriggers = document.querySelectorAll('.level25-trigger');
+  levelTriggers.forEach(trigger => {
+    trigger.addEventListener('click', (e) => {
+      const rect = trigger.getBoundingClientRect();
+      const cx = rect.left + rect.width / 2;
+      const cy = rect.top + rect.height / 2;
+
+      if (window.soundFX) {
+        window.soundFX.playLevelUp();
+      }
+
+      if (window.particleEngine) {
+        window.particleEngine.triggerFortniteConfetti(120);
+        window.particleEngine.spawnMinecraftXPOrbs(cx, cy, 20);
+      }
+
+      // Visual flash animation on badge
+      const badge = document.querySelector('.badge-level25-pulse');
+      if (badge) {
+        badge.classList.add('scale-125');
+        setTimeout(() => badge.classList.remove('scale-125'), 400);
+      }
+    });
+  });
 }
 
 /* ========================================================

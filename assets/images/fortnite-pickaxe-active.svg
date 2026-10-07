@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="40" height="40">
+  <defs>
+    <!-- Legendary Golden Glow filter -->
+    <filter id="gold-glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="0" stdDeviation="2" flood-color="#f59e0b" flood-opacity="0.9"/>
+      <feDropShadow dx="1" dy="1.5" stdDeviation="1" flood-color="#000000" flood-opacity="0.8"/>
+    </filter>
+    <linearGradient id="gold-metal" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fffbeb"/>
+      <stop offset="30%" stop-color="#fde047"/>
+      <stop offset="70%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#b45309"/>
+    </linearGradient>
+    <linearGradient id="purple-shaft" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#c084fc"/>
+      <stop offset="50%" stop-color="#7e22ce"/>
+      <stop offset="100%" stop-color="#3b0764"/>
+    </linearGradient>
+  </defs>
+
+  <g filter="url(#gold-glow)">
+    <!-- Impact / Hit Sparks at top tip (hotspot at 3, 5) -->
+    <path d="M 3 0 L 3 3 M 0 5 L 3 5 M 1 2 L 3 4 M 5 2 L 3 4" stroke="#fef08a" stroke-width="1.2" stroke-linecap="round"/>
+
+    <!-- Handle angled from (12, 12) down to (35, 35) -->
+    <line x1="12" y1="12" x2="35" y2="35" stroke="#000000" stroke-width="5" stroke-linecap="round"/>
+    <line x1="12" y1="12" x2="35" y2="35" stroke="url(#purple-shaft)" stroke-width="3" stroke-linecap="round"/>
+    
+    <!-- Gold grip rings -->
+    <line x1="19" y1="17" x2="21" y2="21" stroke="#fde047" stroke-width="2" stroke-linecap="round"/>
+    <line x1="24" y1="22" x2="26" y2="26" stroke="#fde047" stroke-width="2" stroke-linecap="round"/>
+    <line x1="29" y1="27" x2="31" y2="31" stroke="#fde047" stroke-width="2" stroke-linecap="round"/>
+
+    <!-- Pommel at base -->
+    <circle cx="35" cy="35" r="2.5" fill="#facc15" stroke="#78350f" stroke-width="1"/>
+
+    <!-- Collar / Neck Bracket -->
+    <rect x="9.5" y="9.5" width="5.5" height="5.5" rx="1.5" transform="rotate(45 12 12)" fill="#ca8a04" stroke="#451a03" stroke-width="1"/>
+
+    <!-- Legendary Gold Pickaxe Head -->
+    <path d="M 3 5 
+             C 6 2, 12 4, 18 8 
+             L 21 6 
+             L 20 11 
+             L 14 14 
+             C 9 11, 5 7, 3 5 Z" 
+          fill="url(#gold-metal)" stroke="#451a03" stroke-width="1.2" stroke-linejoin="round"/>
+
+    <!-- Brilliant edge highlight -->
+    <path d="M 3 5 C 6 2, 11 3, 15 6" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+
+    <!-- Center Gem / Power Core -->
+    <circle cx="12" cy="12" r="2" fill="#00f0ff" stroke="#0369a1" stroke-width="0.8"/>
+
+    <!-- Hitmarker crosshair tick near tip -->
+    <circle cx="3" cy="5" r="1.5" fill="#ffffff" stroke="#eab308" stroke-width="0.5"/>
+  </g>
+</svg>

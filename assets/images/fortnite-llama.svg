@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <filter id="llama-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="1" dy="2" stdDeviation="1.5" flood-color="#7a22ff" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+  <g filter="url(#llama-glow)">
+    <!-- Ears -->
+    <polygon points="26,6 30,16 23,16" fill="#a855f7" stroke="#3b0764" stroke-width="1.5" stroke-linejoin="round"/>
+    <polygon points="34,8 38,18 31,18" fill="#c084fc" stroke="#3b0764" stroke-width="1.5" stroke-linejoin="round"/>
+
+    <!-- Head -->
+    <polygon points="22,16 42,16 45,26 38,32 24,32 20,24" fill="#9333ea" stroke="#3b0764" stroke-width="1.5" stroke-linejoin="round"/>
+
+    <!-- Snout / Muzzle -->
+    <polygon points="40,18 52,22 51,28 41,27" fill="#06b6d4" stroke="#083344" stroke-width="1.5" stroke-linejoin="round"/>
+    <rect x="47" y="23" width="2" height="3" fill="#0f172a"/>
+
+    <!-- Eye (Whimsical Pinata Eye) -->
+    <circle cx="33" cy="22" r="3.5" fill="#ffffff" stroke="#0f172a" stroke-width="1"/>
+    <circle cx="34" cy="22" r="1.5" fill="#000000"/>
+
+    <!-- Neck -->
+    <polygon points="24,32 38,32 36,44 26,44" fill="#7e22ce" stroke="#3b0764" stroke-width="1.5" stroke-linejoin="round"/>
+
+    <!-- Saddle Blanket (Cyan / Yellow / Magenta Layers) -->
+    <polygon points="14,42 46,42 44,54 16,54" fill="#06b6d4" stroke="#083344" stroke-width="1.5" stroke-linejoin="round"/>
+    <polygon points="18,45 42,45 40,51 20,51" fill="#eab308" stroke="#713f12" stroke-width="1" stroke-linejoin="round"/>
+    <polygon points="22,47 38,47 36,50 24,50" fill="#ec4899" stroke="#831843" stroke-width="1" stroke-linejoin="round"/>
+
+    <!-- Body / Torso -->
+    <polygon points="12,42 16,40 44,40 48,46 44,56 14,56" fill="#6b21a8" stroke="#3b0764" stroke-width="1.5" stroke-linejoin="round"/>
+
+    <!-- Legs -->
+    <rect x="16" y="54" width="5" height="9" fill="#581c87" stroke="#3b0764" stroke-width="1.2"/>
+    <rect x="23" y="54" width="4.5" height="9" fill="#7e22ce" stroke="#3b0764" stroke-width="1.2"/>
+    <rect x="34" y="54" width="4.5" height="9" fill="#581c87" stroke="#3b0764" stroke-width="1.2"/>
+    <rect x="41" y="54" width="5" height="9" fill="#7e22ce" stroke="#3b0764" stroke-width="1.2"/>
+
+    <!-- Tail -->
+    <polygon points="12,44 6,48 10,53 14,50" fill="#a855f7" stroke="#3b0764" stroke-width="1.5" stroke-linejoin="round"/>
+  </g>
+</svg>

@@ -26,7 +26,7 @@ const DEFAULT_DEDICATIONS = [
     avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80',
     type: 'image',
     image: 'https://images.unsplash.com/photo-1542751371-adc38448a05e?w=800&auto=format&fit=crop&q=80',
-    caption: '¡Fanart especial de cumpleaños! ImArixu con la corona de Clash Royale y el pico de Fortnite listo para rushear el nuevo nivel 🎉✨',
+    caption: '¡Fanart especial de cumpleaños! Ari con la corona de Clash Royale y el pico de Fortnite listo para rushear el nivel 25 🎉✨',
     message: '¡Muchas felicidades Ari! Te dejamos este dibujo con todo el cariño de la comunidad de Discord. ¡A celebrarlo por todo lo alto!',
     reactions: { gg: 89, shield: 45, crown: 112 },
     date: 'Hoy a las 14:15'
@@ -165,7 +165,7 @@ class DedicationsManager {
       let mediaContent = '';
       if (item.type === 'image' && item.image) {
         mediaContent = `
-          <div class="mt-4 rounded-xl overflow-hidden border-2 border-white/10 group cursor-pointer relative" onclick="openLightbox('${item.image}', '${encodeURIComponent(item.caption || 'Fanart para ImArixu')}')">
+          <div class="mt-4 rounded-xl overflow-hidden border-2 border-white/10 group cursor-pointer relative" onclick="openLightbox('${item.image}', '${encodeURIComponent(item.caption || 'Fanart para Ari')}')">
             <img src="${item.image}" alt="Fanart" class="w-full h-64 object-cover object-center group-hover:scale-105 transition-transform duration-300" loading="lazy">
             <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-3">
               <span class="text-xs text-white/90 flex items-center gap-1 font-semibold">

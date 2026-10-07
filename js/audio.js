@@ -240,6 +240,43 @@ class SoundSystem {
     });
   }
 
+  // --- Sound: Level Up Fanfare & Chime (Battle Pass Level 25) ---
+  playLevelUp() {
+    if (this.isMuted) return;
+    this.init();
+    const now = this.ctx.currentTime;
+
+    // Bass boom
+    const sub = this.ctx.createOscillator();
+    const subG = this.ctx.createGain();
+    sub.type = 'triangle';
+    sub.frequency.setValueAtTime(120, now);
+    sub.frequency.exponentialRampToValueAtTime(40, now + 0.4);
+    subG.gain.setValueAtTime(0.35, now);
+    subG.gain.exponentialRampToValueAtTime(0.001, now + 0.5);
+    sub.connect(subG);
+    subG.connect(this.ctx.destination);
+    sub.start(now);
+    sub.stop(now + 0.55);
+
+    // Ascending triumph notes (Level up fanfare)
+    const notes = [261.63, 329.63, 392.00, 523.25, 659.25, 783.99, 1046.50]; // C-E-G-C-E-G-C
+    notes.forEach((freq, idx) => {
+      const osc = this.ctx.createOscillator();
+      const g = this.ctx.createGain();
+      osc.type = 'sine';
+      const t = now + idx * 0.07;
+      osc.frequency.setValueAtTime(freq, t);
+      g.gain.setValueAtTime(0, t);
+      g.gain.linearRampToValueAtTime(0.2, t + 0.02);
+      g.gain.exponentialRampToValueAtTime(0.001, t + (idx === notes.length - 1 ? 0.9 : 0.3));
+      osc.connect(g);
+      g.connect(this.ctx.destination);
+      osc.start(t);
+      osc.stop(t + (idx === notes.length - 1 ? 0.95 : 0.35));
+    });
+  }
+
   // --- Sound: Victory Royale Fanfare ---
   playVictoryFanfare() {
     if (this.isMuted) return;
