@@ -128,10 +128,11 @@
           </div>
         </div>
 
-        <!-- Fortnite Pickaxe Cursor Toggle -->
-        <button id="grabpack-toggle-btn" class="flex items-center gap-1.5 px-2.5 py-1.5 rounded-xl bg-purple-950/80 hover:bg-purple-900 border border-purple-700/60 text-xs font-bold transition-all" title="Activar/Desactivar Puntero Pico de Fortnite">
-          <img src="assets/images/fortnite-pickaxe.svg" class="w-5 h-5 drop-shadow" alt="Pico Fortnite">
-          <span class="hidden xl:inline">Pico: <strong class="text-yellow-400">ON</strong></span>
+        <!-- Cursor Customization Panel Trigger Button -->
+        <button id="open-cursor-modal-btn" class="flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-3 py-1.5 rounded-xl bg-purple-950/80 hover:bg-purple-900 border border-yellow-400/70 hover:border-yellow-300 text-xs font-bold transition-all shadow-md group" title="Personalizar Puntero del Ratón">
+          <img id="header-active-cursor-icon" src="assets/images/fortnite-pickaxe.svg" class="w-5 h-5 drop-shadow group-hover:scale-110 transition-transform" alt="Puntero">
+          <span class="hidden xl:inline font-hud">Puntero: <strong id="header-active-cursor-name" class="text-yellow-300">Pico Fortnite</strong></span>
+          <span class="text-[9px] bg-yellow-400 text-black px-1.5 py-0.5 rounded font-black tracking-wider uppercase shadow">CAMBIAR</span>
         </button>
 
         <!-- Clash Royale Legendary Chest Shortcut -->
@@ -981,6 +982,140 @@
 
     </div>
   </section>
+
+  <!-- ========================================================
+       MODAL: PANEL DE PERSONALIZACIÓN DE PUNTEROS
+       ======================================================== -->
+  <div id="cursor-customization-modal" class="fixed inset-0 z-50 bg-black/85 backdrop-blur-md hidden items-center justify-center p-4">
+    <div class="relative max-w-2xl w-full bg-[#160c30] rounded-3xl p-6 sm:p-8 border-2 border-yellow-400/90 shadow-[0_0_50px_rgba(244,196,48,0.35)] overflow-hidden">
+      
+      <!-- Close Button -->
+      <button id="close-cursor-modal-btn" class="absolute top-4 right-4 text-gray-400 hover:text-white text-2xl font-black z-20">
+        &times;
+      </button>
+
+      <!-- Header -->
+      <div class="text-center mb-6">
+        <div class="inline-flex items-center gap-1.5 bg-yellow-400 text-black text-[11px] font-burbank uppercase px-3 py-1 rounded-md transform -skew-x-6 mb-2 shadow">
+          <span>🎯</span> ARMERÍA DE CURSORES
+        </div>
+        <h3 class="font-burbank text-2xl sm:text-3xl text-yellow-300 uppercase tracking-wide">
+          Personalizar Puntero
+        </h3>
+        <p class="text-xs sm:text-sm text-gray-300 mt-1 max-w-md mx-auto">
+          Selecciona tu puntero favorito para navegar por la web. ¡Cada uno tiene diseño exclusivo y efecto al hacer click!
+        </p>
+      </div>
+
+      <!-- 4 Cursors Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 mb-6">
+        
+        <!-- Option 1: Poppy Playtime GrabPack -->
+        <div class="cursor-option-card relative p-4 rounded-2xl bg-[#0f0722] border-2 border-purple-800 hover:border-cyan-400 transition-all cursor-pointer group" data-cursor-id="poppy">
+          <div class="flex items-start gap-3">
+            <div class="w-14 h-14 rounded-xl bg-cyan-950/60 border border-cyan-400/40 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform p-1">
+              <img src="assets/images/grabpack-blue.svg" class="w-10 h-10 object-contain drop-shadow" alt="Poppy GrabPack">
+            </div>
+            <div class="flex-1 min-w-0">
+              <div class="flex items-center justify-between gap-1 mb-1">
+                <h4 class="font-burbank text-base text-white group-hover:text-cyan-300 truncate">Guante Poppy</h4>
+                <span class="text-[9px] font-mono px-1.5 py-0.5 rounded bg-cyan-900/60 text-cyan-300 border border-cyan-700/50">POPPY PLAYTIME</span>
+              </div>
+              <p class="text-[11px] text-gray-300 leading-snug mb-2">
+                Mano azul interactiva que cambia a roja al pulsar botones.
+              </p>
+              <div class="cursor-status-badge text-[10px] font-hud font-bold text-gray-400 flex items-center gap-1">
+                <span class="w-2 h-2 rounded-full bg-gray-500 status-dot"></span>
+                <span class="status-text">Click para equipar</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Option 2: Fortnite Pickaxe -->
+        <div class="cursor-option-card relative p-4 rounded-2xl bg-[#0f0722] border-2 border-purple-800 hover:border-yellow-400 transition-all cursor-pointer group" data-cursor-id="fortnite">
+          <div class="flex items-start gap-3">
+            <div class="w-14 h-14 rounded-xl bg-yellow-950/60 border border-yellow-400/40 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform p-1">
+              <img src="assets/images/fortnite-pickaxe.svg" class="w-10 h-10 object-contain drop-shadow" alt="Pico Fortnite">
+            </div>
+            <div class="flex-1 min-w-0">
+              <div class="flex items-center justify-between gap-1 mb-1">
+                <h4 class="font-burbank text-base text-white group-hover:text-yellow-300 truncate">Pico de Fortnite</h4>
+                <span class="text-[9px] font-mono px-1.5 py-0.5 rounded bg-yellow-900/60 text-yellow-300 border border-yellow-700/50">FORTNITE BATTLE</span>
+              </div>
+              <p class="text-[11px] text-gray-300 leading-snug mb-2">
+                Pico táctico con filo cian y brillo dorado de impacto al apuntar.
+              </p>
+              <div class="cursor-status-badge text-[10px] font-hud font-bold text-gray-400 flex items-center gap-1">
+                <span class="w-2 h-2 rounded-full bg-gray-500 status-dot"></span>
+                <span class="status-text">Click para equipar</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Option 3: Minecraft Diamond Pickaxe -->
+        <div class="cursor-option-card relative p-4 rounded-2xl bg-[#0f0722] border-2 border-purple-800 hover:border-emerald-400 transition-all cursor-pointer group" data-cursor-id="minecraft">
+          <div class="flex items-start gap-3">
+            <div class="w-14 h-14 rounded-xl bg-teal-950/60 border border-teal-400/40 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform p-1">
+              <img src="assets/images/minecraft-diamond-pickaxe.svg" class="w-10 h-10 object-contain drop-shadow" alt="Pico de Diamante">
+            </div>
+            <div class="flex-1 min-w-0">
+              <div class="flex items-center justify-between gap-1 mb-1">
+                <h4 class="font-burbank text-base text-white group-hover:text-emerald-300 truncate">Pico de Diamante</h4>
+                <span class="text-[9px] font-mono px-1.5 py-0.5 rounded bg-teal-900/60 text-teal-300 border border-teal-700/50">MINECRAFT</span>
+              </div>
+              <p class="text-[11px] text-gray-300 leading-snug mb-2">
+                Pico pixelado de diamante con brillo encantado púrpura al pulsar.
+              </p>
+              <div class="cursor-status-badge text-[10px] font-hud font-bold text-gray-400 flex items-center gap-1">
+                <span class="w-2 h-2 rounded-full bg-gray-500 status-dot"></span>
+                <span class="status-text">Click para equipar</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Option 4: Clash Royale Crown -->
+        <div class="cursor-option-card relative p-4 rounded-2xl bg-[#0f0722] border-2 border-purple-800 hover:border-amber-400 transition-all cursor-pointer group" data-cursor-id="clash">
+          <div class="flex items-start gap-3">
+            <div class="w-14 h-14 rounded-xl bg-amber-950/60 border border-amber-400/40 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform p-1">
+              <img src="assets/images/clash-crown-cursor.svg" class="w-10 h-10 object-contain drop-shadow" alt="Corona Clash Royale">
+            </div>
+            <div class="flex-1 min-w-0">
+              <div class="flex items-center justify-between gap-1 mb-1">
+                <h4 class="font-burbank text-base text-white group-hover:text-amber-300 truncate">Corona Royale</h4>
+                <span class="text-[9px] font-mono px-1.5 py-0.5 rounded bg-amber-900/60 text-amber-300 border border-amber-700/50">CLASH ROYALE</span>
+              </div>
+              <p class="text-[11px] text-gray-300 leading-snug mb-2">
+                Corona dorada con zafiros y rubíes reales con aura centelleante.
+              </p>
+              <div class="cursor-status-badge text-[10px] font-hud font-bold text-gray-400 flex items-center gap-1">
+                <span class="w-2 h-2 rounded-full bg-gray-500 status-dot"></span>
+                <span class="status-text">Click para equipar</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Live Test Zone / Campo de Tiro de Prueba -->
+      <div class="p-3.5 rounded-2xl bg-[#0a0418] border border-purple-800/80 flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left">
+        <div>
+          <span class="font-hud text-xs text-yellow-300 font-bold block">🎯 CAMPO DE TIRO:</span>
+          <span class="text-[11px] text-gray-400">Pasa el ratón por el botón de prueba para comprobar el estado interactivo.</span>
+        </div>
+        <button class="btn-fortnite-ready px-5 py-2 text-xs shadow-md shrink-0" onclick="if(window.soundFX) window.soundFX.playFortniteClick();">
+          <div class="btn-content flex items-center gap-1.5">
+            <span>✨</span>
+            <span>BOTÓN DE PRUEBA</span>
+          </div>
+        </button>
+      </div>
+
+    </div>
+  </div>
 
   <!-- ========================================================
        EASTER EGG MODAL: CLASH ROYALE COFRE LEGENDARIO

@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36" width="36" height="36">
+  <defs>
+    <filter id="crown-gold-aura" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="0" stdDeviation="2" flood-color="#f59e0b" flood-opacity="0.95"/>
+      <feDropShadow dx="1" dy="1.5" stdDeviation="1" flood-color="#000000" flood-opacity="0.8"/>
+    </filter>
+    <linearGradient id="royale-super-gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="25%" stop-color="#fef08a"/>
+      <stop offset="60%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#b45309"/>
+    </linearGradient>
+  </defs>
+  <g filter="url(#crown-gold-aura)">
+    <!-- Radiating Sparkles -->
+    <path d="M 4 0 L 4 8 M 0 4 L 8 4 M 1 1 L 7 7 M 7 1 L 1 7" stroke="#ffffff" stroke-width="1.2" stroke-linecap="round"/>
+    <circle cx="4" cy="4" r="2.2" fill="#ffffff"/>
+
+    <!-- Angled Royal Crown body -->
+    <path d="M 4 4 
+             L 11 12 
+             L 18 5 
+             L 23 14 
+             L 30 9 
+             L 28 27 
+             L 8 23 
+             Z" 
+          fill="url(#royale-super-gold)" stroke="#451a03" stroke-width="1.5" stroke-linejoin="round"/>
+
+    <!-- Crown Base Band -->
+    <path d="M 8 23 L 28 27 L 27 31 L 7 27 Z" fill="#78350f" stroke="#451a03" stroke-width="1.2"/>
+
+    <!-- Pearls with intense glow -->
+    <circle cx="4" cy="4" r="2.5" fill="#fef08a" stroke="#713f12" stroke-width="1"/>
+    <circle cx="18" cy="5" r="2.4" fill="#fef08a" stroke="#713f12" stroke-width="1"/>
+    <circle cx="30" cy="9" r="2.4" fill="#fef08a" stroke="#713f12" stroke-width="1"/>
+
+    <!-- Gleaming Jewels -->
+    <circle cx="12" cy="24" r="2" fill="#00f0ff" stroke="#0369a1" stroke-width="0.8"/>
+    <circle cx="18" cy="25" r="2.5" fill="#f43f5e" stroke="#881337" stroke-width="0.8"/>
+    <circle cx="24" cy="26" r="2" fill="#00f0ff" stroke="#0369a1" stroke-width="0.8"/>
+  </g>
+</svg>

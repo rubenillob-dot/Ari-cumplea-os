@@ -21,8 +21,8 @@ document.addEventListener('DOMContentLoaded', () => {
   // 3. Setup sound & audio toggle
   setupAudioControls();
 
-  // 4. Setup Fortnite Pickaxe cursor toggle
-  setupFortniteCursorToggle();
+  // 4. Setup Cursor Arsenal & Customization Panel
+  setupCursorCustomization();
 
   // 5. Setup Level 25 Battle Pass Celebration
   setupLevel25Celebration();
@@ -87,37 +87,164 @@ function setupAudioControls() {
 }
 
 /* ========================================================
-   2. FORTNITE PICKAXE CURSOR TOGGLE
+   2. CURSOR ARSENAL & CUSTOMIZATION PANEL
    ======================================================== */
-function setupFortniteCursorToggle() {
-  const cursorToggleBtn = document.getElementById('grabpack-toggle-btn') || document.getElementById('cursor-toggle-btn');
-  let isCursorActive = true;
+const CURSOR_THEMES = {
+  poppy: {
+    id: 'poppy',
+    name: 'Guante Poppy',
+    game: 'Poppy Playtime',
+    class: 'cursor-mode-poppy',
+    icon: 'assets/images/grabpack-blue.svg',
+    sound: 'playFortniteClick'
+  },
+  fortnite: {
+    id: 'fortnite',
+    name: 'Pico Fortnite',
+    game: 'Fortnite Battle Royale',
+    class: 'cursor-mode-fortnite',
+    icon: 'assets/images/fortnite-pickaxe.svg',
+    sound: 'playFortniteClick'
+  },
+  minecraft: {
+    id: 'minecraft',
+    name: 'Pico Diamante',
+    game: 'Minecraft Hardcore',
+    class: 'cursor-mode-minecraft',
+    icon: 'assets/images/minecraft-diamond-pickaxe.svg',
+    sound: 'playMinecraftXP'
+  },
+  clash: {
+    id: 'clash',
+    name: 'Corona Royale',
+    game: 'Clash Royale',
+    class: 'cursor-mode-clash',
+    icon: 'assets/images/clash-crown-cursor.svg',
+    sound: 'playCrownSound'
+  }
+};
 
-  // Active by default for the gaming theme
-  document.body.classList.add('fortnite-cursor-active');
-  document.body.classList.add('grabpack-cursor-active');
+let activeCursorId = 'fortnite';
 
-  if (cursorToggleBtn) {
-    cursorToggleBtn.addEventListener('click', () => {
-      isCursorActive = !isCursorActive;
-      if (isCursorActive) {
-        document.body.classList.add('fortnite-cursor-active');
-        document.body.classList.add('grabpack-cursor-active');
-        cursorToggleBtn.innerHTML = `
-          <img src="assets/images/fortnite-pickaxe.svg" class="w-5 h-5 drop-shadow" alt="Pico Fortnite">
-          <span class="hidden sm:inline">Pico: <strong class="text-yellow-400">ON</strong></span>
-        `;
-      } else {
-        document.body.classList.remove('fortnite-cursor-active');
-        document.body.classList.remove('grabpack-cursor-active');
-        cursorToggleBtn.innerHTML = `
-          <img src="assets/images/fortnite-pickaxe.svg" class="w-5 h-5 opacity-40 grayscale" alt="Pico Fortnite">
-          <span class="hidden sm:inline">Pico: <strong class="text-gray-400">OFF</strong></span>
-        `;
+function equipCursor(cursorId, playEffects = false) {
+  if (!CURSOR_THEMES[cursorId]) cursorId = 'fortnite';
+  activeCursorId = cursorId;
+  const config = CURSOR_THEMES[cursorId];
+
+  // 1. Update body classes
+  Object.values(CURSOR_THEMES).forEach(t => {
+    document.body.classList.remove(t.class);
+  });
+  document.body.classList.remove('fortnite-cursor-active', 'grabpack-cursor-active');
+  document.body.classList.add(config.class);
+
+  // 2. Update Header Button Indicator
+  const headerIcon = document.getElementById('header-active-cursor-icon');
+  const headerName = document.getElementById('header-active-cursor-name');
+  if (headerIcon) headerIcon.src = config.icon;
+  if (headerName) headerName.textContent = config.name;
+
+  // 3. Update Modal Cards UI
+  const cards = document.querySelectorAll('.cursor-option-card');
+  cards.forEach(card => {
+    const cardId = card.getAttribute('data-cursor-id');
+    const dot = card.querySelector('.status-dot');
+    const text = card.querySelector('.status-text');
+
+    if (cardId === cursorId) {
+      card.classList.add('active-cursor');
+      if (dot) {
+        dot.className = 'w-2 h-2 rounded-full bg-yellow-400 status-dot shadow-[0_0_8px_#facc15]';
       }
+      if (text) {
+        text.innerHTML = '<strong class="text-yellow-400">✓ EQUIPADO</strong>';
+      }
+    } else {
+      card.classList.remove('active-cursor');
+      if (dot) {
+        dot.className = 'w-2 h-2 rounded-full bg-gray-500 status-dot';
+      }
+      if (text) {
+        text.textContent = 'Click para equipar';
+      }
+    }
+  });
+
+  // 4. Save to localStorage
+  try {
+    localStorage.setItem('imarixu_active_cursor', cursorId);
+  } catch (e) {
+    // ignore
+  }
+
+  // 5. Sound & Particles if manual change
+  if (playEffects) {
+    if (window.soundFX) {
+      if (config.sound === 'playMinecraftXP') window.soundFX.playMinecraftXP(1.2);
+      else if (config.sound === 'playCrownSound') window.soundFX.playCrownSound();
+      else window.soundFX.playFortniteClick();
+    }
+    if (window.particleEngine) {
+      window.particleEngine.triggerFortniteConfetti(45);
+    }
+  }
+}
+
+function setupCursorCustomization() {
+  const modal = document.getElementById('cursor-customization-modal');
+  const openBtn = document.getElementById('open-cursor-modal-btn');
+  const closeBtn = document.getElementById('close-cursor-modal-btn');
+  const cards = document.querySelectorAll('.cursor-option-card');
+
+  // Load saved preference or default to 'fortnite'
+  let saved = null;
+  try {
+    saved = localStorage.getItem('imarixu_active_cursor');
+  } catch (e) {}
+  equipCursor(saved || 'fortnite', false);
+
+  // Modal open
+  if (openBtn && modal) {
+    openBtn.addEventListener('click', () => {
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
       if (window.soundFX) window.soundFX.playFortniteClick();
     });
   }
+
+  // Modal close
+  if (closeBtn && modal) {
+    closeBtn.addEventListener('click', () => {
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    });
+  }
+
+  // Backdrop click close
+  if (modal) {
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+      }
+    });
+  }
+
+  // Card click to equip
+  cards.forEach(card => {
+    card.addEventListener('click', () => {
+      const cursorId = card.getAttribute('data-cursor-id');
+      equipCursor(cursorId, true);
+    });
+  });
+
+  // Keyboard shortcut: ESC to close
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal && !modal.classList.contains('hidden')) {
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+  });
 }
 
 /* ========================================================

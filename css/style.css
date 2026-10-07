@@ -11,22 +11,82 @@
 }
 
 /* ========================================================
-   FORTNITE CUSTOM PICKAXE CURSORS
+   CUSTOM GAMING CURSOR THEMES (CUSTOMIZATION ARSENAL)
    ======================================================== */
-body.fortnite-cursor-active,
-body.fortnite-cursor-active *,
-body.grabpack-cursor-active,
-body.grabpack-cursor-active * {
-  cursor: url('../assets/images/fortnite-pickaxe.svg') 3 5, auto !important;
+/* 1. Poppy Playtime GrabPack Cursor */
+body.cursor-mode-poppy,
+body.cursor-mode-poppy * {
+  cursor: url('../assets/images/grabpack-blue.svg') 19 4, auto !important;
+}
+body.cursor-mode-poppy a,
+body.cursor-mode-poppy button,
+body.cursor-mode-poppy input,
+body.cursor-mode-poppy select,
+body.cursor-mode-poppy textarea,
+body.cursor-mode-poppy .cursor-pointer,
+body.cursor-mode-poppy [role="button"] {
+  cursor: url('../assets/images/grabpack-red.svg') 19 4, pointer !important;
 }
 
+/* 2. Fortnite Pickaxe Cursor */
+body.cursor-mode-fortnite,
+body.cursor-mode-fortnite *,
+body.fortnite-cursor-active,
+body.fortnite-cursor-active * {
+  cursor: url('../assets/images/fortnite-pickaxe.svg') 3 5, auto !important;
+}
+body.cursor-mode-fortnite a,
+body.cursor-mode-fortnite button,
+body.cursor-mode-fortnite input,
+body.cursor-mode-fortnite select,
+body.cursor-mode-fortnite textarea,
+body.cursor-mode-fortnite .cursor-pointer,
+body.cursor-mode-fortnite [role="button"],
 body.fortnite-cursor-active a,
 body.fortnite-cursor-active button,
 body.fortnite-cursor-active input,
 body.fortnite-cursor-active select,
 body.fortnite-cursor-active textarea,
 body.fortnite-cursor-active .cursor-pointer,
-body.fortnite-cursor-active [role="button"],
+body.fortnite-cursor-active [role="button"] {
+  cursor: url('../assets/images/fortnite-pickaxe-active.svg') 3 5, pointer !important;
+}
+
+/* 3. Minecraft Diamond Pickaxe Cursor */
+body.cursor-mode-minecraft,
+body.cursor-mode-minecraft * {
+  cursor: url('../assets/images/minecraft-diamond-pickaxe.svg') 3 3, auto !important;
+}
+body.cursor-mode-minecraft a,
+body.cursor-mode-minecraft button,
+body.cursor-mode-minecraft input,
+body.cursor-mode-minecraft select,
+body.cursor-mode-minecraft textarea,
+body.cursor-mode-minecraft .cursor-pointer,
+body.cursor-mode-minecraft [role="button"] {
+  cursor: url('../assets/images/minecraft-diamond-pickaxe-active.svg') 3 3, pointer !important;
+}
+
+/* 4. Clash Royale Crown Cursor */
+body.cursor-mode-clash,
+body.cursor-mode-clash * {
+  cursor: url('../assets/images/clash-crown-cursor.svg') 4 4, auto !important;
+}
+body.cursor-mode-clash a,
+body.cursor-mode-clash button,
+body.cursor-mode-clash input,
+body.cursor-mode-clash select,
+body.cursor-mode-clash textarea,
+body.cursor-mode-clash .cursor-pointer,
+body.cursor-mode-clash [role="button"] {
+  cursor: url('../assets/images/clash-crown-active.svg') 4 4, pointer !important;
+}
+
+/* Backward compatibility */
+body.grabpack-cursor-active,
+body.grabpack-cursor-active * {
+  cursor: url('../assets/images/grabpack-blue.svg') 19 4, auto !important;
+}
 body.grabpack-cursor-active a,
 body.grabpack-cursor-active button,
 body.grabpack-cursor-active input,
@@ -34,7 +94,7 @@ body.grabpack-cursor-active select,
 body.grabpack-cursor-active textarea,
 body.grabpack-cursor-active .cursor-pointer,
 body.grabpack-cursor-active [role="button"] {
-  cursor: url('../assets/images/fortnite-pickaxe-active.svg') 3 5, pointer !important;
+  cursor: url('../assets/images/grabpack-red.svg') 19 4, pointer !important;
 }
 
 /* Global Smoothness & Selection */
@@ -427,3 +487,24 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: #a855f7;
 }
+
+/* ========================================================
+   CURSOR CUSTOMIZER MODAL CARDS
+   ======================================================== */
+.cursor-option-card.active-cursor {
+  border-color: #facc15 !important;
+  background: linear-gradient(135deg, rgba(36, 17, 71, 0.95), rgba(20, 10, 42, 0.95)) !important;
+  box-shadow: 0 0 25px rgba(244, 196, 48, 0.4), inset 0 0 15px rgba(244, 196, 48, 0.1);
+  transform: translateY(-2px);
+}
+
+.cursor-option-card.active-cursor .status-dot {
+  background-color: #facc15 !important;
+  box-shadow: 0 0 8px #facc15;
+}
+
+.cursor-option-card.active-cursor .status-text {
+  color: #facc15 !important;
+  font-weight: 800;
+}
+

@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36" width="36" height="36">
+  <defs>
+    <filter id="crown-shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="1" dy="1.5" stdDeviation="1" flood-color="#000000" flood-opacity="0.8"/>
+    </filter>
+    <linearGradient id="royale-gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fffbeb"/>
+      <stop offset="25%" stop-color="#fef08a"/>
+      <stop offset="50%" stop-color="#facc15"/>
+      <stop offset="85%" stop-color="#eab308"/>
+      <stop offset="100%" stop-color="#a16207"/>
+    </linearGradient>
+  </defs>
+  <g filter="url(#crown-shadow)">
+    <!-- Hotspot indicator sparkle at (4, 4) -->
+    <path d="M 4 1 L 4 7 M 1 4 L 7 4" stroke="#ffffff" stroke-width="1.2" stroke-linecap="round"/>
+    <circle cx="4" cy="4" r="1.5" fill="#fef08a"/>
+
+    <!-- Angled Royal Crown body -->
+    <!-- Pointer spire at (4, 4) going down-right to base -->
+    <path d="M 4 4 
+             L 11 12 
+             L 18 5 
+             L 23 14 
+             L 30 9 
+             L 28 27 
+             L 8 23 
+             Z" 
+          fill="url(#royale-gold)" stroke="#713f12" stroke-width="1.5" stroke-linejoin="round"/>
+
+    <!-- Crown Base Band -->
+    <path d="M 8 23 L 28 27 L 27 31 L 7 27 Z" fill="#b45309" stroke="#713f12" stroke-width="1.2"/>
+
+    <!-- Pearl Jewels on Spires -->
+    <circle cx="4" cy="4" r="2.5" fill="#ffffff" stroke="#713f12" stroke-width="1"/>
+    <circle cx="18" cy="5" r="2.2" fill="#ffffff" stroke="#713f12" stroke-width="1"/>
+    <circle cx="30" cy="9" r="2.2" fill="#ffffff" stroke="#713f12" stroke-width="1"/>
+
+    <!-- Headband Ruby & Sapphires -->
+    <circle cx="12" cy="24" r="1.8" fill="#3b82f6" stroke="#1e3a8a" stroke-width="0.8"/>
+    <circle cx="18" cy="25" r="2.2" fill="#ef4444" stroke="#7f1d1d" stroke-width="0.8"/>
+    <circle cx="24" cy="26" r="1.8" fill="#3b82f6" stroke="#1e3a8a" stroke-width="0.8"/>
+  </g>
+</svg>
