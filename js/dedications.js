@@ -64,12 +64,120 @@ const DEFAULT_DEDICATIONS = [
     message: '¡Feliz cumpleaños Arixu! Aún recuerdo las risas en cada stream jugando juntas y los momentos más divertidos en dúo. ¡Los mejores momentos siempre! Pásalo genial con toda tu gente 💙❤️',
     reactions: { gg: 61, shield: 19, crown: 54 },
     date: 'Ayer a las 22:18'
+  },
+  {
+    id: 'ded-6',
+    user: 'Sleezzy',
+    platform: 'twitch',
+    role: 'VIP & TRYHARD',
+    rarity: 'epic',
+    avatar: '',
+    type: 'text',
+    message: '¡Feliz cumpleaños Ari! Que este nivel 25 venga cargado de muchas coronas de victoria, snipes limpios y momentos inolvidables en stream. ¡A seguir rompiéndola!',
+    reactions: { gg: 53, shield: 31, crown: 77 },
+    date: 'Hoy a las 11:10'
+  },
+  {
+    id: 'ded-7',
+    user: 'Ferdinang',
+    platform: 'twitch',
+    role: 'SUB NIVEL 25',
+    rarity: 'legendary',
+    avatar: '',
+    type: 'text',
+    message: '¡Muchas felicidades Arixu! Gracias por todos los buenos momentos y las risas diarias en el chat. Eres una streamer increíble y te mereces lo mejor en tu día. ¡GG!',
+    reactions: { gg: 48, shield: 39, crown: 82 },
+    date: 'Hoy a las 10:45'
+  },
+  {
+    id: 'ded-8',
+    user: 'Hellkhan77',
+    platform: 'twitch',
+    role: 'SNIPER DE ÉLITE',
+    rarity: 'mythic',
+    avatar: '',
+    type: 'text',
+    message: '¡Feliz cumple Ari! Por otro año más de rusheos épicos, victorias campales y clutches imposibles en final de zona. ¡Pásalo genial y disfruta al máximo de tu día!',
+    reactions: { gg: 70, shield: 44, crown: 95 },
+    date: 'Hoy a las 10:15'
+  },
+  {
+    id: 'ded-9',
+    user: 'Abranzin',
+    platform: 'twitch',
+    role: 'COMUNIDAD TWITCH',
+    rarity: 'rare',
+    avatar: '',
+    type: 'text',
+    message: '¡Felicidades Ari! Qué alegría celebrar tus 25 años con toda la comunidad de Twitch. Gracias por alegrarnos las tardes con tu energía y buen rollo. ¡A por más!',
+    reactions: { gg: 38, shield: 26, crown: 49 },
+    date: 'Hoy a las 09:30'
+  },
+  {
+    id: 'ded-10',
+    user: 'Dante',
+    platform: 'twitch',
+    role: 'MODERADOR TWITCH',
+    rarity: 'epic',
+    avatar: '',
+    type: 'text',
+    message: '¡Muy feliz cumpleaños capitana! Cuidar el chat y ver cómo disfrutas de cada partida es un placer. Que este nuevo nivel te traiga muchísimos éxitos y alegrías.',
+    reactions: { gg: 65, shield: 50, crown: 88 },
+    date: 'Ayer a las 21:50'
+  },
+  {
+    id: 'ded-11',
+    user: 'GregorM',
+    platform: 'twitch',
+    role: 'SUB VETERANO',
+    rarity: 'legendary',
+    avatar: '',
+    type: 'text',
+    message: '¡Felices 25 Ari! Ya son muchos directos compartidos y partidas inolvidables. Que sigas brillando igual y que nunca falte el escudo ni las buenas partidas. ¡Felicidades!',
+    reactions: { gg: 57, shield: 34, crown: 73 },
+    date: 'Ayer a las 21:15'
+  },
+  {
+    id: 'ded-12',
+    user: 'laabluue',
+    platform: 'twitch',
+    role: 'COMUNIDAD TWITCH',
+    rarity: 'rare',
+    avatar: '',
+    type: 'text',
+    message: '¡Felicidades Arixu! Eres una inspiración y una persona súper divertida. Que pases un cumpleaños maravilloso rodeada de todos los que te quieren. ¡Un abrazo enorme!',
+    reactions: { gg: 44, shield: 29, crown: 61 },
+    date: 'Ayer a las 20:40'
+  },
+  {
+    id: 'ded-13',
+    user: 'ErreDeRamon',
+    platform: 'twitch',
+    role: 'TRYHARD DE ZONA',
+    rarity: 'epic',
+    avatar: '',
+    type: 'text',
+    message: '¡Feliz nivel 25 Ari! Que no se acaben nunca las partidas de risas, los gritos de susto y las coronas ganadas en el último segundo. ¡A celebrarlo a lo grande!',
+    reactions: { gg: 62, shield: 41, crown: 85 },
+    date: 'Ayer a las 19:25'
+  },
+  {
+    id: 'ded-14',
+    user: 'Arcosmen01',
+    platform: 'twitch',
+    role: 'DÚO DE CORONAS',
+    rarity: 'legendary',
+    avatar: '',
+    type: 'text',
+    message: '¡Muchas felicidades Ari! Siempre es un gusto verte jugar y compartir stream con la mejor comunidad. ¡Que disfrutes al máximo de tu cumpleaños, reina de Twitch!',
+    reactions: { gg: 76, shield: 47, crown: 104 },
+    date: 'Ayer a las 18:00'
   }
 ];
 
 class DedicationsManager {
   constructor() {
-    this.storageKey = 'imarixu_birthday_dedications_v3';
+    this.storageKey = 'imarixu_birthday_dedications_v4';
     this.dedications = this.loadDedications();
   }
 
@@ -85,6 +193,7 @@ class DedicationsManager {
     try {
       localStorage.removeItem('imarixu_birthday_dedications_v1');
       localStorage.removeItem('imarixu_birthday_dedications_v2');
+      localStorage.removeItem('imarixu_birthday_dedications_v3');
     } catch (_) {}
     return [...DEFAULT_DEDICATIONS];
   }

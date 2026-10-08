@@ -301,25 +301,27 @@
               <span class="text-xs text-purple-300/80 font-mono">Streamer Élite • Nivel 25 Tryhard & Risas</span>
             </div>
           </div>
-
-          <!-- Quick Mini Potion Drinking Trigger -->
-          <button id="drink-mini-trigger" class="btn-quick-mini flex items-center gap-2 px-3.5 py-1.5 rounded-xl text-xs sm:text-sm font-black text-white shrink-0 group shadow-lg" title="Beber Mini Escudo de 50">
-            <span class="text-sm select-none leading-none drop-shadow group-hover:scale-110 transition-transform">🥤</span>
-            <span class="tracking-wide text-white drop-shadow">TOMAR MINI (+50)</span>
-          </button>
         </div>
 
         <!-- HUD Bars (Fortnite Slurp Shield & Health) -->
-        <div class="space-y-3 font-hud text-xs font-bold">
+        <div class="space-y-4 font-hud text-xs font-bold pt-3 border-t border-purple-800/60">
           
           <!-- Shield Bar (50/100 initial) -->
           <div>
-            <div class="flex justify-between mb-1">
-              <span class="text-cyan-400 flex items-center gap-1">
-                <img src="assets/images/shield-potion.svg" class="w-3.5 h-3.5 inline" alt="Shield">
+            <!-- Header directly above ESCUDO SLURP bar with Tomar Mini button -->
+            <div class="flex justify-between items-center mb-2 flex-wrap gap-2">
+              <span class="text-cyan-400 flex items-center gap-1.5 font-hud font-bold text-sm">
+                <img src="assets/images/shield-potion.svg" class="w-4 h-4 inline" alt="Shield">
                 ESCUDO SLURP
               </span>
-              <span id="shield-val-text" class="text-cyan-300">50 / 100</span>
+              <div class="flex items-center gap-3">
+                <!-- Quick Mini Potion Drinking Trigger -->
+                <button id="drink-mini-trigger" class="btn-quick-mini flex items-center gap-2 px-3.5 py-1.5 rounded-xl text-xs sm:text-sm font-black text-white shrink-0 group shadow-lg" title="Beber Mini Escudo de 50">
+                  <span class="text-sm select-none leading-none drop-shadow group-hover:scale-110 transition-transform">🥤</span>
+                  <span class="tracking-wide text-white drop-shadow">TOMAR MINI (+50)</span>
+                </button>
+                <span id="shield-val-text" class="text-cyan-300 font-mono text-xs">50 / 100</span>
+              </div>
             </div>
             <div class="w-full h-4 bg-slate-900 rounded-full overflow-hidden p-0.5 border border-cyan-700/60 shadow-inner">
               <div id="shield-bar-fill" class="h-full bg-gradient-to-r from-cyan-400 via-sky-400 to-blue-500 rounded-full transition-all duration-700 shadow-[0_0_12px_#00f0ff]" style="width: 50%;"></div>
@@ -1246,6 +1248,510 @@
               <button onclick="handleReaction('ded-5', 'crown', event)" class="reaction-btn flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-purple-950/70 hover:bg-amber-950/80 border border-amber-700/60 hover:border-amber-400 text-xs font-bold text-amber-300 transition-all active:scale-95">
                 <img src="assets/images/crown.svg" class="w-4 h-4" alt="Corona">
                 <span class="counter-val text-white/90" id="cnt-ded-5-crown">54</span>
+              </button>
+            </div>
+            <span class="text-[11px] text-purple-400/80 font-mono flex items-center gap-1">
+              <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+              En directo
+            </span>
+          </div>
+        </article>
+
+        <!-- 6. Sleezzy (VIP & TRYHARD) -->
+        <article class="feed-card relative bg-[#130b28]/90 backdrop-blur-md rounded-2xl p-5 md:p-6 border-2 border-purple-500 shadow-[0_0_20px_rgba(168,85,247,0.3)] transition-all duration-300 hover:-translate-y-1" data-id="ded-6">
+          <div class="absolute -top-3.5 right-6 bg-gradient-to-r from-purple-500 to-fuchsia-600 text-white font-black text-[11px] uppercase tracking-wider px-3 py-0.5 rounded-md skew-x-[-10deg] shadow-md border border-black/40">
+            ÉPICO
+          </div>
+          <div class="flex items-center gap-3.5 mb-3">
+            <div class="relative">
+              <div class="w-13 h-13 rounded-full p-0.5 bg-gradient-to-tr from-purple-500 to-cyan-400 shadow-md">
+                <div class="w-12 h-12 rounded-full bg-[#1b0c36] border-2 border-[#130b28] flex items-center justify-center text-purple-300/70" title="Sin foto">
+                  <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+                </div>
+              </div>
+              <span class="absolute -bottom-1 -right-1 bg-purple-900 border border-purple-400 rounded-full p-0.5" title="twitch">
+                <svg class="w-3.5 h-3.5 text-purple-300" fill="currentColor" viewBox="0 0 24 24"><path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714Z"/></svg>
+              </span>
+            </div>
+            <div class="flex-1 min-w-0">
+              <div class="flex items-center gap-2 flex-wrap">
+                <span class="font-burbank text-lg font-bold text-white tracking-wide truncate">Sleezzy</span>
+                <span class="text-[10px] uppercase font-black px-2 py-0.5 rounded bg-purple-950/80 text-purple-300 border border-purple-700/60">VIP & TRYHARD</span>
+              </div>
+              <div class="flex items-center gap-1.5 text-[11px] text-gray-400 mt-0.5">
+                <span class="inline-flex items-center gap-1 text-[#a970ff] font-bold" title="Twitch">
+                  <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714Z"/></svg>
+                  <span class="text-[10px] uppercase font-mono tracking-wider">Twitch</span>
+                </span>
+                <span class="text-purple-400/50">•</span>
+                <span>Hoy a las 11:10</span>
+              </div>
+            </div>
+          </div>
+          <p class="text-gray-200 text-sm md:text-base leading-relaxed font-sans font-medium whitespace-pre-line">
+            ¡Feliz cumpleaños Ari! Que este nivel 25 venga cargado de muchas coronas de victoria, snipes limpios y momentos inolvidables en stream. ¡A seguir rompiéndola!
+          </p>
+          <div class="mt-5 pt-4 border-t border-purple-900/60 flex items-center justify-between flex-wrap gap-2">
+            <div class="flex items-center gap-2">
+              <button onclick="handleReaction('ded-6', 'gg', event)" class="reaction-btn flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-purple-950/70 hover:bg-purple-800/80 border border-purple-700/50 hover:border-yellow-400 text-xs font-bold text-yellow-300 transition-all active:scale-95">
+                <span class="font-black text-sm">GG</span>
+                <span class="counter-val text-white/90" id="cnt-ded-6-gg">53</span>
+              </button>
+              <button onclick="handleReaction('ded-6', 'shield', event)" class="reaction-btn flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-purple-950/70 hover:bg-cyan-950/80 border border-cyan-800/60 hover:border-cyan-400 text-xs font-bold text-cyan-300 transition-all active:scale-95">
+                <img src="assets/images/shield-potion.svg" class="w-4 h-4" alt="Mini">
+                <span class="counter-val text-white/90" id="cnt-ded-6-shield">31</span>
+              </button>
+              <button onclick="handleReaction('ded-6', 'crown', event)" class="reaction-btn flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-purple-950/70 hover:bg-amber-950/80 border border-amber-700/60 hover:border-amber-400 text-xs font-bold text-amber-300 transition-all active:scale-95">
+                <img src="assets/images/crown.svg" class="w-4 h-4" alt="Corona">
+                <span class="counter-val text-white/90" id="cnt-ded-6-crown">77</span>
+              </button>
+            </div>
+            <span class="text-[11px] text-purple-400/80 font-mono flex items-center gap-1">
+              <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+              En directo
+            </span>
+          </div>
+        </article>
+
+        <!-- 7. Ferdinang (SUB NIVEL 25) -->
+        <article class="feed-card relative bg-[#130b28]/90 backdrop-blur-md rounded-2xl p-5 md:p-6 border-2 border-yellow-400 shadow-[0_0_20px_rgba(234,179,8,0.3)] transition-all duration-300 hover:-translate-y-1" data-id="ded-7">
+          <div class="absolute -top-3.5 right-6 bg-gradient-to-r from-yellow-400 to-amber-500 text-black font-black text-[11px] uppercase tracking-wider px-3 py-0.5 rounded-md skew-x-[-10deg] shadow-md border border-black/40">
+            LEGENDARIO
+          </div>
+          <div class="flex items-center gap-3.5 mb-3">
+            <div class="relative">
+              <div class="w-13 h-13 rounded-full p-0.5 bg-gradient-to-tr from-purple-500 to-cyan-400 shadow-md">
+                <div class="w-12 h-12 rounded-full bg-[#1b0c36] border-2 border-[#130b28] flex items-center justify-center text-purple-300/70" title="Sin foto">
+                  <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+                </div>
+              </div>
+              <span class="absolute -bottom-1 -right-1 bg-purple-900 border border-purple-400 rounded-full p-0.5" title="twitch">
+                <svg class="w-3.5 h-3.5 text-purple-300" fill="currentColor" viewBox="0 0 24 24"><path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714Z"/></svg>
+              </span>
+            </div>
+            <div class="flex-1 min-w-0">
+              <div class="flex items-center gap-2 flex-wrap">
+                <span class="font-burbank text-lg font-bold text-white tracking-wide truncate">Ferdinang</span>
+                <span class="text-[10px] uppercase font-black px-2 py-0.5 rounded bg-purple-950/80 text-purple-300 border border-purple-700/60">SUB NIVEL 25</span>
+              </div>
+              <div class="flex items-center gap-1.5 text-[11px] text-gray-400 mt-0.5">
+                <span class="inline-flex items-center gap-1 text-[#a970ff] font-bold" title="Twitch">
+                  <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714Z"/></svg>
+                  <span class="text-[10px] uppercase font-mono tracking-wider">Twitch</span>
+                </span>
+                <span class="text-purple-400/50">•</span>
+                <span>Hoy a las 10:45</span>
+              </div>
+            </div>
+          </div>
+          <p class="text-gray-200 text-sm md:text-base leading-relaxed font-sans font-medium whitespace-pre-line">
+            ¡Muchas felicidades Arixu! Gracias por todos los buenos momentos y las risas diarias en el chat. Eres una streamer increíble y te mereces lo mejor en tu día. ¡GG!
+          </p>
+          <div class="mt-5 pt-4 border-t border-purple-900/60 flex items-center justify-between flex-wrap gap-2">
+            <div class="flex items-center gap-2">
+              <button onclick="handleReaction('ded-7', 'gg', event)" class="reaction-btn flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-purple-950/70 hover:bg-purple-800/80 border border-purple-700/50 hover:border-yellow-400 text-xs font-bold text-yellow-300 transition-all active:scale-95">
+                <span class="font-black text-sm">GG</span>
+                <span class="counter-val text-white/90" id="cnt-ded-7-gg">48</span>
+              </button>
+              <button onclick="handleReaction('ded-7', 'shield', event)" class="reaction-btn flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-purple-950/70 hover:bg-cyan-950/80 border border-cyan-800/60 hover:border-cyan-400 text-xs font-bold text-cyan-300 transition-all active:scale-95">
+                <img src="assets/images/shield-potion.svg" class="w-4 h-4" alt="Mini">
+                <span class="counter-val text-white/90" id="cnt-ded-7-shield">39</span>
+              </button>
+              <button onclick="handleReaction('ded-7', 'crown', event)" class="reaction-btn flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-purple-950/70 hover:bg-amber-950/80 border border-amber-700/60 hover:border-amber-400 text-xs font-bold text-amber-300 transition-all active:scale-95">
+                <img src="assets/images/crown.svg" class="w-4 h-4" alt="Corona">
+                <span class="counter-val text-white/90" id="cnt-ded-7-crown">82</span>
+              </button>
+            </div>
+            <span class="text-[11px] text-purple-400/80 font-mono flex items-center gap-1">
+              <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+              En directo
+            </span>
+          </div>
+        </article>
+
+        <!-- 8. Hellkhan77 (SNIPER DE ÉLITE) -->
+        <article class="feed-card relative bg-[#130b28]/90 backdrop-blur-md rounded-2xl p-5 md:p-6 border-2 border-amber-400 shadow-[0_0_20px_rgba(245,158,11,0.35)] transition-all duration-300 hover:-translate-y-1" data-id="ded-8">
+          <div class="absolute -top-3.5 right-6 bg-gradient-to-r from-amber-500 to-red-500 text-black font-black text-[11px] uppercase tracking-wider px-3 py-0.5 rounded-md skew-x-[-10deg] shadow-md border border-black/40">
+            MÍTICO
+          </div>
+          <div class="flex items-center gap-3.5 mb-3">
+            <div class="relative">
+              <div class="w-13 h-13 rounded-full p-0.5 bg-gradient-to-tr from-amber-400 to-red-500 shadow-md">
+                <div class="w-12 h-12 rounded-full bg-[#1b0c36] border-2 border-[#130b28] flex items-center justify-center text-purple-300/70" title="Sin foto">
+                  <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+                </div>
+              </div>
+              <span class="absolute -bottom-1 -right-1 bg-purple-900 border border-purple-400 rounded-full p-0.5" title="twitch">
+                <svg class="w-3.5 h-3.5 text-purple-300" fill="currentColor" viewBox="0 0 24 24"><path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714Z"/></svg>
+              </span>
+            </div>
+            <div class="flex-1 min-w-0">
+              <div class="flex items-center gap-2 flex-wrap">
+                <span class="font-burbank text-lg font-bold text-white tracking-wide truncate">Hellkhan77</span>
+                <span class="text-[10px] uppercase font-black px-2 py-0.5 rounded bg-purple-950/80 text-purple-300 border border-purple-700/60">SNIPER DE ÉLITE</span>
+              </div>
+              <div class="flex items-center gap-1.5 text-[11px] text-gray-400 mt-0.5">
+                <span class="inline-flex items-center gap-1 text-[#a970ff] font-bold" title="Twitch">
+                  <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714Z"/></svg>
+                  <span class="text-[10px] uppercase font-mono tracking-wider">Twitch</span>
+                </span>
+                <span class="text-purple-400/50">•</span>
+                <span>Hoy a las 10:15</span>
+              </div>
+            </div>
+          </div>
+          <p class="text-gray-200 text-sm md:text-base leading-relaxed font-sans font-medium whitespace-pre-line">
+            ¡Feliz cumple Ari! Por otro año más de rusheos épicos, victorias campales y clutches imposibles en final de zona. ¡Pásalo genial y disfruta al máximo de tu día!
+          </p>
+          <div class="mt-5 pt-4 border-t border-purple-900/60 flex items-center justify-between flex-wrap gap-2">
+            <div class="flex items-center gap-2">
+              <button onclick="handleReaction('ded-8', 'gg', event)" class="reaction-btn flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-purple-950/70 hover:bg-purple-800/80 border border-purple-700/50 hover:border-yellow-400 text-xs font-bold text-yellow-300 transition-all active:scale-95">
+                <span class="font-black text-sm">GG</span>
+                <span class="counter-val text-white/90" id="cnt-ded-8-gg">70</span>
+              </button>
+              <button onclick="handleReaction('ded-8', 'shield', event)" class="reaction-btn flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-purple-950/70 hover:bg-cyan-950/80 border border-cyan-800/60 hover:border-cyan-400 text-xs font-bold text-cyan-300 transition-all active:scale-95">
+                <img src="assets/images/shield-potion.svg" class="w-4 h-4" alt="Mini">
+                <span class="counter-val text-white/90" id="cnt-ded-8-shield">44</span>
+              </button>
+              <button onclick="handleReaction('ded-8', 'crown', event)" class="reaction-btn flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-purple-950/70 hover:bg-amber-950/80 border border-amber-700/60 hover:border-amber-400 text-xs font-bold text-amber-300 transition-all active:scale-95">
+                <img src="assets/images/crown.svg" class="w-4 h-4" alt="Corona">
+                <span class="counter-val text-white/90" id="cnt-ded-8-crown">95</span>
+              </button>
+            </div>
+            <span class="text-[11px] text-purple-400/80 font-mono flex items-center gap-1">
+              <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+              En directo
+            </span>
+          </div>
+        </article>
+
+        <!-- 9. Abranzin (COMUNIDAD TWITCH) -->
+        <article class="feed-card relative bg-[#130b28]/90 backdrop-blur-md rounded-2xl p-5 md:p-6 border-2 border-cyan-400 shadow-[0_0_20px_rgba(6,182,212,0.3)] transition-all duration-300 hover:-translate-y-1" data-id="ded-9">
+          <div class="absolute -top-3.5 right-6 bg-gradient-to-r from-cyan-400 to-blue-500 text-black font-black text-[11px] uppercase tracking-wider px-3 py-0.5 rounded-md skew-x-[-10deg] shadow-md border border-black/40">
+            RARO / SLURP
+          </div>
+          <div class="flex items-center gap-3.5 mb-3">
+            <div class="relative">
+              <div class="w-13 h-13 rounded-full p-0.5 bg-gradient-to-tr from-purple-500 to-cyan-400 shadow-md">
+                <div class="w-12 h-12 rounded-full bg-[#1b0c36] border-2 border-[#130b28] flex items-center justify-center text-purple-300/70" title="Sin foto">
+                  <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+                </div>
+              </div>
+              <span class="absolute -bottom-1 -right-1 bg-purple-900 border border-purple-400 rounded-full p-0.5" title="twitch">
+                <svg class="w-3.5 h-3.5 text-purple-300" fill="currentColor" viewBox="0 0 24 24"><path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714Z"/></svg>
+              </span>
+            </div>
+            <div class="flex-1 min-w-0">
+              <div class="flex items-center gap-2 flex-wrap">
+                <span class="font-burbank text-lg font-bold text-white tracking-wide truncate">Abranzin</span>
+                <span class="text-[10px] uppercase font-black px-2 py-0.5 rounded bg-purple-950/80 text-purple-300 border border-purple-700/60">COMUNIDAD TWITCH</span>
+              </div>
+              <div class="flex items-center gap-1.5 text-[11px] text-gray-400 mt-0.5">
+                <span class="inline-flex items-center gap-1 text-[#a970ff] font-bold" title="Twitch">
+                  <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714Z"/></svg>
+                  <span class="text-[10px] uppercase font-mono tracking-wider">Twitch</span>
+                </span>
+                <span class="text-purple-400/50">•</span>
+                <span>Hoy a las 09:30</span>
+              </div>
+            </div>
+          </div>
+          <p class="text-gray-200 text-sm md:text-base leading-relaxed font-sans font-medium whitespace-pre-line">
+            ¡Felicidades Ari! Qué alegría celebrar tus 25 años con toda la comunidad de Twitch. Gracias por alegrarnos las tardes con tu energía y buen rollo. ¡A por más!
+          </p>
+          <div class="mt-5 pt-4 border-t border-purple-900/60 flex items-center justify-between flex-wrap gap-2">
+            <div class="flex items-center gap-2">
+              <button onclick="handleReaction('ded-9', 'gg', event)" class="reaction-btn flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-purple-950/70 hover:bg-purple-800/80 border border-purple-700/50 hover:border-yellow-400 text-xs font-bold text-yellow-300 transition-all active:scale-95">
+                <span class="font-black text-sm">GG</span>
+                <span class="counter-val text-white/90" id="cnt-ded-9-gg">38</span>
+              </button>
+              <button onclick="handleReaction('ded-9', 'shield', event)" class="reaction-btn flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-purple-950/70 hover:bg-cyan-950/80 border border-cyan-800/60 hover:border-cyan-400 text-xs font-bold text-cyan-300 transition-all active:scale-95">
+                <img src="assets/images/shield-potion.svg" class="w-4 h-4" alt="Mini">
+                <span class="counter-val text-white/90" id="cnt-ded-9-shield">26</span>
+              </button>
+              <button onclick="handleReaction('ded-9', 'crown', event)" class="reaction-btn flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-purple-950/70 hover:bg-amber-950/80 border border-amber-700/60 hover:border-amber-400 text-xs font-bold text-amber-300 transition-all active:scale-95">
+                <img src="assets/images/crown.svg" class="w-4 h-4" alt="Corona">
+                <span class="counter-val text-white/90" id="cnt-ded-9-crown">49</span>
+              </button>
+            </div>
+            <span class="text-[11px] text-purple-400/80 font-mono flex items-center gap-1">
+              <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+              En directo
+            </span>
+          </div>
+        </article>
+
+        <!-- 10. Dante (MODERADOR TWITCH) -->
+        <article class="feed-card relative bg-[#130b28]/90 backdrop-blur-md rounded-2xl p-5 md:p-6 border-2 border-purple-500 shadow-[0_0_20px_rgba(168,85,247,0.3)] transition-all duration-300 hover:-translate-y-1" data-id="ded-10">
+          <div class="absolute -top-3.5 right-6 bg-gradient-to-r from-purple-500 to-fuchsia-600 text-white font-black text-[11px] uppercase tracking-wider px-3 py-0.5 rounded-md skew-x-[-10deg] shadow-md border border-black/40">
+            ÉPICO
+          </div>
+          <div class="flex items-center gap-3.5 mb-3">
+            <div class="relative">
+              <div class="w-13 h-13 rounded-full p-0.5 bg-gradient-to-tr from-purple-500 to-cyan-400 shadow-md">
+                <div class="w-12 h-12 rounded-full bg-[#1b0c36] border-2 border-[#130b28] flex items-center justify-center text-purple-300/70" title="Sin foto">
+                  <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+                </div>
+              </div>
+              <span class="absolute -bottom-1 -right-1 bg-purple-900 border border-purple-400 rounded-full p-0.5" title="twitch">
+                <svg class="w-3.5 h-3.5 text-purple-300" fill="currentColor" viewBox="0 0 24 24"><path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714Z"/></svg>
+              </span>
+            </div>
+            <div class="flex-1 min-w-0">
+              <div class="flex items-center gap-2 flex-wrap">
+                <span class="font-burbank text-lg font-bold text-white tracking-wide truncate">Dante</span>
+                <span class="text-[10px] uppercase font-black px-2 py-0.5 rounded bg-purple-950/80 text-purple-300 border border-purple-700/60">MODERADOR TWITCH</span>
+              </div>
+              <div class="flex items-center gap-1.5 text-[11px] text-gray-400 mt-0.5">
+                <span class="inline-flex items-center gap-1 text-[#a970ff] font-bold" title="Twitch">
+                  <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714Z"/></svg>
+                  <span class="text-[10px] uppercase font-mono tracking-wider">Twitch</span>
+                </span>
+                <span class="text-purple-400/50">•</span>
+                <span>Ayer a las 21:50</span>
+              </div>
+            </div>
+          </div>
+          <p class="text-gray-200 text-sm md:text-base leading-relaxed font-sans font-medium whitespace-pre-line">
+            ¡Muy feliz cumpleaños capitana! Cuidar el chat y ver cómo disfrutas de cada partida es un placer. Que este nuevo nivel te traiga muchísimos éxitos y alegrías.
+          </p>
+          <div class="mt-5 pt-4 border-t border-purple-900/60 flex items-center justify-between flex-wrap gap-2">
+            <div class="flex items-center gap-2">
+              <button onclick="handleReaction('ded-10', 'gg', event)" class="reaction-btn flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-purple-950/70 hover:bg-purple-800/80 border border-purple-700/50 hover:border-yellow-400 text-xs font-bold text-yellow-300 transition-all active:scale-95">
+                <span class="font-black text-sm">GG</span>
+                <span class="counter-val text-white/90" id="cnt-ded-10-gg">65</span>
+              </button>
+              <button onclick="handleReaction('ded-10', 'shield', event)" class="reaction-btn flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-purple-950/70 hover:bg-cyan-950/80 border border-cyan-800/60 hover:border-cyan-400 text-xs font-bold text-cyan-300 transition-all active:scale-95">
+                <img src="assets/images/shield-potion.svg" class="w-4 h-4" alt="Mini">
+                <span class="counter-val text-white/90" id="cnt-ded-10-shield">50</span>
+              </button>
+              <button onclick="handleReaction('ded-10', 'crown', event)" class="reaction-btn flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-purple-950/70 hover:bg-amber-950/80 border border-amber-700/60 hover:border-amber-400 text-xs font-bold text-amber-300 transition-all active:scale-95">
+                <img src="assets/images/crown.svg" class="w-4 h-4" alt="Corona">
+                <span class="counter-val text-white/90" id="cnt-ded-10-crown">88</span>
+              </button>
+            </div>
+            <span class="text-[11px] text-purple-400/80 font-mono flex items-center gap-1">
+              <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+              En directo
+            </span>
+          </div>
+        </article>
+
+        <!-- 11. GregorM (SUB VETERANO) -->
+        <article class="feed-card relative bg-[#130b28]/90 backdrop-blur-md rounded-2xl p-5 md:p-6 border-2 border-yellow-400 shadow-[0_0_20px_rgba(234,179,8,0.3)] transition-all duration-300 hover:-translate-y-1" data-id="ded-11">
+          <div class="absolute -top-3.5 right-6 bg-gradient-to-r from-yellow-400 to-amber-500 text-black font-black text-[11px] uppercase tracking-wider px-3 py-0.5 rounded-md skew-x-[-10deg] shadow-md border border-black/40">
+            LEGENDARIO
+          </div>
+          <div class="flex items-center gap-3.5 mb-3">
+            <div class="relative">
+              <div class="w-13 h-13 rounded-full p-0.5 bg-gradient-to-tr from-purple-500 to-cyan-400 shadow-md">
+                <div class="w-12 h-12 rounded-full bg-[#1b0c36] border-2 border-[#130b28] flex items-center justify-center text-purple-300/70" title="Sin foto">
+                  <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+                </div>
+              </div>
+              <span class="absolute -bottom-1 -right-1 bg-purple-900 border border-purple-400 rounded-full p-0.5" title="twitch">
+                <svg class="w-3.5 h-3.5 text-purple-300" fill="currentColor" viewBox="0 0 24 24"><path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714Z"/></svg>
+              </span>
+            </div>
+            <div class="flex-1 min-w-0">
+              <div class="flex items-center gap-2 flex-wrap">
+                <span class="font-burbank text-lg font-bold text-white tracking-wide truncate">GregorM</span>
+                <span class="text-[10px] uppercase font-black px-2 py-0.5 rounded bg-purple-950/80 text-purple-300 border border-purple-700/60">SUB VETERANO</span>
+              </div>
+              <div class="flex items-center gap-1.5 text-[11px] text-gray-400 mt-0.5">
+                <span class="inline-flex items-center gap-1 text-[#a970ff] font-bold" title="Twitch">
+                  <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714Z"/></svg>
+                  <span class="text-[10px] uppercase font-mono tracking-wider">Twitch</span>
+                </span>
+                <span class="text-purple-400/50">•</span>
+                <span>Ayer a las 21:15</span>
+              </div>
+            </div>
+          </div>
+          <p class="text-gray-200 text-sm md:text-base leading-relaxed font-sans font-medium whitespace-pre-line">
+            ¡Felices 25 Ari! Ya son muchos directos compartidos y partidas inolvidables. Que sigas brillando igual y que nunca falte el escudo ni las buenas partidas. ¡Felicidades!
+          </p>
+          <div class="mt-5 pt-4 border-t border-purple-900/60 flex items-center justify-between flex-wrap gap-2">
+            <div class="flex items-center gap-2">
+              <button onclick="handleReaction('ded-11', 'gg', event)" class="reaction-btn flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-purple-950/70 hover:bg-purple-800/80 border border-purple-700/50 hover:border-yellow-400 text-xs font-bold text-yellow-300 transition-all active:scale-95">
+                <span class="font-black text-sm">GG</span>
+                <span class="counter-val text-white/90" id="cnt-ded-11-gg">57</span>
+              </button>
+              <button onclick="handleReaction('ded-11', 'shield', event)" class="reaction-btn flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-purple-950/70 hover:bg-cyan-950/80 border border-cyan-800/60 hover:border-cyan-400 text-xs font-bold text-cyan-300 transition-all active:scale-95">
+                <img src="assets/images/shield-potion.svg" class="w-4 h-4" alt="Mini">
+                <span class="counter-val text-white/90" id="cnt-ded-11-shield">34</span>
+              </button>
+              <button onclick="handleReaction('ded-11', 'crown', event)" class="reaction-btn flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-purple-950/70 hover:bg-amber-950/80 border border-amber-700/60 hover:border-amber-400 text-xs font-bold text-amber-300 transition-all active:scale-95">
+                <img src="assets/images/crown.svg" class="w-4 h-4" alt="Corona">
+                <span class="counter-val text-white/90" id="cnt-ded-11-crown">73</span>
+              </button>
+            </div>
+            <span class="text-[11px] text-purple-400/80 font-mono flex items-center gap-1">
+              <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+              En directo
+            </span>
+          </div>
+        </article>
+
+        <!-- 12. laabluue (COMUNIDAD TWITCH) -->
+        <article class="feed-card relative bg-[#130b28]/90 backdrop-blur-md rounded-2xl p-5 md:p-6 border-2 border-cyan-400 shadow-[0_0_20px_rgba(6,182,212,0.3)] transition-all duration-300 hover:-translate-y-1" data-id="ded-12">
+          <div class="absolute -top-3.5 right-6 bg-gradient-to-r from-cyan-400 to-blue-500 text-black font-black text-[11px] uppercase tracking-wider px-3 py-0.5 rounded-md skew-x-[-10deg] shadow-md border border-black/40">
+            RARO / SLURP
+          </div>
+          <div class="flex items-center gap-3.5 mb-3">
+            <div class="relative">
+              <div class="w-13 h-13 rounded-full p-0.5 bg-gradient-to-tr from-purple-500 to-cyan-400 shadow-md">
+                <div class="w-12 h-12 rounded-full bg-[#1b0c36] border-2 border-[#130b28] flex items-center justify-center text-purple-300/70" title="Sin foto">
+                  <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+                </div>
+              </div>
+              <span class="absolute -bottom-1 -right-1 bg-purple-900 border border-purple-400 rounded-full p-0.5" title="twitch">
+                <svg class="w-3.5 h-3.5 text-purple-300" fill="currentColor" viewBox="0 0 24 24"><path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714Z"/></svg>
+              </span>
+            </div>
+            <div class="flex-1 min-w-0">
+              <div class="flex items-center gap-2 flex-wrap">
+                <span class="font-burbank text-lg font-bold text-white tracking-wide truncate">laabluue</span>
+                <span class="text-[10px] uppercase font-black px-2 py-0.5 rounded bg-purple-950/80 text-purple-300 border border-purple-700/60">COMUNIDAD TWITCH</span>
+              </div>
+              <div class="flex items-center gap-1.5 text-[11px] text-gray-400 mt-0.5">
+                <span class="inline-flex items-center gap-1 text-[#a970ff] font-bold" title="Twitch">
+                  <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714Z"/></svg>
+                  <span class="text-[10px] uppercase font-mono tracking-wider">Twitch</span>
+                </span>
+                <span class="text-purple-400/50">•</span>
+                <span>Ayer a las 20:40</span>
+              </div>
+            </div>
+          </div>
+          <p class="text-gray-200 text-sm md:text-base leading-relaxed font-sans font-medium whitespace-pre-line">
+            ¡Felicidades Arixu! Eres una inspiración y una persona súper divertida. Que pases un cumpleaños maravilloso rodeada de todos los que te quieren. ¡Un abrazo enorme!
+          </p>
+          <div class="mt-5 pt-4 border-t border-purple-900/60 flex items-center justify-between flex-wrap gap-2">
+            <div class="flex items-center gap-2">
+              <button onclick="handleReaction('ded-12', 'gg', event)" class="reaction-btn flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-purple-950/70 hover:bg-purple-800/80 border border-purple-700/50 hover:border-yellow-400 text-xs font-bold text-yellow-300 transition-all active:scale-95">
+                <span class="font-black text-sm">GG</span>
+                <span class="counter-val text-white/90" id="cnt-ded-12-gg">44</span>
+              </button>
+              <button onclick="handleReaction('ded-12', 'shield', event)" class="reaction-btn flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-purple-950/70 hover:bg-cyan-950/80 border border-cyan-800/60 hover:border-cyan-400 text-xs font-bold text-cyan-300 transition-all active:scale-95">
+                <img src="assets/images/shield-potion.svg" class="w-4 h-4" alt="Mini">
+                <span class="counter-val text-white/90" id="cnt-ded-12-shield">29</span>
+              </button>
+              <button onclick="handleReaction('ded-12', 'crown', event)" class="reaction-btn flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-purple-950/70 hover:bg-amber-950/80 border border-amber-700/60 hover:border-amber-400 text-xs font-bold text-amber-300 transition-all active:scale-95">
+                <img src="assets/images/crown.svg" class="w-4 h-4" alt="Corona">
+                <span class="counter-val text-white/90" id="cnt-ded-12-crown">61</span>
+              </button>
+            </div>
+            <span class="text-[11px] text-purple-400/80 font-mono flex items-center gap-1">
+              <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+              En directo
+            </span>
+          </div>
+        </article>
+
+        <!-- 13. ErreDeRamon (TRYHARD DE ZONA) -->
+        <article class="feed-card relative bg-[#130b28]/90 backdrop-blur-md rounded-2xl p-5 md:p-6 border-2 border-purple-500 shadow-[0_0_20px_rgba(168,85,247,0.3)] transition-all duration-300 hover:-translate-y-1" data-id="ded-13">
+          <div class="absolute -top-3.5 right-6 bg-gradient-to-r from-purple-500 to-fuchsia-600 text-white font-black text-[11px] uppercase tracking-wider px-3 py-0.5 rounded-md skew-x-[-10deg] shadow-md border border-black/40">
+            ÉPICO
+          </div>
+          <div class="flex items-center gap-3.5 mb-3">
+            <div class="relative">
+              <div class="w-13 h-13 rounded-full p-0.5 bg-gradient-to-tr from-purple-500 to-cyan-400 shadow-md">
+                <div class="w-12 h-12 rounded-full bg-[#1b0c36] border-2 border-[#130b28] flex items-center justify-center text-purple-300/70" title="Sin foto">
+                  <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+                </div>
+              </div>
+              <span class="absolute -bottom-1 -right-1 bg-purple-900 border border-purple-400 rounded-full p-0.5" title="twitch">
+                <svg class="w-3.5 h-3.5 text-purple-300" fill="currentColor" viewBox="0 0 24 24"><path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714Z"/></svg>
+              </span>
+            </div>
+            <div class="flex-1 min-w-0">
+              <div class="flex items-center gap-2 flex-wrap">
+                <span class="font-burbank text-lg font-bold text-white tracking-wide truncate">ErreDeRamon</span>
+                <span class="text-[10px] uppercase font-black px-2 py-0.5 rounded bg-purple-950/80 text-purple-300 border border-purple-700/60">TRYHARD DE ZONA</span>
+              </div>
+              <div class="flex items-center gap-1.5 text-[11px] text-gray-400 mt-0.5">
+                <span class="inline-flex items-center gap-1 text-[#a970ff] font-bold" title="Twitch">
+                  <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714Z"/></svg>
+                  <span class="text-[10px] uppercase font-mono tracking-wider">Twitch</span>
+                </span>
+                <span class="text-purple-400/50">•</span>
+                <span>Ayer a las 19:25</span>
+              </div>
+            </div>
+          </div>
+          <p class="text-gray-200 text-sm md:text-base leading-relaxed font-sans font-medium whitespace-pre-line">
+            ¡Feliz nivel 25 Ari! Que no se acaben nunca las partidas de risas, los gritos de susto y las coronas ganadas en el último segundo. ¡A celebrarlo a lo grande!
+          </p>
+          <div class="mt-5 pt-4 border-t border-purple-900/60 flex items-center justify-between flex-wrap gap-2">
+            <div class="flex items-center gap-2">
+              <button onclick="handleReaction('ded-13', 'gg', event)" class="reaction-btn flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-purple-950/70 hover:bg-purple-800/80 border border-purple-700/50 hover:border-yellow-400 text-xs font-bold text-yellow-300 transition-all active:scale-95">
+                <span class="font-black text-sm">GG</span>
+                <span class="counter-val text-white/90" id="cnt-ded-13-gg">62</span>
+              </button>
+              <button onclick="handleReaction('ded-13', 'shield', event)" class="reaction-btn flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-purple-950/70 hover:bg-cyan-950/80 border border-cyan-800/60 hover:border-cyan-400 text-xs font-bold text-cyan-300 transition-all active:scale-95">
+                <img src="assets/images/shield-potion.svg" class="w-4 h-4" alt="Mini">
+                <span class="counter-val text-white/90" id="cnt-ded-13-shield">41</span>
+              </button>
+              <button onclick="handleReaction('ded-13', 'crown', event)" class="reaction-btn flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-purple-950/70 hover:bg-amber-950/80 border border-amber-700/60 hover:border-amber-400 text-xs font-bold text-amber-300 transition-all active:scale-95">
+                <img src="assets/images/crown.svg" class="w-4 h-4" alt="Corona">
+                <span class="counter-val text-white/90" id="cnt-ded-13-crown">85</span>
+              </button>
+            </div>
+            <span class="text-[11px] text-purple-400/80 font-mono flex items-center gap-1">
+              <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+              En directo
+            </span>
+          </div>
+        </article>
+
+        <!-- 14. Arcosmen01 (DÚO DE CORONAS) -->
+        <article class="feed-card relative bg-[#130b28]/90 backdrop-blur-md rounded-2xl p-5 md:p-6 border-2 border-yellow-400 shadow-[0_0_20px_rgba(234,179,8,0.3)] transition-all duration-300 hover:-translate-y-1" data-id="ded-14">
+          <div class="absolute -top-3.5 right-6 bg-gradient-to-r from-yellow-400 to-amber-500 text-black font-black text-[11px] uppercase tracking-wider px-3 py-0.5 rounded-md skew-x-[-10deg] shadow-md border border-black/40">
+            LEGENDARIO
+          </div>
+          <div class="flex items-center gap-3.5 mb-3">
+            <div class="relative">
+              <div class="w-13 h-13 rounded-full p-0.5 bg-gradient-to-tr from-purple-500 to-cyan-400 shadow-md">
+                <div class="w-12 h-12 rounded-full bg-[#1b0c36] border-2 border-[#130b28] flex items-center justify-center text-purple-300/70" title="Sin foto">
+                  <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+                </div>
+              </div>
+              <span class="absolute -bottom-1 -right-1 bg-purple-900 border border-purple-400 rounded-full p-0.5" title="twitch">
+                <svg class="w-3.5 h-3.5 text-purple-300" fill="currentColor" viewBox="0 0 24 24"><path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714Z"/></svg>
+              </span>
+            </div>
+            <div class="flex-1 min-w-0">
+              <div class="flex items-center gap-2 flex-wrap">
+                <span class="font-burbank text-lg font-bold text-white tracking-wide truncate">Arcosmen01</span>
+                <span class="text-[10px] uppercase font-black px-2 py-0.5 rounded bg-purple-950/80 text-purple-300 border border-purple-700/60">DÚO DE CORONAS</span>
+              </div>
+              <div class="flex items-center gap-1.5 text-[11px] text-gray-400 mt-0.5">
+                <span class="inline-flex items-center gap-1 text-[#a970ff] font-bold" title="Twitch">
+                  <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714Z"/></svg>
+                  <span class="text-[10px] uppercase font-mono tracking-wider">Twitch</span>
+                </span>
+                <span class="text-purple-400/50">•</span>
+                <span>Ayer a las 18:00</span>
+              </div>
+            </div>
+          </div>
+          <p class="text-gray-200 text-sm md:text-base leading-relaxed font-sans font-medium whitespace-pre-line">
+            ¡Muchas felicidades Ari! Siempre es un gusto verte jugar y compartir stream con la mejor comunidad. ¡Que disfrutes al máximo de tu cumpleaños, reina de Twitch!
+          </p>
+          <div class="mt-5 pt-4 border-t border-purple-900/60 flex items-center justify-between flex-wrap gap-2">
+            <div class="flex items-center gap-2">
+              <button onclick="handleReaction('ded-14', 'gg', event)" class="reaction-btn flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-purple-950/70 hover:bg-purple-800/80 border border-purple-700/50 hover:border-yellow-400 text-xs font-bold text-yellow-300 transition-all active:scale-95">
+                <span class="font-black text-sm">GG</span>
+                <span class="counter-val text-white/90" id="cnt-ded-14-gg">76</span>
+              </button>
+              <button onclick="handleReaction('ded-14', 'shield', event)" class="reaction-btn flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-purple-950/70 hover:bg-cyan-950/80 border border-cyan-800/60 hover:border-cyan-400 text-xs font-bold text-cyan-300 transition-all active:scale-95">
+                <img src="assets/images/shield-potion.svg" class="w-4 h-4" alt="Mini">
+                <span class="counter-val text-white/90" id="cnt-ded-14-shield">47</span>
+              </button>
+              <button onclick="handleReaction('ded-14', 'crown', event)" class="reaction-btn flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-purple-950/70 hover:bg-amber-950/80 border border-amber-700/60 hover:border-amber-400 text-xs font-bold text-amber-300 transition-all active:scale-95">
+                <img src="assets/images/crown.svg" class="w-4 h-4" alt="Corona">
+                <span class="counter-val text-white/90" id="cnt-ded-14-crown">104</span>
               </button>
             </div>
             <span class="text-[11px] text-purple-400/80 font-mono flex items-center gap-1">
