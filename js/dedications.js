@@ -7,11 +7,11 @@
 const DEFAULT_DEDICATIONS = [
   {
     id: 'ded-1',
-    user: 'Usuario1',
+    user: 'SITOGAMER',
     platform: 'twitch',
-    role: 'Dúo Legendario',
+    role: 'DÚO LEGENDARIO',
     rarity: 'mythic', // mythic, legendary, epic, rare
-    avatar: '',
+    avatar: 'assets/images/sitogamer-avatar.svg',
     type: 'text',
     message: '¡¡Feliz cumpleaños Arixu!! 🎂👑 Gracias por revivirme siempre que me caigo de la rampa y por carrilearme en los finales de partida más tensos. ¡Que este nuevo año venga cargado de más Victorias Campales y coronas infinitas! Eres la mejor streamer.',
     reactions: { gg: 42, shield: 28, crown: 65 },
@@ -19,33 +19,33 @@ const DEFAULT_DEDICATIONS = [
   },
   {
     id: 'ded-2',
-    user: 'Usuario2',
-    platform: 'discord',
-    role: 'Comunidad Discord',
+    user: 'LUSANITO',
+    platform: 'twitch',
+    role: 'COMUNIDAD TWITCH',
     rarity: 'legendary',
     avatar: '',
     type: 'text',
-    message: '¡Muchas felicidades Ari! Te dejamos esta dedicatoria con todo el cariño de la comunidad de Discord. ¡A celebrarlo por todo lo alto y a seguir sumando niveles!',
+    message: '¡Muchas felicidades Ari! Te dejamos esta dedicatoria con todo el cariño de la comunidad de Twitch. ¡A celebrarlo por todo lo alto y a seguir sumando niveles y victorias en directo!',
     reactions: { gg: 89, shield: 45, crown: 112 },
     date: 'Hoy a las 14:15'
   },
   {
     id: 'ded-3',
-    user: 'Usuario3',
+    user: 'G4PALAU',
     platform: 'twitch',
-    role: 'VIP & Mod',
+    role: 'VIP & MOD',
     rarity: 'epic',
     avatar: '',
     type: 'text',
-    message: 'No podía faltar recordar los mejores momentos de los directos. ¡Casi rompes los cascos del grito pero nos diste momentos legendarios! Feliz cumple capitana 🔥🚀',
+    message: 'No podía faltar recordar los mejores momentos de los directos. ¡Casi rompes los cascos del grito pero nos diste momentos legendarios moderando el chat! Feliz cumple capitana 🔥🚀',
     reactions: { gg: 74, shield: 63, crown: 91 },
     date: 'Hoy a las 13:02'
   },
   {
     id: 'ded-4',
-    user: 'Usuario4',
+    user: 'BANQUITO',
     platform: 'twitch',
-    role: 'Sub Nivel 24',
+    role: 'TWITCH CHAT',
     rarity: 'rare',
     avatar: '',
     type: 'text',
@@ -55,13 +55,13 @@ const DEFAULT_DEDICATIONS = [
   },
   {
     id: 'ded-5',
-    user: 'Usuario5',
-    platform: 'discord',
-    role: 'Seguidor',
+    user: 'MARTA',
+    platform: 'twitch',
+    role: 'DÚO LEGENDARIO',
     rarity: 'legendary',
     avatar: '',
     type: 'text',
-    message: '¡Feliz cumpleaños Arixu! Aún recuerdo las risas en cada stream y los momentos más divertidos con la comunidad. ¡Los mejores momentos siempre! Pásalo genial con toda tu gente 💙❤️',
+    message: '¡Feliz cumpleaños Arixu! Aún recuerdo las risas en cada stream jugando juntas y los momentos más divertidos en dúo. ¡Los mejores momentos siempre! Pásalo genial con toda tu gente 💙❤️',
     reactions: { gg: 61, shield: 19, crown: 54 },
     date: 'Ayer a las 22:18'
   }
@@ -69,7 +69,7 @@ const DEFAULT_DEDICATIONS = [
 
 class DedicationsManager {
   constructor() {
-    this.storageKey = 'imarixu_birthday_dedications_v2';
+    this.storageKey = 'imarixu_birthday_dedications_v3';
     this.dedications = this.loadDedications();
   }
 
@@ -84,6 +84,7 @@ class DedicationsManager {
     }
     try {
       localStorage.removeItem('imarixu_birthday_dedications_v1');
+      localStorage.removeItem('imarixu_birthday_dedications_v2');
     } catch (_) {}
     return [...DEFAULT_DEDICATIONS];
   }
@@ -226,7 +227,14 @@ class DedicationsManager {
                 <span class="font-burbank text-lg font-bold text-white tracking-wide truncate">${item.user}</span>
                 <span class="text-[10px] uppercase font-black px-2 py-0.5 rounded bg-purple-950/80 text-purple-300 border border-purple-700/60">${item.role}</span>
               </div>
-              <span class="text-[11px] text-gray-400 block">${item.date}</span>
+              <div class="flex items-center gap-1.5 text-[11px] text-gray-400 mt-0.5">
+                <span class="inline-flex items-center gap-1 text-[#a970ff] font-bold" title="Twitch">
+                  <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714Z"/></svg>
+                  <span class="text-[10px] uppercase font-mono tracking-wider">Twitch</span>
+                </span>
+                <span class="text-purple-400/50">•</span>
+                <span>${item.date}</span>
+              </div>
             </div>
           </div>
 
