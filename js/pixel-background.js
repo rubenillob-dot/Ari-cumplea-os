@@ -1,11 +1,15 @@
 /**
- * pixel-background.js - Interactive Pixel / Voxel Grid Trail Background
+ * pixel-background.js - Interactive Pixel / Voxel Grid Trail & Ripple Background
  * Inspired by Omarchy (https://omarchy.org/)
  * 
  * Features:
  * - Subtle voxel/pixel grid across the full viewport.
  * - Reactive mouse & touch trail: pixels light up and expand within cursor radius,
  *   gradually fading out with smooth exponential decay.
+ * - Interactive Click / Tap Pixel Shockwave ("Onda de Píxeles"):
+ *   Clicking on the background generates an expanding circular ripple wave that
+ *   propagates outward through the pixel matrix, exciting voxels along the wavefront
+ *   with an accompanying harmonic echo wave!
  * - Project color palette: Fortnite Slurp Cyan (#00f0ff / #25a2e6) & Twitch Purple (#9146ff / #a970ff).
  * - Semi-dispersed ambient static/pulsing pixels along edges and dark zones.
  * - Idle gentle ambient wanderer for mobile & stationary viewing.
@@ -44,6 +48,9 @@
 
       // Ambient Dispersed Pixels
       this.ambientPixels = [];
+
+      // Interactive Click Shockwaves ("Ondas de Píxeles")
+      this.shockwaves = [];
 
       // Mouse & Pointer State
       this.mouseX = -9999;
@@ -117,6 +124,7 @@
       this.energy = new Float32Array(this.totalCells);
       this.colorHue = new Float32Array(this.totalCells);
       this.activeIndices.clear();
+      this.shockwaves = [];
 
       // Initialize ambient dispersed pixels
       this.initAmbientPixels();
@@ -130,7 +138,7 @@
 
     initAmbientPixels() {
       this.ambientPixels = [];
-      // Generate ~140 to 220 ambient pixels with higher bias towards edges & dark corners
+      // Generate ~140 to 240 ambient pixels with higher bias towards edges & dark corners
       const count = Math.min(Math.floor((this.cols * this.rows) * 0.035), 240);
 
       for (let i = 0; i < count; i++) {
@@ -209,6 +217,16 @@
         this.mouseX = -9999;
         this.mouseY = -9999;
       }, { passive: true });
+
+      // Interactive Click / Tap Shockwave ("Onda de Píxeles")
+      // Listen to pointerdown on window (covers desktop mouse, trackpad & mobile tap)
+      window.addEventListener('pointerdown', (e) => {
+        // Allow user to interact with input/textarea/select without triggering huge wave
+        if (e.target && e.target.closest('input, textarea, select')) {
+          return;
+        }
+        this.triggerShockwave(e.clientX, e.clientY);
+      }, { passive: true });
     }
 
     handlePointerMove(x, y, isImmediate = false) {
@@ -239,6 +257,51 @@
 
       this.lastMouseX = this.mouseX;
       this.lastMouseY = this.mouseY;
+    }
+
+    /**
+     * Triggers an expanding circular shockwave of voxels ("Onda de Píxeles")
+     * ripples outward from the click/tap coordinate with a trailing echo wave.
+     */
+    triggerShockwave(x, y) {
+      this.lastInteractionTime = performance.now();
+
+      // 1. Instant epicenter splash / flash
+      this.activateVoxelRegion(x, y, 75, 1.0);
+
+      const maxR = this.width < 640 ? 320 : 460;
+      const baseSpeed = this.width < 640 ? 11 : 14.5;
+
+      // 2. Primary expanding shockwave
+      this.shockwaves.push({
+        x: x,
+        y: y,
+        radius: 8,
+        maxRadius: maxR,
+        speed: baseSpeed,
+        thickness: 52,
+        intensity: 1.0
+      });
+
+      // 3. Harmonic echo ripple (trailing 110ms later)
+      setTimeout(() => {
+        if (this.shockwaves.length < 8) {
+          this.shockwaves.push({
+            x: x,
+            y: y,
+            radius: 4,
+            maxRadius: maxR * 0.72,
+            speed: baseSpeed * 0.82,
+            thickness: 40,
+            intensity: 0.65
+          });
+        }
+      }, 110);
+
+      // Prevent unbounded array growth if user rapid-clicks
+      if (this.shockwaves.length > 8) {
+        this.shockwaves.shift();
+      }
     }
 
     activateVoxelRegion(px, py, radius, maxIntensity = 1.0) {
@@ -308,7 +371,7 @@
         const ap = this.ambientPixels[i];
         const idx = ap.idx;
 
-        // Skip if this cell is actively lit by cursor trail
+        // Skip if this cell is actively lit by cursor trail or shockwave
         if (this.energy[idx] > 0.15) continue;
 
         const pulse = Math.sin(time * ap.pulseSpeed + ap.phase);
@@ -328,7 +391,7 @@
 
       // --- 2. Idle Ambient Wanderer (Soft floating spark when inactive) ---
       const idleTime = time - this.lastInteractionTime;
-      if (idleTime > 2200) {
+      if (idleTime > 2200 && this.shockwaves.length === 0) {
         // Smooth multi-frequency Lissajous curves across the screen
         const t = (time - 2200) * 0.0006;
         const targetX = (this.width * 0.5) + Math.sin(t * 1.1) * (this.width * 0.38) + Math.cos(t * 2.3) * (this.width * 0.08);
@@ -341,7 +404,78 @@
         this.activateVoxelRegion(this.ghostX, this.ghostY, this.radius * 0.75, 0.45);
       }
 
-      // --- 3. Reactive Active Pixels (Omarchy Voxel Trail) ---
+      // --- 3. Interactive Pixel Shockwaves ("Ondas de Píxeles") Propagation ---
+      if (this.shockwaves.length > 0) {
+        for (let swIdx = this.shockwaves.length - 1; swIdx >= 0; swIdx--) {
+          const sw = this.shockwaves[swIdx];
+          sw.radius += sw.speed;
+          const progress = sw.radius / sw.maxRadius;
+          sw.intensity = Math.max(0, 1.0 - Math.pow(progress, 1.25));
+
+          if (progress >= 1.0 || sw.intensity <= 0.01) {
+            this.shockwaves.splice(swIdx, 1);
+            continue;
+          }
+
+          // Optical Energy Shockwave Ring along the wave crest
+          if (sw.radius > 12) {
+            ctx.save();
+            ctx.beginPath();
+            ctx.arc(sw.x, sw.y, sw.radius, 0, Math.PI * 2);
+            const ringAlpha = sw.intensity * 0.28;
+            ctx.strokeStyle = `rgba(0, 240, 255, ${ringAlpha})`;
+            ctx.lineWidth = Math.max(1, 2.5 * sw.intensity);
+            ctx.stroke();
+            ctx.restore();
+          }
+
+          // Excite voxels intersecting the annular wavefront ring
+          const halfThick = sw.thickness * 0.5;
+          const minR = Math.max(0, sw.radius - halfThick);
+          const maxR = sw.radius + halfThick;
+
+          const minCol = Math.max(0, Math.floor((sw.x - maxR) / this.cellSize));
+          const maxCol = Math.min(this.cols - 1, Math.floor((sw.x + maxR) / this.cellSize));
+          const minRow = Math.max(0, Math.floor((sw.y - maxR) / this.cellSize));
+          const maxRow = Math.min(this.rows - 1, Math.floor((sw.y + maxR) / this.cellSize));
+
+          const minRSq = minR * minR;
+          const maxRSq = maxR * maxR;
+
+          for (let r = minRow; r <= maxRow; r++) {
+            const cy = r * this.cellSize + this.cellSize * 0.5;
+            const dy = sw.y - cy;
+            const dySq = dy * dy;
+
+            for (let c = minCol; c <= maxCol; c++) {
+              const cx = c * this.cellSize + this.cellSize * 0.5;
+              const dx = sw.x - cx;
+              const distSq = dx * dx + dySq;
+
+              if (distSq <= maxRSq && distSq >= minRSq) {
+                const dist = Math.sqrt(distSq);
+                const diff = Math.abs(dist - sw.radius);
+
+                if (diff <= halfThick) {
+                  // Smooth cosine wave profile across the wavefront crest
+                  const crestProfile = Math.cos((diff / halfThick) * (Math.PI * 0.5));
+                  const waveEnergy = crestProfile * sw.intensity * 1.2;
+
+                  const idx = r * this.cols + c;
+                  if (waveEnergy > this.energy[idx]) {
+                    this.energy[idx] = Math.min(1.0, waveEnergy);
+                    // Wavefront chromatic transition: Slurp Cyan at crest, electric blue/purple along perimeter
+                    this.colorHue[idx] = Math.max(this.colorHue[idx], 0.2 + 0.8 * (1 - progress));
+                    this.activeIndices.add(idx);
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      // --- 4. Reactive Active Pixels (Voxel rendering & smooth decay) ---
       if (this.activeIndices.size > 0) {
         // Collect dead indices to remove after iteration
         const toRemove = [];
@@ -364,7 +498,7 @@
           const r = Math.floor(idx / this.cols);
 
           // Dynamic scale: slight expansion at peak energy for tactile voxel pop
-          const scaleBoost = e * 2.2;
+          const scaleBoost = e * 2.4;
           const size = this.pixelSize + scaleBoost;
           const offset = scaleBoost * 0.5;
 
@@ -377,7 +511,7 @@
 
           if (hueRatio > 0.6) {
             // Bright Slurp Cyan: #00f0ff (0, 240, 255)
-            // Slightly brighter core at very high energy
+            // Extra brilliant white-cyan core at peak energy
             if (e > 0.75) {
               red = 110;
               green = 247;
