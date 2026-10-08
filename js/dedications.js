@@ -172,12 +172,48 @@ const DEFAULT_DEDICATIONS = [
     message: '¡Muchas felicidades Ari! Siempre es un gusto verte jugar y compartir stream con la mejor comunidad. ¡Que disfrutes al máximo de tu cumpleaños, reina de Twitch!',
     reactions: { gg: 76, shield: 47, crown: 104 },
     date: 'Ayer a las 18:00'
+  },
+  {
+    id: 'ded-15',
+    user: 'jaratos',
+    platform: 'twitch',
+    role: 'COMUNIDAD TWITCH',
+    rarity: 'epic',
+    avatar: '',
+    type: 'text',
+    message: '¡Muchísimas felicidades Ari! Gracias por hacer directos tan divertidos y crear esta pedazo de comunidad. ¡Que este año te traiga muchísimas victorias y momentos inolvidables!',
+    reactions: { gg: 51, shield: 36, crown: 68 },
+    date: 'Ayer a las 17:30'
+  },
+  {
+    id: 'ded-16',
+    user: 'Joandix',
+    platform: 'twitch',
+    role: 'COMUNIDAD TWITCH',
+    rarity: 'legendary',
+    avatar: '',
+    type: 'text',
+    message: '¡Feliz cumpleaños Arixu! Siempre es un placer pasarse por el chat a compartir risas y buenas partidas. ¡A seguir disfrutando a tope y celebrando el nivel 25 como te mereces! 🎂👑',
+    reactions: { gg: 64, shield: 42, crown: 88 },
+    date: 'Ayer a las 16:45'
+  },
+  {
+    id: 'ded-17',
+    user: 'Bailen82',
+    platform: 'twitch',
+    role: 'COMUNIDAD TWITCH',
+    rarity: 'rare',
+    avatar: '',
+    type: 'text',
+    message: '¡Feliz cumpleaños Ari! Que nunca falte el buen rollo en directo ni los minis en el inventario para salvar la partida. ¡Que pases un día espectacular con toda tu gente! 🥤🔥',
+    reactions: { gg: 47, shield: 31, crown: 62 },
+    date: 'Ayer a las 16:10'
   }
 ];
 
 class DedicationsManager {
   constructor() {
-    this.storageKey = 'imarixu_birthday_dedications_v4';
+    this.storageKey = 'imarixu_birthday_dedications_v5';
     this.dedications = this.loadDedications();
   }
 
@@ -194,6 +230,7 @@ class DedicationsManager {
       localStorage.removeItem('imarixu_birthday_dedications_v1');
       localStorage.removeItem('imarixu_birthday_dedications_v2');
       localStorage.removeItem('imarixu_birthday_dedications_v3');
+      localStorage.removeItem('imarixu_birthday_dedications_v4');
     } catch (_) {}
     return [...DEFAULT_DEDICATIONS];
   }
