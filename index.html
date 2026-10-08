@@ -42,6 +42,9 @@
 </head>
 <body class="fortnite-lobby-bg text-white min-h-screen relative flex flex-col fortnite-cursor-active">
 
+  <!-- Interactive Pixel / Voxel Grid Trail Canvas (Inspirado en Omarchy) -->
+  <canvas id="pixel-grid-canvas" class="fixed inset-0 w-full h-full pointer-events-none z-0"></canvas>
+
   <!-- Canvas for celebration confetti & streamers -->
   <canvas id="confetti-canvas" class="fixed inset-0 pointer-events-none z-50 w-full h-full"></canvas>
 
@@ -368,7 +371,7 @@
   <!-- ========================================================
        2. SECCIÓN: "YEAR IN REVIEW: EL MEJOR AÑO DE ARI"
        ======================================================== -->
-  <section id="year-in-review" class="py-20 px-4 sm:px-6 lg:px-8 relative bg-[#0d051c]/90 border-t-2 border-b-2 border-purple-900/60">
+  <section id="year-in-review" class="py-20 px-4 sm:px-6 lg:px-8 relative bg-[#0d051c]/75 backdrop-blur-[2px] border-t-2 border-b-2 border-purple-900/60">
     
     <div class="max-w-7xl mx-auto">
       
@@ -950,7 +953,7 @@
   <!-- ========================================================
        3. SECCIÓN: "MURO DE DEDICATORIAS DE LA COMUNIDAD"
        ======================================================== -->
-  <section id="muro-comunidad" class="py-20 px-4 sm:px-6 lg:px-8 relative bg-[#0e071e]">
+  <section id="muro-comunidad" class="py-20 px-4 sm:px-6 lg:px-8 relative bg-[#0e071e]/75 backdrop-blur-[2px]">
     
     <div class="max-w-4xl mx-auto">
       
@@ -2246,7 +2249,7 @@
   <!-- ========================================================
        FOOTER (Minecraft 1% Hardcore Hearts & Birthday Message)
        ======================================================== -->
-  <footer class="mt-auto py-12 px-4 sm:px-6 lg:px-8 border-t-2 border-purple-900/60 bg-[#07030e] text-center relative z-20">
+  <footer class="mt-auto py-12 px-4 sm:px-6 lg:px-8 border-t-2 border-purple-900/60 bg-[#07030e]/80 backdrop-blur-[2px] text-center relative z-20">
     <div class="max-w-4xl mx-auto">
       
       <!-- Minecraft Hardcore 10 Hearts Bar -->
@@ -2286,6 +2289,7 @@
   </footer>
 
   <!-- Scripts -->
+  <script src="js/pixel-background.js"></script>
   <script src="js/audio.js"></script>
   <script src="js/particles.js"></script>
   <script src="js/dedications.js"></script>
