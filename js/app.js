@@ -440,7 +440,7 @@ function setupDedicationModal() {
         rarity,
         type,
         message,
-        avatar: `https://api.dicebear.com/7.x/bottts/svg?seed=${encodeURIComponent(user)}`
+        avatar: ''
       };
 
       if (type === 'image' && mediaUrl) {

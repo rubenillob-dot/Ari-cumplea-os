@@ -312,6 +312,54 @@ body {
   box-shadow: 0 2px 0 #155e75;
 }
 
+/* High-Visibility Electric Slurp Mini Trigger Button */
+.btn-quick-mini {
+  background: linear-gradient(135deg, #00f0ff 0%, #0284c7 50%, #0369a1 100%);
+  border: 2px solid #a5f3fc;
+  color: #ffffff;
+  box-shadow: 
+    0 0 16px rgba(0, 240, 255, 0.65),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6),
+    0 4px 10px rgba(0, 0, 0, 0.35);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7), 0 0 10px rgba(255, 255, 255, 0.4);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-quick-mini::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  transform: skewX(-20deg);
+  transition: none;
+}
+
+.btn-quick-mini:hover {
+  background: linear-gradient(135deg, #38bdf8 0%, #00f0ff 45%, #0284c7 100%);
+  border-color: #ffffff;
+  box-shadow: 
+    0 0 24px rgba(0, 240, 255, 0.95),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9),
+    0 4px 14px rgba(0, 0, 0, 0.45);
+  transform: translateY(-1px);
+}
+
+.btn-quick-mini:hover::before {
+  left: 150%;
+  transition: all 0.6s ease;
+}
+
+.btn-quick-mini:active {
+  transform: translateY(1px) scale(0.96);
+  box-shadow: 0 0 12px rgba(0, 240, 255, 0.6);
+}
+
 /* ========================================================
    VICTORIA CAMPAL (VICTORY ROYALE) BANNER
    ======================================================== */

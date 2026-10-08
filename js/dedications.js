@@ -7,11 +7,11 @@
 const DEFAULT_DEDICATIONS = [
   {
     id: 'ded-1',
-    user: 'SoyTuDuoFavorito',
+    user: 'Usuario1',
     platform: 'twitch',
     role: 'Dúo Legendario',
     rarity: 'mythic', // mythic, legendary, epic, rare
-    avatar: 'https://images.unsplash.com/photo-1566492031773-4f4e44671857?w=150&auto=format&fit=crop&q=80',
+    avatar: '',
     type: 'text',
     message: '¡¡Feliz cumpleaños Arixu!! 🎂👑 Gracias por revivirme siempre que me caigo de la rampa y por carrilearme en los finales de partida más tensos. ¡Que este nuevo año venga cargado de más Victorias Campales y coronas infinitas! Eres la mejor streamer.',
     reactions: { gg: 42, shield: 28, crown: 65 },
@@ -19,41 +19,35 @@ const DEFAULT_DEDICATIONS = [
   },
   {
     id: 'ded-2',
-    user: 'PapiLlama_Fanart',
+    user: 'Usuario2',
     platform: 'discord',
-    role: 'Artista de la Comunidad',
+    role: 'Comunidad Discord',
     rarity: 'legendary',
-    avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80',
-    type: 'image',
-    image: 'https://images.unsplash.com/photo-1542751371-adc38448a05e?w=800&auto=format&fit=crop&q=80',
-    caption: '¡Fanart especial de cumpleaños! Ari con la corona de Clash Royale y el pico de Fortnite listo para rushear el nivel 25 🎉✨',
-    message: '¡Muchas felicidades Ari! Te dejamos este dibujo con todo el cariño de la comunidad de Discord. ¡A celebrarlo por todo lo alto!',
+    avatar: '',
+    type: 'text',
+    message: '¡Muchas felicidades Ari! Te dejamos esta dedicatoria con todo el cariño de la comunidad de Discord. ¡A celebrarlo por todo lo alto y a seguir sumando niveles!',
     reactions: { gg: 89, shield: 45, crown: 112 },
     date: 'Hoy a las 14:15'
   },
   {
     id: 'ded-3',
-    user: 'TryhardMaster_99',
+    user: 'Usuario3',
     platform: 'twitch',
     role: 'VIP & Mod',
     rarity: 'epic',
-    avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&auto=format&fit=crop&q=80',
-    type: 'clip',
-    clipTitle: 'Clip Mítico: ¡El clutch 1v4 en zona final con 1 de vida!',
-    clipDuration: '0:45',
-    clipThumbnail: 'https://images.unsplash.com/photo-1511512578047-dfb367046420?w=800&auto=format&fit=crop&q=80',
-    videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1', // placeholder video player modal
-    message: 'No podía faltar recordar el clip del año. ¡Casi rompes los cascos del grito pero nos diste la partida del siglo! Feliz cumple capitana 🔥🚀',
+    avatar: '',
+    type: 'text',
+    message: 'No podía faltar recordar los mejores momentos de los directos. ¡Casi rompes los cascos del grito pero nos diste momentos legendarios! Feliz cumple capitana 🔥🚀',
     reactions: { gg: 74, shield: 63, crown: 91 },
     date: 'Hoy a las 13:02'
   },
   {
     id: 'ded-4',
-    user: 'MiniPocionera',
+    user: 'Usuario4',
     platform: 'twitch',
     role: 'Sub Nivel 24',
     rarity: 'rare',
-    avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&auto=format&fit=crop&q=80',
+    avatar: '',
     type: 'text',
     message: '¡Feliz cumple Ari! Ver tus streams después de un día duro siempre me saca una sonrisa enorme. Que cumplas muchísimos más y que nunca falten los minis de 50 en tu inventario. ¡GG WP!',
     reactions: { gg: 35, shield: 52, crown: 40 },
@@ -61,13 +55,13 @@ const DEFAULT_DEDICATIONS = [
   },
   {
     id: 'ded-5',
-    user: 'Huggy_Wuggy_Fan',
+    user: 'Usuario5',
     platform: 'discord',
-    role: 'Experto en Sustos',
+    role: 'Seguidor',
     rarity: 'legendary',
-    avatar: 'https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?w=150&auto=format&fit=crop&q=80',
+    avatar: '',
     type: 'text',
-    message: '¡Feliz cumpleaños Arixu! Aún recuerdo cuando jugaste a Poppy Playtime y casi tiras la cámara por la ventana con el GrabPack jajaja. ¡Los mejores momentos siempre! Pásalo genial con toda tu gente 💙❤️',
+    message: '¡Feliz cumpleaños Arixu! Aún recuerdo las risas en cada stream y los momentos más divertidos con la comunidad. ¡Los mejores momentos siempre! Pásalo genial con toda tu gente 💙❤️',
     reactions: { gg: 61, shield: 19, crown: 54 },
     date: 'Ayer a las 22:18'
   }
@@ -75,7 +69,7 @@ const DEFAULT_DEDICATIONS = [
 
 class DedicationsManager {
   constructor() {
-    this.storageKey = 'imarixu_birthday_dedications_v1';
+    this.storageKey = 'imarixu_birthday_dedications_v2';
     this.dedications = this.loadDedications();
   }
 
@@ -88,6 +82,9 @@ class DedicationsManager {
         console.error('Error loading saved dedications', e);
       }
     }
+    try {
+      localStorage.removeItem('imarixu_birthday_dedications_v1');
+    } catch (_) {}
     return [...DEFAULT_DEDICATIONS];
   }
 
@@ -205,7 +202,15 @@ class DedicationsManager {
             <!-- Avatar with Rarity Ring -->
             <div class="relative">
               <div class="w-13 h-13 rounded-full p-0.5 bg-gradient-to-tr ${cfg.border === 'border-amber-400' ? 'from-amber-400 to-red-500' : 'from-purple-500 to-cyan-400'} shadow-md">
-                <img src="${item.avatar}" alt="${item.user}" class="w-12 h-12 rounded-full object-cover border-2 border-[#130b28]">
+                ${item.avatar ? `
+                  <img src="${item.avatar}" alt="${item.user}" class="w-12 h-12 rounded-full object-cover border-2 border-[#130b28]">
+                ` : `
+                  <div class="w-12 h-12 rounded-full bg-[#1b0c36] border-2 border-[#130b28] flex items-center justify-center text-purple-300/70" title="Sin foto">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                    </svg>
+                  </div>
+                `}
               </div>
               <span class="absolute -bottom-1 -right-1 bg-purple-900 border border-purple-400 rounded-full p-0.5" title="${item.platform}">
                 ${item.platform === 'twitch' ? 
