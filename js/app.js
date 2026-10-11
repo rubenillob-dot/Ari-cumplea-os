@@ -278,50 +278,20 @@ function setupLevel25Celebration() {
 }
 
 /* ========================================================
-   3. FORTNITE SHIELD POTION MECHANIC & "LISTO" BUTTON
+   3. HERO NAVIGATION ("LISTO" BUTTON)
    ======================================================== */
-let currentShield = 50;
-
 function setupShieldMechanic() {
-  const shieldBtn = document.getElementById('hero-shield-action-btn');
-  const shieldBarFill = document.getElementById('shield-bar-fill');
-  const shieldValText = document.getElementById('shield-val-text');
-  const drinkMiniTrigger = document.getElementById('drink-mini-trigger');
-
-  const drinkPotion = (event) => {
-    if (window.soundFX) window.soundFX.playShieldPotion();
-    
-    // Slurp particles at click position
-    const rect = (event && event.currentTarget) ? event.currentTarget.getBoundingClientRect() : { left: window.innerWidth / 2, top: window.innerHeight / 2, width: 0, height: 0 };
-    const cx = rect.left + rect.width / 2;
-    const cy = rect.top + rect.height / 2;
-
-    if (window.particleEngine) {
-      window.particleEngine.spawnSlurpSplash(cx, cy);
-      window.particleEngine.spawnMinecraftXPOrbs(cx, cy, 10);
-    }
-
-    currentShield = 100;
-    if (shieldBarFill) {
-      shieldBarFill.style.width = '100%';
-      shieldBarFill.classList.add('animate-pulse');
-    }
-    if (shieldValText) {
-      shieldValText.textContent = '100 / 100 (¡ESCUDO MÁXIMO!)';
-      shieldValText.classList.add('text-cyan-300', 'font-black');
-    }
-
-    // Scroll to Year in Review section
-    setTimeout(() => {
+  const navBtn = document.getElementById('hero-shield-action-btn');
+  if (navBtn) {
+    navBtn.addEventListener('click', (event) => {
+      event.preventDefault();
+      if (window.soundFX) window.soundFX.playFortniteClick();
       const yearSection = document.getElementById('year-in-review');
       if (yearSection) {
         yearSection.scrollIntoView({ behavior: 'smooth' });
       }
-    }, 700);
-  };
-
-  if (shieldBtn) shieldBtn.addEventListener('click', drinkPotion);
-  if (drinkMiniTrigger) drinkMiniTrigger.addEventListener('click', drinkPotion);
+    });
+  }
 }
 
 /* ========================================================

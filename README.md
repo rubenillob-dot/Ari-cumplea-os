@@ -11,7 +11,6 @@ Una Single Page Application interactiva desarrollada en **HTML5, Tailwind CSS y 
   - Tipografía épica estilo *"Burbank Big Condensed"* (Google Fonts `Luckiest Guy` + `Lilita One` + `Chakra Petch`).
   - Botón principal de estilo **"LISTO"** (*Ready Up*) con bisel 3D, inclinación (`skew`), sombra profunda y animación continua de reflejo brillante (*shine*).
   - Banner 3D de **Victoria Campal #1** con alas de laureles dorados.
-  - HUD interactivo de Salud y Escudo: Escudo inicial de 50/100 que se llena a 100/100 al beber una poción de mini escudo con sonido burbujeante y aura slurp.
   - Confeti y serpentinas con la paleta de colores de Fortnite.
 
 - **👑 5% Clash Royale**:
