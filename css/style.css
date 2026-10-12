@@ -509,3 +509,38 @@ body {
   font-weight: 800;
 }
 
+/* ========================================================
+   CÓDIGO ARIXU GROWTH CHART STYLES
+   ======================================================== */
+.chart-line-path {
+  stroke-dasharray: 1400;
+  stroke-dashoffset: 1400;
+  animation: drawChartLine 2.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes drawChartLine {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.chart-area-path {
+  opacity: 0;
+  animation: fadeChartArea 1.6s ease-out 0.8s forwards;
+}
+
+@keyframes fadeChartArea {
+  to {
+    opacity: 1;
+  }
+}
+
+.chart-badge-float {
+  animation: chartBadgeFloat 3s ease-in-out infinite alternate;
+}
+
+@keyframes chartBadgeFloat {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-4px); }
+}
+

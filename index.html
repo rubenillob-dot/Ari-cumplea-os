@@ -921,97 +921,244 @@
         </div>
 
         <!-- ========================================================
-             SECCIÓN ADICIONAL FORTNITE: ARSENAL & CARGA MÍTICA (5-SLOT HUD)
+             SECCIÓN: CRECIMIENTO DEL CÓDIGO ARIXU
              ======================================================== -->
-        <div class="bg-[#120726] rounded-3xl p-6 sm:p-8 border-2 border-yellow-400/80 shadow-[0_0_35px_rgba(244,196,48,0.25)] relative overflow-hidden">
-          <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 mb-6">
+        <div id="crecimiento-codigo-arixu" class="bg-[#120726] rounded-3xl p-6 sm:p-8 md:p-10 border-2 border-yellow-400/80 shadow-[0_0_40px_rgba(244,196,48,0.3)] relative overflow-hidden">
+          
+          <!-- Ambient decorative flares -->
+          <div class="absolute -top-24 -left-24 w-72 h-72 bg-purple-600/20 rounded-full blur-3xl pointer-events-none"></div>
+          <div class="absolute -top-24 -right-24 w-72 h-72 bg-amber-500/15 rounded-full blur-3xl pointer-events-none"></div>
+
+          <!-- Section Header & Top Right Call-to-Action Banner -->
+          <div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 mb-8 relative z-10">
             <div>
-              <div class="inline-flex items-center gap-2 bg-yellow-400 text-black font-burbank text-xs px-2.5 py-0.5 rounded transform -skew-x-12 mb-2">
-                <span>🎒</span> LOADOUT OFICIAL
+              <div class="inline-flex items-center gap-2 bg-yellow-400 text-black font-burbank text-xs px-2.5 py-0.5 rounded transform -skew-x-12 mb-2 shadow-md">
+                <span>🛍️</span> APOYA A UN CREADOR EN FORTNITE
               </div>
-              <h3 class="font-burbank text-2xl sm:text-3xl text-yellow-300 uppercase tracking-wide">
-                Arsenal Legendario de Ari
+              <h3 class="font-burbank text-2xl sm:text-4xl text-yellow-300 uppercase tracking-wide drop-shadow-[0_2px_8px_rgba(244,196,48,0.35)]">
+                CRECIMIENTO DEL CÓDIGO ARIXU
               </h3>
-              <p class="text-xs sm:text-sm text-gray-400">
-                La configuración sagrada de 5 casillas con la que Ari domina cada partida de Battle Royale.
+              <p class="text-sm sm:text-base text-purple-200 mt-1 font-medium">
+                ¡Gracias a vuestro apoyo, nuestra comunidad no para de crecer!
               </p>
             </div>
-            <span class="px-3 py-1.5 rounded-xl bg-purple-950/80 border border-purple-700 text-xs font-hud text-purple-300">
-              Ranuras: 5/5 Llenas
-            </span>
+
+            <!-- Top Right Banner Destacado -->
+            <div class="w-full lg:w-auto bg-[#1b0f38]/90 border-2 border-yellow-400/80 rounded-2xl p-4 sm:p-5 shadow-[0_0_25px_rgba(244,196,48,0.25)] flex flex-col sm:flex-row items-center gap-4">
+              <div class="flex items-center gap-3">
+                <div class="px-3.5 py-1.5 rounded-xl bg-gradient-to-r from-yellow-400 via-amber-400 to-yellow-500 text-black font-burbank text-base sm:text-lg tracking-wider font-black shadow-[0_0_15px_rgba(244,196,48,0.6)] animate-pulse flex items-center gap-1.5 whitespace-nowrap">
+                  <span>👑</span>
+                  <span>¡YA SOMOS 127!</span>
+                </div>
+              </div>
+              <div class="text-center sm:text-left">
+                <p class="text-xs sm:text-sm text-gray-200 font-medium">
+                  Usa el código Arixu para seguir creciendo juntos
+                </p>
+              </div>
+              <!-- Botón interactivo que resalta Código: ARIXU -->
+              <button onclick="copyCreatorCode(this)" class="group cursor-pointer flex items-center gap-2 px-4 py-2 rounded-xl bg-gradient-to-r from-yellow-400 to-amber-500 hover:from-yellow-300 hover:to-amber-400 text-black font-burbank text-sm sm:text-base tracking-wider uppercase shadow-lg hover:scale-105 active:scale-95 transition-all duration-200 border-2 border-yellow-200 shrink-0" title="Click para copiar el código ARIXU">
+                <span class="text-base group-hover:rotate-12 transition-transform">✨</span>
+                <span class="font-black">Código: ARIXU</span>
+                <svg class="w-4 h-4 ml-0.5 opacity-70 group-hover:opacity-100" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+              </button>
+            </div>
           </div>
 
-          <!-- 5 Fortnite Inventory Slots -->
-          <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-4 font-hud">
+          <!-- Growth Line Chart Container -->
+          <div class="relative bg-[#0d051c]/95 rounded-2xl p-4 sm:p-6 border border-purple-800/80 shadow-inner overflow-hidden">
             
-            <!-- Slot 1: Escopeta Mítica -->
-            <div class="p-3.5 rounded-2xl bg-gradient-to-b from-amber-500/20 to-red-600/10 border-2 border-amber-400 shadow-md group hover:scale-102 transition-transform cursor-pointer" onclick="if(window.soundFX) window.soundFX.playFortniteClick()">
-              <div class="flex justify-between items-center text-[10px] font-bold text-amber-400 mb-1">
-                <span>[TECLA 1]</span>
-                <span class="px-1.5 py-0.5 rounded bg-amber-500 text-black font-black">MÍTICO</span>
+            <!-- Quick Chart Legend Header -->
+            <div class="flex flex-wrap items-center justify-between gap-3 mb-4 text-xs font-hud border-b border-purple-900/60 pb-3">
+              <div class="flex items-center gap-2 text-yellow-300 font-bold">
+                <span class="inline-block w-3 h-3 rounded-full bg-gradient-to-r from-orange-500 to-yellow-400 shadow-[0_0_8px_rgba(244,196,48,0.8)]"></span>
+                <span class="tracking-wide">Evolución de Apoyos (Fortnite Support-A-Creator)</span>
               </div>
-              <div class="h-16 flex items-center justify-center text-3xl group-hover:scale-110 transition-transform">
-                💥
+              <div class="flex items-center gap-4 text-gray-300">
+                <span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-orange-500"></span> Inicio: <strong class="text-white">50</strong></span>
+                <span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-yellow-400"></span> Actual: <strong class="text-yellow-300">127</strong></span>
+                <span class="px-2 py-0.5 rounded bg-emerald-950/80 text-emerald-400 border border-emerald-600/50 font-bold">+154% Crecimiento</span>
               </div>
-              <div class="font-burbank text-sm text-white mb-0.5 truncate">Corredera Mítica</div>
-              <div class="text-[11px] text-amber-300 font-bold">200 Daño Cabeza</div>
-              <div class="text-[10px] text-gray-400 mt-1 italic">"Un disparo, un lobby"</div>
             </div>
 
-            <!-- Slot 2: Fusil de Asalto -->
-            <div class="p-3.5 rounded-2xl bg-gradient-to-b from-yellow-500/20 to-amber-600/10 border-2 border-yellow-400 shadow-md group hover:scale-102 transition-transform cursor-pointer" onclick="if(window.soundFX) window.soundFX.playFortniteClick()">
-              <div class="flex justify-between items-center text-[10px] font-bold text-yellow-400 mb-1">
-                <span>[TECLA 2]</span>
-                <span class="px-1.5 py-0.5 rounded bg-yellow-400 text-black font-black">LEGENDARIO</span>
-              </div>
-              <div class="h-16 flex items-center justify-center text-3xl group-hover:scale-110 transition-transform">
-                🎯
-              </div>
-              <div class="font-burbank text-sm text-white mb-0.5 truncate">Fusil de Ojo Rojo</div>
-              <div class="text-[11px] text-yellow-300 font-bold">Precisión Quirúrgica</div>
-              <div class="text-[10px] text-gray-400 mt-1 italic">"Puntería láser sin bloom"</div>
+            <!-- SVG Responsive Line Chart -->
+            <div class="w-full overflow-x-auto">
+              <svg viewBox="0 0 920 380" class="w-full h-auto min-w-[680px] max-w-full select-none" preserveAspectRatio="xMidYMid meet">
+                <defs>
+                  <!-- Warm gradient for the line: Orange -> Amber -> Yellow -->
+                  <linearGradient id="arixuStrokeGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" stop-color="#f97316"/>
+                    <stop offset="30%" stop-color="#f59e0b"/>
+                    <stop offset="70%" stop-color="#fbbf24"/>
+                    <stop offset="100%" stop-color="#fde047"/>
+                  </linearGradient>
+
+                  <!-- Warm area fill: Orange/Yellow fading down into darkness -->
+                  <linearGradient id="arixuAreaGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.4"/>
+                    <stop offset="40%" stop-color="#d97706" stop-opacity="0.18"/>
+                    <stop offset="85%" stop-color="#7a22ff" stop-opacity="0.04"/>
+                    <stop offset="100%" stop-color="#0d051c" stop-opacity="0"/>
+                  </linearGradient>
+
+                  <!-- Gold badge fill for final 127 point -->
+                  <linearGradient id="arixuGoldBadge" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#facc15"/>
+                    <stop offset="50%" stop-color="#f59e0b"/>
+                    <stop offset="100%" stop-color="#eab308"/>
+                  </linearGradient>
+
+                  <!-- Neon filter glow -->
+                  <filter id="neonGlow" x="-30%" y="-30%" width="160%" height="160%">
+                    <feGaussianBlur stdDeviation="3.5" result="blur"/>
+                    <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+                  </filter>
+                </defs>
+
+                <!-- Grid Lines Y (Escala de 0 a 150) -->
+                <!-- Y = 150 (y=45) -->
+                <line x1="65" y1="45" x2="855" y2="45" stroke="rgba(168, 85, 247, 0.22)" stroke-dasharray="4 4" stroke-width="1"/>
+                <!-- Y = 100 (y=131.7) -->
+                <line x1="65" y1="131.7" x2="855" y2="131.7" stroke="rgba(168, 85, 247, 0.22)" stroke-dasharray="4 4" stroke-width="1"/>
+                <!-- Y = 50 (y=218.3) - Destacada sutilmente -->
+                <line x1="65" y1="218.3" x2="855" y2="218.3" stroke="rgba(249, 115, 22, 0.3)" stroke-dasharray="4 4" stroke-width="1.2"/>
+                <!-- Y = 0 (y=305) - Baseline -->
+                <line x1="65" y1="305" x2="855" y2="305" stroke="rgba(168, 85, 247, 0.6)" stroke-width="1.5"/>
+
+                <!-- Vertical subtle guideline for each month -->
+                <line x1="65.0" y1="45" x2="65.0" y2="305" stroke="rgba(147, 51, 234, 0.12)" stroke-width="1"/>
+                <line x1="136.8" y1="45" x2="136.8" y2="305" stroke="rgba(147, 51, 234, 0.12)" stroke-width="1"/>
+                <line x1="208.6" y1="45" x2="208.6" y2="305" stroke="rgba(147, 51, 234, 0.12)" stroke-width="1"/>
+                <line x1="280.5" y1="45" x2="280.5" y2="305" stroke="rgba(147, 51, 234, 0.12)" stroke-width="1"/>
+                <line x1="352.3" y1="45" x2="352.3" y2="305" stroke="rgba(147, 51, 234, 0.12)" stroke-width="1"/>
+                <line x1="424.1" y1="45" x2="424.1" y2="305" stroke="rgba(147, 51, 234, 0.12)" stroke-width="1"/>
+                <line x1="495.9" y1="45" x2="495.9" y2="305" stroke="rgba(147, 51, 234, 0.12)" stroke-width="1"/>
+                <line x1="567.7" y1="45" x2="567.7" y2="305" stroke="rgba(147, 51, 234, 0.12)" stroke-width="1"/>
+                <line x1="639.5" y1="45" x2="639.5" y2="305" stroke="rgba(147, 51, 234, 0.12)" stroke-width="1"/>
+                <line x1="711.4" y1="45" x2="711.4" y2="305" stroke="rgba(147, 51, 234, 0.12)" stroke-width="1"/>
+                <line x1="783.2" y1="45" x2="783.2" y2="305" stroke="rgba(147, 51, 234, 0.12)" stroke-width="1"/>
+                <line x1="855.0" y1="45" x2="855.0" y2="305" stroke="rgba(147, 51, 234, 0.12)" stroke-width="1"/>
+
+                <!-- Y Axis Labels (Personas 0 a 150) -->
+                <text x="54" y="24" text-anchor="end" fill="#c084fc" font-family="'Chakra Petch', sans-serif" font-size="10" font-weight="bold" letter-spacing="0.5">PERSONAS</text>
+                <text x="54" y="49" text-anchor="end" fill="#c084fc" font-family="'Chakra Petch', sans-serif" font-size="11" font-weight="bold">150</text>
+                <text x="54" y="135" text-anchor="end" fill="#c084fc" font-family="'Chakra Petch', sans-serif" font-size="11" font-weight="bold">100</text>
+                <text x="54" y="222" text-anchor="end" fill="#f97316" font-family="'Chakra Petch', sans-serif" font-size="11" font-weight="bold">50</text>
+                <text x="54" y="308" text-anchor="end" fill="#a855f7" font-family="'Chakra Petch', sans-serif" font-size="11" font-weight="bold">0</text>
+
+                <!-- Area Fill Path -->
+                <path d="M 65.0 218.3 C 77.0 216.9, 112.9 213.2, 136.8 209.7 C 160.7 206.2, 184.7 201.6, 208.6 197.5 C 232.5 193.4, 256.6 189.4, 280.5 185.4 C 304.4 181.4, 328.4 177.1, 352.3 173.3 C 376.2 169.6, 400.2 167.0, 424.1 162.9 C 448.0 158.8, 472.0 153.3, 495.9 149.0 C 519.8 144.7, 543.8 141.2, 567.7 136.9 C 591.6 132.6, 615.5 127.6, 639.5 123.0 C 663.5 118.4, 687.4 113.4, 711.4 109.1 C 735.4 104.8, 759.3 101.0, 783.2 97.0 C 807.1 93.0, 843.0 86.9, 855.0 84.9 L 855.0 305.0 L 65.0 305.0 Z"
+                  fill="url(#arixuAreaGrad)"
+                  class="chart-area-path"
+                />
+
+                <!-- Warm Gradient Line Path -->
+                <path d="M 65.0 218.3 C 77.0 216.9, 112.9 213.2, 136.8 209.7 C 160.7 206.2, 184.7 201.6, 208.6 197.5 C 232.5 193.4, 256.6 189.4, 280.5 185.4 C 304.4 181.4, 328.4 177.1, 352.3 173.3 C 376.2 169.6, 400.2 167.0, 424.1 162.9 C 448.0 158.8, 472.0 153.3, 495.9 149.0 C 519.8 144.7, 543.8 141.2, 567.7 136.9 C 591.6 132.6, 615.5 127.6, 639.5 123.0 C 663.5 118.4, 687.4 113.4, 711.4 109.1 C 735.4 104.8, 759.3 101.0, 783.2 97.0 C 807.1 93.0, 843.0 86.9, 855.0 84.9"
+                  fill="none"
+                  stroke="url(#arixuStrokeGrad)"
+                  stroke-width="4.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  filter="url(#neonGlow)"
+                  class="chart-line-path"
+                />
+
+                <!-- Intermediate Points (Dic to Sep) with Tooltips -->
+                <g class="chart-points-intermediate">
+                  <!-- Dic: 55 -->
+                  <circle cx="136.8" cy="209.7" r="4.5" fill="#f59e0b" stroke="#0d051c" stroke-width="2"><title>Dic 2025: 55 personas</title></circle>
+                  <!-- Ene 2026: 62 -->
+                  <circle cx="208.6" cy="197.5" r="4.5" fill="#f59e0b" stroke="#0d051c" stroke-width="2"><title>Ene 2026: 62 personas</title></circle>
+                  <!-- Feb: 69 -->
+                  <circle cx="280.5" cy="185.4" r="4.5" fill="#fbbf24" stroke="#0d051c" stroke-width="2"><title>Feb 2026: 69 personas</title></circle>
+                  <!-- Mar: 76 -->
+                  <circle cx="352.3" cy="173.3" r="4.5" fill="#fbbf24" stroke="#0d051c" stroke-width="2"><title>Mar 2026: 76 personas</title></circle>
+                  <!-- Abr: 82 -->
+                  <circle cx="424.1" cy="162.9" r="4.5" fill="#fbbf24" stroke="#0d051c" stroke-width="2"><title>Abr 2026: 82 personas</title></circle>
+                  <!-- May: 90 -->
+                  <circle cx="495.9" cy="149.0" r="4.5" fill="#fbbf24" stroke="#0d051c" stroke-width="2"><title>May 2026: 90 personas</title></circle>
+                  <!-- Jun: 97 -->
+                  <circle cx="567.7" cy="136.9" r="4.5" fill="#fbbf24" stroke="#0d051c" stroke-width="2"><title>Jun 2026: 97 personas</title></circle>
+                  <!-- Jul: 105 -->
+                  <circle cx="639.5" cy="123.0" r="4.5" fill="#facc15" stroke="#0d051c" stroke-width="2"><title>Jul 2026: 105 personas</title></circle>
+                  <!-- Ago: 113 -->
+                  <circle cx="711.4" cy="109.1" r="4.5" fill="#facc15" stroke="#0d051c" stroke-width="2"><title>Ago 2026: 113 personas</title></circle>
+                  <!-- Sep: 120 -->
+                  <circle cx="783.2" cy="97.0" r="4.5" fill="#facc15" stroke="#0d051c" stroke-width="2"><title>Sep 2026: 120 personas</title></circle>
+                </g>
+
+                <!-- ==============================================
+                     PUNTO CLAVE INICIAL: 50 PERSONAS (NOV 2025)
+                     ============================================== -->
+                <!-- Vertical connection dashed line -->
+                <line x1="65.0" y1="218.3" x2="65.0" y2="305" stroke="#f97316" stroke-width="1.5" stroke-dasharray="3 3"/>
+                <!-- Pulse halo & Outer Rings -->
+                <circle cx="65.0" cy="218.3" r="13" fill="rgba(249, 115, 22, 0.25)" class="animate-pulse"/>
+                <circle cx="65.0" cy="218.3" r="7.5" fill="#f97316" stroke="#fbbf24" stroke-width="2.5" filter="url(#neonGlow)"/>
+                <circle cx="65.0" cy="218.3" r="3" fill="#ffffff"/>
+                <!-- Callout Badge Inicial (50 Personas) -->
+                <g class="chart-badge-float" transform="translate(65.0, 168)">
+                  <rect x="-48" y="-22" width="96" height="26" rx="13" fill="#1f0d38" stroke="#f97316" stroke-width="2" filter="url(#neonGlow)"/>
+                  <polygon points="-5,4 5,4 0,9" fill="#f97316"/>
+                  <text x="0" y="-5" text-anchor="middle" fill="#fde047" font-family="'Chakra Petch', sans-serif" font-size="12" font-weight="bold">
+                    📍 50 personas
+                  </text>
+                </g>
+
+                <!-- ==============================================
+                     PUNTO CLAVE FINAL: 127 PERSONAS (OCT 2026)
+                     ============================================== -->
+                <!-- Vertical connection dashed line -->
+                <line x1="855.0" y1="84.9" x2="855.0" y2="305" stroke="#facc15" stroke-width="1.8" stroke-dasharray="3 3"/>
+                <!-- Pulse halo & Glowing Gold Rings -->
+                <circle cx="855.0" cy="84.9" r="16" fill="rgba(250, 204, 21, 0.3)" class="animate-pulse"/>
+                <circle cx="855.0" cy="84.9" r="8" fill="#facc15" stroke="#ffffff" stroke-width="3" filter="url(#neonGlow)"/>
+                <circle cx="855.0" cy="84.9" r="3.5" fill="#120726"/>
+                <!-- Callout Badge Final (127 Personas Destacado) -->
+                <g class="chart-badge-float" transform="translate(845.0, 36)">
+                  <rect x="-64" y="-24" width="128" height="28" rx="8" fill="url(#arixuGoldBadge)" stroke="#ffffff" stroke-width="1.5" filter="url(#neonGlow)"/>
+                  <polygon points="-5,4 5,4 0,10" fill="#facc15"/>
+                  <text x="0" y="-6" text-anchor="middle" fill="#000000" font-family="'Luckiest Guy', 'Impact', sans-serif" font-size="13" font-weight="bold" letter-spacing="0.5">
+                    👑 127 PERSONAS
+                  </text>
+                </g>
+
+                <!-- X Axis Labels (Tiempo: Noviembre 2025 a Octubre 2026) -->
+                <text x="65.0" y="332" text-anchor="middle" fill="#fde047" font-family="'Chakra Petch', monospace" font-size="11" font-weight="bold">Nov 2025</text>
+                <text x="136.8" y="332" text-anchor="middle" fill="#c084fc" font-family="'Chakra Petch', monospace" font-size="11" font-weight="600">Dic</text>
+                <text x="208.6" y="332" text-anchor="middle" fill="#e9d5ff" font-family="'Chakra Petch', monospace" font-size="11" font-weight="bold">Ene 2026</text>
+                <text x="280.5" y="332" text-anchor="middle" fill="#c084fc" font-family="'Chakra Petch', monospace" font-size="11" font-weight="600">Feb</text>
+                <text x="352.3" y="332" text-anchor="middle" fill="#c084fc" font-family="'Chakra Petch', monospace" font-size="11" font-weight="600">Mar</text>
+                <text x="424.1" y="332" text-anchor="middle" fill="#c084fc" font-family="'Chakra Petch', monospace" font-size="11" font-weight="600">Abr</text>
+                <text x="495.9" y="332" text-anchor="middle" fill="#c084fc" font-family="'Chakra Petch', monospace" font-size="11" font-weight="600">May</text>
+                <text x="567.7" y="332" text-anchor="middle" fill="#c084fc" font-family="'Chakra Petch', monospace" font-size="11" font-weight="600">Jun</text>
+                <text x="639.5" y="332" text-anchor="middle" fill="#c084fc" font-family="'Chakra Petch', monospace" font-size="11" font-weight="600">Jul</text>
+                <text x="711.4" y="332" text-anchor="middle" fill="#c084fc" font-family="'Chakra Petch', monospace" font-size="11" font-weight="600">Ago</text>
+                <text x="783.2" y="332" text-anchor="middle" fill="#c084fc" font-family="'Chakra Petch', monospace" font-size="11" font-weight="600">Sep</text>
+                <text x="855.0" y="332" text-anchor="middle" fill="#fde047" font-family="'Chakra Petch', monospace" font-size="11" font-weight="bold">Oct 2026</text>
+
+                <!-- Axis Title Legend -->
+                <text x="460" y="362" text-anchor="middle" fill="#a855f7" font-family="'Chakra Petch', monospace" font-size="10" font-weight="bold" letter-spacing="1.5">EJE X: TIEMPO (NOVIEMBRE 2025 — OCTUBRE 2026)</text>
+              </svg>
             </div>
 
-            <!-- Slot 3: Francotirador -->
-            <div class="p-3.5 rounded-2xl bg-gradient-to-b from-cyan-500/20 to-blue-600/10 border-2 border-cyan-400 shadow-md group hover:scale-102 transition-transform cursor-pointer" onclick="if(window.soundFX) window.soundFX.playFortniteClick()">
-              <div class="flex justify-between items-center text-[10px] font-bold text-cyan-400 mb-1">
-                <span>[TECLA 3]</span>
-                <span class="px-1.5 py-0.5 rounded bg-cyan-400 text-black font-black">EXÓTICO</span>
+            <!-- Bottom Highlights Bar -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-5 mt-4 border-t border-purple-900/60 font-hud text-center">
+              <div class="bg-[#180a33] p-3 rounded-xl border border-purple-800/60">
+                <span class="text-[11px] text-gray-400 block uppercase tracking-wider">Punto de Partida</span>
+                <span class="font-burbank text-xl text-orange-400">50 Personas</span>
+                <span class="text-[10px] text-gray-400 block font-mono">Noviembre 2025</span>
               </div>
-              <div class="h-16 flex items-center justify-center text-3xl group-hover:scale-110 transition-transform">
-                🔭
+              <div class="bg-[#180a33] p-3 rounded-xl border border-yellow-500/50 shadow-[0_0_15px_rgba(244,196,48,0.15)]">
+                <span class="text-[11px] text-yellow-300 block uppercase tracking-wider">Hito de Comunidad</span>
+                <span class="font-burbank text-xl text-yellow-300">¡127 Personas!</span>
+                <span class="text-[10px] text-yellow-400/80 block font-mono">Octubre 2026 (+154%)</span>
               </div>
-              <div class="font-burbank text-sm text-white mb-0.5 truncate">Sniper de Cerrojo</div>
-              <div class="text-[11px] text-cyan-300 font-bold">Zoom Térmico 280m</div>
-              <div class="text-[10px] text-gray-400 mt-1 italic">"El terror de las colinas"</div>
-            </div>
-
-            <!-- Slot 4: Minis de Escudo -->
-            <div class="p-3.5 rounded-2xl bg-gradient-to-b from-cyan-500/20 to-blue-900/20 border-2 border-sky-400 shadow-md group hover:scale-102 transition-transform cursor-pointer" onclick="if(window.soundFX) window.soundFX.playShieldPotion()">
-              <div class="flex justify-between items-center text-[10px] font-bold text-sky-400 mb-1">
-                <span>[TECLA 4]</span>
-                <span class="px-1.5 py-0.5 rounded bg-sky-400 text-black font-black">SLURP x6</span>
+              <div class="bg-[#180a33] p-3 rounded-xl border border-purple-800/60">
+                <span class="text-[11px] text-gray-400 block uppercase tracking-wider">Tu Apoyo Suma</span>
+                <span class="font-burbank text-xl text-cyan-400">Código: ARIXU</span>
+                <span class="text-[10px] text-gray-400 block font-mono">En la Tienda de Fortnite</span>
               </div>
-              <div class="h-16 flex items-center justify-center group-hover:scale-110 transition-transform">
-                <img src="assets/images/shield-potion.svg" class="w-10 h-10 drop-shadow" alt="Minis">
-              </div>
-              <div class="font-burbank text-sm text-white mb-0.5 truncate">Minis de Escudo</div>
-              <div class="text-[11px] text-sky-300 font-bold">+50 Escudo Rápido</div>
-              <div class="text-[10px] text-gray-400 mt-1 italic">"Su objeto más sagrado"</div>
-            </div>
-
-            <!-- Slot 5: Gancho de Asalto -->
-            <div class="p-3.5 rounded-2xl bg-gradient-to-b from-purple-500/20 to-indigo-600/10 border-2 border-purple-500 shadow-md group hover:scale-102 transition-transform cursor-pointer col-span-2 sm:col-span-1" onclick="if(window.soundFX) window.soundFX.playFortniteClick()">
-              <div class="flex justify-between items-center text-[10px] font-bold text-purple-400 mb-1">
-                <span>[TECLA 5]</span>
-                <span class="px-1.5 py-0.5 rounded bg-purple-500 text-white font-black">ÉPICO</span>
-              </div>
-              <div class="h-16 flex items-center justify-center text-3xl group-hover:scale-110 transition-transform">
-                ⚡
-              </div>
-              <div class="font-burbank text-sm text-white mb-0.5 truncate">Gancho de Asalto</div>
-              <div class="text-[11px] text-purple-300 font-bold">Movilidad Extrema</div>
-              <div class="text-[10px] text-gray-400 mt-1 italic">"Para caerles por sorpresa"</div>
             </div>
 
           </div>

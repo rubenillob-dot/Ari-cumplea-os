@@ -619,3 +619,32 @@ document.addEventListener('keydown', (e) => {
     window.closeClipModal();
   }
 });
+
+// Support-A-Creator Code: ARIXU copy interaction
+window.copyCreatorCode = function(btn) {
+  const code = 'ARIXU';
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(code).catch(() => {});
+  } else {
+    const textarea = document.createElement('textarea');
+    textarea.value = code;
+    document.body.appendChild(textarea);
+    textarea.select();
+    try { document.execCommand('copy'); } catch(e) {}
+    document.body.removeChild(textarea);
+  }
+  
+  if (window.soundFX && window.soundFX.playFortniteClick) {
+    window.soundFX.playFortniteClick();
+  }
+  
+  if (btn) {
+    const originalHTML = btn.innerHTML;
+    btn.innerHTML = '<span>✅</span><span class="font-black">¡COPIADO: ARIXU!</span>';
+    btn.classList.add('bg-emerald-400', 'from-emerald-400', 'to-teal-400');
+    setTimeout(() => {
+      btn.innerHTML = originalHTML;
+      btn.classList.remove('bg-emerald-400', 'from-emerald-400', 'to-teal-400');
+    }, 2200);
+  }
+};
