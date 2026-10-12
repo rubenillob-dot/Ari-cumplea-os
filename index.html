@@ -1291,15 +1291,91 @@
 
             </div>
 
-            <!-- VERTICAL LYRICS VIEW (Hidden by default, expands vertically on click) -->
+            <!-- STATIC LYRICS VIEW (Hidden by default, expands vertically on click) -->
             <div id="ferdinang-lyrics-wrapper" class="hidden mt-4 pt-4 border-t border-purple-800/60 transition-all duration-300">
               <div class="flex items-center justify-between pb-2 mb-3 border-b border-purple-900/40 text-xs text-gray-400">
                 <span class="font-burbank text-yellow-300 text-sm tracking-wide">📜 LETRA DE LA CANCIÓN</span>
-                <span class="text-[11px] font-mono text-purple-300/70">Click en cualquier verso para saltar</span>
+                <span class="text-[11px] font-mono text-purple-300/70">Letra oficial</span>
               </div>
 
-              <div id="ferdinang-lyrics-list" class="max-h-80 sm:max-h-96 overflow-y-auto space-y-2 px-2 py-1 lyrics-scrollbar scroll-smooth">
-                <!-- Generated dynamically by initFerdinangPlayer -->
+              <div id="ferdinang-lyrics-list" class="max-h-80 sm:max-h-96 overflow-y-auto px-2 py-1 lyrics-scrollbar">
+                <div class="space-y-3.5 text-sm sm:text-base text-gray-200 leading-relaxed font-sans p-1 select-text">
+                  <div class="bg-purple-950/40 rounded-xl p-3 border border-purple-800/40">
+                    <span class="font-burbank text-yellow-400 text-xs tracking-wider block mb-1 font-bold">[INTRO]</span>
+                    <p class="whitespace-pre-line">¡Ay, qué noche más bonita!
+¡Veinticinco primaveras!
+Hoy le cantamos a Ariadna,
+¡la reina de nuestra fiesta!</p>
+                  </div>
+                  <div class="bg-purple-950/40 rounded-xl p-3 border border-purple-800/40">
+                    <span class="font-burbank text-yellow-400 text-xs tracking-wider block mb-1 font-bold">[VERSO 1]</span>
+                    <p class="whitespace-pre-line">Hoy es tu día, llegó tu cumpleaños,
+y todo el chat te quiere celebrar,
+con tu constancia y tus grandes ideas,
+cada día más lejos vas a llegar.
+Con esa fuerza que nunca se rinde,
+con esa chispa que sabe enganchar,
+eres la reina de nuestra familia,
+y hoy nadie te va a olvidar.</p>
+                  </div>
+                  <div class="bg-purple-950/40 rounded-xl p-3 border border-purple-800/40">
+                    <span class="font-burbank text-yellow-400 text-xs tracking-wider block mb-1 font-bold">[VERSO 2]</span>
+                    <p class="whitespace-pre-line">Dice que entrena en el pádel,
+¡vaya manera de jugar!
+Con ese cuerpazo, niña,
+¡que no deje de entrenar!</p>
+                  </div>
+                  <div class="bg-gradient-to-r from-amber-500/15 to-yellow-500/10 rounded-xl p-3.5 border border-yellow-500/40 shadow-sm">
+                    <span class="font-burbank text-yellow-300 text-xs tracking-wider block mb-1 font-bold">[ESTRIBILLO]</span>
+                    <p class="whitespace-pre-line font-medium text-white">¡ARI-ADNA-NANA!
+¡ARI-ADNA-NANA!
+Veinticinco primaveras,
+¡hoy te vamos a cantar!
+¡ARI-ADNA-NANA!
+¡ARI-ADNA-NANA!
+¡Reina de nuestro corazón,
+que cumplas muchos más!</p>
+                  </div>
+                  <div class="bg-purple-950/40 rounded-xl p-3 border border-purple-800/40">
+                    <span class="font-burbank text-yellow-400 text-xs tracking-wider block mb-1 font-bold">[VERSO 3]</span>
+                    <p class="whitespace-pre-line">Gracias, moderadores, por estar a su lado,
+los VIPs y la plebe ya vienen preparados.
+Podemos rondarte en este día especial,
+porque contigo, Ariadna, ¡lo vamos a celebrar!
+Para las buenas y las mejores,
+aquí contigo estaremos,
+que aunque pasen los días y cambien las horas,
+siempre en el corazón te llevaremos.</p>
+                  </div>
+                  <div class="bg-purple-950/40 rounded-xl p-3 border border-purple-800/40">
+                    <span class="font-burbank text-yellow-400 text-xs tracking-wider block mb-1 font-bold">[CUMPLEAÑOS FELIZ]</span>
+                    <p class="whitespace-pre-line">Y Simba te canta: «¡Cumpleaños feliz!»,
+con todo el cariño que sentimos por ti.
+Cumpleaños feliz,
+cumpleaños feliz,
+te deseamos, Ariadna,
+¡cumpleaños feliz!</p>
+                  </div>
+                  <div class="bg-gradient-to-r from-amber-500/20 to-yellow-500/15 rounded-xl p-3.5 border border-yellow-400/80 shadow-md">
+                    <span class="font-burbank text-yellow-300 text-xs tracking-wider block mb-1 font-bold">[ESTRIBILLO FINAL]</span>
+                    <p class="whitespace-pre-line font-semibold text-white">¡ARI-ADNA-NANA!
+¡ARI-ADNA-NANA!
+Veinticinco primaveras,
+¡hoy te vamos a cantar!
+¡ARI-ADNA-NANA!
+¡ARI-ADNA-NANA!
+¡Reina de nuestro corazón,
+que cumplas muchos más!</p>
+                  </div>
+                  <div class="bg-purple-950/40 rounded-xl p-3 border border-purple-800/40">
+                    <span class="font-burbank text-yellow-400 text-xs tracking-wider block mb-1 font-bold">[OUTRO]</span>
+                    <p class="whitespace-pre-line">¡Ole, Ariadna!
+¡Ole tu arte y tu salero!
+¡Tu familia te quiere,
+hoy y el año entero!
+<strong class="text-yellow-300">¡Veinticinco primaveras! ¡Y que cumplas muchos más!</strong></p>
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -1319,6 +1395,235 @@
               <button onclick="handleReaction('ded-ferdinang', 'crown', event)" class="reaction-btn flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-purple-950/70 hover:bg-amber-950/80 border border-amber-700/60 hover:border-amber-400 text-xs font-bold text-amber-300 transition-all active:scale-95">
                 <img src="assets/images/crown.svg" class="w-4 h-4" alt="Corona">
                 <span class="counter-val text-white/90" id="cnt-ded-ferdinang-crown">210</span>
+              </button>
+            </div>
+            <span class="text-[11px] text-purple-400/80 font-mono flex items-center gap-1">
+              <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+              En directo
+            </span>
+          </div>
+        </article>
+
+        <!-- DEDICATORIA: LIVINGBENIDORM (CANCIÓN ORIGINAL CON LETRA SINCRONIZADA VERTICAL) -->
+        <article class="feed-card relative bg-[#130b28]/90 backdrop-blur-md rounded-2xl p-5 md:p-6 border-2 border-amber-400 shadow-[0_0_20px_rgba(245,158,11,0.35)] transition-all duration-300 hover:-translate-y-1" data-id="ded-livingbenidorm">
+          <!-- Angled Cut Ribbon Tag -->
+          <div class="absolute -top-3.5 right-6 bg-gradient-to-r from-amber-500 to-red-500 text-black font-black text-[11px] uppercase tracking-wider px-3 py-0.5 rounded-md skew-x-[-10deg] shadow-md border border-black/40">
+            MÍTICO
+          </div>
+
+          <!-- User Header -->
+          <div class="flex items-center gap-3.5 mb-3">
+            <!-- Avatar with Rarity Ring -->
+            <div class="relative">
+              <div class="w-13 h-13 rounded-full p-0.5 bg-gradient-to-tr from-amber-400 to-red-500 shadow-md">
+                <img src="assets/Iconos de perfiles/LivingBenidorm.webp" alt="LivingBenidorm" class="w-12 h-12 rounded-full object-cover border-2 border-[#130b28]">
+              </div>
+              <span class="absolute -bottom-1 -right-1 bg-purple-900 border border-purple-400 rounded-full p-0.5" title="twitch">
+                <svg class="w-3.5 h-3.5 text-purple-300" fill="currentColor" viewBox="0 0 24 24"><path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714Z"/></svg>
+              </span>
+            </div>
+
+            <!-- Nickname -->
+            <div class="flex-1 min-w-0">
+              <div class="flex items-center gap-2 flex-wrap">
+                <span class="font-burbank text-lg font-bold text-white tracking-wide truncate">LivingBenidorm</span>
+              </div>
+              <div class="flex items-center gap-1.5 text-[11px] text-gray-400 mt-0.5">
+                <span class="inline-flex items-center gap-1 text-[#a970ff] font-bold" title="Twitch">
+                  <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714Z"/></svg>
+                  <span class="text-[10px] uppercase font-mono tracking-wider">Twitch</span>
+                </span>
+                <span class="text-purple-400/50">•</span>
+                <span>Hoy a las 16:30</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Message Body -->
+          <p class="text-gray-200 text-sm md:text-base leading-relaxed font-sans font-medium whitespace-pre-line">
+¡Muchas felicidades Ari! 🎂🎮 18 meses ya suscrito a tus directos, compartiendo risas, partidas sin construcción y grandes momentos en el chat.
+Te he preparado esta canción con todo el cariño de parte de uno de tus suscriptores. ¡Sube el volumen, cántala a tope y que cumplas muchísimos más, Mamixu! 👑💜
+          </p>
+
+          <!-- Media attachment: Player & Vertical Lyrics -->
+          <div class="mt-5 rounded-2xl bg-[#0f0622]/95 border-2 border-yellow-400/80 p-4 sm:p-5 shadow-[0_0_25px_rgba(244,196,48,0.2)]">
+            <!-- Audio element hidden -->
+            <audio id="livingbenidorm-audio" src="assets/Dedicatorias/LivingBenidorm.mp3" preload="metadata"></audio>
+
+            <!-- Main Player Controls Row -->
+            <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+              
+              <!-- Vinyl Avatar + Track Info -->
+              <div class="flex items-center gap-3.5 w-full md:w-auto">
+                <div class="relative w-14 h-14 sm:w-16 sm:h-16 shrink-0">
+                  <div id="livingbenidorm-vinyl-disc" class="w-full h-full rounded-full bg-gradient-to-tr from-black via-zinc-900 to-black p-1 border-2 border-zinc-700 shadow-xl flex items-center justify-center transition-transform">
+                    <div class="w-6 h-6 sm:w-8 sm:h-8 rounded-full overflow-hidden border border-yellow-400 shadow">
+                      <img src="assets/Iconos de perfiles/LivingBenidorm.webp" alt="LivingBenidorm" class="w-full h-full object-cover">
+                    </div>
+                  </div>
+                  <span id="livingbenidorm-player-status-badge" class="absolute -bottom-1 -right-1 bg-yellow-400 text-black text-[9px] font-black px-1.5 py-0.5 rounded uppercase shadow font-mono">PAUSA</span>
+                </div>
+
+                <div class="min-w-0">
+                  <h4 class="font-burbank text-lg sm:text-xl text-yellow-300 truncate tracking-wide">¡EY, ARIXU!</h4>
+                  <p class="text-xs text-purple-200 truncate font-sans">18 Meses de Sub • Para Ariadna • <strong class="text-white">LivingBenidorm</strong></p>
+                </div>
+              </div>
+
+              <!-- Controls + Timeline Scrubber -->
+              <div class="flex flex-col items-center w-full md:max-w-md">
+                <div class="flex items-center justify-center gap-3 mb-2">
+                  <button onclick="skipSongAudio('livingbenidorm', -10)" class="px-2.5 py-1.5 rounded-xl bg-purple-950/80 hover:bg-purple-900 border border-purple-700/70 text-yellow-300 transition-all hover:scale-105 active:scale-95" title="Retroceder 10 segundos">
+                    <span class="text-xs font-mono font-black">⏪ -10s</span>
+                  </button>
+
+                  <button id="livingbenidorm-play-btn" onclick="toggleSongPlay('livingbenidorm')" class="px-5 py-2 rounded-2xl bg-gradient-to-r from-yellow-400 to-amber-500 hover:from-yellow-300 hover:to-amber-400 text-black font-burbank text-base flex items-center gap-2 shadow-[0_0_20px_rgba(244,196,48,0.5)] hover:scale-105 active:scale-95 transition-all duration-200 border border-yellow-200">
+                    <span id="livingbenidorm-play-icon" class="text-lg">▶</span>
+                    <span id="livingbenidorm-play-text" class="font-black uppercase tracking-wider">REPRODUCIR</span>
+                  </button>
+
+                  <button onclick="skipSongAudio('livingbenidorm', 10)" class="px-2.5 py-1.5 rounded-xl bg-purple-950/80 hover:bg-purple-900 border border-purple-700/70 text-yellow-300 transition-all hover:scale-105 active:scale-95" title="Avanzar 10 segundos">
+                    <span class="text-xs font-mono font-black">+10s ⏩</span>
+                  </button>
+                </div>
+
+                <div class="w-full flex items-center gap-2.5">
+                  <span id="livingbenidorm-time-current" class="text-[11px] font-mono text-yellow-300 font-bold w-10 text-right">00:00</span>
+                  <div class="relative flex-1 h-2 bg-black/70 rounded-full cursor-pointer group" id="livingbenidorm-progress-container" onclick="seekSongAudio('livingbenidorm', event)">
+                    <div id="livingbenidorm-progress-bar" class="h-full bg-gradient-to-r from-orange-500 to-yellow-400 rounded-full w-0 transition-all duration-100 shadow-[0_0_10px_rgba(244,196,48,0.7)]"></div>
+                  </div>
+                  <span id="livingbenidorm-time-total" class="text-[11px] font-mono text-gray-400 w-10">02:21</span>
+                </div>
+              </div>
+
+              <!-- Action Buttons -->
+              <div class="flex items-center gap-2 w-full md:w-auto justify-end flex-wrap">
+                <button id="livingbenidorm-toggle-lyrics-btn" onclick="toggleSongLyrics('livingbenidorm')" class="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl bg-purple-900/60 hover:bg-purple-800 border border-purple-600/70 text-xs font-bold font-hud text-purple-200 hover:text-white transition-all hover:scale-102">
+                  <span>📜</span>
+                  <span id="livingbenidorm-toggle-lyrics-text">Ver Letra</span>
+                </button>
+                <button onclick="downloadSongLyrics('livingbenidorm')" class="inline-flex items-center gap-1 px-2.5 py-2 rounded-xl bg-purple-950/70 hover:bg-purple-900 border border-purple-800/60 text-xs text-purple-300 hover:text-yellow-300 transition-all" title="Descargar letra en .txt">
+                  <span>📥</span>
+                </button>
+              </div>
+
+            </div>
+
+            <!-- STATIC LYRICS VIEW (Hidden by default, expands vertically on click) -->
+            <div id="livingbenidorm-lyrics-wrapper" class="hidden mt-4 pt-4 border-t border-purple-800/60 transition-all duration-300">
+              <div class="flex items-center justify-between pb-2 mb-3 border-b border-purple-900/40 text-xs text-gray-400">
+                <span class="font-burbank text-yellow-300 text-sm tracking-wide">📜 LETRA DE LA CANCIÓN</span>
+                <span class="text-[11px] font-mono text-purple-300/70">Letra oficial</span>
+              </div>
+
+              <div id="livingbenidorm-lyrics-list" class="max-h-80 sm:max-h-96 overflow-y-auto px-2 py-1 lyrics-scrollbar">
+                <div class="space-y-3.5 text-sm sm:text-base text-gray-200 leading-relaxed font-sans p-1 select-text">
+                  <div class="bg-purple-950/40 rounded-xl p-3 border border-purple-800/40">
+                    <span class="font-burbank text-yellow-400 text-xs tracking-wider block mb-1 font-bold">[INTRO]</span>
+                    <p class="whitespace-pre-line">¡Ey, Arixu, hoy toca celebrar!
+Deja un momento el Fortnite,
+¡que te venimos a felicitar!</p>
+                  </div>
+
+                  <div class="bg-purple-950/40 rounded-xl p-3 border border-purple-800/40">
+                    <span class="font-burbank text-yellow-400 text-xs tracking-wider block mb-1 font-bold">[VERSO 1]</span>
+                    <p class="whitespace-pre-line">Cada día me conecto,
+ya es parte de mi rutina,
+a tu stream para verte jugar,
+¡y echarme unas risas contigo, Arixu, una vez más!
+Con el mando y sin construcción,
+buscando otra victoria,
+entre partidas y locuras,
+vamos sumando nuestra historia.</p>
+                  </div>
+
+                  <div class="bg-purple-950/40 rounded-xl p-3 border border-purple-800/40">
+                    <span class="font-burbank text-yellow-400 text-xs tracking-wider block mb-1 font-bold">[PREESTRIBILLO]</span>
+                    <p class="whitespace-pre-line">18 meses ya que estoy suscrito,
+y parece que fue ayer,
+tantos momentos divertidos
+que no se pueden ni contar, ¡qué bien!</p>
+                  </div>
+
+                  <div class="bg-gradient-to-r from-amber-500/15 to-yellow-500/10 rounded-xl p-3.5 border border-yellow-500/40 shadow-sm">
+                    <span class="font-burbank text-yellow-300 text-xs tracking-wider block mb-1 font-bold">[ESTRIBILLO]</span>
+                    <p class="whitespace-pre-line font-medium text-white">¡Feliz cumpleaños, Arixu!
+Que hoy te salga todo genial,
+que consigas mil victorias
+y que no falte la felicidad.
+¡Feliz cumpleaños, Arixu!
+Hoy el chat va a celebrar,
+aunque yo escriba poquito,
+¡casi siempre estoy detrás!</p>
+                  </div>
+
+                  <div class="bg-purple-950/40 rounded-xl p-3 border border-purple-800/40">
+                    <span class="font-burbank text-yellow-400 text-xs tracking-wider block mb-1 font-bold">[PREESTRIBILLO]</span>
+                    <p class="whitespace-pre-line">18 meses de sub compartiendo
+aventuras frente a la pantalla,
+y aunque no me toquen los ñorteos
+aquí tienes a alguien siempre detrás</p>
+                  </div>
+
+                  <div class="bg-gradient-to-r from-amber-500/15 to-yellow-500/10 rounded-xl p-3.5 border border-yellow-500/40 shadow-sm">
+                    <span class="font-burbank text-yellow-300 text-xs tracking-wider block mb-1 font-bold">[ESTRIBILLO]</span>
+                    <p class="whitespace-pre-line font-medium text-white">¡Feliz cumpleaños, Imarixu!
+Que hoy te salga todo genial,
+que consigas mil victorias
+y que no falte la felicidad.
+¡Feliz cumpleaños, Arixu!
+Que la suerte te acompañe al jugar,
+que haya risas, buenos momentos
+y más streams para disfrutar.</p>
+                  </div>
+
+                  <div class="bg-purple-950/40 rounded-xl p-3 border border-purple-800/40">
+                    <span class="font-burbank text-yellow-400 text-xs tracking-wider block mb-1 font-bold">[PUENTE]</span>
+                    <p class="whitespace-pre-line">Que si pierdes una partida,
+que si toca remontar,
+lo importante es estar juntos
+y tener motivos para celebrar.</p>
+                  </div>
+
+                  <div class="bg-gradient-to-r from-amber-500/20 to-yellow-500/15 rounded-xl p-3.5 border border-yellow-400/80 shadow-md">
+                    <span class="font-burbank text-yellow-300 text-xs tracking-wider block mb-1 font-bold">[ESTRIBILLO FINAL]</span>
+                    <p class="whitespace-pre-line font-semibold text-white">¡Feliz cumpleaños, Imarixu!
+Hoy te toca brillar,
+que explote de alegría el directo
+y que no paremos de celebrar.
+Año y medio de aventuras,
+mil recuerdos que guardar,
+soy de los que hablan poquito,
+¡pero casi siempre están!</p>
+                  </div>
+
+                  <div class="bg-purple-950/40 rounded-xl p-3 border border-purple-800/40">
+                    <span class="font-burbank text-yellow-400 text-xs tracking-wider block mb-1 font-bold">[OUTRO]</span>
+                    <p class="whitespace-pre-line">Así que sopla las velas,
+pide un deseo especial,
+de parte de uno de tus suscriptores:
+<strong class="text-yellow-300">¡Mamixu, que cumplas muchos más!</strong></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Interactive Reaction Counters -->
+          <div class="mt-5 pt-4 border-t border-purple-900/60 flex items-center justify-between flex-wrap gap-2">
+            <div class="flex items-center gap-2">
+              <button onclick="handleReaction('ded-livingbenidorm', 'gg', event)" class="reaction-btn flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-purple-950/70 hover:bg-purple-800/80 border border-purple-700/50 hover:border-yellow-400 text-xs font-bold text-yellow-300 transition-all active:scale-95">
+                <span class="font-black text-sm">GG</span>
+                <span class="counter-val text-white/90" id="cnt-ded-livingbenidorm-gg">175</span>
+              </button>
+              <button onclick="handleReaction('ded-livingbenidorm', 'shield', event)" class="reaction-btn flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-purple-950/70 hover:bg-cyan-950/80 border border-cyan-800/60 hover:border-cyan-400 text-xs font-bold text-cyan-300 transition-all active:scale-95">
+                <img src="assets/images/shield-potion.svg" class="w-4 h-4" alt="Mini">
+                <span class="counter-val text-white/90" id="cnt-ded-livingbenidorm-shield">108</span>
+              </button>
+              <button onclick="handleReaction('ded-livingbenidorm', 'crown', event)" class="reaction-btn flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-purple-950/70 hover:bg-amber-950/80 border border-amber-700/60 hover:border-amber-400 text-xs font-bold text-amber-300 transition-all active:scale-95">
+                <img src="assets/images/crown.svg" class="w-4 h-4" alt="Corona">
+                <span class="counter-val text-white/90" id="cnt-ded-livingbenidorm-crown">234</span>
               </button>
             </div>
             <span class="text-[11px] text-purple-400/80 font-mono flex items-center gap-1">
