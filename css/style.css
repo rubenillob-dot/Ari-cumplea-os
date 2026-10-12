@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,400;0,600;0,700;1,700&family=Lilita+One&family=Luckiest+Guy&family=Outfit:wght@400;600;800;900&family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,400;0,600;0,700;1,700&family=Lilita+One&family=Luckiest+Guy&family=Montserrat:wght@700;800;900&family=Outfit:wght@400;600;800;900&family=Press+Start+2P&display=swap');
 
 :root {
   --fn-storm-deep: #0e071e;
@@ -543,4 +543,66 @@ body {
   0% { transform: translateY(0); }
   100% { transform: translateY(-4px); }
 }
+
+/* ========================================================
+   VERTICAL SYNCHRONIZED SONG LYRICS
+   ======================================================== */
+.lyric-line {
+  transition: all 0.25s ease-out;
+  padding: 8px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  line-height: 1.5;
+  font-size: 1rem;
+  font-weight: 600;
+  color: rgba(209, 213, 219, 0.7);
+  user-select: none;
+}
+
+.lyric-line:hover {
+  background: rgba(147, 51, 234, 0.25);
+  color: #ffffff !important;
+}
+
+/* Active line: smooth glow, highlight background, border accent */
+.lyric-line.lyric-active {
+  color: #ffffff !important;
+  font-weight: 800 !important;
+  font-size: 1.05rem !important;
+  background: rgba(168, 85, 247, 0.22) !important;
+  border-left: 3px solid #facc15 !important;
+  box-shadow: 0 0 15px rgba(244, 196, 48, 0.2);
+  transform: translateX(4px);
+}
+
+.lyric-line.lyric-past,
+.lyric-line.lyric-future {
+  color: rgba(209, 213, 219, 0.65) !important;
+}
+
+/* Vinyl rotation animation */
+@keyframes spinVinylDisc {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.vinyl-playing {
+  animation: spinVinylDisc 4s linear infinite;
+}
+
+/* Smooth minimalist lyrics scrollbar */
+.lyrics-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+.lyrics-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.lyrics-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(168, 85, 247, 0.3);
+  border-radius: 9999px;
+}
+.lyrics-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(244, 196, 48, 0.6);
+}
+
 

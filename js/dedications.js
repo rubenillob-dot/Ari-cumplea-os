@@ -1,10 +1,101 @@
 /**
  * dedications.js - Community Dedications Feed for ImArixu Birthday
- * Supports text, fanart/images, video/clips, rarity borders, and interactive reactions.
+ * Supports text, fanart/images, video/clips, song/music with synchronized lyrics, rarity borders, and interactive reactions.
  * Stores extra dedications in localStorage.
  */
 
+const FERDINANG_LYRICS = [
+  { time: 0, text: "🎶 [Intro Musical Flamenca / Rumba]" },
+  { time: 13, text: "¡Ay, qué noche más bonita!" },
+  { time: 16.5, text: "¡Veinticinco primaveras!" },
+  { time: 20, text: "Hoy le cantamos a Ariadna," },
+  { time: 24, text: "¡la reina de nuestra fiesta!" },
+  { time: 36, text: "Hoy es tu día, llegó tu cumpleaños," },
+  { time: 41, text: "y todo el chat te quiere celebrar," },
+  { time: 47, text: "con tu constancia y tus grandes ideas," },
+  { time: 52, text: "cada día más lejos vas a llegar." },
+  { time: 57, text: "Con esa fuerza que nunca se rinde," },
+  { time: 61.5, text: "con esa chispa que sabe enganchar," },
+  { time: 66, text: "eres la reina de nuestra familia," },
+  { time: 69.5, text: "y hoy nadie te va a olvidar." },
+  { time: 73, text: "Dice que entrena en el pádel," },
+  { time: 76, text: "¡vaya manera de jugar!" },
+  { time: 79, text: "Con ese cuerpazo, niña," },
+  { time: 82, text: "¡que no deje de entrenar!" },
+  { time: 85, text: "¡ARI-ADNA-NANA!" },
+  { time: 87.5, text: "¡ARI-ADNA-NANA!" },
+  { time: 90.5, text: "Veinticinco primaveras," },
+  { time: 93.5, text: "¡hoy te vamos a cantar!" },
+  { time: 96.5, text: "¡ARI-ADNA-NANA!" },
+  { time: 99.5, text: "¡ARI-ADNA-NANA!" },
+  { time: 102, text: "¡Reina de nuestro corazón," },
+  { time: 104.5, text: "que cumplas muchos más!" },
+  { time: 108, text: "Gracias, moderadores, por estar a su lado," },
+  { time: 112, text: "los VIPs y la plebe ya vienen preparados." },
+  { time: 115, text: "Podemos rondarte en este día especial," },
+  { time: 118, text: "porque contigo, Ariadna, ¡lo vamos a celebrar!" },
+  { time: 121, text: "Para las buenas y las mejores," },
+  { time: 124, text: "aquí contigo estaremos," },
+  { time: 127, text: "que aunque pasen los días y cambien las horas," },
+  { time: 130.5, text: "siempre en el corazón te llevaremos." },
+  { time: 134, text: "Y Simba te canta: «¡Cumpleaños feliz!»," },
+  { time: 139, text: "con todo el cariño que sentimos por ti." },
+  { time: 144, text: "Cumpleaños feliz," },
+  { time: 147.5, text: "cumpleaños feliz," },
+  { time: 151, text: "te deseamos, Ariadna," },
+  { time: 155, text: "¡cumpleaños feliz!" },
+  { time: 159, text: "¡ARI-ADNA-NANA!" },
+  { time: 162, text: "¡ARI-ADNA-NANA!" },
+  { time: 165, text: "Veinticinco primaveras," },
+  { time: 168, text: "¡hoy te vamos a cantar!" },
+  { time: 171.5, text: "¡ARI-ADNA-NANA!" },
+  { time: 174.5, text: "¡ARI-ADNA-NANA!" },
+  { time: 177, text: "¡Reina de nuestro corazón," },
+  { time: 180, text: "que cumplas muchos más!" },
+  { time: 187, text: "¡Ole, Ariadna!" },
+  { time: 191, text: "¡Ole tu arte y tu salero!" },
+  { time: 195, text: "¡Tu familia te quiere," },
+  { time: 198.5, text: "hoy y el año entero!" },
+  { time: 202.5, text: "¡Veinticinco primaveras!" },
+  { time: 206, text: "¡Y que cumplas muchos más!" },
+  { time: 212, text: "🎉 [Fin de fiesta • ¡Viva Ariadna!]" }
+];
+
 const DEFAULT_DEDICATIONS = [
+  {
+    id: 'ded-ferdinang',
+    user: 'Ferdinang',
+    platform: 'twitch',
+    role: 'VIP & MOD • CANCIÓN ORIGINAL 🎵',
+    rarity: 'mythic',
+    avatar: 'assets/Iconos de perfiles/Ferdinang.webp',
+    type: 'song',
+    songTitle: 'FELICIDADES',
+    audioUrl: 'assets/Dedicatorias/Ferdinang.mp3',
+    message: '¡Muchas felicidades Ariadna! 🎂👑 25 primaveras no se cumplen todos los días. Te he preparado esta canción con todo el cariño de nuestra familia y de todo el chat para celebrarlo por todo lo alto. ¡Sube el volumen, cántala con nosotros y disfruta de tu día reina!',
+    reactions: { gg: 154, shield: 92, crown: 210 },
+    date: 'Hoy a las 16:00'
+  },
+  {
+    id: 'ded-rubenillo',
+    user: 'Rubenillo',
+    platform: 'twitch',
+    role: 'MODERADOR',
+    rarity: 'mythic',
+    avatar: 'assets/Iconos de perfiles/Rubenillo.webp',
+    type: 'image',
+    image: 'assets/Dedicatorias/Rubenillo.png',
+    caption: 'Recuerdo especial de Rubenillo con Ariadna',
+    message: `Ari, familia... hoy cuelgo la placa de moderador un momento para hablaros simplemente desde el corazón.
+
+Mirar atrás y ver todo lo que hemos construido juntos este último año es increíble. Ari, gracias infinitas por darme la oportunidad de cuidar esta comunidad desde primera línea y confiar en mí para proteger este espacio. He visto de cerca tu esfuerzo incansable detrás de cada directo, y acompañarte hasta lograr la meta del tan soñado Partner de Twitch ha sido un orgullo inmenso.
+
+Ese 'check' morado no es solo una marca, es el reflejo de tu constancia y del refugio tan bonito que has creado para todos nosotros.
+
+Felicidades, Ari. Te lo has ganado a pulso. A por el siguiente nivel, porque esto acaba de empezar y aquí seguiremos, siempre cubriéndote las espaldas. 💜`,
+    reactions: { gg: 188, shield: 115, crown: 245 },
+    date: 'Hoy a las 16:15'
+  },
   {
     id: 'ded-1',
     user: 'SITOGAMER',
@@ -213,7 +304,7 @@ const DEFAULT_DEDICATIONS = [
 
 class DedicationsManager {
   constructor() {
-    this.storageKey = 'imarixu_birthday_dedications_v5';
+    this.storageKey = 'imarixu_birthday_dedications_v7';
     this.dedications = this.loadDedications();
   }
 
@@ -231,6 +322,8 @@ class DedicationsManager {
       localStorage.removeItem('imarixu_birthday_dedications_v2');
       localStorage.removeItem('imarixu_birthday_dedications_v3');
       localStorage.removeItem('imarixu_birthday_dedications_v4');
+      localStorage.removeItem('imarixu_birthday_dedications_v5');
+      localStorage.removeItem('imarixu_birthday_dedications_v6');
     } catch (_) {}
     return [...DEFAULT_DEDICATIONS];
   }
@@ -309,8 +402,8 @@ class DedicationsManager {
       let mediaContent = '';
       if (item.type === 'image' && item.image) {
         mediaContent = `
-          <div class="mt-4 rounded-xl overflow-hidden border-2 border-white/10 group cursor-pointer relative" onclick="openLightbox('${item.image}', '${encodeURIComponent(item.caption || 'Fanart para Ari')}')">
-            <img src="${item.image}" alt="Fanart" class="w-full h-64 object-cover object-center group-hover:scale-105 transition-transform duration-300" loading="lazy">
+          <div class="mt-4 rounded-xl overflow-hidden border-2 border-white/10 group cursor-pointer relative" onclick="openLightbox('${item.image}', '${encodeURIComponent(item.caption || 'Recuerdo especial de ' + item.user)}')">
+            <img src="${item.image}" alt="Dedicatoria" class="w-full h-64 sm:h-80 md:h-96 object-cover object-center group-hover:scale-105 transition-transform duration-300" loading="lazy">
             <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-3">
               <span class="text-xs text-white/90 flex items-center gap-1 font-semibold">
                 <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/><path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"/></svg>
@@ -333,6 +426,82 @@ class DedicationsManager {
               <span class="truncate">${item.clipTitle || 'Ver Clip'}</span>
               <span class="text-yellow-400 ml-2 font-mono">${item.clipDuration || 'CLIP'}</span>
             </div>
+          </div>
+        `;
+      } else if (item.type === 'song') {
+        mediaContent = `
+          <div class="mt-5 rounded-2xl bg-[#0f0622]/95 border-2 border-yellow-400/80 p-4 sm:p-5 shadow-[0_0_25px_rgba(244,196,48,0.2)]">
+            <!-- Audio element hidden -->
+            <audio id="ferdinang-audio" src="${item.audioUrl}" preload="metadata"></audio>
+
+            <!-- Main Player Controls Row -->
+            <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+              
+              <!-- Vinyl Avatar + Track Info -->
+              <div class="flex items-center gap-3.5 w-full md:w-auto">
+                <div class="relative w-14 h-14 sm:w-16 sm:h-16 shrink-0">
+                  <div id="vinyl-disc" class="w-full h-full rounded-full bg-gradient-to-tr from-black via-zinc-900 to-black p-1 border-2 border-zinc-700 shadow-xl flex items-center justify-center transition-transform">
+                    <div class="w-6 h-6 sm:w-8 sm:h-8 rounded-full overflow-hidden border border-yellow-400 shadow">
+                      <img src="${item.avatar}" alt="Ferdinang" class="w-full h-full object-cover">
+                    </div>
+                  </div>
+                  <span id="player-status-badge" class="absolute -bottom-1 -right-1 bg-yellow-400 text-black text-[9px] font-black px-1.5 py-0.5 rounded uppercase shadow font-mono">PAUSA</span>
+                </div>
+
+                <div class="min-w-0">
+                  <h4 class="font-burbank text-lg sm:text-xl text-yellow-300 truncate tracking-wide">FELICIDADES</h4>
+                  <p class="text-xs text-purple-200 truncate font-sans">25 Primaveras • Para Ariadna • <strong class="text-white">Ferdinang</strong></p>
+                </div>
+              </div>
+
+              <!-- Controls + Timeline Scrubber -->
+              <div class="flex flex-col items-center w-full md:max-w-md">
+                <div class="flex items-center justify-center gap-3 mb-2">
+                  <button onclick="skipFerdinangAudio(-10)" class="px-2.5 py-1.5 rounded-xl bg-purple-950/80 hover:bg-purple-900 border border-purple-700/70 text-yellow-300 transition-all hover:scale-105 active:scale-95" title="Retroceder 10 segundos">
+                    <span class="text-xs font-mono font-black">⏪ -10s</span>
+                  </button>
+
+                  <button id="ferdinang-play-btn" onclick="toggleFerdinangPlay()" class="px-5 py-2 rounded-2xl bg-gradient-to-r from-yellow-400 to-amber-500 hover:from-yellow-300 hover:to-amber-400 text-black font-burbank text-base flex items-center gap-2 shadow-[0_0_20px_rgba(244,196,48,0.5)] hover:scale-105 active:scale-95 transition-all duration-200 border border-yellow-200">
+                    <span id="ferdinang-play-icon" class="text-lg">▶</span>
+                    <span id="ferdinang-play-text" class="font-black uppercase tracking-wider">REPRODUCIR</span>
+                  </button>
+
+                  <button onclick="skipFerdinangAudio(10)" class="px-2.5 py-1.5 rounded-xl bg-purple-950/80 hover:bg-purple-900 border border-purple-700/70 text-yellow-300 transition-all hover:scale-105 active:scale-95" title="Avanzar 10 segundos">
+                    <span class="text-xs font-mono font-black">+10s ⏩</span>
+                  </button>
+                </div>
+
+                <div class="w-full flex items-center gap-2.5">
+                  <span id="ferdinang-time-current" class="text-[11px] font-mono text-yellow-300 font-bold w-10 text-right">00:00</span>
+                  <div class="relative flex-1 h-2 bg-black/70 rounded-full cursor-pointer group" id="ferdinang-progress-container" onclick="seekFerdinangAudio(event)">
+                    <div id="ferdinang-progress-bar" class="h-full bg-gradient-to-r from-orange-500 to-yellow-400 rounded-full w-0 transition-all duration-100 shadow-[0_0_10px_rgba(244,196,48,0.7)]"></div>
+                  </div>
+                  <span id="ferdinang-time-total" class="text-[11px] font-mono text-gray-400 w-10">03:37</span>
+                </div>
+              </div>
+
+              <!-- Action Buttons -->
+              <div class="flex items-center gap-2 w-full md:w-auto justify-end flex-wrap">
+                <button id="toggle-lyrics-btn" onclick="toggleLyricsPanel()" class="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl bg-purple-900/60 hover:bg-purple-800 border border-purple-600/70 text-xs font-bold font-hud text-purple-200 hover:text-white transition-all hover:scale-102">
+                  <span>📜</span>
+                  <span id="toggle-lyrics-text">Ver Letra</span>
+                </button>
+              </div>
+
+            </div>
+
+            <!-- VERTICAL LYRICS VIEW (Hidden by default, expands vertically on click) -->
+            <div id="ferdinang-lyrics-wrapper" class="hidden mt-4 pt-4 border-t border-purple-800/60 transition-all duration-300">
+              <div class="flex items-center justify-between pb-2 mb-3 border-b border-purple-900/40 text-xs text-gray-400">
+                <span class="font-burbank text-yellow-300 text-sm tracking-wide">📜 LETRA DE LA CANCIÓN</span>
+                <span class="text-[11px] font-mono text-purple-300/70">Click en cualquier verso para saltar</span>
+              </div>
+
+              <div id="ferdinang-lyrics-list" class="max-h-80 sm:max-h-96 overflow-y-auto space-y-2 px-2 py-1 lyrics-scrollbar scroll-smooth">
+                <!-- Generated dynamically by initFerdinangPlayer -->
+              </div>
+            </div>
+
           </div>
         `;
       }
@@ -367,11 +536,10 @@ class DedicationsManager {
               </span>
             </div>
 
-            <!-- Nickname & Badges -->
+            <!-- Nickname -->
             <div class="flex-1 min-w-0">
               <div class="flex items-center gap-2 flex-wrap">
                 <span class="font-burbank text-lg font-bold text-white tracking-wide truncate">${item.user}</span>
-                <span class="text-[10px] uppercase font-black px-2 py-0.5 rounded bg-purple-950/80 text-purple-300 border border-purple-700/60">${item.role}</span>
               </div>
               <div class="flex items-center gap-1.5 text-[11px] text-gray-400 mt-0.5">
                 <span class="inline-flex items-center gap-1 text-[#a970ff] font-bold" title="Twitch">
@@ -423,7 +591,288 @@ class DedicationsManager {
         </article>
       `;
     }).join('');
+
+    // Initialize Spotify-style player and lyrics listeners
+    setTimeout(() => {
+      if (window.initFerdinangPlayer) {
+        window.initFerdinangPlayer();
+      }
+    }, 50);
   }
 }
 
 window.dedicationsManager = new DedicationsManager();
+
+/* ========================================================
+   FERDINANG PLAYER & VERTICAL SYNCHRONIZED LYRICS
+   ======================================================== */
+window.initFerdinangPlayer = function() {
+  const audio = document.getElementById('ferdinang-audio');
+  const lyricsList = document.getElementById('ferdinang-lyrics-list');
+  if (!audio || !lyricsList) return;
+
+  function formatTime(sec) {
+    if (isNaN(sec) || sec < 0) return '00:00';
+    const m = Math.floor(sec / 60);
+    const s = Math.floor(sec % 60);
+    return `${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}`;
+  }
+
+  // Populate lyrics if empty
+  if (lyricsList.children.length === 0 || !lyricsList.querySelector('.lyric-line')) {
+    lyricsList.innerHTML = FERDINANG_LYRICS.map((line, idx) => `
+      <div class="lyric-line ${idx === 0 ? 'lyric-active' : 'lyric-future'}" data-index="${idx}" data-time="${line.time}" onclick="seekSongTo(${line.time})">
+        ${line.text}
+      </div>
+    `).join('');
+  }
+
+  audio.addEventListener('loadedmetadata', () => {
+    const totalEl = document.getElementById('ferdinang-time-total');
+    if (totalEl) totalEl.textContent = formatTime(audio.duration);
+  });
+
+  // Default duration fallback
+  const totalEl = document.getElementById('ferdinang-time-total');
+  if (totalEl && audio.duration) {
+    totalEl.textContent = formatTime(audio.duration);
+  }
+
+  let activeIndex = -1;
+  audio.addEventListener('timeupdate', () => {
+    const curTime = audio.currentTime;
+    const duration = audio.duration || 217.6;
+
+    // Update progress bar
+    const progressEl = document.getElementById('ferdinang-progress-bar');
+    const timeCurEl = document.getElementById('ferdinang-time-current');
+    if (progressEl) {
+      const pct = (curTime / duration) * 100;
+      progressEl.style.width = `${pct}%`;
+    }
+    if (timeCurEl) {
+      timeCurEl.textContent = formatTime(curTime);
+    }
+
+    // Determine active line in lyrics
+    let newIndex = 0;
+    for (let i = 0; i < FERDINANG_LYRICS.length; i++) {
+      if (curTime >= FERDINANG_LYRICS[i].time) {
+        newIndex = i;
+      } else {
+        break;
+      }
+    }
+
+    if (newIndex !== activeIndex) {
+      activeIndex = newIndex;
+      const lines = lyricsList.querySelectorAll('.lyric-line');
+      lines.forEach((line, idx) => {
+        if (idx === activeIndex) {
+          line.classList.remove('lyric-past', 'lyric-future');
+          line.classList.add('lyric-active');
+          
+          // Smooth vertical centering inside lyricsList container
+          const targetOffset = line.offsetTop - (lyricsList.clientHeight / 2) + (line.clientHeight / 2);
+          lyricsList.scrollTo({
+            top: Math.max(0, targetOffset),
+            behavior: 'smooth'
+          });
+        } else if (idx < activeIndex) {
+          line.classList.remove('lyric-active', 'lyric-future');
+          line.classList.add('lyric-past');
+        } else {
+          line.classList.remove('lyric-active', 'lyric-past');
+          line.classList.add('lyric-future');
+        }
+      });
+    }
+  });
+
+  audio.addEventListener('play', () => {
+    // Lower or pause background lobby music so song is heard clearly
+    if (window.soundFX && window.soundFX.bgmAudio && !window.soundFX.bgmAudio.paused) {
+      window.soundFX.bgmAudio.pause();
+    }
+    const playIcon = document.getElementById('ferdinang-play-icon');
+    const playText = document.getElementById('ferdinang-play-text');
+    const disc = document.getElementById('vinyl-disc');
+    const badge = document.getElementById('player-status-badge');
+    if (playIcon) playIcon.textContent = '⏸';
+    if (playText) playText.textContent = 'PAUSAR';
+    if (disc) disc.classList.add('vinyl-playing');
+    if (badge) {
+      badge.textContent = 'SONANDO';
+      badge.classList.remove('bg-yellow-400');
+      badge.classList.add('bg-emerald-400');
+    }
+  });
+
+  audio.addEventListener('pause', () => {
+    const playIcon = document.getElementById('ferdinang-play-icon');
+    const playText = document.getElementById('ferdinang-play-text');
+    const disc = document.getElementById('vinyl-disc');
+    const badge = document.getElementById('player-status-badge');
+    if (playIcon) playIcon.textContent = '▶';
+    if (playText) playText.textContent = 'REPRODUCIR';
+    if (disc) disc.classList.remove('vinyl-playing');
+    if (badge) {
+      badge.textContent = 'PAUSA';
+      badge.classList.remove('bg-emerald-400');
+      badge.classList.add('bg-yellow-400');
+    }
+  });
+
+  audio.addEventListener('ended', () => {
+    const playIcon = document.getElementById('ferdinang-play-icon');
+    const playText = document.getElementById('ferdinang-play-text');
+    const disc = document.getElementById('vinyl-disc');
+    const badge = document.getElementById('player-status-badge');
+    if (playIcon) playIcon.textContent = '▶';
+    if (playText) playText.textContent = 'REPETIR';
+    if (disc) disc.classList.remove('vinyl-playing');
+    if (badge) {
+      badge.textContent = 'FINAL';
+      badge.classList.remove('bg-emerald-400');
+      badge.classList.add('bg-yellow-400');
+    }
+  });
+};
+
+window.toggleFerdinangPlay = function() {
+  const audio = document.getElementById('ferdinang-audio');
+  if (!audio) return;
+  if (audio.paused) {
+    audio.play().catch(() => {});
+  } else {
+    audio.pause();
+  }
+};
+
+window.skipFerdinangAudio = function(sec) {
+  const audio = document.getElementById('ferdinang-audio');
+  if (!audio) return;
+  audio.currentTime = Math.max(0, Math.min(audio.duration || 217.6, audio.currentTime + sec));
+  if (window.soundFX && window.soundFX.playFortniteClick) {
+    window.soundFX.playFortniteClick();
+  }
+};
+
+window.seekFerdinangAudio = function(e) {
+  const audio = document.getElementById('ferdinang-audio');
+  const container = document.getElementById('ferdinang-progress-container');
+  if (!audio || !container) return;
+  const rect = container.getBoundingClientRect();
+  const clickX = e.clientX - rect.left;
+  const pct = Math.max(0, Math.min(1, clickX / rect.width));
+  audio.currentTime = pct * (audio.duration || 217.6);
+};
+
+window.seekSongTo = function(seconds) {
+  const audio = document.getElementById('ferdinang-audio');
+  if (!audio) return;
+  audio.currentTime = seconds;
+  if (audio.paused) {
+    audio.play().catch(() => {});
+  }
+};
+
+window.toggleLyricsPanel = function() {
+  const wrapper = document.getElementById('ferdinang-lyrics-wrapper');
+  const textEl = document.getElementById('toggle-lyrics-text');
+  if (!wrapper) return;
+  wrapper.classList.toggle('hidden');
+  const isHidden = wrapper.classList.contains('hidden');
+  if (textEl) {
+    textEl.textContent = isHidden ? 'Ver Letra' : 'Ocultar Letra';
+  }
+  if (window.soundFX && window.soundFX.playFortniteClick) {
+    window.soundFX.playFortniteClick();
+  }
+};
+
+window.downloadFerdinangLyrics = function() {
+  const lyricsText = `FELICIDADES (25 Primaveras de Ariadna)
+Dedicatoria especial de: Ferdinang
+
+¡Ay, qué noche más bonita!
+¡Veinticinco primaveras!
+Hoy le cantamos a Ariadna,
+¡la reina de nuestra fiesta!
+
+Hoy es tu día, llegó tu cumpleaños,
+y todo el chat te quiere celebrar,
+con tu constancia y tus grandes ideas,
+cada día más lejos vas a llegar.
+
+Con esa fuerza que nunca se rinde,
+con esa chispa que sabe enganchar,
+eres la reina de nuestra familia,
+y hoy nadie te va a olvidar.
+
+Dice que entrena en el pádel,
+¡vaya manera de jugar!
+Con ese cuerpazo, niña,
+¡que no deje de entrenar!
+
+¡ARI-ADNA-NANA!
+¡ARI-ADNA-NANA!
+Veinticinco primaveras,
+¡hoy te vamos a cantar!
+
+¡ARI-ADNA-NANA!
+¡ARI-ADNA-NANA!
+¡Reina de nuestro corazón,
+que cumplas muchos más!
+
+Gracias, moderadores, por estar a su lado,
+los VIPs y la plebe ya vienen preparados.
+Podemos rondarte en este día especial,
+porque contigo, Ariadna, ¡lo vamos a celebrar!
+
+Para las buenas y las mejores,
+aquí contigo estaremos,
+que aunque pasen los días y cambien las horas,
+siempre en el corazón te llevaremos.
+
+Y Simba te canta: «¡Cumpleaños feliz!»,
+con todo el cariño que sentimos por ti.
+
+Cumpleaños feliz,
+cumpleaños feliz,
+te deseamos, Ariadna,
+¡cumpleaños feliz!
+
+¡ARI-ADNA-NANA!
+¡ARI-ADNA-NANA!
+Veinticinco primaveras,
+¡hoy te vamos a cantar!
+
+¡ARI-ADNA-NANA!
+¡ARI-ADNA-NANA!
+¡Reina de nuestro corazón,
+que cumplas muchos más!
+
+¡Ole, Ariadna!
+¡Ole tu arte y tu salero!
+¡Tu familia te quiere,
+hoy y el año entero!
+
+¡Veinticinco primaveras!
+¡Y que cumplas muchos más!
+`;
+
+  const blob = new Blob([lyricsText], { type: 'text/plain;charset=utf-8' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'Letra_Ferdinang_Felicidades_Ari.txt';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+
+};
+
+
+
