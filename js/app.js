@@ -561,10 +561,32 @@ window.openClipModal = function(title, videoUrl) {
   const modal = document.getElementById('clip-player-modal');
   const clipTitleEl = document.getElementById('modal-clip-title');
   const clipIframe = document.getElementById('modal-clip-iframe');
+  const clipVideo = document.getElementById('modal-clip-video');
 
-  if (modal && clipIframe) {
-    clipIframe.src = videoUrl;
+  if (modal) {
     if (clipTitleEl) clipTitleEl.textContent = title;
+
+    const isMp4OrLocal = videoUrl && (videoUrl.endsWith('.mp4') || videoUrl.endsWith('.webm') || videoUrl.startsWith('assets/'));
+    
+    if (isMp4OrLocal && clipVideo) {
+      if (clipIframe) {
+        clipIframe.src = '';
+        clipIframe.classList.add('hidden');
+      }
+      clipVideo.src = videoUrl;
+      clipVideo.classList.remove('hidden');
+      clipVideo.currentTime = 0;
+      clipVideo.play().catch(() => {});
+    } else if (clipIframe) {
+      if (clipVideo) {
+        clipVideo.pause();
+        clipVideo.src = '';
+        clipVideo.classList.add('hidden');
+      }
+      clipIframe.src = videoUrl;
+      clipIframe.classList.remove('hidden');
+    }
+
     modal.classList.remove('hidden');
     modal.classList.add('flex');
     if (window.soundFX) window.soundFX.playFortniteClick();
@@ -574,9 +596,26 @@ window.openClipModal = function(title, videoUrl) {
 window.closeClipModal = function() {
   const modal = document.getElementById('clip-player-modal');
   const clipIframe = document.getElementById('modal-clip-iframe');
+  const clipVideo = document.getElementById('modal-clip-video');
   if (modal) {
-    if (clipIframe) clipIframe.src = '';
+    if (clipVideo) {
+      clipVideo.pause();
+      clipVideo.src = '';
+      clipVideo.classList.add('hidden');
+    }
+    if (clipIframe) {
+      clipIframe.src = '';
+      clipIframe.classList.add('hidden');
+    }
     modal.classList.add('hidden');
     modal.classList.remove('flex');
   }
 };
+
+// Global escape key listener to close modals
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    window.closeLightbox();
+    window.closeClipModal();
+  }
+});

@@ -393,10 +393,10 @@
             <div class="w-12 h-12 rounded-xl bg-yellow-400/20 border border-yellow-400/50 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
               <img src="assets/images/victory-crown.svg" class="w-7 h-7 drop-shadow" alt="Coronas">
             </div>
-            <div class="font-hud font-bold text-3xl sm:text-4xl text-yellow-300 mb-1">478</div>
+            <div class="font-hud font-bold text-3xl sm:text-4xl text-yellow-300 mb-1">632</div>
             <div class="font-burbank text-lg text-white mb-2">Victory Royales</div>
             <p class="text-xs text-gray-300 leading-relaxed mb-4">
-              Reclamaste 478 Victory Royales con una media de 41
+              Reclamaste 632 Victory Royales con una media de 41
             </p>
           </div>
           <div class="pt-3 border-t border-purple-900/60 flex items-center justify-between text-[11px] font-mono">
@@ -490,38 +490,48 @@
       <div>
         <div class="flex flex-col sm:flex-row items-center justify-between gap-4 mb-8">
           <div>
+            <div class="inline-flex items-center gap-2 bg-purple-600/30 text-purple-300 border border-purple-500/40 text-xs font-bold px-3 py-1 rounded-full mb-2">
+              <span>🎬</span> VIDEOTECA OFICIAL EN DIRECTO
+            </div>
             <h3 class="font-burbank text-2xl sm:text-3xl text-white uppercase tracking-wide">
               Hitos & Clips del Año
             </h3>
-            <p class="text-sm text-gray-400">Selecciona una categoría para revivir sus mejores momentos</p>
+            <p class="text-sm text-gray-400">18 clips reales organizados por momentos graciosos, fails, wins, risas y el Partner de Twitch en el centro</p>
           </div>
 
           <!-- Filter Tabs -->
           <div class="flex items-center gap-1.5 p-1 bg-[#160b2d] rounded-xl border border-purple-800/80 flex-wrap">
             <button data-filter="all" class="review-filter-btn px-3 py-1.5 rounded-lg text-xs font-gaming bg-yellow-400 text-black border border-yellow-300 shadow-[0_0_15px_rgba(244,196,48,0.5)]">
-              TODOS
+              TODOS (18)
             </button>
-            <button data-filter="clips" class="review-filter-btn px-3 py-1.5 rounded-lg text-xs font-gaming bg-purple-950/70 text-gray-300 border border-purple-800 hover:text-white">
-              CLIPS MÍTICOS
+            <button data-filter="main" class="review-filter-btn px-3 py-1.5 rounded-lg text-xs font-gaming bg-purple-950/70 text-gray-300 border border-purple-800 hover:text-white">
+              ⭐ ARI PARTNER (MAIN)
             </button>
-            <button data-filter="tryhard" class="review-filter-btn px-3 py-1.5 rounded-lg text-xs font-gaming bg-purple-950/70 text-gray-300 border border-purple-800 hover:text-white">
-              PARTIDAS TRYHARD
+            <button data-filter="wins" class="review-filter-btn px-3 py-1.5 rounded-lg text-xs font-gaming bg-purple-950/70 text-gray-300 border border-purple-800 hover:text-white">
+              🏆 WINS (4)
             </button>
             <button data-filter="fails" class="review-filter-btn px-3 py-1.5 rounded-lg text-xs font-gaming bg-purple-950/70 text-gray-300 border border-purple-800 hover:text-white">
-              RISAS & FAILS
+              💀 FAILS (3)
+            </button>
+            <button data-filter="risas" class="review-filter-btn px-3 py-1.5 rounded-lg text-xs font-gaming bg-purple-950/70 text-gray-300 border border-purple-800 hover:text-white">
+              😂 RISAS (4)
+            </button>
+            <button data-filter="graciosos" class="review-filter-btn px-3 py-1.5 rounded-lg text-xs font-gaming bg-purple-950/70 text-gray-300 border border-purple-800 hover:text-white">
+              🎭 MOMENTOS GRACIOSOS (6)
             </button>
           </div>
         </div>
 
-        <!-- Grid of Moments -->
+        <!-- Grid of Moments (3x6 Grid with ARI PARTNER in the center of Row 3) -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
           
-          <!-- Card 1: 1v4 Final Circle Clutch (Tryhard) -->
-          <div class="review-card group bg-[#160c30] rounded-2xl overflow-hidden border-2 border-amber-400/60 hover:border-amber-400 shadow-xl transition-all duration-300 hover:-translate-y-1.5" data-category="tryhard">
-            <div class="relative h-48 overflow-hidden cursor-pointer" onclick="openClipModal('Clutch 1v4 en zona final con 1 de vida', 'https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1')">
-              <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?w=800&auto=format&fit=crop&q=80" alt="Clutch 1v4" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          <!-- Card 1: Jugadon (Wins) -->
+          <div class="review-card group bg-[#160c30] rounded-2xl overflow-hidden border-2 border-amber-400/60 hover:border-amber-400 shadow-xl transition-all duration-300 hover:-translate-y-1.5" data-category="wins">
+            <div class="relative h-48 overflow-hidden cursor-pointer" onclick="openClipModal('🏆 El Jugadón Maestro en Solitario', 'assets/Clips/Jugadon.mp4')">
+              <img src="assets/Clips/thumbnails/Jugadon.jpg" alt="Jugadon" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
               <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
-              <span class="absolute top-3 left-3 bg-amber-500 text-black font-black text-[10px] px-2 py-0.5 rounded uppercase">PARTIDA TRYHARD</span>
+              <span class="absolute top-3 left-3 bg-amber-500 text-black font-black text-[10px] px-2 py-0.5 rounded uppercase">WINS</span>
+              <span class="absolute bottom-2 right-2 bg-black/80 font-mono text-[10px] text-yellow-300 px-1.5 py-0.5 rounded border border-purple-700/60 font-bold">⏱️ 01:00</span>
               <div class="absolute inset-0 flex items-center justify-center">
                 <div class="w-12 h-12 rounded-full bg-yellow-400 text-black flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
                   <svg class="w-6 h-6 ml-1" fill="currentColor" viewBox="0 0 20 20"><polygon points="5 3 19 10 5 17 5 3"/></svg>
@@ -530,180 +540,25 @@
             </div>
             <div class="p-5">
               <h4 class="font-burbank text-lg text-white mb-1 group-hover:text-yellow-300 transition-colors">
-                El Clutch Imposible 1v4 en Zona
+                El Jugadón Maestro en Solitario
               </h4>
               <p class="text-xs text-gray-300 leading-relaxed mb-3">
-                Sin materiales, rodeada por 4 enemigos y con una escopeta gris. La definición absoluta de sangre fría para cerrar la partida.
+                Máxima concentración, puntería láser y reflejos relámpago en el árbol para eliminar rivales y asegurar una victoria antológica.
               </p>
               <div class="flex items-center justify-between text-[11px] text-gray-400 font-mono border-t border-purple-900/60 pt-3">
-                <span>Final de Torneo</span>
-                <span class="text-yellow-400 font-bold">👑 Victoria Magistral</span>
+                <span>Fortnite Battle Royale</span>
+                <span class="text-amber-400 font-bold">🔥 Puntería Láser</span>
               </div>
             </div>
           </div>
 
-          <!-- Card 2: El Asalto a la Bóveda y Escape con el Medallón (Tryhard) -->
-          <div class="review-card group bg-[#160c30] rounded-2xl overflow-hidden border-2 border-yellow-400/60 hover:border-yellow-400 shadow-xl transition-all duration-300 hover:-translate-y-1.5" data-category="tryhard">
-            <div class="relative h-48 overflow-hidden cursor-pointer" onclick="openClipModal('Asalto a la Bóveda de la Sociedad y Escape con Medallón', 'https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1')">
-              <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=800&auto=format&fit=crop&q=80" alt="Bóveda Mítica" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          <!-- Card 2: Acentos (Momentos Graciosos) -->
+          <div class="review-card group bg-[#160c30] rounded-2xl overflow-hidden border-2 border-fuchsia-400/60 hover:border-fuchsia-400 shadow-xl transition-all duration-300 hover:-translate-y-1.5" data-category="graciosos">
+            <div class="relative h-48 overflow-hidden cursor-pointer" onclick="openClipModal('🎭 La Reina de los Acentos', 'assets/Clips/Acentos.mp4')">
+              <img src="assets/Clips/thumbnails/Acentos.jpg" alt="Acentos" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
               <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
-              <span class="absolute top-3 left-3 bg-yellow-400 text-black font-black text-[10px] px-2 py-0.5 rounded uppercase">PARTIDA TRYHARD</span>
-              <div class="absolute inset-0 flex items-center justify-center">
-                <div class="w-12 h-12 rounded-full bg-yellow-400 text-black flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
-                  <svg class="w-6 h-6 ml-1" fill="currentColor" viewBox="0 0 20 20"><polygon points="5 3 19 10 5 17 5 3"/></svg>
-                </div>
-              </div>
-            </div>
-            <div class="p-5">
-              <h4 class="font-burbank text-lg text-white mb-1 group-hover:text-yellow-300 transition-colors">
-                El Robo Maestro de la Bóveda
-              </h4>
-              <p class="text-xs text-gray-300 leading-relaxed mb-3">
-                Derrotó al boss, escaneó la puerta, saqueó el cofre mítico y escapó con el medallón por el conducto mientras medio mapa la buscaba.
-              </p>
-              <div class="flex items-center justify-between text-[11px] text-gray-400 font-mono border-t border-purple-900/60 pt-3">
-                <span>Villa Costera</span>
-                <span class="text-amber-400 font-bold">💎 Medallón Mítico</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Card 3: No-Scope Aéreo desde la Lanzadera (Clips Míticos) -->
-          <div class="review-card group bg-[#160c30] rounded-2xl overflow-hidden border-2 border-cyan-400/60 hover:border-cyan-400 shadow-xl transition-all duration-300 hover:-translate-y-1.5" data-category="clips">
-            <div class="relative h-48 overflow-hidden cursor-pointer" onclick="openClipModal('No-scope aéreo de 280 metros desde la lanzadera', 'https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1')">
-              <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?w=800&auto=format&fit=crop&q=80" alt="Sniper Clip" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
-              <span class="absolute top-3 left-3 bg-cyan-400 text-black font-black text-[10px] px-2 py-0.5 rounded uppercase">CLIP MÍTICO</span>
-              <div class="absolute inset-0 flex items-center justify-center">
-                <div class="w-12 h-12 rounded-full bg-cyan-400 text-black flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
-                  <svg class="w-6 h-6 ml-1" fill="currentColor" viewBox="0 0 20 20"><polygon points="5 3 19 10 5 17 5 3"/></svg>
-                </div>
-              </div>
-            </div>
-            <div class="p-5">
-              <h4 class="font-burbank text-lg text-white mb-1 group-hover:text-cyan-300 transition-colors">
-                No-Scope Aéreo a 280 Metros
-              </h4>
-              <p class="text-xs text-gray-300 leading-relaxed mb-3">
-                Saltando en pleno vuelo desde la lanzadera, calculó la parábola sin mira y derribó al líder enemigo en tirolina. ¡El chat colapsó de 'REPORT'!
-              </p>
-              <div class="flex items-center justify-between text-[11px] text-gray-400 font-mono border-t border-purple-900/60 pt-3">
-                <span>Torneo de Creadores</span>
-                <span class="text-cyan-400 font-bold">🎯 280m Headshot</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Card 4: Furgoneta de Reinicio en Tormenta (Tryhard) -->
-          <div class="review-card group bg-[#160c30] rounded-2xl overflow-hidden border-2 border-emerald-400/60 hover:border-emerald-400 shadow-xl transition-all duration-300 hover:-translate-y-1.5" data-category="tryhard">
-            <div class="relative h-48 overflow-hidden cursor-pointer" onclick="openClipModal('Reinicio de Squad en Furgoneta a 1 segundo de Tormenta', 'https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1')">
-              <img src="https://images.unsplash.com/photo-1538481199705-c710c4e965fc?w=800&auto=format&fit=crop&q=80" alt="Furgoneta de Reinicio" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
-              <span class="absolute top-3 left-3 bg-emerald-400 text-black font-black text-[10px] px-2 py-0.5 rounded uppercase">PARTIDA TRYHARD</span>
-              <div class="absolute inset-0 flex items-center justify-center">
-                <div class="w-12 h-12 rounded-full bg-emerald-400 text-black flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
-                  <svg class="w-6 h-6 ml-1" fill="currentColor" viewBox="0 0 20 20"><polygon points="5 3 19 10 5 17 5 3"/></svg>
-                </div>
-              </div>
-            </div>
-            <div class="p-5">
-              <h4 class="font-burbank text-lg text-white mb-1 group-hover:text-emerald-300 transition-colors">
-                Resurrección Heroica en Furgoneta
-              </h4>
-              <p class="text-xs text-gray-300 leading-relaxed mb-3">
-                Con sus tres compañeros eliminados y la tormenta cerrando, esquivó snipers, activó la furgoneta al 99% y revivió a toda la squad para ganar.
-              </p>
-              <div class="flex items-center justify-between text-[11px] text-gray-400 font-mono border-t border-purple-900/60 pt-3">
-                <span>Partida con Subs</span>
-                <span class="text-emerald-400 font-bold">🚑 Squad Salvada</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Card 5: Fuga en Camioneta Nitro por Pisos Picados (Clips Míticos) -->
-          <div class="review-card group bg-[#160c30] rounded-2xl overflow-hidden border-2 border-orange-500/60 hover:border-orange-400 shadow-xl transition-all duration-300 hover:-translate-y-1.5" data-category="clips">
-            <div class="relative h-48 overflow-hidden cursor-pointer" onclick="openClipModal('Fuga en Coche Nitro atravesando edificios en Pisos Picados', 'https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1')">
-              <img src="https://images.unsplash.com/photo-1563089145-599997674d42?w=800&auto=format&fit=crop&q=80" alt="Nitro Car" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
-              <span class="absolute top-3 left-3 bg-orange-500 text-white font-black text-[10px] px-2 py-0.5 rounded uppercase">CLIP MÍTICO</span>
-              <div class="absolute inset-0 flex items-center justify-center">
-                <div class="w-12 h-12 rounded-full bg-orange-500 text-white flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
-                  <svg class="w-6 h-6 ml-1" fill="currentColor" viewBox="0 0 20 20"><polygon points="5 3 19 10 5 17 5 3"/></svg>
-                </div>
-              </div>
-            </div>
-            <div class="p-5">
-              <h4 class="font-burbank text-lg text-white mb-1 group-hover:text-orange-300 transition-colors">
-                Escape Nitro a Través de Rascacielos
-              </h4>
-              <p class="text-xs text-gray-300 leading-relaxed mb-3">
-                Con el parabrisas destrozado por la tormenta y a 5 de vida, pisó el turbo de nitro atravesando paredes y saltando por una rampa a zona segura.
-              </p>
-              <div class="flex items-center justify-between text-[11px] text-gray-400 font-mono border-t border-purple-900/60 pt-3">
-                <span>Pisos Picados</span>
-                <span class="text-orange-400 font-bold">🏎️ Nitro Rush</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Card 6: El 'Missclick' del Lanzacohetes en el Cubo (Risas & Fails) -->
-          <div class="review-card group bg-[#160c30] rounded-2xl overflow-hidden border-2 border-red-500/60 hover:border-red-400 shadow-xl transition-all duration-300 hover:-translate-y-1.5" data-category="fails">
-            <div class="relative h-48 overflow-hidden cursor-pointer" onclick="openClipModal('Disparo de RPG contra su propia pared de madera', 'https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1')">
-              <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=800&auto=format&fit=crop&q=80" alt="RPG Fail" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
-              <span class="absolute top-3 left-3 bg-red-500 text-white font-black text-[10px] px-2 py-0.5 rounded uppercase">RISAS & FAILS</span>
-              <div class="absolute inset-0 flex items-center justify-center">
-                <div class="w-12 h-12 rounded-full bg-red-500 text-white flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
-                  <svg class="w-6 h-6 ml-1" fill="currentColor" viewBox="0 0 20 20"><polygon points="5 3 19 10 5 17 5 3"/></svg>
-                </div>
-              </div>
-            </div>
-            <div class="p-5">
-              <h4 class="font-burbank text-lg text-white mb-1 group-hover:text-red-300 transition-colors">
-                El RPG a Quemarropa en su Propio Cubo
-              </h4>
-              <p class="text-xs text-gray-300 leading-relaxed mb-3">
-                Iba a curarse con un salpicón azul de escudo, pero presionó la ranura 5 y lanzó un cohete contra la madera a 10cm de su cara. Risas infinitas.
-              </p>
-              <div class="flex items-center justify-between text-[11px] text-gray-400 font-mono border-t border-purple-900/60 pt-3">
-                <span>Top 3 Partida Épica</span>
-                <span class="text-red-400 font-bold">💥 Autodestrucción GG</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Card 7: El Arbusto Espía y el Duelo Silencioso (Risas & Fails) -->
-          <div class="review-card group bg-[#160c30] rounded-2xl overflow-hidden border-2 border-lime-400/60 hover:border-lime-400 shadow-xl transition-all duration-300 hover:-translate-y-1.5" data-category="fails">
-            <div class="relative h-48 overflow-hidden cursor-pointer" onclick="openClipModal('Duelo de miradas dentro del arbusto con enemigo oculto', 'https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1')">
-              <img src="https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=800&auto=format&fit=crop&q=80" alt="Arbusto Camuflaje" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
-              <span class="absolute top-3 left-3 bg-lime-400 text-black font-black text-[10px] px-2 py-0.5 rounded uppercase">RISAS & FAILS</span>
-              <div class="absolute inset-0 flex items-center justify-center">
-                <div class="w-12 h-12 rounded-full bg-lime-400 text-black flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
-                  <svg class="w-6 h-6 ml-1" fill="currentColor" viewBox="0 0 20 20"><polygon points="5 3 19 10 5 17 5 3"/></svg>
-                </div>
-              </div>
-            </div>
-            <div class="p-5">
-              <h4 class="font-burbank text-lg text-white mb-1 group-hover:text-lime-300 transition-colors">
-                El Duelo Silencioso en el Arbusto
-              </h4>
-              <p class="text-xs text-gray-300 leading-relaxed mb-3">
-                Llevaba 5 minutos quieta agachada en un arbusto esperando a curarse... hasta que el arbusto de al lado se movió: ¡otro jugador mirándola fijamente!
-              </p>
-              <div class="flex items-center justify-between text-[11px] text-gray-400 font-mono border-t border-purple-900/60 pt-3">
-                <span>Bosque de la Furia</span>
-                <span class="text-lime-400 font-bold">🌿 Camuflaje Troll</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Card 8: Drop Agresivo en Pisos Picados: 9 Bajas (Tryhard) -->
-          <div class="review-card group bg-[#160c30] rounded-2xl overflow-hidden border-2 border-fuchsia-500/60 hover:border-fuchsia-400 shadow-xl transition-all duration-300 hover:-translate-y-1.5" data-category="tryhard">
-            <div class="relative h-48 overflow-hidden cursor-pointer" onclick="openClipModal('9 Bajas en 3 minutos cayendo en la torre del reloj', 'https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1')">
-              <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=800&auto=format&fit=crop&q=80" alt="Pisos Picados Drop" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
-              <span class="absolute top-3 left-3 bg-fuchsia-500 text-white font-black text-[10px] px-2 py-0.5 rounded uppercase">PARTIDA TRYHARD</span>
+              <span class="absolute top-3 left-3 bg-fuchsia-500 text-white font-black text-[10px] px-2 py-0.5 rounded uppercase">MOMENTOS GRACIOSOS</span>
+              <span class="absolute bottom-2 right-2 bg-black/80 font-mono text-[10px] text-yellow-300 px-1.5 py-0.5 rounded border border-purple-700/60 font-bold">⏱️ 00:28</span>
               <div class="absolute inset-0 flex items-center justify-center">
                 <div class="w-12 h-12 rounded-full bg-fuchsia-500 text-white flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
                   <svg class="w-6 h-6 ml-1" fill="currentColor" viewBox="0 0 20 20"><polygon points="5 3 19 10 5 17 5 3"/></svg>
@@ -712,102 +567,25 @@
             </div>
             <div class="p-5">
               <h4 class="font-burbank text-lg text-white mb-1 group-hover:text-fuchsia-300 transition-colors">
-                Drop Agresivo: 9 Kills en 3 Minutos
+                La Reina de los Acentos
               </h4>
               <p class="text-xs text-gray-300 leading-relaxed mb-3">
-                Aterrizó en la torre del reloj con 10 squads alrededor. Con escopeta táctica y una pistola gris, limpió la zona entera con ediciones relámpago.
+                Con gorro navideño en el lobby de Fortnite esperando partida mientras saca a relucir su talento oculto para imitar acentos de todas partes.
               </p>
               <div class="flex items-center justify-between text-[11px] text-gray-400 font-mono border-t border-purple-900/60 pt-3">
-                <span>Torre del Reloj</span>
-                <span class="text-fuchsia-400 font-bold">🔥 9 Kills en Early</span>
+                <span>Especial Navidad</span>
+                <span class="text-fuchsia-400 font-bold">🎅 Imitaciones Top</span>
               </div>
             </div>
           </div>
 
-          <!-- Card 9: El Baile de la Corona Número 50 (Clips Míticos) -->
-          <div class="review-card group bg-[#160c30] rounded-2xl overflow-hidden border-2 border-yellow-300/60 hover:border-yellow-300 shadow-xl transition-all duration-300 hover:-translate-y-1.5" data-category="clips">
-            <div class="relative h-48 overflow-hidden cursor-pointer" onclick="openClipModal('Celebración de la Corona de Victoria número 50 de la temporada', 'https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1')">
-              <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=800&auto=format&fit=crop&q=80" alt="Emote Corona" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
-              <span class="absolute top-3 left-3 bg-yellow-400 text-black font-black text-[10px] px-2 py-0.5 rounded uppercase">CLIP MÍTICO</span>
-              <div class="absolute inset-0 flex items-center justify-center">
-                <div class="w-12 h-12 rounded-full bg-yellow-400 text-black flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
-                  <svg class="w-6 h-6 ml-1" fill="currentColor" viewBox="0 0 20 20"><polygon points="5 3 19 10 5 17 5 3"/></svg>
-                </div>
-              </div>
-            </div>
-            <div class="p-5">
-              <h4 class="font-burbank text-lg text-white mb-1 group-hover:text-yellow-200 transition-colors">
-                El Baile de la Corona #50 en Directo
-              </h4>
-              <p class="text-xs text-gray-300 leading-relaxed mb-3">
-                El hito cumbre: alcanzar las 50 coronas de victoria en directo y soltar el emote de la almohada dorada mientras llovía confeti virtual en stream.
-              </p>
-              <div class="flex items-center justify-between text-[11px] text-gray-400 font-mono border-t border-purple-900/60 pt-3">
-                <span>Récord de Temporada</span>
-                <span class="text-yellow-300 font-bold">👑 50 Coronas Royale</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Card 10: Salto con Gancho y 200 de Daño en Caída (Clips Míticos) -->
-          <div class="review-card group bg-[#160c30] rounded-2xl overflow-hidden border-2 border-indigo-400/60 hover:border-indigo-400 shadow-xl transition-all duration-300 hover:-translate-y-1.5" data-category="clips">
-            <div class="relative h-48 overflow-hidden cursor-pointer" onclick="openClipModal('Enganche aéreo y 200 a la cabeza con escopeta corredera', 'https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1')">
-              <img src="https://images.unsplash.com/photo-1547394765-185e1317ac14?w=800&auto=format&fit=crop&q=80" alt="Gancho 200" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
-              <span class="absolute top-3 left-3 bg-indigo-500 text-white font-black text-[10px] px-2 py-0.5 rounded uppercase">CLIP MÍTICO</span>
-              <div class="absolute inset-0 flex items-center justify-center">
-                <div class="w-12 h-12 rounded-full bg-indigo-500 text-white flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
-                  <svg class="w-6 h-6 ml-1" fill="currentColor" viewBox="0 0 20 20"><polygon points="5 3 19 10 5 17 5 3"/></svg>
-                </div>
-              </div>
-            </div>
-            <div class="p-5">
-              <h4 class="font-burbank text-lg text-white mb-1 group-hover:text-indigo-300 transition-colors">
-                Gancho Aéreo y 200 en la Cabeza
-              </h4>
-              <p class="text-xs text-gray-300 leading-relaxed mb-3">
-                Se impulsó con el gancho sobre el globo aerostático, soltó el cable en el cenit del vuelo y asestó un 200 limpio al enemigo que campeaba en la colina.
-              </p>
-              <div class="flex items-center justify-between text-[11px] text-gray-400 font-mono border-t border-purple-900/60 pt-3">
-                <span>Partida Ranked Unreal</span>
-                <span class="text-indigo-400 font-bold">⚡ 200 Daño Limpio</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Card 11: Distracción en el Autobús y Caída al Agua (Risas & Fails) -->
-          <div class="review-card group bg-[#160c30] rounded-2xl overflow-hidden border-2 border-teal-400/60 hover:border-teal-400 shadow-xl transition-all duration-300 hover:-translate-y-1.5" data-category="fails">
-            <div class="relative h-48 overflow-hidden cursor-pointer" onclick="openClipModal('Distracción leyendo el chat y caída fuera del mapa', 'https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1')">
-              <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&auto=format&fit=crop&q=80" alt="Autobús Drop Fail" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
-              <span class="absolute top-3 left-3 bg-teal-400 text-black font-black text-[10px] px-2 py-0.5 rounded uppercase">RISAS & FAILS</span>
-              <div class="absolute inset-0 flex items-center justify-center">
-                <div class="w-12 h-12 rounded-full bg-teal-400 text-black flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
-                  <svg class="w-6 h-6 ml-1" fill="currentColor" viewBox="0 0 20 20"><polygon points="5 3 19 10 5 17 5 3"/></svg>
-                </div>
-              </div>
-            </div>
-            <div class="p-5">
-              <h4 class="font-burbank text-lg text-white mb-1 group-hover:text-teal-300 transition-colors">
-                La Caída al Océano por Mirar el Chat
-              </h4>
-              <p class="text-xs text-gray-300 leading-relaxed mb-3">
-                Estaba tan concentrada respondiendo un chiste del chat que el autobús la expulsó en la última milla y cayó nadando a 800 metros de la costa sin armas.
-              </p>
-              <div class="flex items-center justify-between text-[11px] text-gray-400 font-mono border-t border-purple-900/60 pt-3">
-                <span>Inicio de Partida</span>
-                <span class="text-teal-400 font-bold">🌊 Natación Extrema</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Card 12: El Jumpscare de Poppy Playtime (Risas/Fails) -->
+          <!-- Card 3: ImArixu no se entera (Fails) -->
           <div class="review-card group bg-[#160c30] rounded-2xl overflow-hidden border-2 border-rose-500/60 hover:border-rose-400 shadow-xl transition-all duration-300 hover:-translate-y-1.5" data-category="fails">
-            <div class="relative h-48 overflow-hidden cursor-pointer" onclick="openClipModal('El susto del GrabPack en Poppy Playtime', 'https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1')">
-              <img src="https://images.unsplash.com/photo-1579373903781-fd5c0c30c4cd?w=800&auto=format&fit=crop&q=80" alt="Poppy Playtime Fail" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="relative h-48 overflow-hidden cursor-pointer" onclick="openClipModal('💀 Si Te Persiguen... ¡Tienes que Correr!', 'assets/Clips/ImArixu no se entera de que si te persiguen tienes que correr.mp4')">
+              <img src="assets/Clips/thumbnails/ImArixu no se entera de que si te persiguen tienes que correr.jpg" alt="Poppy Playtime Fail" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
               <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
-              <span class="absolute top-3 left-3 bg-rose-500 text-white font-black text-[10px] px-2 py-0.5 rounded uppercase">RISAS & FAILS</span>
+              <span class="absolute top-3 left-3 bg-rose-500 text-white font-black text-[10px] px-2 py-0.5 rounded uppercase">FAILS</span>
+              <span class="absolute bottom-2 right-2 bg-black/80 font-mono text-[10px] text-yellow-300 px-1.5 py-0.5 rounded border border-purple-700/60 font-bold">⏱️ 00:30</span>
               <div class="absolute inset-0 flex items-center justify-center">
                 <div class="w-12 h-12 rounded-full bg-rose-500 text-white flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
                   <svg class="w-6 h-6 ml-1" fill="currentColor" viewBox="0 0 20 20"><polygon points="5 3 19 10 5 17 5 3"/></svg>
@@ -816,14 +594,445 @@
             </div>
             <div class="p-5">
               <h4 class="font-burbank text-lg text-white mb-1 group-hover:text-rose-300 transition-colors">
-                El Jumpscare del GrabPack
+                Si Te Persiguen... ¡Tienes que Correr!
               </h4>
               <p class="text-xs text-gray-300 leading-relaxed mb-3">
-                Disparó la mano azul al interruptor equivocado en la fábrica de juguetes y el grito se escuchó en 3 servidores de Discord a la vez. ¡Clip histórico!
+                En plena fábrica de Poppy Playtime con el GrabPack, se queda mirando fijamente al monstruo mientras el chat entra en pánico y le grita que huya.
               </p>
               <div class="flex items-center justify-between text-[11px] text-gray-400 font-mono border-t border-purple-900/60 pt-3">
-                <span>Especial Halloween</span>
-                <span class="text-rose-400 font-bold">😂 Clip Viral del Año</span>
+                <span>Poppy Playtime</span>
+                <span class="text-rose-400 font-bold">😱 Jumpscare Histórico</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4: Una Gitana de toda la vida (Risas) -->
+          <div class="review-card group bg-[#160c30] rounded-2xl overflow-hidden border-2 border-yellow-400/60 hover:border-yellow-400 shadow-xl transition-all duration-300 hover:-translate-y-1.5" data-category="risas">
+            <div class="relative h-48 overflow-hidden cursor-pointer" onclick="openClipModal('😂 Una Gitana de Toda la Vida', 'assets/Clips/Una Gitana de toda la vida.mp4')">
+              <img src="assets/Clips/thumbnails/Una Gitana de toda la vida.jpg" alt="Una Gitana" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+              <span class="absolute top-3 left-3 bg-yellow-400 text-black font-black text-[10px] px-2 py-0.5 rounded uppercase">RISAS</span>
+              <span class="absolute bottom-2 right-2 bg-black/80 font-mono text-[10px] text-yellow-300 px-1.5 py-0.5 rounded border border-purple-700/60 font-bold">⏱️ 00:30</span>
+              <div class="absolute inset-0 flex items-center justify-center">
+                <div class="w-12 h-12 rounded-full bg-yellow-400 text-black flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                  <svg class="w-6 h-6 ml-1" fill="currentColor" viewBox="0 0 20 20"><polygon points="5 3 19 10 5 17 5 3"/></svg>
+                </div>
+              </div>
+            </div>
+            <div class="p-5">
+              <h4 class="font-burbank text-lg text-white mb-1 group-hover:text-yellow-300 transition-colors">
+                Una Gitana de Toda la Vida
+              </h4>
+              <p class="text-xs text-gray-300 leading-relaxed mb-3">
+                Dibujando en Gartic Show mientras el chat intenta adivinar diciendo "un huevo", "nutria" y "calvo", desatando carcajadas imposibles de frenar.
+              </p>
+              <div class="flex items-center justify-between text-[11px] text-gray-400 font-mono border-t border-purple-900/60 pt-3">
+                <span>Gartic Show</span>
+                <span class="text-yellow-400 font-bold">🎨 Dibujo Legendario</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 5: Epic (Wins) -->
+          <div class="review-card group bg-[#160c30] rounded-2xl overflow-hidden border-2 border-amber-400/60 hover:border-amber-400 shadow-xl transition-all duration-300 hover:-translate-y-1.5" data-category="wins">
+            <div class="relative h-48 overflow-hidden cursor-pointer" onclick="openClipModal('🏆 Rotaciones Épicas con Spider-Man', 'assets/Clips/Epic.mp4')">
+              <img src="assets/Clips/thumbnails/Epic.jpg" alt="Epic Clip" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+              <span class="absolute top-3 left-3 bg-amber-500 text-black font-black text-[10px] px-2 py-0.5 rounded uppercase">WINS</span>
+              <span class="absolute bottom-2 right-2 bg-black/80 font-mono text-[10px] text-yellow-300 px-1.5 py-0.5 rounded border border-purple-700/60 font-bold">⏱️ 00:30</span>
+              <div class="absolute inset-0 flex items-center justify-center">
+                <div class="w-12 h-12 rounded-full bg-yellow-400 text-black flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                  <svg class="w-6 h-6 ml-1" fill="currentColor" viewBox="0 0 20 20"><polygon points="5 3 19 10 5 17 5 3"/></svg>
+                </div>
+              </div>
+            </div>
+            <div class="p-5">
+              <h4 class="font-burbank text-lg text-white mb-1 group-hover:text-yellow-300 transition-colors">
+                Rotaciones Épicas con Spider-Man
+              </h4>
+              <p class="text-xs text-gray-300 leading-relaxed mb-3">
+                Rotaciones acrobáticas imposibles entre los árboles con los lanzatelarañas de Spider-Man para cazar al último enemigo desde las alturas.
+              </p>
+              <div class="flex items-center justify-between text-[11px] text-gray-400 font-mono border-t border-purple-900/60 pt-3">
+                <span>Fortnite Tryhard</span>
+                <span class="text-amber-400 font-bold">🕷️ Movilidad Épica</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 6: Vuela alto (Fails) -->
+          <div class="review-card group bg-[#160c30] rounded-2xl overflow-hidden border-2 border-rose-500/60 hover:border-rose-400 shadow-xl transition-all duration-300 hover:-translate-y-1.5" data-category="fails">
+            <div class="relative h-48 overflow-hidden cursor-pointer" onclick="openClipModal('💀 ¡No Funciona Gente! - Reto Bean Boozled', 'assets/Clips/Vuela alto.mp4')">
+              <img src="assets/Clips/thumbnails/Vuela alto.jpg" alt="Vuela alto" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+              <span class="absolute top-3 left-3 bg-rose-500 text-white font-black text-[10px] px-2 py-0.5 rounded uppercase">FAILS</span>
+              <span class="absolute bottom-2 right-2 bg-black/80 font-mono text-[10px] text-yellow-300 px-1.5 py-0.5 rounded border border-purple-700/60 font-bold">⏱️ 01:00</span>
+              <div class="absolute inset-0 flex items-center justify-center">
+                <div class="w-12 h-12 rounded-full bg-rose-500 text-white flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                  <svg class="w-6 h-6 ml-1" fill="currentColor" viewBox="0 0 20 20"><polygon points="5 3 19 10 5 17 5 3"/></svg>
+                </div>
+              </div>
+            </div>
+            <div class="p-5">
+              <h4 class="font-burbank text-lg text-white mb-1 group-hover:text-rose-300 transition-colors">
+                "¡No Funciona Gente!" - Reto Bean Boozled
+              </h4>
+              <p class="text-xs text-gray-300 leading-relaxed mb-3">
+                Probando las grageas misteriosas picantes en stream con lágrimas en los ojos mientras el chat no puede parar de reírse de su reacción.
+              </p>
+              <div class="flex items-center justify-between text-[11px] text-gray-400 font-mono border-t border-purple-900/60 pt-3">
+                <span>Especial 40 Subs</span>
+                <span class="text-rose-400 font-bold">🌶️ Gragea Mortal</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 7: Ari puñitos (Momentos Graciosos) -->
+          <div class="review-card group bg-[#160c30] rounded-2xl overflow-hidden border-2 border-pink-400/60 hover:border-pink-400 shadow-xl transition-all duration-300 hover:-translate-y-1.5" data-category="graciosos">
+            <div class="relative h-48 overflow-hidden cursor-pointer" onclick="openClipModal('🎭 Los Puñitos de Boxeo de Arcane', 'assets/Clips/Ari puñitos.mp4')">
+              <img src="assets/Clips/thumbnails/Ari puñitos.jpg" alt="Ari puñitos" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+              <span class="absolute top-3 left-3 bg-pink-500 text-white font-black text-[10px] px-2 py-0.5 rounded uppercase">MOMENTOS GRACIOSOS</span>
+              <span class="absolute bottom-2 right-2 bg-black/80 font-mono text-[10px] text-yellow-300 px-1.5 py-0.5 rounded border border-purple-700/60 font-bold">⏱️ 00:09</span>
+              <div class="absolute inset-0 flex items-center justify-center">
+                <div class="w-12 h-12 rounded-full bg-pink-500 text-white flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                  <svg class="w-6 h-6 ml-1" fill="currentColor" viewBox="0 0 20 20"><polygon points="5 3 19 10 5 17 5 3"/></svg>
+                </div>
+              </div>
+            </div>
+            <div class="p-5">
+              <h4 class="font-burbank text-lg text-white mb-1 group-hover:text-pink-300 transition-colors">
+                Los Puñitos de Boxeo de Arcane
+              </h4>
+              <p class="text-xs text-gray-300 leading-relaxed mb-3">
+                Imitando el gesto de boxeo de Arcane con sus puñitos en webcam tras recibir un regalo de la comunidad de Twitch. ¡Pura ternura y risas!
+              </p>
+              <div class="flex items-center justify-between text-[11px] text-gray-400 font-mono border-t border-purple-900/60 pt-3">
+                <span>Gesto Fortnite Arcane</span>
+                <span class="text-pink-400 font-bold">🥊 Boxeadora Pro</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 8: ⭐ ARI PARTNER (MAIN VIDEO - EN EL CENTRO EXACTO DE LA CUADRÍCULA) ⭐ -->
+          <div class="review-card group bg-gradient-to-b from-[#2e105e] via-[#1c083d] to-[#120527] rounded-3xl overflow-hidden border-4 border-yellow-400 hover:border-yellow-300 shadow-[0_0_40px_rgba(244,196,48,0.5)] transition-all duration-300 hover:-translate-y-2 relative ring-2 ring-purple-500/50" data-category="main">
+            <!-- Pulsing golden glow badge -->
+            <div class="absolute -top-1 -right-1 z-10 bg-gradient-to-r from-yellow-400 via-amber-400 to-yellow-500 text-black font-black text-[11px] uppercase tracking-wider px-3.5 py-1 rounded-bl-2xl shadow-lg border-b border-l border-black/40 flex items-center gap-1.5 animate-pulse">
+              <span>⭐</span>
+              <span>VIDEO MAIN • HITO HISTÓRICO</span>
+            </div>
+
+            <div class="relative h-52 overflow-hidden cursor-pointer" onclick="openClipModal('🎉 Ari Consigue el Partner de Twitch (Momento Histórico)', 'assets/Clips/Ari Partner.mp4')">
+              <img src="assets/Clips/thumbnails/Ari Partner.jpg" alt="Ari Partner de Twitch" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-[#120527] via-transparent to-transparent"></div>
+              
+              <!-- Twitch Badge -->
+              <span class="absolute top-3 left-3 bg-purple-600 text-white font-black text-[11px] px-2.5 py-1 rounded-lg uppercase tracking-wide flex items-center gap-1.5 shadow-md border border-purple-400/50">
+                <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714Z"/></svg>
+                TWITCH PARTNER
+              </span>
+              
+              <!-- Duration Badge -->
+              <span class="absolute bottom-3 right-3 bg-black/85 font-mono text-[11px] text-yellow-300 px-2 py-0.5 rounded-md border border-yellow-400/60 font-bold shadow">
+                ⏱️ 01:00
+              </span>
+
+              <!-- Big Golden Play Button Overlay -->
+              <div class="absolute inset-0 flex items-center justify-center">
+                <div class="w-16 h-16 rounded-full bg-gradient-to-tr from-yellow-400 to-amber-500 text-black flex items-center justify-center shadow-[0_0_30px_rgba(244,196,48,0.8)] group-hover:scale-115 transition-transform">
+                  <svg class="w-8 h-8 ml-1" fill="currentColor" viewBox="0 0 20 20"><polygon points="5 3 19 10 5 17 5 3"/></svg>
+                </div>
+              </div>
+            </div>
+
+            <div class="p-6">
+              <div class="flex items-center gap-2 mb-1.5">
+                <span class="text-xs uppercase font-black px-2 py-0.5 rounded bg-amber-950/80 text-amber-300 border border-amber-500/50">MÍTICO • PARTNER</span>
+                <span class="text-xs text-purple-300 font-mono">El Momento Más Especial</span>
+              </div>
+              <h4 class="font-burbank text-xl sm:text-2xl text-yellow-300 mb-2 group-hover:text-yellow-200 transition-colors tracking-wide">
+                ¡Ari Consigue el Partner de Twitch! 👑
+              </h4>
+              <p class="text-xs sm:text-sm text-gray-200 leading-relaxed mb-4">
+                El instante más emotivo de la historia del canal: Twitch reconoce oficialmente a Ari como Partner. Lágrimas de emoción compartidas con el chat, orgullo infinito y el mayor hito de su carrera como streamer.
+              </p>
+              <div class="flex items-center justify-between text-xs text-gray-300 font-mono border-t border-purple-800/80 pt-3.5">
+                <span class="text-yellow-400 font-bold flex items-center gap-1.5">
+                  <span>👑</span> Hito Histórico Oficial
+                </span>
+                <span class="text-purple-300 font-bold hover:underline cursor-pointer" onclick="openClipModal('🎉 Ari Consigue el Partner de Twitch', 'assets/Clips/Ari Partner.mp4')">
+                  Ver Clip Completo ▶
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 9: No son 20 , son 23 (Risas) -->
+          <div class="review-card group bg-[#160c30] rounded-2xl overflow-hidden border-2 border-yellow-400/60 hover:border-yellow-400 shadow-xl transition-all duration-300 hover:-translate-y-1.5" data-category="risas">
+            <div class="relative h-48 overflow-hidden cursor-pointer" onclick="openClipModal('😂 No Son 20, Son 23 - Broma Telefónica', 'assets/Clips/No son 20 , son 23.mp4')">
+              <img src="assets/Clips/thumbnails/No son 20 , son 23.jpg" alt="No son 20 , son 23" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+              <span class="absolute top-3 left-3 bg-yellow-400 text-black font-black text-[10px] px-2 py-0.5 rounded uppercase">RISAS</span>
+              <span class="absolute bottom-2 right-2 bg-black/80 font-mono text-[10px] text-yellow-300 px-1.5 py-0.5 rounded border border-purple-700/60 font-bold">⏱️ 00:30</span>
+              <div class="absolute inset-0 flex items-center justify-center">
+                <div class="w-12 h-12 rounded-full bg-yellow-400 text-black flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                  <svg class="w-6 h-6 ml-1" fill="currentColor" viewBox="0 0 20 20"><polygon points="5 3 19 10 5 17 5 3"/></svg>
+                </div>
+              </div>
+            </div>
+            <div class="p-5">
+              <h4 class="font-burbank text-lg text-white mb-1 group-hover:text-yellow-300 transition-colors">
+                "No Son 20, Son 23"
+              </h4>
+              <p class="text-xs text-gray-300 leading-relaxed mb-3">
+                Broma en llamada con altavoz en directo manteniendo la compostura y mirando seria a la cámara mientras el chat colapsa de risa.
+              </p>
+              <div class="flex items-center justify-between text-[11px] text-gray-400 font-mono border-t border-purple-900/60 pt-3">
+                <span>Stream en Directo</span>
+                <span class="text-yellow-400 font-bold">📞 Broma Telefónica</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 10: Arixu51 (Wins) -->
+          <div class="review-card group bg-[#160c30] rounded-2xl overflow-hidden border-2 border-cyan-400/60 hover:border-cyan-400 shadow-xl transition-all duration-300 hover:-translate-y-1.5" data-category="wins">
+            <div class="relative h-48 overflow-hidden cursor-pointer" onclick="openClipModal('🏆 Bidón de Sorbete en Zona Final', 'assets/Clips/Arixu51.mp4')">
+              <img src="assets/Clips/thumbnails/Arixu51.jpg" alt="Arixu51" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+              <span class="absolute top-3 left-3 bg-cyan-400 text-black font-black text-[10px] px-2 py-0.5 rounded uppercase">WINS</span>
+              <span class="absolute bottom-2 right-2 bg-black/80 font-mono text-[10px] text-yellow-300 px-1.5 py-0.5 rounded border border-purple-700/60 font-bold">⏱️ 00:34</span>
+              <div class="absolute inset-0 flex items-center justify-center">
+                <div class="w-12 h-12 rounded-full bg-cyan-400 text-black flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                  <svg class="w-6 h-6 ml-1" fill="currentColor" viewBox="0 0 20 20"><polygon points="5 3 19 10 5 17 5 3"/></svg>
+                </div>
+              </div>
+            </div>
+            <div class="p-5">
+              <h4 class="font-burbank text-lg text-white mb-1 group-hover:text-cyan-300 transition-colors">
+                Bidón de Sorbete en Zona Final
+              </h4>
+              <p class="text-xs text-gray-300 leading-relaxed mb-3">
+                Con solo 5 jugadores restantes y 7 kills en el contador, toma el Bidón Legendario a cubierto de la tormenta para cerrar la partida con corona.
+              </p>
+              <div class="flex items-center justify-between text-[11px] text-gray-400 font-mono border-t border-purple-900/60 pt-3">
+                <span>Endgame Ranked</span>
+                <span class="text-cyan-400 font-bold">🧪 Slurp Legendario</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 11: Ari what (Fails) -->
+          <div class="review-card group bg-[#160c30] rounded-2xl overflow-hidden border-2 border-orange-500/60 hover:border-orange-400 shadow-xl transition-all duration-300 hover:-translate-y-1.5" data-category="fails">
+            <div class="relative h-48 overflow-hidden cursor-pointer" onclick="openClipModal('💀 ¿Qué Acaba de Pasar? (Ari What)', 'assets/Clips/Ari what.mp4')">
+              <img src="assets/Clips/thumbnails/Ari what.jpg" alt="Ari what" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+              <span class="absolute top-3 left-3 bg-orange-500 text-white font-black text-[10px] px-2 py-0.5 rounded uppercase">FAILS</span>
+              <span class="absolute bottom-2 right-2 bg-black/80 font-mono text-[10px] text-yellow-300 px-1.5 py-0.5 rounded border border-purple-700/60 font-bold">⏱️ 00:28</span>
+              <div class="absolute inset-0 flex items-center justify-center">
+                <div class="w-12 h-12 rounded-full bg-orange-500 text-white flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                  <svg class="w-6 h-6 ml-1" fill="currentColor" viewBox="0 0 20 20"><polygon points="5 3 19 10 5 17 5 3"/></svg>
+                </div>
+              </div>
+            </div>
+            <div class="p-5">
+              <h4 class="font-burbank text-lg text-white mb-1 group-hover:text-orange-300 transition-colors">
+                ¿Qué Acaba de Pasar? (Ari What)
+              </h4>
+              <p class="text-xs text-gray-300 leading-relaxed mb-3">
+                Vestida de Wonder Woman en el desierto, mirando al infinito con cara de desconcierto total ante una eliminación de lo más surrealista.
+              </p>
+              <div class="flex items-center justify-between text-[11px] text-gray-400 font-mono border-t border-purple-900/60 pt-3">
+                <span>Fortnite Fails</span>
+                <span class="text-orange-400 font-bold">❓ Confusión Total</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 12: Un que (Risas) -->
+          <div class="review-card group bg-[#160c30] rounded-2xl overflow-hidden border-2 border-lime-400/60 hover:border-lime-400 shadow-xl transition-all duration-300 hover:-translate-y-1.5" data-category="risas">
+            <div class="relative h-48 overflow-hidden cursor-pointer" onclick="openClipModal('😂 ¿Un Qué? - Risas en Gartic Show', 'assets/Clips/Un que.mp4')">
+              <img src="assets/Clips/thumbnails/Un que.jpg" alt="Un que" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+              <span class="absolute top-3 left-3 bg-lime-400 text-black font-black text-[10px] px-2 py-0.5 rounded uppercase">RISAS</span>
+              <span class="absolute bottom-2 right-2 bg-black/80 font-mono text-[10px] text-yellow-300 px-1.5 py-0.5 rounded border border-purple-700/60 font-bold">⏱️ 00:44</span>
+              <div class="absolute inset-0 flex items-center justify-center">
+                <div class="w-12 h-12 rounded-full bg-lime-400 text-black flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                  <svg class="w-6 h-6 ml-1" fill="currentColor" viewBox="0 0 20 20"><polygon points="5 3 19 10 5 17 5 3"/></svg>
+                </div>
+              </div>
+            </div>
+            <div class="p-5">
+              <h4 class="font-burbank text-lg text-white mb-1 group-hover:text-lime-300 transition-colors">
+                "¿Un Qué?" - Risas en Gartic Show
+              </h4>
+              <p class="text-xs text-gray-300 leading-relaxed mb-3">
+                El lienzo en blanco, una palabra incomprensible y Ari preguntando "¿Un qué?" mientras toda la comunidad llora de la risa.
+              </p>
+              <div class="flex items-center justify-between text-[11px] text-gray-400 font-mono border-t border-purple-900/60 pt-3">
+                <span>Gartic Show</span>
+                <span class="text-lime-400 font-bold">🤣 "Yo Lloro"</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 13: La rueda (Wins) -->
+          <div class="review-card group bg-[#160c30] rounded-2xl overflow-hidden border-2 border-emerald-400/60 hover:border-emerald-400 shadow-xl transition-all duration-300 hover:-translate-y-1.5" data-category="wins">
+            <div class="relative h-48 overflow-hidden cursor-pointer" onclick="openClipModal('🏆 El Dominio del Block Trickshot 100+', 'assets/Clips/La rueda.mp4')">
+              <img src="assets/Clips/thumbnails/La rueda.jpg" alt="La rueda" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+              <span class="absolute top-3 left-3 bg-emerald-400 text-black font-black text-[10px] px-2 py-0.5 rounded uppercase">WINS</span>
+              <span class="absolute bottom-2 right-2 bg-black/80 font-mono text-[10px] text-yellow-300 px-1.5 py-0.5 rounded border border-purple-700/60 font-bold">⏱️ 00:30</span>
+              <div class="absolute inset-0 flex items-center justify-center">
+                <div class="w-12 h-12 rounded-full bg-emerald-400 text-black flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                  <svg class="w-6 h-6 ml-1" fill="currentColor" viewBox="0 0 20 20"><polygon points="5 3 19 10 5 17 5 3"/></svg>
+                </div>
+              </div>
+            </div>
+            <div class="p-5">
+              <h4 class="font-burbank text-lg text-white mb-1 group-hover:text-emerald-300 transition-colors">
+                El Dominio del Block Trickshot 100+
+              </h4>
+              <p class="text-xs text-gray-300 leading-relaxed mb-3">
+                Deslizándose por rampas de metal gigantes a toda velocidad y calculando cada salto en el mapa de parkour más exigente de Fortnite.
+              </p>
+              <div class="flex items-center justify-between text-[11px] text-gray-400 font-mono border-t border-purple-900/60 pt-3">
+                <span>Modo Creativo</span>
+                <span class="text-emerald-400 font-bold">🛹 Parkour Pro</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 14: Ari matamoskitos (Momentos Graciosos) -->
+          <div class="review-card group bg-[#160c30] rounded-2xl overflow-hidden border-2 border-teal-400/60 hover:border-teal-400 shadow-xl transition-all duration-300 hover:-translate-y-1.5" data-category="graciosos">
+            <div class="relative h-48 overflow-hidden cursor-pointer" onclick="openClipModal('🎭 Este Fli No Vale Ná - Guerra de Mosquitos', 'assets/Clips/Ari matamoskitos, este fli no vale na.mp4')">
+              <img src="assets/Clips/thumbnails/Ari matamoskitos, este fli no vale na.jpg" alt="Ari matamoskitos" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+              <span class="absolute top-3 left-3 bg-teal-400 text-black font-black text-[10px] px-2 py-0.5 rounded uppercase">MOMENTOS GRACIOSOS</span>
+              <span class="absolute bottom-2 right-2 bg-black/80 font-mono text-[10px] text-yellow-300 px-1.5 py-0.5 rounded border border-purple-700/60 font-bold">⏱️ 00:30</span>
+              <div class="absolute inset-0 flex items-center justify-center">
+                <div class="w-12 h-12 rounded-full bg-teal-400 text-black flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                  <svg class="w-6 h-6 ml-1" fill="currentColor" viewBox="0 0 20 20"><polygon points="5 3 19 10 5 17 5 3"/></svg>
+                </div>
+              </div>
+            </div>
+            <div class="p-5">
+              <h4 class="font-burbank text-lg text-white mb-1 group-hover:text-teal-300 transition-colors">
+                "Este Fli No Vale Ná" - Guerra de Mosquitos
+              </h4>
+              <p class="text-xs text-gray-300 leading-relaxed mb-3">
+                Interrumpiendo el stream en Cruce Cañón para intentar cazar un mosquito armada con un spray insecticida que no funciona.
+              </p>
+              <div class="flex items-center justify-between text-[11px] text-gray-400 font-mono border-t border-purple-900/60 pt-3">
+                <span>Anécdota Stream</span>
+                <span class="text-teal-400 font-bold">🦟 Cazadora de Bichos</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 15: Griñi (Risas) -->
+          <div class="review-card group bg-[#160c30] rounded-2xl overflow-hidden border-2 border-amber-400/60 hover:border-amber-400 shadow-xl transition-all duration-300 hover:-translate-y-1.5" data-category="risas">
+            <div class="relative h-48 overflow-hidden cursor-pointer" onclick="openClipModal('😂 El Almuerzo en Directo con Griñi', 'assets/Clips/Griñi.mp4')">
+              <img src="assets/Clips/thumbnails/Griñi.jpg" alt="Griñi" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+              <span class="absolute top-3 left-3 bg-amber-400 text-black font-black text-[10px] px-2 py-0.5 rounded uppercase">RISAS</span>
+              <span class="absolute bottom-2 right-2 bg-black/80 font-mono text-[10px] text-yellow-300 px-1.5 py-0.5 rounded border border-purple-700/60 font-bold">⏱️ 00:30</span>
+              <div class="absolute inset-0 flex items-center justify-center">
+                <div class="w-12 h-12 rounded-full bg-amber-400 text-black flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                  <svg class="w-6 h-6 ml-1" fill="currentColor" viewBox="0 0 20 20"><polygon points="5 3 19 10 5 17 5 3"/></svg>
+                </div>
+              </div>
+            </div>
+            <div class="p-5">
+              <h4 class="font-burbank text-lg text-white mb-1 group-hover:text-amber-300 transition-colors">
+                El Almuerzo en Directo con Griñi
+              </h4>
+              <p class="text-xs text-gray-300 leading-relaxed mb-3">
+                Comiendo pasta en directo IRL mientras el chat canjea puntos del canal para trolear con el modo "no talking" y soltar risas.
+              </p>
+              <div class="flex items-center justify-between text-[11px] text-gray-400 font-mono border-t border-purple-900/60 pt-3">
+                <span>Especial IRL</span>
+                <span class="text-amber-400 font-bold">🍝 Modo No Talking</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 16: DinoAri (Momentos Graciosos) -->
+          <div class="review-card group bg-[#160c30] rounded-2xl overflow-hidden border-2 border-indigo-400/60 hover:border-indigo-400 shadow-xl transition-all duration-300 hover:-translate-y-1.5" data-category="graciosos">
+            <div class="relative h-48 overflow-hidden cursor-pointer" onclick="openClipModal('🎭 Dino-Ari Lista Para el Salto', 'assets/Clips/DinoAri.mp4')">
+              <img src="assets/Clips/thumbnails/DinoAri.jpg" alt="DinoAri" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+              <span class="absolute top-3 left-3 bg-indigo-500 text-white font-black text-[10px] px-2 py-0.5 rounded uppercase">MOMENTOS GRACIOSOS</span>
+              <span class="absolute bottom-2 right-2 bg-black/80 font-mono text-[10px] text-yellow-300 px-1.5 py-0.5 rounded border border-purple-700/60 font-bold">⏱️ 00:05</span>
+              <div class="absolute inset-0 flex items-center justify-center">
+                <div class="w-12 h-12 rounded-full bg-indigo-500 text-white flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                  <svg class="w-6 h-6 ml-1" fill="currentColor" viewBox="0 0 20 20"><polygon points="5 3 19 10 5 17 5 3"/></svg>
+                </div>
+              </div>
+            </div>
+            <div class="p-5">
+              <h4 class="font-burbank text-lg text-white mb-1 group-hover:text-indigo-300 transition-colors">
+                Dino-Ari Lista Para el Salto
+              </h4>
+              <p class="text-xs text-gray-300 leading-relaxed mb-3">
+                Concentración absoluta mirando a la pantalla de carga de Fortnite con el gorro navideño y la energía al máximo.
+              </p>
+              <div class="flex items-center justify-between text-[11px] text-gray-400 font-mono border-t border-purple-900/60 pt-3">
+                <span>Pantalla de Carga</span>
+                <span class="text-indigo-400 font-bold">🦖 Rugido Gamer</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 17: UWU (Momentos Graciosos) -->
+          <div class="review-card group bg-[#160c30] rounded-2xl overflow-hidden border-2 border-sky-400/60 hover:border-sky-400 shadow-xl transition-all duration-300 hover:-translate-y-1.5" data-category="graciosos">
+            <div class="relative h-48 overflow-hidden cursor-pointer" onclick="openClipModal('🎭 Reacción UWU a Hatsune Miku', 'assets/Clips/UWU.mp4')">
+              <img src="assets/Clips/thumbnails/UWU.jpg" alt="UWU" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+              <span class="absolute top-3 left-3 bg-sky-400 text-black font-black text-[10px] px-2 py-0.5 rounded uppercase">MOMENTOS GRACIOSOS</span>
+              <span class="absolute bottom-2 right-2 bg-black/80 font-mono text-[10px] text-yellow-300 px-1.5 py-0.5 rounded border border-purple-700/60 font-bold">⏱️ 00:08</span>
+              <div class="absolute inset-0 flex items-center justify-center">
+                <div class="w-12 h-12 rounded-full bg-sky-400 text-black flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                  <svg class="w-6 h-6 ml-1" fill="currentColor" viewBox="0 0 20 20"><polygon points="5 3 19 10 5 17 5 3"/></svg>
+                </div>
+              </div>
+            </div>
+            <div class="p-5">
+              <h4 class="font-burbank text-lg text-white mb-1 group-hover:text-sky-300 transition-colors">
+                Reacción UWU a Hatsune Miku
+              </h4>
+              <p class="text-xs text-gray-300 leading-relaxed mb-3">
+                Descubriendo la skin de Snow Miku en la tienda de Fortnite con su accesorio conejito y soltando una reacción súper tierna.
+              </p>
+              <div class="flex items-center justify-between text-[11px] text-gray-400 font-mono border-t border-purple-900/60 pt-3">
+                <span>Tienda Fortnite</span>
+                <span class="text-sky-400 font-bold">❄️ Hatsune Miku</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 18: No perdona una (Momentos Graciosos) -->
+          <div class="review-card group bg-[#160c30] rounded-2xl overflow-hidden border-2 border-purple-400/60 hover:border-purple-400 shadow-xl transition-all duration-300 hover:-translate-y-1.5" data-category="graciosos">
+            <div class="relative h-48 overflow-hidden cursor-pointer" onclick="openClipModal('🎭 Krusty con Alerta de Pedro Sánchez', 'assets/Clips/No perdona una.mp4')">
+              <img src="assets/Clips/thumbnails/No perdona una.jpg" alt="No perdona una" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+              <span class="absolute top-3 left-3 bg-purple-500 text-white font-black text-[10px] px-2 py-0.5 rounded uppercase">MOMENTOS GRACIOSOS</span>
+              <span class="absolute bottom-2 right-2 bg-black/80 font-mono text-[10px] text-yellow-300 px-1.5 py-0.5 rounded border border-purple-700/60 font-bold">⏱️ 00:14</span>
+              <div class="absolute inset-0 flex items-center justify-center">
+                <div class="w-12 h-12 rounded-full bg-purple-500 text-white flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                  <svg class="w-6 h-6 ml-1" fill="currentColor" viewBox="0 0 20 20"><polygon points="5 3 19 10 5 17 5 3"/></svg>
+                </div>
+              </div>
+            </div>
+            <div class="p-5">
+              <h4 class="font-burbank text-lg text-white mb-1 group-hover:text-purple-300 transition-colors">
+                Krusty con Alerta de Pedro Sánchez
+              </h4>
+              <p class="text-xs text-gray-300 leading-relaxed mb-3">
+                Jugando con la skin de Krusty el Payaso mientras un seguidor canjea la alerta con la voz de IlloJuan diciendo "¡Pedro Sánchez!".
+              </p>
+              <div class="flex items-center justify-between text-[11px] text-gray-400 font-mono border-t border-purple-900/60 pt-3">
+                <span>Alerta del Chat</span>
+                <span class="text-purple-400 font-bold">🤡 Krusty Royale</span>
               </div>
             </div>
           </div>
@@ -2221,7 +2430,8 @@
           &times;
         </button>
       </div>
-      <div class="aspect-video w-full bg-black">
+      <div class="aspect-video w-full bg-black relative flex items-center justify-center">
+        <video id="modal-clip-video" class="w-full h-full object-contain hidden" controls playsinline preload="auto"></video>
         <iframe id="modal-clip-iframe" class="w-full h-full" src="" title="Clip" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
     </div>
