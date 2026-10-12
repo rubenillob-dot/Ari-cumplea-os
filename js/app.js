@@ -33,10 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // 7. Setup Year in Review filter tabs
   setupYearInReviewFilters();
 
-  // 8. Setup dedication modal form
-  setupDedicationModal();
-
-  // 9. Setup Legendary Chest Easter Egg
+  // 8. Setup Legendary Chest Easter Egg
   setupLegendaryChest();
 
   // 10. Setup Minecraft XP interactions
@@ -359,94 +356,6 @@ window.handleReaction = function(id, type, event) {
     if (window.particleEngine) window.particleEngine.spawnFloatingCrown(cx, cy);
   }
 };
-
-function setupDedicationModal() {
-  const openModalBtn = document.getElementById('open-dedication-modal-btn');
-  const modal = document.getElementById('dedication-modal');
-  const closeBtn = document.getElementById('close-dedication-modal-btn');
-  const form = document.getElementById('new-dedication-form');
-
-  if (openModalBtn && modal) {
-    openModalBtn.addEventListener('click', () => {
-      modal.classList.remove('hidden');
-      modal.classList.add('flex');
-      if (window.soundFX) window.soundFX.playFortniteClick();
-    });
-  }
-
-  if (closeBtn && modal) {
-    closeBtn.addEventListener('click', () => {
-      modal.classList.add('hidden');
-      modal.classList.remove('flex');
-    });
-  }
-
-  if (modal) {
-    modal.addEventListener('click', (e) => {
-      if (e.target === modal) {
-        modal.classList.add('hidden');
-        modal.classList.remove('flex');
-      }
-    });
-  }
-
-  if (form) {
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const user = document.getElementById('form-user').value.trim() || 'Fan Anónimo';
-      const role = document.getElementById('form-role').value.trim() || 'Seguidor';
-      const platform = document.getElementById('form-platform').value || 'twitch';
-      const rarity = document.getElementById('form-rarity').value || 'legendary';
-      const message = document.getElementById('form-message').value.trim();
-      const type = document.getElementById('form-type').value || 'text';
-      const mediaUrl = document.getElementById('form-media-url').value.trim();
-
-      if (!message) return;
-
-      const newEntry = {
-        user,
-        role,
-        platform,
-        rarity,
-        type,
-        message,
-        avatar: ''
-      };
-
-      if (type === 'image' && mediaUrl) {
-        newEntry.image = mediaUrl;
-        newEntry.caption = 'Fanart compartido por ' + user;
-      } else if (type === 'clip' && mediaUrl) {
-        newEntry.clipTitle = 'Momento especial compartido por ' + user;
-        newEntry.videoUrl = mediaUrl;
-        newEntry.clipThumbnail = 'https://images.unsplash.com/photo-1542751371-adc38448a05e?w=800&auto=format&fit=crop&q=80';
-      }
-
-      if (window.dedicationsManager) {
-        window.dedicationsManager.addDedication(newEntry);
-        window.dedicationsManager.renderFeed('dedications-feed');
-      }
-
-      // Close modal & celebrate
-      modal.classList.add('hidden');
-      modal.classList.remove('flex');
-      form.reset();
-
-      if (window.soundFX) {
-        window.soundFX.playVictoryFanfare();
-      }
-      if (window.particleEngine) {
-        window.particleEngine.triggerFortniteConfetti(120);
-      }
-
-      // Scroll to dedications top
-      const dedicationsSection = document.getElementById('muro-comunidad');
-      if (dedicationsSection) {
-        dedicationsSection.scrollIntoView({ behavior: 'smooth' });
-      }
-    });
-  }
-}
 
 /* ========================================================
    6. CLASH ROYALE LEGENDARY CHEST MODAL

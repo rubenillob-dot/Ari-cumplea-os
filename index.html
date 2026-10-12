@@ -1175,27 +1175,17 @@
     
     <div class="max-w-4xl mx-auto">
       
-      <!-- Section Title & CTA Button -->
-      <div class="flex flex-col sm:flex-row items-center justify-between gap-6 mb-12">
-        <div>
-          <div class="inline-flex items-center gap-2 bg-purple-600/30 text-purple-300 border border-purple-500/40 text-xs font-bold px-3 py-1 rounded-full mb-2">
-            <span>💌</span> FEED DE LA COMUNIDAD EN VIVO
-          </div>
-          <h2 class="font-burbank text-3xl sm:text-5xl text-yellow-300 text-stroke-black uppercase tracking-wider">
-            MURO DE DEDICATORIAS
-          </h2>
-          <p class="text-sm text-gray-400 mt-1">
-            Los mensajes, fanarts y felicitaciones de tu chat y amigos para este día tan especial.
-          </p>
+      <!-- Section Title -->
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <div class="inline-flex items-center gap-2 bg-purple-600/30 text-purple-300 border border-purple-500/40 text-xs font-bold px-3 py-1 rounded-full mb-2">
+          <span>💌</span> FEED DE LA COMUNIDAD EN VIVO
         </div>
-
-        <!-- Add Dedication Trigger Button -->
-        <button id="open-dedication-modal-btn" class="btn-fortnite-ready px-6 py-3 text-base shadow-lg shrink-0">
-          <div class="btn-content flex items-center gap-2">
-            <span>✨</span>
-            <span>DEJAR DEDICATORIA</span>
-          </div>
-        </button>
+        <h2 class="font-burbank text-3xl sm:text-5xl text-yellow-300 text-stroke-black uppercase tracking-wider">
+          MURO DE DEDICATORIAS
+        </h2>
+        <p class="text-sm text-gray-400 mt-1">
+          Los mensajes, fanarts y felicitaciones de tu chat y amigos para este día tan especial.
+        </p>
       </div>
 
       <!-- Feed Container (Vertical Timeline) -->
@@ -2353,86 +2343,7 @@
     </div>
   </div>
 
-  <!-- ========================================================
-       MODAL: FORMULARIO DE NUEVA DEDICATORIA
-       ======================================================== -->
-  <div id="dedication-modal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4">
-    <div class="relative max-w-lg w-full bg-[#160b33] rounded-3xl p-6 sm:p-8 border-2 border-yellow-400 shadow-2xl">
-      
-      <button id="close-dedication-modal-btn" class="absolute top-4 right-4 text-gray-400 hover:text-white text-2xl font-black">
-        &times;
-      </button>
 
-      <div class="flex items-center gap-2 mb-4">
-        <span class="text-2xl">📝</span>
-        <h3 class="font-burbank text-2xl text-yellow-300 uppercase">
-          Escribir Dedicatoria para Ari
-        </h3>
-      </div>
-      <p class="text-xs text-gray-400 mb-6">
-        Tu mensaje se publicará directamente en el muro con efectos y reacciones en directo.
-      </p>
-
-      <form id="new-dedication-form" class="space-y-4">
-        <div>
-          <label class="block text-xs font-hud font-bold text-purple-300 uppercase mb-1">Tu Nombre / Nick de Twitch o Discord *</label>
-          <input type="text" id="form-user" required placeholder="Ej: Tryharder_Fan" class="w-full bg-[#0d051e] border border-purple-700 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-yellow-400">
-        </div>
-
-        <div class="grid grid-cols-2 gap-3">
-          <div>
-            <label class="block text-xs font-hud font-bold text-purple-300 uppercase mb-1">Tu Rol / Rango</label>
-            <input type="text" id="form-role" placeholder="Ej: Mod, Sub, Dúo" class="w-full bg-[#0d051e] border border-purple-700 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-yellow-400">
-          </div>
-          <div>
-            <label class="block text-xs font-hud font-bold text-purple-300 uppercase mb-1">Plataforma</label>
-            <select id="form-platform" class="w-full bg-[#0d051e] border border-purple-700 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-yellow-400">
-              <option value="twitch">Twitch</option>
-              <option value="discord">Discord</option>
-            </select>
-          </div>
-        </div>
-
-        <div class="grid grid-cols-2 gap-3">
-          <div>
-            <label class="block text-xs font-hud font-bold text-purple-300 uppercase mb-1">Rareza de Tarjeta</label>
-            <select id="form-rarity" class="w-full bg-[#0d051e] border border-purple-700 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-yellow-400">
-              <option value="legendary">Legendario (Dorado)</option>
-              <option value="mythic">Mítico (Ámbar/Rojo)</option>
-              <option value="epic">Épico (Morado)</option>
-              <option value="rare">Raro (Cian Slurp)</option>
-            </select>
-          </div>
-          <div>
-            <label class="block text-xs font-hud font-bold text-purple-300 uppercase mb-1">Tipo de Mensaje</label>
-            <select id="form-type" class="w-full bg-[#0d051e] border border-purple-700 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-yellow-400">
-              <option value="text">Solo Texto</option>
-              <option value="image">Con Fanart / Foto (URL)</option>
-              <option value="clip">Con Clip / Vídeo (URL)</option>
-            </select>
-          </div>
-        </div>
-
-        <div id="media-url-container">
-          <label class="block text-xs font-hud font-bold text-purple-300 uppercase mb-1">URL de Imagen o Vídeo (Opcional)</label>
-          <input type="url" id="form-media-url" placeholder="https://..." class="w-full bg-[#0d051e] border border-purple-700 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-yellow-400">
-        </div>
-
-        <div>
-          <label class="block text-xs font-hud font-bold text-purple-300 uppercase mb-1">Tu Mensaje Emotivo o Divertido *</label>
-          <textarea id="form-message" rows="3" required placeholder="¡Feliz cumpleaños Arixu! Que este año..." class="w-full bg-[#0d051e] border border-purple-700 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-yellow-400"></textarea>
-        </div>
-
-        <button type="submit" class="btn-fortnite-ready w-full py-3 text-lg">
-          <div class="btn-content flex items-center justify-center gap-2">
-            <span>🚀</span>
-            <span>PUBLICAR EN EL MURO</span>
-          </div>
-        </button>
-      </form>
-
-    </div>
-  </div>
 
   <!-- ========================================================
        MODAL: LIGHTBOX PARA VER FANARTS
