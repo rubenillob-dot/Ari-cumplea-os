@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,400;0,600;0,700;1,700&family=Lilita+One&family=Luckiest+Guy&family=Montserrat:wght@700;800;900&family=Outfit:wght@400;600;800;900&family=Press+Start+2P&display=swap');
 
 :root {
-  --fn-storm-deep: #0e071e;
-  --fn-storm-mid: #1b113a;
-  --fn-storm-purple: #7a22ff;
+  --fn-storm-deep: #1e0e3e;
+  --fn-storm-mid: #2c1554;
+  --fn-storm-purple: #8b3dff;
   --fn-slurp-cyan: #00f0ff;
   --fn-legendary-gold: #f4c430;
   --fn-amber: #e69e24;
@@ -133,19 +133,19 @@ body {
    ======================================================== */
 .fortnite-lobby-bg {
   background: 
-    radial-gradient(ellipse at 50% 10%, rgba(145, 70, 255, 0.4) 0%, rgba(20, 10, 42, 0.75) 50%, rgba(10, 5, 22, 0.96) 100%),
-    linear-gradient(180deg, rgba(14, 7, 30, 0.88) 0%, rgba(27, 12, 58, 0.84) 40%, rgba(10, 4, 20, 0.94) 100%),
+    radial-gradient(ellipse at 50% 0%, rgba(168, 85, 247, 0.45) 0%, rgba(126, 46, 235, 0.35) 30%, rgba(54, 22, 102, 0.8) 70%, rgba(36, 14, 68, 0.9) 100%),
+    linear-gradient(180deg, rgba(50, 20, 96, 0.78) 0%, rgba(72, 30, 140, 0.65) 40%, rgba(42, 16, 82, 0.82) 100%),
     url('../assets/images/twitch-fortnite-bg.jpg') center top / cover no-repeat fixed;
   background-attachment: fixed;
 }
 
 .lobby-grid-lines {
   background-image: 
-    linear-gradient(to right, rgba(145, 70, 255, 0.12) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(0, 240, 255, 0.08) 1px, transparent 1px);
+    linear-gradient(to right, rgba(168, 85, 247, 0.18) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 240, 255, 0.12) 1px, transparent 1px);
   background-size: 40px 40px;
-  mask-image: radial-gradient(circle at 50% 30%, black 30%, transparent 85%);
-  -webkit-mask-image: radial-gradient(circle at 50% 30%, black 30%, transparent 85%);
+  mask-image: radial-gradient(circle at 50% 30%, black 40%, transparent 90%);
+  -webkit-mask-image: radial-gradient(circle at 50% 30%, black 40%, transparent 90%);
 }
 
 /* Floating Gaming Background Doodles & Elements */
@@ -479,7 +479,7 @@ body {
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #0e071e;
+  background: #1e0e3e;
 }
 ::-webkit-scrollbar-thumb {
   background: #7a22ff;
