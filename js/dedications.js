@@ -442,12 +442,24 @@ Felicidades, Ari. Te lo has ganado a pulso. A por el siguiente nivel, porque est
     message: '¡Feliz cumpleaños Ari! Que nunca falte el buen rollo en directo ni los minis en el inventario para salvar la partida. ¡Que pases un día espectacular con toda tu gente! 🥤🔥',
     reactions: { gg: 47, shield: 31, crown: 62 },
     date: 'Ayer a las 16:10'
+  },
+  {
+    id: 'ded-18',
+    user: 'Neus',
+    platform: 'twitch',
+    role: 'COMUNIDAD TWITCH',
+    rarity: 'epic',
+    avatar: '',
+    type: 'text',
+    message: '¡Muchísimas felicidades Ari! 🎂👑 Que pases un cumpleaños increíble y que este nuevo nivel venga repleto de risas, directos inolvidables y muchas victorias campales. ¡A disfrutar al máximo de tu día! 💜✨',
+    reactions: { gg: 58, shield: 37, crown: 79 },
+    date: 'Hoy a las 17:00'
   }
 ];
 
 class DedicationsManager {
   constructor() {
-    this.storageKey = 'imarixu_birthday_dedications_v9';
+    this.storageKey = 'imarixu_birthday_dedications_v10';
     this.dedications = this.loadDedications();
   }
 
@@ -469,6 +481,7 @@ class DedicationsManager {
       localStorage.removeItem('imarixu_birthday_dedications_v6');
       localStorage.removeItem('imarixu_birthday_dedications_v7');
       localStorage.removeItem('imarixu_birthday_dedications_v8');
+      localStorage.removeItem('imarixu_birthday_dedications_v9');
     } catch (_) {}
     return [...DEFAULT_DEDICATIONS];
   }
