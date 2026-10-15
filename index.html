@@ -3102,7 +3102,95 @@ Felicidades, Ari. Te lo has ganado a pulso. A por el siguiente nivel, porque est
   </div>
 
   <!-- ========================================================
-       FOOTER (Minecraft 1% Hardcore Hearts & Birthday Message)
+       MODAL: POLÍTICA DE COOKIES Y PRIVACIDAD
+       ======================================================== -->
+  <div id="cookies-modal" class="fixed inset-0 z-50 bg-black/85 backdrop-blur-md hidden items-center justify-center p-4">
+    <div class="relative max-w-2xl w-full bg-[#160b30] rounded-3xl p-6 sm:p-8 border-2 border-yellow-400/90 shadow-[0_0_50px_rgba(244,196,48,0.35)] overflow-hidden max-h-[90vh] flex flex-col">
+      
+      <!-- Close Button -->
+      <button id="close-cookies-modal-btn" class="absolute top-4 right-4 text-gray-400 hover:text-white text-2xl font-black z-20 transition-colors" aria-label="Cerrar modal">
+        &times;
+      </button>
+
+      <!-- Header -->
+      <div class="text-center mb-5 shrink-0">
+        <div class="inline-flex items-center gap-1.5 bg-yellow-400 text-black text-[11px] font-burbank uppercase px-3 py-1 rounded-md transform -skew-x-6 mb-2 shadow">
+          <span>🍪</span> INFORMACIÓN LEGAL & PRIVACIDAD
+        </div>
+        <h3 class="font-burbank text-2xl sm:text-3xl text-yellow-300 uppercase tracking-wide">
+          Política de Cookies
+        </h3>
+        <p class="text-xs sm:text-sm text-gray-300 mt-1 max-w-md mx-auto">
+          Información clara y transparente sobre el almacenamiento y la privacidad en esta web festiva.
+        </p>
+      </div>
+
+      <!-- Content (Scrollable) -->
+      <div class="overflow-y-auto pr-2 space-y-3.5 text-xs sm:text-sm text-gray-300 leading-relaxed font-sans">
+        
+        <div class="p-4 rounded-2xl bg-[#0f0722] border border-purple-800/80">
+          <h4 class="font-hud font-bold text-yellow-300 text-sm mb-1.5 flex items-center gap-2">
+            <span>🛡️</span> 1. ¿Utilizamos Cookies de Rastreo o Publicitarias?
+          </h4>
+          <p class="text-gray-300 text-xs sm:text-[13px] leading-relaxed">
+            <strong class="text-emerald-400">Rotundamente NO.</strong> Esta página web es un proyecto tributo y homenaje conmemorativo, sin fines lucrativos ni comerciales. No empleamos cookies de terceros con fines publicitarios ni realizamos venta o cesión de datos personales a ningún tercero.
+          </p>
+        </div>
+
+        <div class="p-4 rounded-2xl bg-[#0f0722] border border-purple-800/80">
+          <h4 class="font-hud font-bold text-yellow-300 text-sm mb-1.5 flex items-center gap-2">
+            <span>💾</span> 2. Almacenamiento Local Técnico (LocalStorage)
+          </h4>
+          <p class="text-gray-300 text-xs sm:text-[13px] mb-2 leading-relaxed">
+            Para garantizar que disfrutes de todas las mecánicas interactivas y mantengas tu configuración, la web utiliza el almacenamiento técnico de tu propio navegador (<code class="text-cyan-300 bg-purple-950 px-1.5 py-0.5 rounded font-mono text-xs">localStorage</code>), exclusivamente para finalidades funcionales:
+          </p>
+          <ul class="space-y-1.5 text-xs text-gray-300 list-disc list-inside">
+            <li><strong class="text-yellow-200">🎯 Armería de Cursores:</strong> Guardar el puntero gaming que has equipado (Poppy GrabPack, Pico Fortnite, Diamante Minecraft o Corona Royale).</li>
+            <li><strong class="text-yellow-200">🎵 Control de Audio:</strong> Recordar tu preferencia de reproducción o silenciado de la música.</li>
+            <li><strong class="text-yellow-200">💬 Dedicatorias de la Comunidad:</strong> Registrar de forma local tus reacciones (GG, Escudo o Corona) en el muro para evitar votos duplicados accidentales.</li>
+            <li><strong class="text-yellow-200">🍪 Preferencia del Aviso:</strong> Recordar que ya has aceptado este aviso informativo para no volvértelo a mostrar.</li>
+          </ul>
+        </div>
+
+        <div class="p-4 rounded-2xl bg-[#0f0722] border border-purple-800/80">
+          <h4 class="font-hud font-bold text-yellow-300 text-sm mb-1.5 flex items-center gap-2">
+            <span>©️</span> 3. Copyright y Autoría
+          </h4>
+          <p class="text-gray-300 text-xs sm:text-[13px] leading-relaxed">
+            El diseño web, desarrollo técnico, código e integración multimedia han sido realizados íntegramente por <strong class="text-yellow-300 font-bold">Rubenillo</strong>. Todos los derechos reservados bajo Copyright © 2026.
+          </p>
+        </div>
+
+        <div class="p-4 rounded-2xl bg-[#0f0722] border border-purple-800/80">
+          <h4 class="font-hud font-bold text-yellow-300 text-sm mb-1.5 flex items-center gap-2">
+            <span>⚙️</span> 4. Cómo gestionar o borrar estos datos
+          </h4>
+          <p class="text-gray-300 text-xs sm:text-[13px] leading-relaxed">
+            Tienes pleno control: puedes eliminar el almacenamiento local en cualquier momento vaciando la caché y datos de sitio en la configuración de privacidad de tu navegador.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Footer Buttons -->
+      <div class="mt-4 pt-3.5 border-t border-purple-800/80 flex flex-col sm:flex-row items-center justify-between gap-3 shrink-0">
+        <span class="text-[11px] text-purple-300/80 font-mono flex items-center gap-1.5">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+          Cookies técnicas: 100% seguras y funcionales
+        </span>
+        <button id="accept-cookies-modal-btn" class="btn-fortnite-ready px-6 py-2 text-xs shadow-md shrink-0 w-full sm:w-auto">
+          <div class="btn-content flex items-center justify-center gap-2">
+            <span>✨</span>
+            <span>¡ENTENDIDO Y ACEPTAR!</span>
+          </div>
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ========================================================
+       FOOTER (Minecraft 1% Hardcore Hearts, Mensaje & Legal)
        ======================================================== -->
   <footer class="mt-auto py-12 px-4 sm:px-6 lg:px-8 border-t-2 border-purple-700/50 bg-[#220f42]/85 backdrop-blur-[2px] text-center relative z-20">
     <div class="max-w-4xl mx-auto">
@@ -3140,8 +3228,111 @@ Felicidades, Ari. Te lo has ganado a pulso. A por el siguiente nivel, porque est
         🔊 [Click para recoger Orbes de Experiencia XP]
       </button>
 
+      <!-- ========================================================
+           SECCIÓN INFERIOR: COPYRIGHT, AUTORÍA (RUBENILLO) Y COOKIES
+           ======================================================== -->
+      <div class="mt-10 pt-8 border-t border-purple-600/40">
+        
+        <!-- Bloque Principal de Copyright y Autor -->
+        <div class="bg-[#120726]/90 border-2 border-purple-700/60 rounded-3xl p-5 sm:p-7 shadow-[0_0_25px_rgba(139,61,255,0.2)] text-left backdrop-blur-md">
+          
+          <div class="flex flex-col lg:flex-row items-center justify-between gap-5 border-b border-purple-800/70 pb-5 mb-5">
+            <div class="flex items-center gap-4 text-center lg:text-left flex-col sm:flex-row">
+              <div class="w-13 h-13 rounded-2xl bg-gradient-to-tr from-purple-800 via-indigo-700 to-yellow-500 p-0.5 shadow-lg shrink-0">
+                <div class="w-12 h-12 rounded-[14px] bg-[#1a0c36] flex items-center justify-center text-2xl">
+                  👑
+                </div>
+              </div>
+              <div>
+                <div class="flex items-center gap-2 flex-wrap justify-center sm:justify-start">
+                  <span class="font-burbank text-lg sm:text-xl text-yellow-300 tracking-wide uppercase">
+                    © 2026 IMARIXU BIRTHDAY
+                  </span>
+                  <span class="inline-flex items-center gap-1 bg-red-500/20 text-rose-300 border border-rose-500/40 text-[10px] font-mono uppercase px-2.5 py-0.5 rounded-full font-bold">
+                    <span>©</span> COPYRIGHT REGISTRADO
+                  </span>
+                </div>
+                <p class="text-xs sm:text-sm text-gray-200 mt-1">
+                  Página web y desarrollo realizados íntegramente por <strong class="text-yellow-400 font-burbank text-sm sm:text-base tracking-wider px-2 py-0.5 bg-yellow-400/10 rounded border border-yellow-400/30">Rubenillo</strong>
+                </p>
+              </div>
+            </div>
+
+            <!-- Botón de apertura de Política de Cookies -->
+            <div class="flex items-center gap-3 shrink-0 flex-wrap justify-center">
+              <button id="open-cookies-modal-btn" type="button" class="btn-fortnite-ready px-4 py-2 text-xs shadow-md">
+                <div class="btn-content flex items-center gap-2">
+                  <span class="text-sm">🍪</span>
+                  <span>POLÍTICA DE COOKIES</span>
+                </div>
+              </button>
+            </div>
+          </div>
+
+          <!-- Columnas de Detalle Legal y Fan Tribute -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs text-gray-300">
+            <div class="p-3.5 rounded-xl bg-[#0a0418]/70 border border-purple-900/60">
+              <div class="font-hud font-bold text-yellow-300 uppercase tracking-wider text-[11px] mb-1.5 flex items-center gap-1.5">
+                <span>🛡️</span> AVISO DE COPYRIGHT & DERECHOS RESERVADOS
+              </div>
+              <p class="text-gray-400 leading-relaxed text-[11.5px]">
+                Todos los derechos de este proyecto web, su arquitectura técnica, código fuente, efectos de audio, diseño y componentes visuales quedan reservados y protegidos por Copyright bajo la autoría de <strong class="text-gray-200 font-semibold">Rubenillo</strong>. Queda expresamente prohibida la copia no autorizada o explotación comercial sin consentimiento previo.
+              </p>
+            </div>
+
+            <div class="p-3.5 rounded-xl bg-[#0a0418]/70 border border-purple-900/60">
+              <div class="font-hud font-bold text-cyan-300 uppercase tracking-wider text-[11px] mb-1.5 flex items-center gap-1.5">
+                <span>🎮</span> FAN TRIBUTE & EXENCIÓN DE MARCAS
+              </div>
+              <p class="text-gray-400 leading-relaxed text-[11.5px]">
+                Proyecto homenaje conmemorativo sin ánimo de lucro creado por y para la comunidad en honor a <strong class="text-yellow-300 font-semibold">Ari (IMARIXU)</strong>. Todas las marcas registradas, logotipos y assets de videojuegos son propiedad de sus respectivos dueños: Fortnite es de Epic Games Inc., Clash Royale de Supercell, Poppy Playtime de Mob Entertainment y Minecraft de Mojang Studios.
+              </p>
+            </div>
+          </div>
+
+          <div class="mt-4 pt-3.5 border-t border-purple-900/50 flex flex-col sm:flex-row items-center justify-between gap-2 text-[11px] text-gray-400">
+            <span>Celebrando el Nivel 25 de IMARIXU • Victoria Campal 👑</span>
+            <span class="font-mono text-purple-400/90 font-bold">Realizado por Rubenillo • © 2026</span>
+          </div>
+
+        </div>
+      </div>
+
     </div>
   </footer>
+
+  <!-- ========================================================
+       BANNER FLOTANTE DE CONSENTIMIENTO DE COOKIES
+       ======================================================== -->
+  <div id="cookie-banner" class="fixed bottom-4 left-4 right-4 sm:left-auto sm:right-6 sm:max-w-md z-40 bg-[#150a2b]/95 border-2 border-yellow-400/90 rounded-2xl p-4 shadow-[0_0_30px_rgba(244,196,48,0.35)] backdrop-blur-md hidden transition-all duration-300">
+    <div class="flex items-start gap-3">
+      <div class="text-2xl shrink-0 p-2 bg-yellow-400/15 rounded-xl border border-yellow-400/30">
+        🍪
+      </div>
+      <div class="flex-1 min-w-0">
+        <div class="flex items-center justify-between gap-1 mb-1">
+          <h4 class="font-burbank text-sm text-yellow-300 uppercase tracking-wide">
+            Cookies y Copyright
+          </h4>
+          <span class="text-[9px] font-mono px-1.5 py-0.5 rounded bg-purple-900 text-purple-200 border border-purple-700">INFO</span>
+        </div>
+        <p class="text-xs text-gray-300 leading-relaxed">
+          Esta web utiliza almacenamiento técnico para tus opciones de audio y puntero. Realizado por <strong class="text-yellow-400">Rubenillo</strong> con Copyright © 2026.
+        </p>
+        <div class="flex items-center gap-2 mt-3">
+          <button id="banner-accept-cookies-btn" type="button" class="px-3.5 py-1.5 rounded-lg bg-yellow-400 hover:bg-yellow-300 text-black font-burbank text-xs uppercase tracking-wider font-bold transition-all shadow-md active:scale-95">
+            Aceptar
+          </button>
+          <button id="banner-open-modal-btn" type="button" class="px-3 py-1.5 rounded-lg bg-purple-900/70 hover:bg-purple-800 text-purple-200 hover:text-white text-xs font-semibold transition-all border border-purple-600/60">
+            Ver Política
+          </button>
+        </div>
+      </div>
+      <button id="banner-close-btn" type="button" class="text-gray-400 hover:text-white text-xl font-bold p-1 leading-none transition-colors" title="Cerrar banner">
+        &times;
+      </button>
+    </div>
+  </div>
 
   <!-- Scripts -->
   <script src="js/pixel-background.js"></script>

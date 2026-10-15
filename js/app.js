@@ -42,6 +42,9 @@ document.addEventListener('DOMContentLoaded', () => {
   // 11. Setup Chart Point Hover Interactions
   setupChartInteractions();
 
+  // 12. Setup Cookie Policy & Privacy Modal / Banner
+  setupCookiePolicy();
+
   // Enable sound on first interaction
   const unlockAudio = () => {
     if (window.soundFX) window.soundFX.init();
@@ -529,6 +532,9 @@ document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') {
     window.closeLightbox();
     window.closeClipModal();
+    if (typeof window.closeCookiesModal === 'function') {
+      window.closeCookiesModal();
+    }
   }
 });
 
@@ -628,3 +634,97 @@ function setupChartInteractions() {
   }, { passive: true });
 }
 
+/* ========================================================
+   12. COOKIE POLICY & PRIVACY MODAL / BANNER
+   ======================================================== */
+function setupCookiePolicy() {
+  const cookiesModal = document.getElementById('cookies-modal');
+  const openBtn = document.getElementById('open-cookies-modal-btn');
+  const closeBtn = document.getElementById('close-cookies-modal-btn');
+  const acceptModalBtn = document.getElementById('accept-cookies-modal-btn');
+  const banner = document.getElementById('cookie-banner');
+  const bannerAcceptBtn = document.getElementById('banner-accept-cookies-btn');
+  const bannerOpenBtn = document.getElementById('banner-open-modal-btn');
+  const bannerCloseBtn = document.getElementById('banner-close-btn');
+
+  const openCookiesModal = () => {
+    if (!cookiesModal) return;
+    cookiesModal.classList.remove('hidden');
+    cookiesModal.classList.add('flex');
+    if (window.soundFX && window.soundFX.playFortniteClick) {
+      window.soundFX.playFortniteClick();
+    }
+  };
+
+  const closeCookiesModal = () => {
+    if (!cookiesModal) return;
+    cookiesModal.classList.add('hidden');
+    cookiesModal.classList.remove('flex');
+  };
+
+  window.openCookiesModal = openCookiesModal;
+  window.closeCookiesModal = closeCookiesModal;
+
+  const acceptCookies = () => {
+    try {
+      localStorage.setItem('imarixu_cookies_accepted', 'true');
+    } catch (e) {}
+
+    closeCookiesModal();
+
+    if (banner) {
+      banner.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+      banner.style.opacity = '0';
+      banner.style.transform = 'translateY(16px)';
+      setTimeout(() => banner.classList.add('hidden'), 350);
+    }
+
+    if (window.soundFX && window.soundFX.playFortniteClick) {
+      window.soundFX.playFortniteClick();
+    }
+  };
+
+  const dismissBanner = () => {
+    try {
+      localStorage.setItem('imarixu_cookies_accepted', 'dismissed');
+    } catch (e) {}
+
+    if (banner) {
+      banner.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+      banner.style.opacity = '0';
+      banner.style.transform = 'translateY(16px)';
+      setTimeout(() => banner.classList.add('hidden'), 350);
+    }
+  };
+
+  // Open & Close triggers
+  if (openBtn) openBtn.addEventListener('click', openCookiesModal);
+  if (closeBtn) closeBtn.addEventListener('click', closeCookiesModal);
+  if (acceptModalBtn) acceptModalBtn.addEventListener('click', acceptCookies);
+
+  // Banner triggers
+  if (bannerAcceptBtn) bannerAcceptBtn.addEventListener('click', acceptCookies);
+  if (bannerOpenBtn) bannerOpenBtn.addEventListener('click', openCookiesModal);
+  if (bannerCloseBtn) bannerCloseBtn.addEventListener('click', dismissBanner);
+
+  // Backdrop click to close
+  if (cookiesModal) {
+    cookiesModal.addEventListener('click', (e) => {
+      if (e.target === cookiesModal) {
+        closeCookiesModal();
+      }
+    });
+  }
+
+  // Check initial banner visibility
+  try {
+    const isConsentGiven = localStorage.getItem('imarixu_cookies_accepted');
+    if (!isConsentGiven && banner) {
+      setTimeout(() => {
+        banner.classList.remove('hidden');
+      }, 1000);
+    }
+  } catch (e) {
+    if (banner) banner.classList.remove('hidden');
+  }
+}
