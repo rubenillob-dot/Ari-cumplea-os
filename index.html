@@ -930,40 +930,44 @@
           <div class="absolute -top-24 -right-24 w-72 h-72 bg-amber-500/15 rounded-full blur-3xl pointer-events-none"></div>
 
           <!-- Section Header & Top Right Call-to-Action Banner -->
-          <div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 mb-8 relative z-10">
-            <div>
+          <div class="flex flex-col xl:flex-row items-start xl:items-center justify-between gap-6 mb-8 relative z-10">
+            <div class="max-w-xl">
               <div class="inline-flex items-center gap-2 bg-yellow-400 text-black font-burbank text-xs px-2.5 py-0.5 rounded transform -skew-x-12 mb-2 shadow-md">
                 <span>🛍️</span> APOYA A UN CREADOR EN FORTNITE
               </div>
               <h3 class="font-burbank text-2xl sm:text-4xl text-yellow-300 uppercase tracking-wide drop-shadow-[0_2px_8px_rgba(244,196,48,0.35)]">
                 CÓDIGO ARIXU: PROGRESO Y MISIÓN NOVIEMBRE
               </h3>
-              <p class="text-sm sm:text-base text-purple-200 mt-1 font-medium max-w-2xl leading-relaxed">
+              <p class="text-sm sm:text-base text-purple-200 mt-1 font-medium leading-relaxed">
                 Este apartado no es solo para ver cómo ha progresado el código en la gráfica: ¡es nuestro llamamiento para <strong>noviembre</strong>! Si queremos seguir creciendo dentro de Fortnite y conquistar la meta del <strong>Epic Partner</strong>, hay que meterle muchísima caña.
               </p>
             </div>
 
             <!-- Top Right Banner Destacado -->
-            <div class="w-full lg:w-auto bg-[#1b0f38]/90 border-2 border-yellow-400/80 rounded-2xl p-4 sm:p-5 shadow-[0_0_25px_rgba(244,196,48,0.25)] flex flex-col sm:flex-row items-center gap-4">
-              <div class="flex items-center gap-3">
-                <div class="px-3.5 py-1.5 rounded-xl bg-gradient-to-r from-yellow-400 via-amber-400 to-yellow-500 text-black font-burbank text-base sm:text-lg tracking-wider font-black shadow-[0_0_15px_rgba(244,196,48,0.6)] animate-pulse flex items-center gap-1.5 whitespace-nowrap">
+            <div class="w-full xl:w-auto bg-[#1b0f38]/90 border-2 border-yellow-400/80 rounded-2xl p-4 sm:p-5 shadow-[0_0_25px_rgba(244,196,48,0.25)] flex flex-col md:flex-row items-center justify-between gap-4">
+              <div class="flex items-center gap-3 w-full md:w-auto justify-center md:justify-start">
+                <div class="px-3.5 py-1.5 rounded-xl bg-gradient-to-r from-yellow-400 via-amber-400 to-yellow-500 text-black font-burbank text-base sm:text-lg tracking-wider font-black shadow-[0_0_15px_rgba(244,196,48,0.6)] animate-pulse flex items-center gap-1.5 whitespace-nowrap shrink-0">
                   <span>👑</span>
                   <span>¡YA SOMOS 272!</span>
                 </div>
+                <div class="text-left hidden sm:block">
+                  <p class="text-xs text-amber-300 font-bold uppercase tracking-wider">
+                    Récord: 450 en agosto
+                  </p>
+                  <p class="text-[11px] text-gray-300 font-medium">
+                    ¡A por el Epic Partner en noviembre!
+                  </p>
+                </div>
               </div>
-              <div class="text-center sm:text-left">
-                <p class="text-xs sm:text-sm text-gray-200 font-medium">
-                  Récord histórico de 450 en agosto • ¡A por el Epic Partner en noviembre!
-                </p>
-              </div>
-              <!-- Acciones: Botón interactivo que resalta Código: ARIXU y acceso directo a la Misión -->
-              <div class="flex items-center gap-2 shrink-0">
-                <a href="#mision-noviembre-epic-partner" class="hidden sm:inline-flex items-center gap-1.5 px-3 py-2 rounded-xl bg-purple-900/70 hover:bg-purple-800 border border-amber-400/60 hover:border-amber-300 text-xs font-hud text-amber-300 transition-all font-bold shadow-md hover:scale-105 active:scale-95" title="Ir directamente a la Misión Noviembre">
-                  <span>🎯</span> Misión Noviembre
+              <!-- Acciones perfectamente cuadradas y alineadas -->
+              <div class="flex items-center justify-center gap-2.5 w-full md:w-auto shrink-0 flex-wrap sm:flex-nowrap">
+                <a href="#mision-noviembre-epic-partner" class="flex-1 sm:flex-none h-11 px-3.5 rounded-xl bg-purple-900/80 hover:bg-purple-800 border-2 border-amber-400/70 hover:border-amber-300 text-xs sm:text-sm font-burbank tracking-wider uppercase text-amber-300 shadow-md hover:scale-105 active:scale-95 flex items-center justify-center gap-1.5 whitespace-nowrap transition-all font-bold" title="Ir directamente a la Misión Noviembre">
+                  <span>🎯</span>
+                  <span>Misión Noviembre</span>
                 </a>
-                <button onclick="copyCreatorCode(this)" class="group cursor-pointer flex items-center gap-2 px-4 py-2 rounded-xl bg-gradient-to-r from-yellow-400 to-amber-500 hover:from-yellow-300 hover:to-amber-400 text-black font-burbank text-sm sm:text-base tracking-wider uppercase shadow-lg hover:scale-105 active:scale-95 transition-all duration-200 border-2 border-yellow-200 shrink-0" title="Click para copiar el código ARIXU">
+                <button onclick="copyCreatorCode(this)" class="flex-1 sm:flex-none h-11 px-4 rounded-xl bg-gradient-to-r from-yellow-400 to-amber-500 hover:from-yellow-300 hover:to-amber-400 text-black font-burbank text-xs sm:text-sm tracking-wider uppercase shadow-lg hover:scale-105 active:scale-95 transition-all duration-200 border-2 border-yellow-200 flex items-center justify-center gap-2 whitespace-nowrap font-black cursor-pointer shrink-0" title="Click para copiar el código ARIXU">
                   <span class="text-base group-hover:rotate-12 transition-transform">✨</span>
-                  <span class="font-black">Código: ARIXU</span>
+                  <span>Código: ARIXU</span>
                   <svg class="w-4 h-4 ml-0.5 opacity-70 group-hover:opacity-100" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
                 </button>
               </div>
