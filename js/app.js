@@ -39,6 +39,9 @@ document.addEventListener('DOMContentLoaded', () => {
   // 10. Setup Minecraft XP interactions
   setupMinecraftEasterEggs();
 
+  // 11. Setup Chart Point Hover Interactions
+  setupChartInteractions();
+
   // Enable sound on first interaction
   const unlockAudio = () => {
     if (window.soundFX) window.soundFX.init();
@@ -557,3 +560,71 @@ window.copyCreatorCode = function(btn) {
     }, 2200);
   }
 };
+
+/* ========================================================
+   11. CÓDIGO ARIXU GROWTH CHART HOVER INTERACTIONS
+   ======================================================== */
+function setupChartInteractions() {
+  const pointGroups = document.querySelectorAll('.chart-point-group');
+  const hudBadge = document.getElementById('chart-hover-indicator');
+  const defaultText = hudBadge ? hudBadge.innerHTML : '';
+
+  if (!pointGroups.length) return;
+
+  pointGroups.forEach(group => {
+    const month = group.getAttribute('data-month');
+    const val = group.getAttribute('data-val');
+    const tag = group.getAttribute('data-tag');
+
+    const handleEnter = () => {
+      // Clear active class from all other points
+      pointGroups.forEach(g => g.classList.remove('is-active'));
+      group.classList.add('is-active');
+
+      // Soft audio feedback when hovering over a month
+      if (window.soundFX && window.soundFX.playMinecraftXP && !group._soundCooldown) {
+        window.soundFX.playMinecraftXP(1.1);
+        group._soundCooldown = true;
+        setTimeout(() => { group._soundCooldown = false; }, 160);
+      }
+
+      // Update HUD badge text and styling
+      if (hudBadge && month && val) {
+        const tagHTML = tag ? `<span class="ml-1 text-[10px] px-1.5 py-0.5 rounded bg-yellow-400 text-black font-black uppercase tracking-wider">${tag}</span>` : '';
+        hudBadge.innerHTML = `<span class="text-yellow-300">📈</span> <strong class="text-white">${month}:</strong> <span class="text-yellow-300 font-bold">${val} personas</span> ${tagHTML}`;
+        hudBadge.classList.add('border-yellow-400/90', 'bg-yellow-400/20', 'shadow-[0_0_12px_rgba(244,196,48,0.4)]');
+        hudBadge.classList.remove('border-purple-600/60', 'bg-purple-950/90');
+      }
+    };
+
+    const handleLeave = () => {
+      group.classList.remove('is-active');
+      if (hudBadge) {
+        hudBadge.innerHTML = defaultText;
+        hudBadge.classList.remove('border-yellow-400/90', 'bg-yellow-400/20', 'shadow-[0_0_12px_rgba(244,196,48,0.4)]');
+        hudBadge.classList.add('border-purple-600/60', 'bg-purple-950/90');
+      }
+    };
+
+    group.addEventListener('mouseenter', handleEnter);
+    group.addEventListener('mouseleave', handleLeave);
+
+    // Mobile touch interaction
+    group.addEventListener('touchstart', () => {
+      handleEnter();
+    }, { passive: true });
+  });
+
+  // Touch outside to dismiss active point on mobile
+  document.addEventListener('touchstart', (e) => {
+    if (!e.target.closest('.chart-point-group')) {
+      pointGroups.forEach(g => g.classList.remove('is-active'));
+      if (hudBadge) {
+        hudBadge.innerHTML = defaultText;
+        hudBadge.classList.remove('border-yellow-400/90', 'bg-yellow-400/20', 'shadow-[0_0_12px_rgba(244,196,48,0.4)]');
+        hudBadge.classList.add('border-purple-600/60', 'bg-purple-950/90');
+      }
+    }
+  }, { passive: true });
+}
+

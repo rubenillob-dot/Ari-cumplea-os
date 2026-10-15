@@ -545,6 +545,79 @@ body {
 }
 
 /* ========================================================
+   INTERACTIVE CHART POINTS & HOVER TOOLTIPS
+   ======================================================== */
+.chart-point-group {
+  cursor: pointer;
+  outline: none;
+}
+
+.chart-point-group .point-pulse {
+  opacity: 0;
+  transform-origin: center;
+  transition: opacity 0.2s ease, transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+  pointer-events: none;
+}
+
+.chart-point-group .point-line {
+  opacity: 0.15;
+  transition: opacity 0.2s ease, stroke 0.2s ease, stroke-width 0.2s ease;
+  pointer-events: none;
+}
+
+.chart-point-group .point-dot {
+  transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1), fill 0.2s ease, stroke 0.2s ease, r 0.2s ease;
+  pointer-events: none;
+}
+
+.chart-point-group .point-tooltip {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(6px);
+  transition: opacity 0.2s ease, transform 0.22s cubic-bezier(0.34, 1.56, 0.64, 1), visibility 0.2s;
+  pointer-events: none;
+}
+
+/* Hover, Focus & Active States */
+.chart-point-group:hover .point-pulse,
+.chart-point-group:focus-visible .point-pulse,
+.chart-point-group.is-active .point-pulse {
+  opacity: 1;
+}
+
+.chart-point-group:hover .point-line,
+.chart-point-group:focus-visible .point-line,
+.chart-point-group.is-active .point-line {
+  opacity: 0.95;
+  stroke: #facc15;
+  stroke-width: 1.8px;
+  stroke-dasharray: 3 3;
+}
+
+.chart-point-group:hover .point-dot,
+.chart-point-group:focus-visible .point-dot,
+.chart-point-group.is-active .point-dot {
+  r: 7.5px;
+  fill: #fde047;
+  stroke: #ffffff;
+  stroke-width: 2.5px;
+}
+
+.chart-point-group:hover .point-tooltip,
+.chart-point-group:focus-visible .point-tooltip,
+.chart-point-group.is-active .point-tooltip {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.chart-point-group:hover .chart-badge-float,
+.chart-point-group:focus-visible .chart-badge-float,
+.chart-point-group.is-active .chart-badge-float {
+  filter: drop-shadow(0 0 10px rgba(250, 204, 21, 0.8));
+}
+
+/* ========================================================
    VERTICAL SYNCHRONIZED SONG LYRICS
    ======================================================== */
 .lyric-line {

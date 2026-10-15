@@ -979,6 +979,9 @@
                 <span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-amber-400"></span> Récord (Ago): <strong class="text-amber-300">397</strong></span>
                 <span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-yellow-400"></span> Actual: <strong class="text-yellow-300">272</strong></span>
                 <span class="px-2 py-0.5 rounded bg-emerald-950/80 text-emerald-400 border border-emerald-600/50 font-bold">+99% Crecimiento</span>
+                <span id="chart-hover-indicator" class="hidden sm:inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-purple-950/90 border border-purple-600/60 text-purple-200 text-xs font-hud transition-all duration-200">
+                  <span>💡</span> Pasa el ratón por los puntos para ver cada mes
+                </span>
               </div>
             </div>
 
@@ -1071,82 +1074,216 @@
                   class="chart-line-path"
                 />
 
-                <!-- Intermediate Points (Nov to Sep) with Tooltips -->
-                <g class="chart-points-intermediate">
-                  <!-- Nov 2025: 173 -->
-                  <circle cx="130.8" cy="215.0" r="4.5" fill="#f59e0b" stroke="#0d051c" stroke-width="2"><title>Nov 2025: 173 personas</title></circle>
-                  <!-- Dic 2025: 188 -->
-                  <circle cx="196.7" cy="207.2" r="4.5" fill="#f59e0b" stroke="#0d051c" stroke-width="2"><title>Dic 2025: ~188 personas</title></circle>
-                  <!-- Ene 2026: 202 -->
-                  <circle cx="262.5" cy="200.0" r="4.5" fill="#f59e0b" stroke="#0d051c" stroke-width="2"><title>Ene 2026: 202 personas</title></circle>
-                  <!-- Feb 2026: 204 -->
-                  <circle cx="328.3" cy="198.9" r="4.5" fill="#fbbf24" stroke="#0d051c" stroke-width="2"><title>Feb 2026: 204 personas</title></circle>
-                  <!-- Mar 2026: 230 -->
-                  <circle cx="394.2" cy="185.4" r="4.5" fill="#fbbf24" stroke="#0d051c" stroke-width="2"><title>Mar 2026: 230 personas</title></circle>
-                  <!-- Abr 2026: 243 -->
-                  <circle cx="460.0" cy="178.6" r="4.5" fill="#fbbf24" stroke="#0d051c" stroke-width="2"><title>Abr 2026: ~243 personas</title></circle>
-                  <!-- May 2026: 255 -->
-                  <circle cx="525.8" cy="172.4" r="4.5" fill="#fbbf24" stroke="#0d051c" stroke-width="2"><title>May 2026: ~255 personas</title></circle>
-                  <!-- Jun 2026: 268 -->
-                  <circle cx="591.7" cy="165.6" r="4.5" fill="#fbbf24" stroke="#0d051c" stroke-width="2"><title>Jun 2026: 268 personas</title></circle>
-                  <!-- Jul 2026: 340 -->
-                  <circle cx="657.5" cy="128.2" r="4.5" fill="#facc15" stroke="#0d051c" stroke-width="2"><title>Jul 2026: 340 personas</title></circle>
-                  <!-- Sep 2026: 335 -->
-                  <circle cx="789.2" cy="130.8" r="5" fill="#facc15" stroke="#0d051c" stroke-width="2"><title>Sep 2026: ~335 personas</title></circle>
-                </g>
-
                 <!-- ==============================================
-                     PUNTO CLAVE INICIAL: 137 PERSONAS (OCT 2025)
+                     PUNTOS INTERACTIVOS CON HOVER & TOOLTIPS (13 MESES)
                      ============================================== -->
-                <!-- Vertical connection dashed line -->
-                <line x1="65.0" y1="233.8" x2="65.0" y2="305" stroke="#f97316" stroke-width="1.5" stroke-dasharray="3 3"/>
-                <!-- Pulse halo & Outer Rings -->
-                <circle cx="65.0" cy="233.8" r="11" fill="rgba(249, 115, 22, 0.25)" class="animate-pulse"/>
-                <circle cx="65.0" cy="233.8" r="6.5" fill="#f97316" stroke="#fbbf24" stroke-width="2.5" filter="url(#neonGlow)"/>
-                <circle cx="65.0" cy="233.8" r="2.5" fill="#ffffff"/>
-                <!-- Callout Badge Inicial (137 Personas) -->
-                <g class="chart-badge-float" transform="translate(65.0, 190)">
-                  <rect x="-52" y="-22" width="104" height="26" rx="13" fill="#1f0d38" stroke="#f97316" stroke-width="2" filter="url(#neonGlow)"/>
-                  <polygon points="-5,4 5,4 0,9" fill="#f97316"/>
-                  <text x="0" y="-5" text-anchor="middle" fill="#fde047" font-family="'Chakra Petch', sans-serif" font-size="12" font-weight="bold">
-                    📍 137 personas
-                  </text>
-                </g>
+                <g class="chart-interactive-points">
 
-                <!-- ==============================================
-                     PUNTO CLAVE RÉCORD: 397 PERSONAS (AGO 2026)
-                     ============================================== -->
-                <!-- Vertical connection dashed line -->
-                <line x1="723.3" y1="98.6" x2="723.3" y2="305" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="3 3"/>
-                <!-- Pulse halo & Rings -->
-                <circle cx="723.3" cy="98.6" r="15" fill="rgba(245, 158, 11, 0.3)" class="animate-pulse"/>
-                <circle cx="723.3" cy="98.6" r="7.5" fill="#f59e0b" stroke="#ffffff" stroke-width="2.5" filter="url(#neonGlow)"/>
-                <circle cx="723.3" cy="98.6" r="3" fill="#ffffff"/>
-                <!-- Callout Badge Récord (397 Personas Destacado) -->
-                <g class="chart-badge-float" transform="translate(723.3, 53)">
-                  <rect x="-62" y="-22" width="124" height="26" rx="13" fill="#240c3e" stroke="#f59e0b" stroke-width="2" filter="url(#neonGlow)"/>
-                  <polygon points="-5,4 5,4 0,9" fill="#f59e0b"/>
-                  <text x="0" y="-5" text-anchor="middle" fill="#fbbf24" font-family="'Luckiest Guy', 'Impact', sans-serif" font-size="12" font-weight="bold" letter-spacing="0.5">
-                    🔥 RÉCORD 397
-                  </text>
-                </g>
+                  <!-- 1. OCTUBRE 2025: 137 (Punto Clave Inicial) -->
+                  <g class="chart-point-group" data-month="Octubre 2025" data-val="137" data-tag="Inicio" tabindex="0">
+                    <line x1="65.0" y1="233.8" x2="65.0" y2="305" stroke="#f97316" stroke-width="1.5" stroke-dasharray="3 3" class="point-line"/>
+                    <circle cx="65.0" cy="233.8" r="14" fill="rgba(249, 115, 22, 0.3)" stroke="#f97316" stroke-width="1.5" class="point-pulse"/>
+                    <circle cx="65.0" cy="233.8" r="6.5" fill="#f97316" stroke="#fbbf24" stroke-width="2.5" filter="url(#neonGlow)" class="point-dot"/>
+                    <circle cx="65.0" cy="233.8" r="2.5" fill="#ffffff"/>
+                    <!-- Invisible large hit area -->
+                    <circle cx="65.0" cy="233.8" r="22" fill="transparent"/>
+                    <title>Octubre 2025: 137 personas</title>
+                    <!-- Floating Callout Badge -->
+                    <g class="chart-badge-float" transform="translate(65.0, 190)">
+                      <rect x="-52" y="-22" width="104" height="26" rx="13" fill="#1f0d38" stroke="#f97316" stroke-width="2" filter="url(#neonGlow)"/>
+                      <polygon points="-5,4 5,4 0,9" fill="#f97316"/>
+                      <text x="0" y="-5" text-anchor="middle" fill="#fde047" font-family="'Chakra Petch', sans-serif" font-size="12" font-weight="bold">
+                        📍 137 personas
+                      </text>
+                    </g>
+                  </g>
 
-                <!-- ==============================================
-                     PUNTO CLAVE FINAL: 272 PERSONAS (OCT 2026)
-                     ============================================== -->
-                <!-- Vertical connection dashed line -->
-                <line x1="855.0" y1="163.6" x2="855.0" y2="305" stroke="#facc15" stroke-width="1.8" stroke-dasharray="3 3"/>
-                <!-- Pulse halo & Glowing Gold Rings -->
-                <circle cx="855.0" cy="163.6" r="15" fill="rgba(250, 204, 21, 0.3)" class="animate-pulse"/>
-                <circle cx="855.0" cy="163.6" r="7.5" fill="#facc15" stroke="#ffffff" stroke-width="2.5" filter="url(#neonGlow)"/>
-                <circle cx="855.0" cy="163.6" r="3" fill="#120726"/>
-                <!-- Callout Badge Final (272 Personas Destacado) -->
-                <g class="chart-badge-float" transform="translate(845.0, 115)">
-                  <rect x="-64" y="-24" width="128" height="28" rx="8" fill="url(#arixuGoldBadge)" stroke="#ffffff" stroke-width="1.5" filter="url(#neonGlow)"/>
-                  <polygon points="-5,4 5,4 0,10" fill="#facc15"/>
-                  <text x="0" y="-6" text-anchor="middle" fill="#000000" font-family="'Luckiest Guy', 'Impact', sans-serif" font-size="13" font-weight="bold" letter-spacing="0.5">
-                    👑 272 PERSONAS
-                  </text>
+                  <!-- 2. NOVIEMBRE 2025: 173 -->
+                  <g class="chart-point-group" data-month="Noviembre 2025" data-val="173" tabindex="0">
+                    <line x1="130.8" y1="215.0" x2="130.8" y2="305" stroke="#facc15" stroke-width="1" stroke-dasharray="2 2" class="point-line"/>
+                    <circle cx="130.8" cy="215.0" r="13" fill="rgba(245, 158, 11, 0.25)" stroke="#facc15" stroke-width="1.5" class="point-pulse"/>
+                    <circle cx="130.8" cy="215.0" r="5" fill="#f59e0b" stroke="#0d051c" stroke-width="2" class="point-dot"/>
+                    <circle cx="130.8" cy="215.0" r="22" fill="transparent"/>
+                    <title>Noviembre 2025: 173 personas</title>
+                    <g class="point-tooltip" transform="translate(130.8, 172)">
+                      <rect x="-56" y="-36" width="112" height="36" rx="8" fill="#15082d" stroke="#facc15" stroke-width="1.8" filter="url(#neonGlow)"/>
+                      <polygon points="-5,0 5,0 0,6" fill="#facc15"/>
+                      <text x="0" y="-21" text-anchor="middle" fill="#c084fc" font-family="'Chakra Petch', sans-serif" font-size="9.5" font-weight="bold" letter-spacing="0.5">NOV 2025</text>
+                      <text x="0" y="-7" text-anchor="middle" fill="#fde047" font-family="'Luckiest Guy', sans-serif" font-size="13" font-weight="bold">173 PERSONAS</text>
+                    </g>
+                  </g>
+
+                  <!-- 3. DICIEMBRE 2025: ~188 -->
+                  <g class="chart-point-group" data-month="Diciembre 2025" data-val="~188" tabindex="0">
+                    <line x1="196.7" y1="207.2" x2="196.7" y2="305" stroke="#facc15" stroke-width="1" stroke-dasharray="2 2" class="point-line"/>
+                    <circle cx="196.7" cy="207.2" r="13" fill="rgba(245, 158, 11, 0.25)" stroke="#facc15" stroke-width="1.5" class="point-pulse"/>
+                    <circle cx="196.7" cy="207.2" r="5" fill="#f59e0b" stroke="#0d051c" stroke-width="2" class="point-dot"/>
+                    <circle cx="196.7" cy="207.2" r="22" fill="transparent"/>
+                    <title>Diciembre 2025: ~188 personas</title>
+                    <g class="point-tooltip" transform="translate(196.7, 164)">
+                      <rect x="-56" y="-36" width="112" height="36" rx="8" fill="#15082d" stroke="#facc15" stroke-width="1.8" filter="url(#neonGlow)"/>
+                      <polygon points="-5,0 5,0 0,6" fill="#facc15"/>
+                      <text x="0" y="-21" text-anchor="middle" fill="#c084fc" font-family="'Chakra Petch', sans-serif" font-size="9.5" font-weight="bold" letter-spacing="0.5">DIC 2025</text>
+                      <text x="0" y="-7" text-anchor="middle" fill="#fde047" font-family="'Luckiest Guy', sans-serif" font-size="13" font-weight="bold">~188 PERSONAS</text>
+                    </g>
+                  </g>
+
+                  <!-- 4. ENERO 2026: 202 -->
+                  <g class="chart-point-group" data-month="Enero 2026" data-val="202" tabindex="0">
+                    <line x1="262.5" y1="200.0" x2="262.5" y2="305" stroke="#facc15" stroke-width="1" stroke-dasharray="2 2" class="point-line"/>
+                    <circle cx="262.5" cy="200.0" r="13" fill="rgba(245, 158, 11, 0.25)" stroke="#facc15" stroke-width="1.5" class="point-pulse"/>
+                    <circle cx="262.5" cy="200.0" r="5" fill="#f59e0b" stroke="#0d051c" stroke-width="2" class="point-dot"/>
+                    <circle cx="262.5" cy="200.0" r="22" fill="transparent"/>
+                    <title>Enero 2026: 202 personas</title>
+                    <g class="point-tooltip" transform="translate(262.5, 157)">
+                      <rect x="-56" y="-36" width="112" height="36" rx="8" fill="#15082d" stroke="#facc15" stroke-width="1.8" filter="url(#neonGlow)"/>
+                      <polygon points="-5,0 5,0 0,6" fill="#facc15"/>
+                      <text x="0" y="-21" text-anchor="middle" fill="#c084fc" font-family="'Chakra Petch', sans-serif" font-size="9.5" font-weight="bold" letter-spacing="0.5">ENE 2026</text>
+                      <text x="0" y="-7" text-anchor="middle" fill="#fde047" font-family="'Luckiest Guy', sans-serif" font-size="13" font-weight="bold">202 PERSONAS</text>
+                    </g>
+                  </g>
+
+                  <!-- 5. FEBRERO 2026: 204 -->
+                  <g class="chart-point-group" data-month="Febrero 2026" data-val="204" tabindex="0">
+                    <line x1="328.3" y1="198.9" x2="328.3" y2="305" stroke="#facc15" stroke-width="1" stroke-dasharray="2 2" class="point-line"/>
+                    <circle cx="328.3" cy="198.9" r="13" fill="rgba(251, 191, 36, 0.25)" stroke="#facc15" stroke-width="1.5" class="point-pulse"/>
+                    <circle cx="328.3" cy="198.9" r="5" fill="#fbbf24" stroke="#0d051c" stroke-width="2" class="point-dot"/>
+                    <circle cx="328.3" cy="198.9" r="22" fill="transparent"/>
+                    <title>Febrero 2026: 204 personas</title>
+                    <g class="point-tooltip" transform="translate(328.3, 156)">
+                      <rect x="-56" y="-36" width="112" height="36" rx="8" fill="#15082d" stroke="#facc15" stroke-width="1.8" filter="url(#neonGlow)"/>
+                      <polygon points="-5,0 5,0 0,6" fill="#facc15"/>
+                      <text x="0" y="-21" text-anchor="middle" fill="#c084fc" font-family="'Chakra Petch', sans-serif" font-size="9.5" font-weight="bold" letter-spacing="0.5">FEB 2026</text>
+                      <text x="0" y="-7" text-anchor="middle" fill="#fde047" font-family="'Luckiest Guy', sans-serif" font-size="13" font-weight="bold">204 PERSONAS</text>
+                    </g>
+                  </g>
+
+                  <!-- 6. MARZO 2026: 230 -->
+                  <g class="chart-point-group" data-month="Marzo 2026" data-val="230" tabindex="0">
+                    <line x1="394.2" y1="185.4" x2="394.2" y2="305" stroke="#facc15" stroke-width="1" stroke-dasharray="2 2" class="point-line"/>
+                    <circle cx="394.2" cy="185.4" r="13" fill="rgba(251, 191, 36, 0.25)" stroke="#facc15" stroke-width="1.5" class="point-pulse"/>
+                    <circle cx="394.2" cy="185.4" r="5" fill="#fbbf24" stroke="#0d051c" stroke-width="2" class="point-dot"/>
+                    <circle cx="394.2" cy="185.4" r="22" fill="transparent"/>
+                    <title>Marzo 2026: 230 personas</title>
+                    <g class="point-tooltip" transform="translate(394.2, 142)">
+                      <rect x="-56" y="-36" width="112" height="36" rx="8" fill="#15082d" stroke="#facc15" stroke-width="1.8" filter="url(#neonGlow)"/>
+                      <polygon points="-5,0 5,0 0,6" fill="#facc15"/>
+                      <text x="0" y="-21" text-anchor="middle" fill="#c084fc" font-family="'Chakra Petch', sans-serif" font-size="9.5" font-weight="bold" letter-spacing="0.5">MAR 2026</text>
+                      <text x="0" y="-7" text-anchor="middle" fill="#fde047" font-family="'Luckiest Guy', sans-serif" font-size="13" font-weight="bold">230 PERSONAS</text>
+                    </g>
+                  </g>
+
+                  <!-- 7. ABRIL 2026: ~243 -->
+                  <g class="chart-point-group" data-month="Abril 2026" data-val="~243" tabindex="0">
+                    <line x1="460.0" y1="178.6" x2="460.0" y2="305" stroke="#facc15" stroke-width="1" stroke-dasharray="2 2" class="point-line"/>
+                    <circle cx="460.0" cy="178.6" r="13" fill="rgba(251, 191, 36, 0.25)" stroke="#facc15" stroke-width="1.5" class="point-pulse"/>
+                    <circle cx="460.0" cy="178.6" r="5" fill="#fbbf24" stroke="#0d051c" stroke-width="2" class="point-dot"/>
+                    <circle cx="460.0" cy="178.6" r="22" fill="transparent"/>
+                    <title>Abril 2026: ~243 personas</title>
+                    <g class="point-tooltip" transform="translate(460.0, 135)">
+                      <rect x="-56" y="-36" width="112" height="36" rx="8" fill="#15082d" stroke="#facc15" stroke-width="1.8" filter="url(#neonGlow)"/>
+                      <polygon points="-5,0 5,0 0,6" fill="#facc15"/>
+                      <text x="0" y="-21" text-anchor="middle" fill="#c084fc" font-family="'Chakra Petch', sans-serif" font-size="9.5" font-weight="bold" letter-spacing="0.5">ABR 2026</text>
+                      <text x="0" y="-7" text-anchor="middle" fill="#fde047" font-family="'Luckiest Guy', sans-serif" font-size="13" font-weight="bold">~243 PERSONAS</text>
+                    </g>
+                  </g>
+
+                  <!-- 8. MAYO 2026: ~255 -->
+                  <g class="chart-point-group" data-month="Mayo 2026" data-val="~255" tabindex="0">
+                    <line x1="525.8" y1="172.4" x2="525.8" y2="305" stroke="#facc15" stroke-width="1" stroke-dasharray="2 2" class="point-line"/>
+                    <circle cx="525.8" cy="172.4" r="13" fill="rgba(251, 191, 36, 0.25)" stroke="#facc15" stroke-width="1.5" class="point-pulse"/>
+                    <circle cx="525.8" cy="172.4" r="5" fill="#fbbf24" stroke="#0d051c" stroke-width="2" class="point-dot"/>
+                    <circle cx="525.8" cy="172.4" r="22" fill="transparent"/>
+                    <title>Mayo 2026: ~255 personas</title>
+                    <g class="point-tooltip" transform="translate(525.8, 129)">
+                      <rect x="-56" y="-36" width="112" height="36" rx="8" fill="#15082d" stroke="#facc15" stroke-width="1.8" filter="url(#neonGlow)"/>
+                      <polygon points="-5,0 5,0 0,6" fill="#facc15"/>
+                      <text x="0" y="-21" text-anchor="middle" fill="#c084fc" font-family="'Chakra Petch', sans-serif" font-size="9.5" font-weight="bold" letter-spacing="0.5">MAY 2026</text>
+                      <text x="0" y="-7" text-anchor="middle" fill="#fde047" font-family="'Luckiest Guy', sans-serif" font-size="13" font-weight="bold">~255 PERSONAS</text>
+                    </g>
+                  </g>
+
+                  <!-- 9. JUNIO 2026: 268 -->
+                  <g class="chart-point-group" data-month="Junio 2026" data-val="268" tabindex="0">
+                    <line x1="591.7" y1="165.6" x2="591.7" y2="305" stroke="#facc15" stroke-width="1" stroke-dasharray="2 2" class="point-line"/>
+                    <circle cx="591.7" cy="165.6" r="13" fill="rgba(251, 191, 36, 0.25)" stroke="#facc15" stroke-width="1.5" class="point-pulse"/>
+                    <circle cx="591.7" cy="165.6" r="5" fill="#fbbf24" stroke="#0d051c" stroke-width="2" class="point-dot"/>
+                    <circle cx="591.7" cy="165.6" r="22" fill="transparent"/>
+                    <title>Junio 2026: 268 personas</title>
+                    <g class="point-tooltip" transform="translate(591.7, 122)">
+                      <rect x="-56" y="-36" width="112" height="36" rx="8" fill="#15082d" stroke="#facc15" stroke-width="1.8" filter="url(#neonGlow)"/>
+                      <polygon points="-5,0 5,0 0,6" fill="#facc15"/>
+                      <text x="0" y="-21" text-anchor="middle" fill="#c084fc" font-family="'Chakra Petch', sans-serif" font-size="9.5" font-weight="bold" letter-spacing="0.5">JUN 2026</text>
+                      <text x="0" y="-7" text-anchor="middle" fill="#fde047" font-family="'Luckiest Guy', sans-serif" font-size="13" font-weight="bold">268 PERSONAS</text>
+                    </g>
+                  </g>
+
+                  <!-- 10. JULIO 2026: 340 -->
+                  <g class="chart-point-group" data-month="Julio 2026" data-val="340" tabindex="0">
+                    <line x1="657.5" y1="128.2" x2="657.5" y2="305" stroke="#facc15" stroke-width="1" stroke-dasharray="2 2" class="point-line"/>
+                    <circle cx="657.5" cy="128.2" r="14" fill="rgba(250, 204, 21, 0.3)" stroke="#facc15" stroke-width="1.5" class="point-pulse"/>
+                    <circle cx="657.5" cy="128.2" r="5.5" fill="#facc15" stroke="#0d051c" stroke-width="2" class="point-dot"/>
+                    <circle cx="657.5" cy="128.2" r="22" fill="transparent"/>
+                    <title>Julio 2026: 340 personas</title>
+                    <g class="point-tooltip" transform="translate(657.5, 85)">
+                      <rect x="-56" y="-36" width="112" height="36" rx="8" fill="#15082d" stroke="#facc15" stroke-width="1.8" filter="url(#neonGlow)"/>
+                      <polygon points="-5,0 5,0 0,6" fill="#facc15"/>
+                      <text x="0" y="-21" text-anchor="middle" fill="#c084fc" font-family="'Chakra Petch', sans-serif" font-size="9.5" font-weight="bold" letter-spacing="0.5">JUL 2026</text>
+                      <text x="0" y="-7" text-anchor="middle" fill="#fde047" font-family="'Luckiest Guy', sans-serif" font-size="13" font-weight="bold">340 PERSONAS</text>
+                    </g>
+                  </g>
+
+                  <!-- 11. AGOSTO 2026: 397 (Punto Clave Récord) -->
+                  <g class="chart-point-group" data-month="Agosto 2026" data-val="397" data-tag="Récord" tabindex="0">
+                    <line x1="723.3" y1="98.6" x2="723.3" y2="305" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="3 3" class="point-line"/>
+                    <circle cx="723.3" cy="98.6" r="16" fill="rgba(245, 158, 11, 0.35)" stroke="#f59e0b" stroke-width="1.5" class="point-pulse animate-pulse"/>
+                    <circle cx="723.3" cy="98.6" r="7.5" fill="#f59e0b" stroke="#ffffff" stroke-width="2.5" filter="url(#neonGlow)" class="point-dot"/>
+                    <circle cx="723.3" cy="98.6" r="3" fill="#ffffff"/>
+                    <circle cx="723.3" cy="98.6" r="22" fill="transparent"/>
+                    <title>Agosto 2026: 397 personas (Récord)</title>
+                    <!-- Floating Callout Badge -->
+                    <g class="chart-badge-float" transform="translate(723.3, 53)">
+                      <rect x="-62" y="-22" width="124" height="26" rx="13" fill="#240c3e" stroke="#f59e0b" stroke-width="2" filter="url(#neonGlow)"/>
+                      <polygon points="-5,4 5,4 0,9" fill="#f59e0b"/>
+                      <text x="0" y="-5" text-anchor="middle" fill="#fbbf24" font-family="'Luckiest Guy', 'Impact', sans-serif" font-size="12" font-weight="bold" letter-spacing="0.5">
+                        🔥 RÉCORD 397
+                      </text>
+                    </g>
+                  </g>
+
+                  <!-- 12. SEPTIEMBRE 2026: ~335 -->
+                  <g class="chart-point-group" data-month="Septiembre 2026" data-val="~335" tabindex="0">
+                    <line x1="789.2" y1="130.8" x2="789.2" y2="305" stroke="#facc15" stroke-width="1" stroke-dasharray="2 2" class="point-line"/>
+                    <circle cx="789.2" cy="130.8" r="14" fill="rgba(250, 204, 21, 0.3)" stroke="#facc15" stroke-width="1.5" class="point-pulse"/>
+                    <circle cx="789.2" cy="130.8" r="5.5" fill="#facc15" stroke="#0d051c" stroke-width="2" class="point-dot"/>
+                    <circle cx="789.2" cy="130.8" r="22" fill="transparent"/>
+                    <title>Septiembre 2026: ~335 personas</title>
+                    <g class="point-tooltip" transform="translate(789.2, 87)">
+                      <rect x="-56" y="-36" width="112" height="36" rx="8" fill="#15082d" stroke="#facc15" stroke-width="1.8" filter="url(#neonGlow)"/>
+                      <polygon points="-5,0 5,0 0,6" fill="#facc15"/>
+                      <text x="0" y="-21" text-anchor="middle" fill="#c084fc" font-family="'Chakra Petch', sans-serif" font-size="9.5" font-weight="bold" letter-spacing="0.5">SEP 2026</text>
+                      <text x="0" y="-7" text-anchor="middle" fill="#fde047" font-family="'Luckiest Guy', sans-serif" font-size="13" font-weight="bold">~335 PERSONAS</text>
+                    </g>
+                  </g>
+
+                  <!-- 13. OCTUBRE 2026: 272 (Punto Clave Final / Actual) -->
+                  <g class="chart-point-group" data-month="Octubre 2026" data-val="272" data-tag="Actual" tabindex="0">
+                    <line x1="855.0" y1="163.6" x2="855.0" y2="305" stroke="#facc15" stroke-width="1.8" stroke-dasharray="3 3" class="point-line"/>
+                    <circle cx="855.0" cy="163.6" r="16" fill="rgba(250, 204, 21, 0.35)" stroke="#facc15" stroke-width="1.5" class="point-pulse animate-pulse"/>
+                    <circle cx="855.0" cy="163.6" r="7.5" fill="#facc15" stroke="#ffffff" stroke-width="2.5" filter="url(#neonGlow)" class="point-dot"/>
+                    <circle cx="855.0" cy="163.6" r="3" fill="#120726"/>
+                    <circle cx="855.0" cy="163.6" r="22" fill="transparent"/>
+                    <title>Octubre 2026: 272 personas (Actual)</title>
+                    <!-- Floating Callout Badge -->
+                    <g class="chart-badge-float" transform="translate(845.0, 115)">
+                      <rect x="-64" y="-24" width="128" height="28" rx="8" fill="url(#arixuGoldBadge)" stroke="#ffffff" stroke-width="1.5" filter="url(#neonGlow)"/>
+                      <polygon points="-5,4 5,4 0,10" fill="#facc15"/>
+                      <text x="0" y="-6" text-anchor="middle" fill="#000000" font-family="'Luckiest Guy', 'Impact', sans-serif" font-size="13" font-weight="bold" letter-spacing="0.5">
+                        👑 272 PERSONAS
+                      </text>
+                    </g>
+                  </g>
+
                 </g>
 
                 <!-- X Axis Labels (Tiempo: Octubre 2025 a Octubre 2026) -->
