@@ -654,9 +654,6 @@ class DedicationsManager {
                   <span>📜</span>
                   <span id="${songKey}-toggle-lyrics-text">Ver Letra</span>
                 </button>
-                <button onclick="downloadSongLyrics('${songKey}')" class="inline-flex items-center gap-1 px-2.5 py-2 rounded-xl bg-purple-950/70 hover:bg-purple-900 border border-purple-800/60 text-xs text-purple-300 hover:text-yellow-300 transition-all" title="Descargar letra en .txt">
-                  <span>📥</span>
-                </button>
               </div>
 
             </div>
