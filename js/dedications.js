@@ -5,6 +5,148 @@
  */
 
 const STATIC_LYRICS_DATA = {
+  sito: `
+    <div class="space-y-3.5 text-sm sm:text-base text-gray-200 leading-relaxed font-sans p-1 select-text">
+      <div class="bg-purple-950/40 rounded-xl p-3 border border-purple-800/40">
+        <span class="font-burbank text-yellow-400 text-xs tracking-wider block mb-1 font-bold">[INTRO – HABLADO]</span>
+        <p class="whitespace-pre-line">¡Ey, ey, ey!
+¡Que se prepare el chat, que hoy es un día especial!
+Que se escuchen los emotes, que comience la celebración…
+¡Porque hoy cumple años nuestra Arichu! ❤️🎉</p>
+      </div>
+
+      <div class="bg-purple-950/40 rounded-xl p-3 border border-purple-800/40">
+        <span class="font-burbank text-yellow-400 text-xs tracking-wider block mb-1 font-bold">[VERSO 1]</span>
+        <p class="whitespace-pre-line">Se enciende el directo, ya comienza la misión,
+Arichu está en la partida, preparados corazón.
+Con el Fortnite en la pantalla y su gente alrededor,
+cada tarde se convierte en una fiesta de emoción.
+
+Entre risas y victorias, algún baile inesperado,
+con su comunidad entera siempre tiene un escuadrón preparado.
+No importa si hay derrota o si toca remontar,
+porque estando todos juntos siempre hay ganas de jugar.</p>
+      </div>
+
+      <div class="bg-purple-950/40 rounded-xl p-3 border border-purple-800/40">
+        <span class="font-burbank text-yellow-400 text-xs tracking-wider block mb-1 font-bold">[PREESTRIBILLO]</span>
+        <p class="whitespace-pre-line">Y que lo sepa todo el mundo, que hoy no hay que competir,
+hoy las estrellas del directo solo brillan para ti.
+Que se llene todo el chat, que no pare la ilusión,
+¡que hoy cumple años Arichu y lo celebra el corazón!</p>
+      </div>
+
+      <div class="bg-gradient-to-r from-amber-500/15 to-yellow-500/10 rounded-xl p-3.5 border border-yellow-500/40 shadow-sm">
+        <span class="font-burbank text-yellow-300 text-xs tracking-wider block mb-1 font-bold">[ESTRIBILLO]</span>
+        <p class="whitespace-pre-line font-medium text-white">¡Feliz cumpleaños, Arichu,
+hoy el mundo es para ti!
+Que te sobren las victorias
+y mil sueños por cumplir.
+
+Con tu gente a tu lado,
+con Lusimi junto a ti,
+y Simba moviendo la cola,
+¡qué bonito es verte feliz!
+
+¡Feliz cumpleaños, Arichu,
+que no pare la emoción!
+Tu comunidad es tu familia,
+¡y hoy te canta esta canción!</p>
+      </div>
+
+      <div class="bg-purple-950/40 rounded-xl p-3 border border-purple-800/40">
+        <span class="font-burbank text-yellow-400 text-xs tracking-wider block mb-1 font-bold">[VERSO 2]</span>
+        <p class="whitespace-pre-line">Hay un montón de personas que se quedan por aquí,
+que no vienen solo al juego, vienen porque estás tú ahí.
+Una comunidad gigante, leal de corazón,
+que convierte cada directo en una gran celebración.
+
+Desde el lobby hasta la victoria, desde el meme hasta el baile,
+cada día hay mil recuerdos que hacen que nada les falle.
+Y aunque cambie la temporada y haya un nuevo aterrizaje,
+tu comunidad seguirá acompañándote en el viaje.</p>
+      </div>
+
+      <div class="bg-purple-950/40 rounded-xl p-3 border border-purple-800/40">
+        <span class="font-burbank text-yellow-400 text-xs tracking-wider block mb-1 font-bold">[PREESTRIBILLO 2]</span>
+        <p class="whitespace-pre-line">Que hoy las preocupaciones se vayan a desconectar,
+que las velas de tu tarta sean deseos por cumplir.
+Que la vida te regale mil motivos para sonreír,
+porque todo lo bonito hoy se merece quedar junto a ti.</p>
+      </div>
+
+      <div class="bg-gradient-to-r from-amber-500/15 to-yellow-500/10 rounded-xl p-3.5 border border-yellow-500/40 shadow-sm">
+        <span class="font-burbank text-yellow-300 text-xs tracking-wider block mb-1 font-bold">[ESTRIBILLO]</span>
+        <p class="whitespace-pre-line font-medium text-white">¡Feliz cumpleaños, Arichu,
+hoy el mundo es para ti!
+Que te sobren las victorias
+y mil sueños por cumplir.
+
+Con tu gente a tu lado,
+con Lusimi junto a ti,
+y Simba moviendo la cola,
+¡qué bonito es verte feliz!
+
+¡Feliz cumpleaños, Arichu,
+que no pare la emoción!
+Tu comunidad es tu familia,
+¡y hoy te canta esta canción!</p>
+      </div>
+
+      <div class="bg-purple-950/40 rounded-xl p-3 border border-purple-800/40">
+        <span class="font-burbank text-yellow-400 text-xs tracking-wider block mb-1 font-bold">[PUENTE – MÁS EMOTIVO]</span>
+        <p class="whitespace-pre-line">Y entre tantas aventuras que nos quedan por jugar,
+hay momentos que en la vida no se pueden reiniciar.
+Son las risas, son las noches, son las ganas de volver,
+son las personas que te quieren y que siempre van a estar.
+
+Que Lusimi te acompañe en cada nuevo amanecer,
+que Simba llene de alegría cada rincón de tu hogar.
+Y que nunca te falten motivos para celebrar,
+ni una comunidad entera que te quiera hacer brillar.
+
+¡Emotes arriba! ¡Que se escuche ese chat!
+¡Hoy no hay tormenta que nos pueda parar!</p>
+      </div>
+
+      <div class="bg-gradient-to-r from-amber-500/20 to-yellow-500/15 rounded-xl p-3.5 border border-yellow-400/80 shadow-md">
+        <span class="font-burbank text-yellow-300 text-xs tracking-wider block mb-1 font-bold">[ESTRIBILLO FINAL – A LO GRANDE]</span>
+        <p class="whitespace-pre-line font-semibold text-white">¡Feliz cumpleaños, Arichu,
+hoy el mundo es para ti!
+Que la vida te dé todo
+lo que sueñas conseguir.
+
+Con Lusimi a tu lado,
+con Simba junto a ti,
+y esa gente que te quiere
+que hoy se reúne por ti.
+
+¡Feliz cumpleaños, Arichu,
+nuestra estrella del directo!
+Que haya risas, amor y sueños,
+¡y mil años de momentos!
+
+Y si mañana hay otra partida,
+allí nos vamos a encontrar,
+porque más que una comunidad,
+¡somos tu familia digital!</p>
+      </div>
+
+      <div class="bg-purple-950/40 rounded-xl p-3 border border-purple-800/40">
+        <span class="font-burbank text-yellow-400 text-xs tracking-wider block mb-1 font-bold">[OUTRO – HABLADO]</span>
+        <p class="whitespace-pre-line">De parte de toda tu comunidad,
+por las risas, los momentos y todo lo compartido…
+Que este nuevo año te traiga felicidad, amor y muchísimas aventuras.
+
+Un abrazo enorme para Lusimi,
+un montón de mimos para Simba…
+Y para ti, Arichu, todo el cariño del mundo.
+
+<strong class="text-yellow-300">¡Feliz cumpleaños! ❤️🎂🎮</strong></p>
+      </div>
+    </div>
+  `,
+
   livingbenidorm: `
     <div class="space-y-3.5 text-sm sm:text-base text-gray-200 leading-relaxed font-sans p-1 select-text">
       <div class="bg-purple-950/40 rounded-xl p-3 border border-purple-800/40">
@@ -239,17 +381,22 @@ Felicidades, Ari. Te lo has ganado a pulso. A por el siguiente nivel, porque est
     reactions: { gg: 188, shield: 115, crown: 245 },
     date: 'Hoy a las 16:15'
   },
-  {
-    id: 'ded-1',
-    user: 'SITOGAMER',
+    {
+    id: 'ded-sito',
+    user: 'Sito',
     platform: 'twitch',
-    role: 'DÚO LEGENDARIO',
-    rarity: 'mythic', // mythic, legendary, epic, rare
-    avatar: 'assets/images/sitogamer-avatar.svg',
-    type: 'text',
-    message: '¡¡Feliz cumpleaños Arixu!! 🎂👑 Gracias por revivirme siempre que me caigo de la rampa y por carrilearme en los finales de partida más tensos. ¡Que este nuevo año venga cargado de más Victorias Campales y coronas infinitas! Eres la mejor streamer.',
-    reactions: { gg: 42, shield: 28, crown: 65 },
-    date: 'Hoy a las 15:30'
+    role: 'DÚO LEGENDARIO • CANCIÓN ORIGINAL 🎵',
+    rarity: 'mythic',
+    avatar: 'assets/Iconos de perfiles/Sito.webp',
+    type: 'song',
+    songKey: 'sito',
+    songTitle: 'NUESTRA ARICHU',
+    subtitle: 'Dúo Legendario • Para Arichu • <strong class="text-white">Sito</strong>',
+    audioUrl: 'assets/Dedicatorias/Sito.m4a',
+    durationText: '04:54',
+    message: `¡Muchas felicidades Arichu! ❤️🎂🎮 Que nunca cambies y sigas así de humilde, que te queremos muchísimo. Te dedico esta canción con todo el cariño del mundo de parte de tu dúo y de toda tu comunidad. ¡Y recordad todos: código ARIXU en la tienda de Fortnite! 🎉👑`,
+    reactions: { gg: 198, shield: 135, crown: 260 },
+    date: 'Hoy a las 16:45'
   },
   {
     id: 'ded-2',
@@ -459,7 +606,7 @@ Felicidades, Ari. Te lo has ganado a pulso. A por el siguiente nivel, porque est
 
 class DedicationsManager {
   constructor() {
-    this.storageKey = 'imarixu_birthday_dedications_v10';
+    this.storageKey = 'imarixu_birthday_dedications_v11';
     this.dedications = this.loadDedications();
   }
 
@@ -482,6 +629,7 @@ class DedicationsManager {
       localStorage.removeItem('imarixu_birthday_dedications_v7');
       localStorage.removeItem('imarixu_birthday_dedications_v8');
       localStorage.removeItem('imarixu_birthday_dedications_v9');
+      localStorage.removeItem('imarixu_birthday_dedications_v10');
     } catch (_) {}
     return [...DEFAULT_DEDICATIONS];
   }
@@ -814,7 +962,7 @@ function initSingleSongPlayer(songKey) {
 
   audio.addEventListener('timeupdate', () => {
     const curTime = audio.currentTime;
-    const duration = audio.duration || (songKey === 'livingbenidorm' ? 140.8 : 217.6);
+    const duration = audio.duration || (songKey === 'sito' ? 294 : (songKey === 'livingbenidorm' ? 140.8 : 217.6));
 
     // Update progress bar
     const progressEl = getProgEl();
@@ -833,6 +981,9 @@ function initSingleSongPlayer(songKey) {
     // Lower or pause background lobby music so song is heard clearly
     if (window.soundFX && window.soundFX.bgmAudio && !window.soundFX.bgmAudio.paused) {
       window.soundFX.bgmAudio.pause();
+    }
+    if (window.soundFX && window.soundFX.stopBGM) {
+      window.soundFX.stopBGM();
     }
     // Pause other songs
     Object.keys(STATIC_LYRICS_DATA).forEach(otherKey => {
@@ -912,7 +1063,7 @@ window.toggleSongPlay = function(songKey) {
 window.skipSongAudio = function(songKey, sec) {
   const audio = document.getElementById(`${songKey}-audio`);
   if (!audio) return;
-  const dur = audio.duration || (songKey === 'livingbenidorm' ? 140.8 : 217.6);
+  const dur = audio.duration || (songKey === 'sito' ? 294 : (songKey === 'livingbenidorm' ? 140.8 : 217.6));
   audio.currentTime = Math.max(0, Math.min(dur, audio.currentTime + sec));
   if (window.soundFX && window.soundFX.playFortniteClick) {
     window.soundFX.playFortniteClick();
@@ -926,7 +1077,7 @@ window.seekSongAudio = function(songKey, e) {
   const rect = container.getBoundingClientRect();
   const clickX = e.clientX - rect.left;
   const pct = Math.max(0, Math.min(1, clickX / rect.width));
-  const dur = audio.duration || (songKey === 'livingbenidorm' ? 140.8 : 217.6);
+  const dur = audio.duration || (songKey === 'sito' ? 294 : (songKey === 'livingbenidorm' ? 140.8 : 217.6));
   audio.currentTime = pct * dur;
 };
 
@@ -965,7 +1116,131 @@ window.downloadSongLyrics = function(songKey) {
   let filename = '';
   let lyricsText = '';
 
-  if (songKey === 'livingbenidorm') {
+    if (songKey === 'sito') {
+    filename = 'Letra_Sito_Nuestra_Arichu.txt';
+    lyricsText = `NUESTRA ARICHU (FELIZ CUMPLEAÑOS)
+Dedicatoria especial de: Sito (Dúo Legendario)
+
+[Intro – Hablado]
+¡Ey, ey, ey!
+¡Que se prepare el chat, que hoy es un día especial!
+Que se escuchen los emotes, que comience la celebración…
+¡Porque hoy cumple años nuestra Arichu! ❤️🎉
+
+[Verso 1]
+Se enciende el directo, ya comienza la misión,
+Arichu está en la partida, preparados corazón.
+Con el Fortnite en la pantalla y su gente alrededor,
+cada tarde se convierte en una fiesta de emoción.
+
+Entre risas y victorias, algún baile inesperado,
+con su comunidad entera siempre tiene un escuadrón preparado.
+No importa si hay derrota o si toca remontar,
+porque estando todos juntos siempre hay ganas de jugar.
+
+[Preestribillo]
+Y que lo sepa todo el mundo, que hoy no hay que competir,
+hoy las estrellas del directo solo brillan para ti.
+Que se llene todo el chat, que no pare la ilusión,
+¡que hoy cumple años Arichu y lo celebra el corazón!
+
+[Estribillo]
+¡Feliz cumpleaños, Arichu,
+hoy el mundo es para ti!
+Que te sobren las victorias
+y mil sueños por cumplir.
+
+Con tu gente a tu lado,
+con Lusimi junto a ti,
+y Simba moviendo la cola,
+¡qué bonito es verte feliz!
+
+¡Feliz cumpleaños, Arichu,
+que no pare la emoción!
+Tu comunidad es tu familia,
+¡y hoy te canta esta canción!
+
+[Verso 2]
+Hay un montón de personas que se quedan por aquí,
+que no vienen solo al juego, vienen porque estás tú ahí.
+Una comunidad gigante, leal de corazón,
+que convierte cada directo en una gran celebración.
+
+Desde el lobby hasta la victoria, desde el meme hasta el baile,
+cada día hay mil recuerdos que hacen que nada les falle.
+Y aunque cambie la temporada y haya un nuevo aterrizaje,
+tu comunidad seguirá acompañándote en el viaje.
+
+[Preestribillo 2]
+Que hoy las preocupaciones se vayan a desconectar,
+que las velas de tu tarta sean deseos por cumplir.
+Que la vida te regale mil motivos para sonreír,
+porque todo lo bonito hoy se merece quedar junto a ti.
+
+[Estribillo]
+¡Feliz cumpleaños, Arichu,
+hoy el mundo es para ti!
+Que te sobren las victorias
+y mil sueños por cumplir.
+
+Con tu gente a tu lado,
+con Lusimi junto a ti,
+y Simba moviendo la cola,
+¡qué bonito es verte feliz!
+
+¡Feliz cumpleaños, Arichu,
+que no pare la emoción!
+Tu comunidad es tu familia,
+¡y hoy te canta esta canción!
+
+[Puente – Más emotivo]
+Y entre tantas aventuras que nos quedan por jugar,
+hay momentos que en la vida no se pueden reiniciar.
+Son las risas, son las noches, son las ganas de volver,
+son las personas que te quieren y que siempre van a estar.
+
+Que Lusimi te acompañe en cada nuevo amanecer,
+que Simba llene de alegría cada rincón de tu hogar.
+Y que nunca te falten motivos para celebrar,
+ni una comunidad entera que te quiera hacer brillar.
+
+¡Emotes arriba! ¡Que se escuche ese chat!
+¡Hoy no hay tormenta que nos pueda parar!
+
+[Estribillo final – A lo grande]
+¡Feliz cumpleaños, Arichu,
+hoy el mundo es para ti!
+Que la vida te dé todo
+lo que sueñas conseguir.
+
+Con Lusimi a tu lado,
+con Simba junto a ti,
+y esa gente que te quiere
+que hoy se reúne por ti.
+
+¡Feliz cumpleaños, Arichu,
+nuestra estrella del directo!
+Que haya risas, amor y sueños,
+¡y mil años de momentos!
+
+Y si mañana hay otra partida,
+allí nos vamos a encontrar,
+porque más que una comunidad,
+¡somos tu familia digital!
+
+[Outro – Hablado, con música bajando]
+De parte de toda tu comunidad,
+por las risas, los momentos y todo lo compartido…
+Que este nuevo año te traiga felicidad, amor y muchísimas aventuras.
+
+Un abrazo enorme para Lusimi,
+un montón de mimos para Simba…
+Y para ti, Arichu, todo el cariño del mundo.
+
+¡Feliz cumpleaños! ❤️🎂🎮
+Y recuerda: ¡código ARIXU en la tienda de Fortnite!
+`;
+  } else if (songKey === 'livingbenidorm') {
     filename = 'Letra_LivingBenidorm_Arixu.txt';
     lyricsText = `FELIZ CUMPLEAÑOS, ARIXU
 Dedicatoria especial de: LivingBenidorm (@ximoahuir)
