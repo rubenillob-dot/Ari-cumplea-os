@@ -399,6 +399,35 @@ Felicidades, Ari. Te lo has ganado a pulso. A por el siguiente nivel, porque est
     date: 'Hoy a las 16:45'
   },
   {
+    id: 'ded-errederamon',
+    user: 'ErreDeRamon',
+    platform: 'twitch',
+    role: 'TRYHARD DE ZONA • FANART EXCLUSIVO 🎨',
+    rarity: 'mythic',
+    avatar: 'assets/Iconos de perfiles/ErreDeRamon.webp',
+    type: 'image',
+    image: 'assets/Dedicatorias/ErreDeRamon.webp',
+    caption: 'Fanart y felicitación especial de ErreDeRamon para Ariadna',
+    message: '¡Felicidades campeona! 🎂👑💜 Sigue haciendo lo que haces, que es genial. Que todos tus deseos se hagan realidad en este nivel 25, Ari. ¡Que no se acaben nunca las risas, los sustos en directo y las coronas ganadas en el último segundo! ¡A celebrarlo a lo grande, te lo mereces! 🎉🎮',
+    reactions: { gg: 172, shield: 104, crown: 218 },
+    date: 'Hoy a las 17:15'
+  },
+  {
+    id: 'ded-bailen82',
+    user: 'Bailen82',
+    platform: 'twitch',
+    role: 'COMUNIDAD TWITCH • NUEVA EPIC PARTNER 👑',
+    rarity: 'mythic',
+    avatar: 'assets/Iconos de perfiles/Bailen82.webp',
+    type: 'image',
+    fit: 'contain',
+    image: 'assets/Dedicatorias/Bailen82.webp',
+    caption: 'Doble celebración de Bailen82: ¡Cumpleaños y Nueva Epic Partner!',
+    message: '¡Feliz cumpleaños Arixu y enhorabuena por ser nueva Epic Partner! 🎉👑 Doble celebración para una grande. Que este nuevo año de vida venga lleno de éxitos, risas y muchas victorias. ¡Sigue rompiéndola en cada partida y disfrutando de todo lo que has conseguido! 🎂🎈✨',
+    reactions: { gg: 164, shield: 95, crown: 205 },
+    date: 'Hoy a las 17:20'
+  },
+  {
     id: 'ded-2',
     user: 'LUSANITO',
     platform: 'twitch',
@@ -531,18 +560,6 @@ Felicidades, Ari. Te lo has ganado a pulso. A por el siguiente nivel, porque est
     date: 'Ayer a las 20:40'
   },
   {
-    id: 'ded-13',
-    user: 'ErreDeRamon',
-    platform: 'twitch',
-    role: 'TRYHARD DE ZONA',
-    rarity: 'epic',
-    avatar: '',
-    type: 'text',
-    message: '¡Feliz nivel 25 Ari! Que no se acaben nunca las partidas de risas, los gritos de susto y las coronas ganadas en el último segundo. ¡A celebrarlo a lo grande!',
-    reactions: { gg: 62, shield: 41, crown: 85 },
-    date: 'Ayer a las 19:25'
-  },
-  {
     id: 'ded-14',
     user: 'Arcosmen01',
     platform: 'twitch',
@@ -579,18 +596,6 @@ Felicidades, Ari. Te lo has ganado a pulso. A por el siguiente nivel, porque est
     date: 'Ayer a las 16:45'
   },
   {
-    id: 'ded-17',
-    user: 'Bailen82',
-    platform: 'twitch',
-    role: 'COMUNIDAD TWITCH',
-    rarity: 'rare',
-    avatar: '',
-    type: 'text',
-    message: '¡Feliz cumpleaños Ari! Que nunca falte el buen rollo en directo ni los minis en el inventario para salvar la partida. ¡Que pases un día espectacular con toda tu gente! 🥤🔥',
-    reactions: { gg: 47, shield: 31, crown: 62 },
-    date: 'Ayer a las 16:10'
-  },
-  {
     id: 'ded-18',
     user: 'Neus',
     platform: 'twitch',
@@ -606,7 +611,7 @@ Felicidades, Ari. Te lo has ganado a pulso. A por el siguiente nivel, porque est
 
 class DedicationsManager {
   constructor() {
-    this.storageKey = 'imarixu_birthday_dedications_v11';
+    this.storageKey = 'imarixu_birthday_dedications_v13';
     this.dedications = this.loadDedications();
   }
 
@@ -630,6 +635,8 @@ class DedicationsManager {
       localStorage.removeItem('imarixu_birthday_dedications_v8');
       localStorage.removeItem('imarixu_birthday_dedications_v9');
       localStorage.removeItem('imarixu_birthday_dedications_v10');
+      localStorage.removeItem('imarixu_birthday_dedications_v11');
+      localStorage.removeItem('imarixu_birthday_dedications_v12');
     } catch (_) {}
     return [...DEFAULT_DEDICATIONS];
   }
@@ -707,10 +714,11 @@ class DedicationsManager {
 
       let mediaContent = '';
       if (item.type === 'image' && item.image) {
+        const fitClass = item.fit === 'contain' ? 'object-contain bg-black/60' : 'object-cover';
         mediaContent = `
-          <div class="mt-4 rounded-xl overflow-hidden border-2 border-white/10 group cursor-pointer relative" onclick="openLightbox('${item.image}', '${encodeURIComponent(item.caption || 'Recuerdo especial de ' + item.user)}')">
-            <img src="${item.image}" alt="Dedicatoria" class="w-full h-64 sm:h-80 md:h-96 object-cover object-center group-hover:scale-105 transition-transform duration-300" loading="lazy">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-3">
+          <div class="mt-4 rounded-xl overflow-hidden border-2 border-white/10 group cursor-pointer relative ${item.fit === 'contain' ? 'bg-[#0b0518]' : ''}" onclick="openLightbox('${item.image}', '${encodeURIComponent(item.caption || 'Recuerdo especial de ' + item.user)}')">
+            <img src="${item.image}" alt="Dedicatoria" class="w-full h-64 sm:h-80 md:h-96 ${fitClass} object-center group-hover:scale-105 transition-transform duration-300" loading="lazy">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-3 pointer-events-none">
               <span class="text-xs text-white/90 flex items-center gap-1 font-semibold">
                 <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/><path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"/></svg>
                 Ver imagen completa
