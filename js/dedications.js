@@ -339,7 +339,7 @@ const DEFAULT_DEDICATIONS = [
     subtitle: '25 Primaveras • Para Ariadna • <strong class="text-white">Ferdinang</strong>',
     audioUrl: 'assets/Dedicatorias/Ferdinang.mp3',
     durationText: '03:37',
-    message: '¡Muchas felicidades Ariadna! 🎂👑 25 primaveras no se cumplen todos los días. Te he preparado esta canción con todo el cariño de nuestra familia y de todo el chat para celebrarlo por todo lo alto. ¡Sube el volumen, cántala con nosotros y disfruta de tu día reina!',
+    message: 'Un cuarto de siglo, 25 añicos muchísimas felicidades!! Que alegría haberte conocido y tener el privilegio de poder felicitarte, pues no sé cómo hiciste pero tal cual empecé a verte me enganchaste con tú carisma y alegría, con tu amabilidad y respeto, pero sobre todo y por encima de cualquiera cosa, como revientas en las partidas, como sabes moverte, me dejas alucinado. Solo voy a pedirte una cosa, que no cambies nunca, sino mis chistes serán peores, aviso, y que sigas así de feliz. Te queremos mucho!!!',
     reactions: { gg: 154, shield: 92, crown: 210 },
     date: 'Hoy a las 16:00'
   },
@@ -418,9 +418,9 @@ Felicidades, Ari. Te lo has ganado a pulso. A por el siguiente nivel, porque est
     platform: 'twitch',
     role: 'COMUNIDAD TWITCH • NUEVA EPIC PARTNER 👑',
     rarity: 'mythic',
+    layout: 'side-by-side',
     avatar: 'assets/Iconos de perfiles/Bailen82.webp',
     type: 'image',
-    fit: 'contain',
     image: 'assets/Dedicatorias/Bailen82.webp',
     caption: 'Doble celebración de Bailen82: ¡Cumpleaños y Nueva Epic Partner!',
     message: '¡Feliz cumpleaños Arixu y enhorabuena por ser nueva Epic Partner! 🎉👑 Doble celebración para una grande. Que este nuevo año de vida venga lleno de éxitos, risas y muchas victorias. ¡Sigue rompiéndola en cada partida y disfrutando de todo lo que has conseguido! 🎂🎈✨',
@@ -486,18 +486,6 @@ Felicidades, Ari. Te lo has ganado a pulso. A por el siguiente nivel, porque est
     message: '¡Feliz cumpleaños Ari! Que este nivel 25 venga cargado de muchas coronas de victoria, snipes limpios y momentos inolvidables en stream. ¡A seguir rompiéndola!',
     reactions: { gg: 53, shield: 31, crown: 77 },
     date: 'Hoy a las 11:10'
-  },
-  {
-    id: 'ded-7',
-    user: 'Ferdinang',
-    platform: 'twitch',
-    role: 'SUB NIVEL 25',
-    rarity: 'legendary',
-    avatar: '',
-    type: 'text',
-    message: '¡Muchas felicidades Arixu! Gracias por todos los buenos momentos y las risas diarias en el chat. Eres una streamer increíble y te mereces lo mejor en tu día. ¡GG!',
-    reactions: { gg: 48, shield: 39, crown: 82 },
-    date: 'Hoy a las 10:45'
   },
   {
     id: 'ded-8',
@@ -611,7 +599,7 @@ Felicidades, Ari. Te lo has ganado a pulso. A por el siguiente nivel, porque est
 
 class DedicationsManager {
   constructor() {
-    this.storageKey = 'imarixu_birthday_dedications_v13';
+    this.storageKey = 'imarixu_birthday_dedications_v15';
     this.dedications = this.loadDedications();
   }
 
@@ -637,6 +625,8 @@ class DedicationsManager {
       localStorage.removeItem('imarixu_birthday_dedications_v10');
       localStorage.removeItem('imarixu_birthday_dedications_v11');
       localStorage.removeItem('imarixu_birthday_dedications_v12');
+      localStorage.removeItem('imarixu_birthday_dedications_v13');
+      localStorage.removeItem('imarixu_birthday_dedications_v14');
     } catch (_) {}
     return [...DEFAULT_DEDICATIONS];
   }
@@ -713,11 +703,43 @@ class DedicationsManager {
       const cfg = this.getRarityConfig(item.rarity || 'rare');
 
       let mediaContent = '';
-      if (item.type === 'image' && item.image) {
-        const fitClass = item.fit === 'contain' ? 'object-contain bg-black/60' : 'object-cover';
+      if (item.layout === 'side-by-side' && item.type === 'image' && item.image) {
         mediaContent = `
-          <div class="mt-4 rounded-xl overflow-hidden border-2 border-white/10 group cursor-pointer relative ${item.fit === 'contain' ? 'bg-[#0b0518]' : ''}" onclick="openLightbox('${item.image}', '${encodeURIComponent(item.caption || 'Recuerdo especial de ' + item.user)}')">
-            <img src="${item.image}" alt="Dedicatoria" class="w-full h-64 sm:h-80 md:h-96 ${fitClass} object-center group-hover:scale-105 transition-transform duration-300" loading="lazy">
+          <!-- Content: Side-by-side Layout (Vertical Image + Text Column) -->
+          <div class="mt-4 flex flex-col md:flex-row items-center md:items-stretch gap-6 bg-purple-950/30 p-4 sm:p-5 rounded-2xl border border-purple-800/50">
+            <!-- Vertical Image Column -->
+            <div class="w-full md:w-5/12 max-w-[280px] shrink-0 mx-auto rounded-xl overflow-hidden border-2 border-yellow-400/70 shadow-[0_0_25px_rgba(244,196,48,0.25)] group cursor-pointer relative bg-black/50" onclick="openLightbox('${item.image}', '${encodeURIComponent(item.caption || 'Recuerdo especial de ' + item.user)}')">
+              <img src="${item.image}" alt="${item.user}" class="w-full h-auto max-h-[460px] object-contain mx-auto group-hover:scale-105 transition-transform duration-300" loading="lazy">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-2.5 pointer-events-none">
+                <span class="text-xs text-white/90 flex items-center gap-1 font-semibold">
+                  <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/><path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"/></svg>
+                  Ver imagen completa
+                </span>
+              </div>
+            </div>
+
+            <!-- Text & Info Column -->
+            <div class="flex-1 flex flex-col justify-center space-y-3.5">
+              <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl bg-yellow-400/15 border border-yellow-400/40 text-yellow-300 text-xs font-hud font-bold w-fit">
+                <span>👑</span> <span>DOBLE CELEBRACIÓN: CUMPLEAÑOS & EPIC PARTNER</span>
+              </div>
+              <div class="bg-black/30 rounded-xl p-4 border border-purple-800/40">
+                <p class="text-gray-100 text-sm sm:text-base leading-relaxed font-sans font-medium whitespace-pre-line">
+${item.message}
+                </p>
+              </div>
+              ${item.caption ? `
+                <p class="text-xs text-yellow-300/80 italic border-l-2 border-yellow-400/60 pl-3 py-1 bg-yellow-400/5 rounded-r">
+                  ${item.caption}
+                </p>
+              ` : ''}
+            </div>
+          </div>
+        `;
+      } else if (item.type === 'image' && item.image) {
+        mediaContent = `
+          <div class="mt-4 rounded-xl overflow-hidden border-2 border-white/10 group cursor-pointer relative bg-black/40" onclick="openLightbox('${item.image}', '${encodeURIComponent(item.caption || 'Recuerdo especial de ' + item.user)}')">
+            <img src="${item.image}" alt="Dedicatoria" class="w-full h-auto max-h-[650px] object-contain object-top mx-auto group-hover:scale-105 transition-transform duration-300" loading="lazy">
             <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-3 pointer-events-none">
               <span class="text-xs text-white/90 flex items-center gap-1 font-semibold">
                 <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/><path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"/></svg>
@@ -876,10 +898,12 @@ class DedicationsManager {
             </div>
           </div>
 
-          <!-- Message Body -->
-          <p class="text-gray-200 text-sm md:text-base leading-relaxed font-sans font-medium whitespace-pre-line">
-            ${item.message}
-          </p>
+          ${item.layout === 'side-by-side' ? '' : `
+            <!-- Message Body -->
+            <p class="text-gray-200 text-sm md:text-base leading-relaxed font-sans font-medium whitespace-pre-line">
+              ${item.message}
+            </p>
+          `}
 
           <!-- Media attachment (if any) -->
           ${mediaContent}
