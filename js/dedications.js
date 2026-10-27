@@ -336,7 +336,7 @@ const DEFAULT_DEDICATIONS = [
     type: 'song',
     songKey: 'ferdinang',
     songTitle: 'FELICIDADES',
-    subtitle: '25 Primaveras • Para Ariadna • <strong class="text-white">Ferdinang</strong>',
+    subtitle: '25 Primaveras • Para Ariadna • <strong class="text-purple-300 font-bold">Ferdinang</strong>',
     audioUrl: 'assets/Dedicatorias/Ferdinang.mp3',
     durationText: '03:37',
     message: 'Un cuarto de siglo, 25 añicos muchísimas felicidades!! Que alegría haberte conocido y tener el privilegio de poder felicitarte, pues no sé cómo hiciste pero tal cual empecé a verte me enganchaste con tú carisma y alegría, con tu amabilidad y respeto, pero sobre todo y por encima de cualquiera cosa, como revientas en las partidas, como sabes moverte, me dejas alucinado. Solo voy a pedirte una cosa, que no cambies nunca, sino mis chistes serán peores, aviso, y que sigas así de feliz. Te queremos mucho!!!',
@@ -353,7 +353,7 @@ const DEFAULT_DEDICATIONS = [
     type: 'song',
     songKey: 'livingbenidorm',
     songTitle: '¡EY, ARIXU!',
-    subtitle: '18 Meses de Sub • Para Ariadna • <strong class="text-white">LivingBenidorm</strong>',
+    subtitle: '18 Meses de Sub • Para Ariadna • <strong class="text-purple-300 font-bold">LivingBenidorm</strong>',
     audioUrl: 'assets/Dedicatorias/LivingBenidorm.mp3',
     durationText: '02:21',
     message: `¡Muchas felicidades Ari! 🎂🎮 18 meses ya suscrito a tus directos, compartiendo risas, partidas sin construcción y grandes momentos en el chat.
@@ -391,7 +391,7 @@ Felicidades, Ari. Te lo has ganado a pulso. A por el siguiente nivel, porque est
     type: 'song',
     songKey: 'sito',
     songTitle: 'NUESTRA ARICHU',
-    subtitle: 'Dúo Legendario • Para Arichu • <strong class="text-white">Sito</strong>',
+    subtitle: 'Dúo Legendario • Para Arichu • <strong class="text-purple-300 font-bold">Sito</strong>',
     audioUrl: 'assets/Dedicatorias/Sito.m4a',
     durationText: '04:54',
     message: `¡Muchas felicidades Arichu! ❤️🎂🎮 Que nunca cambies y sigas así de humilde, que te queremos muchísimo. Te dedico esta canción con todo el cariño del mundo de parte de tu dúo y de toda tu comunidad. ¡Y recordad todos: código ARIXU en la tienda de Fortnite! 🎉👑`,
@@ -599,7 +599,7 @@ Felicidades, Ari. Te lo has ganado a pulso. A por el siguiente nivel, porque est
 
 class DedicationsManager {
   constructor() {
-    this.storageKey = 'imarixu_birthday_dedications_v15';
+    this.storageKey = 'imarixu_birthday_dedications_v16';
     this.dedications = this.loadDedications();
   }
 
@@ -627,6 +627,7 @@ class DedicationsManager {
       localStorage.removeItem('imarixu_birthday_dedications_v12');
       localStorage.removeItem('imarixu_birthday_dedications_v13');
       localStorage.removeItem('imarixu_birthday_dedications_v14');
+      localStorage.removeItem('imarixu_birthday_dedications_v15');
     } catch (_) {}
     return [...DEFAULT_DEDICATIONS];
   }
@@ -766,7 +767,7 @@ ${item.message}
         `;
       } else if (item.type === 'song') {
         const songKey = item.songKey || (item.id === 'ded-ferdinang' ? 'ferdinang' : item.id.replace('ded-', ''));
-        const subtitle = item.subtitle || `Para Ariadna • <strong class="text-white">${item.user}</strong>`;
+        const subtitle = item.subtitle || `Para Ariadna • <strong class="text-purple-300 font-bold">${item.user}</strong>`;
         const durText = item.durationText || '03:37';
 
         mediaContent = `
@@ -885,7 +886,7 @@ ${item.message}
             <!-- Nickname -->
             <div class="flex-1 min-w-0">
               <div class="flex items-center gap-2 flex-wrap">
-                <span class="font-burbank text-lg font-bold text-white tracking-wide truncate">${item.user}</span>
+                <span class="font-username text-lg font-bold text-purple-300 tracking-wide truncate">${item.user}</span>
               </div>
               <div class="flex items-center gap-1.5 text-[11px] text-gray-400 mt-0.5">
                 <span class="inline-flex items-center gap-1 text-[#a970ff] font-bold" title="Twitch">
