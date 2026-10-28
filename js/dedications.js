@@ -589,9 +589,17 @@ Felicidades, Ari. Te lo has ganado a pulso. A por el siguiente nivel, porque est
     platform: 'twitch',
     role: 'COMUNIDAD TWITCH',
     rarity: 'epic',
-    avatar: '',
-    type: 'text',
-    message: '¡Muchísimas felicidades Ari! 🎂👑 Que pases un cumpleaños increíble y que este nuevo nivel venga repleto de risas, directos inolvidables y muchas victorias campales. ¡A disfrutar al máximo de tu día! 💜✨',
+    avatar: 'assets/Iconos de perfiles/Neus.webp',
+    type: 'image',
+    image: 'assets/Dedicatorias/Neus.jpeg',
+    caption: 'Carta y recuerdo especial de Neus para Ariadna',
+    message: `Quién me iba a decir que, hace un año, cuando empecé en tu canal, acabarías convirtiéndote en alguien tan especial para mí. Porque, aunque para muchos seas simplemente su creadora, para mí eres mucho más que mi “jefa”.
+
+Te he cogido un cariño enorme y, aunque a veces tengamos nuestras diferencias, eso no cambia lo mucho que te quiero y te aprecio. Me alegro muchísimo de haber coincidido contigo y de poder formar parte de tu camino. Gracias por todos los momentos compartidos y por dejarme vivir este año a tu lado.
+
+Hoy solo deseo que la vida te regale todo lo bonito que mereces, que nunca te falten motivos para sonreír y que puedas cumplir cada uno de tus sueños.
+
+Feliz cumpleaños, Ari. ♡ ¡Por muchos años más!`,
     reactions: { gg: 58, shield: 37, crown: 79 },
     date: 'Hoy a las 17:00'
   }
@@ -599,7 +607,7 @@ Felicidades, Ari. Te lo has ganado a pulso. A por el siguiente nivel, porque est
 
 class DedicationsManager {
   constructor() {
-    this.storageKey = 'imarixu_birthday_dedications_v16';
+    this.storageKey = 'imarixu_birthday_dedications_v17';
     this.dedications = this.loadDedications();
   }
 
@@ -628,6 +636,7 @@ class DedicationsManager {
       localStorage.removeItem('imarixu_birthday_dedications_v13');
       localStorage.removeItem('imarixu_birthday_dedications_v14');
       localStorage.removeItem('imarixu_birthday_dedications_v15');
+      localStorage.removeItem('imarixu_birthday_dedications_v16');
     } catch (_) {}
     return [...DEFAULT_DEDICATIONS];
   }
