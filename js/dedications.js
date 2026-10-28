@@ -440,6 +440,26 @@ Felicidades, Ari. Te lo has ganado a pulso. A por el siguiente nivel, porque est
     date: 'Hoy a las 14:15'
   },
   {
+    id: 'ded-18',
+    user: 'Neus',
+    platform: 'twitch',
+    role: 'COMUNIDAD TWITCH',
+    rarity: 'epic',
+    avatar: 'assets/Iconos de perfiles/Neus.webp',
+    type: 'image',
+    image: 'assets/Dedicatorias/Neus.jpeg',
+    caption: 'Carta y recuerdo especial de Neus para Ariadna',
+    message: `Quién me iba a decir que, hace un año, cuando empecé en tu canal, acabarías convirtiéndote en alguien tan especial para mí. Porque, aunque para muchos seas simplemente su creadora, para mí eres mucho más que mi “jefa”.
+
+Te he cogido un cariño enorme y, aunque a veces tengamos nuestras diferencias, eso no cambia lo mucho que te quiero y te aprecio. Me alegro muchísimo de haber coincidido contigo y de poder formar parte de tu camino. Gracias por todos los momentos compartidos y por dejarme vivir este año a tu lado.
+
+Hoy solo deseo que la vida te regale todo lo bonito que mereces, que nunca te falten motivos para sonreír y que puedas cumplir cada uno de tus sueños.
+
+Feliz cumpleaños, Ari. ♡ ¡Por muchos años más!`,
+    reactions: { gg: 58, shield: 37, crown: 79 },
+    date: 'Hoy a las 17:00'
+  },
+  {
     id: 'ded-3',
     user: 'G4PALAU',
     platform: 'twitch',
@@ -582,32 +602,12 @@ Felicidades, Ari. Te lo has ganado a pulso. A por el siguiente nivel, porque est
     message: '¡Feliz cumpleaños Arixu! Siempre es un placer pasarse por el chat a compartir risas y buenas partidas. ¡A seguir disfrutando a tope y celebrando el nivel 25 como te mereces! 🎂👑',
     reactions: { gg: 64, shield: 42, crown: 88 },
     date: 'Ayer a las 16:45'
-  },
-  {
-    id: 'ded-18',
-    user: 'Neus',
-    platform: 'twitch',
-    role: 'COMUNIDAD TWITCH',
-    rarity: 'epic',
-    avatar: 'assets/Iconos de perfiles/Neus.webp',
-    type: 'image',
-    image: 'assets/Dedicatorias/Neus.jpeg',
-    caption: 'Carta y recuerdo especial de Neus para Ariadna',
-    message: `Quién me iba a decir que, hace un año, cuando empecé en tu canal, acabarías convirtiéndote en alguien tan especial para mí. Porque, aunque para muchos seas simplemente su creadora, para mí eres mucho más que mi “jefa”.
-
-Te he cogido un cariño enorme y, aunque a veces tengamos nuestras diferencias, eso no cambia lo mucho que te quiero y te aprecio. Me alegro muchísimo de haber coincidido contigo y de poder formar parte de tu camino. Gracias por todos los momentos compartidos y por dejarme vivir este año a tu lado.
-
-Hoy solo deseo que la vida te regale todo lo bonito que mereces, que nunca te falten motivos para sonreír y que puedas cumplir cada uno de tus sueños.
-
-Feliz cumpleaños, Ari. ♡ ¡Por muchos años más!`,
-    reactions: { gg: 58, shield: 37, crown: 79 },
-    date: 'Hoy a las 17:00'
   }
 ];
 
 class DedicationsManager {
   constructor() {
-    this.storageKey = 'imarixu_birthday_dedications_v17';
+    this.storageKey = 'imarixu_birthday_dedications_v18';
     this.dedications = this.loadDedications();
   }
 
@@ -637,6 +637,7 @@ class DedicationsManager {
       localStorage.removeItem('imarixu_birthday_dedications_v14');
       localStorage.removeItem('imarixu_birthday_dedications_v15');
       localStorage.removeItem('imarixu_birthday_dedications_v16');
+      localStorage.removeItem('imarixu_birthday_dedications_v17');
     } catch (_) {}
     return [...DEFAULT_DEDICATIONS];
   }
