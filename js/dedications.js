@@ -433,7 +433,7 @@ Felicidades, Ari. Te lo has ganado a pulso. A por el siguiente nivel, porque est
     platform: 'twitch',
     role: 'COMUNIDAD TWITCH',
     rarity: 'legendary',
-    avatar: '',
+    avatar: 'assets/Iconos de perfiles/Lusanito.webp',
     type: 'text',
     message: 'Gracias Ari por ser como eres y crear la comunidad que tienes, no recuerdo cómo llegué aquí pero me alegro de haber descubierto tu canal. No sabes lo que indirectamente me has ayudado en los días malos que tenía con tus directos. Sigue así! Me alegra mucho ver como en un año has crecido tanto y sé que seguirás creciendo!!',
     reactions: { gg: 89, shield: 45, crown: 112 },
