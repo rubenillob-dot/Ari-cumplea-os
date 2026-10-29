@@ -630,6 +630,7 @@ Pasaba por aquí para desearte que pases un día increíble celebrando este nive
     avatar: 'assets/Iconos de perfiles/TeverdeconLimon.png',
     twitchUrl: 'https://twitch.tv/teverdeconlimon',
     twitchUser: 'teverdeconlimon',
+    creatorCode: 'TEVERDE',
     type: 'video',
     video: 'assets/Dedicatorias/TeverdeconLimon.mp4',
     videoUrl: 'assets/Dedicatorias/TeverdeconLimon.mp4',
@@ -855,7 +856,7 @@ Feliz cumpleaños, Ari. ♡ ¡Por muchos años más!`,
 
 class DedicationsManager {
   constructor() {
-    this.storageKey = 'imarixu_birthday_dedications_v25';
+    this.storageKey = 'imarixu_birthday_dedications_v26';
     this.dedications = this.loadDedications();
   }
 
@@ -893,6 +894,7 @@ class DedicationsManager {
       localStorage.removeItem('imarixu_birthday_dedications_v22');
       localStorage.removeItem('imarixu_birthday_dedications_v23');
       localStorage.removeItem('imarixu_birthday_dedications_v24');
+      localStorage.removeItem('imarixu_birthday_dedications_v25');
     } catch (_) {}
     return [...DEFAULT_DEDICATIONS];
   }
