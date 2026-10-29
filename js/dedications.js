@@ -859,7 +859,7 @@ Feliz cumpleaños, Ari. ♡ ¡Por muchos años más!`,
 
 class DedicationsManager {
   constructor() {
-    this.storageKey = 'imarixu_birthday_dedications_v29';
+    this.storageKey = 'imarixu_birthday_dedications_v30';
     this.dedications = this.loadDedications();
   }
 
@@ -901,6 +901,7 @@ class DedicationsManager {
       localStorage.removeItem('imarixu_birthday_dedications_v26');
       localStorage.removeItem('imarixu_birthday_dedications_v27');
       localStorage.removeItem('imarixu_birthday_dedications_v28');
+      localStorage.removeItem('imarixu_birthday_dedications_v29');
     } catch (_) {}
     return [...DEFAULT_DEDICATIONS];
   }
@@ -1128,9 +1129,9 @@ class DedicationsManager {
               </div>
 
 
-              <!-- Video Player -->
-              <div class="mt-4 rounded-2xl overflow-hidden border-2 border-[#9146FF]/80 bg-black/85 shadow-[0_0_30px_rgba(145,70,255,0.4)] relative max-w-[360px] sm:max-w-[400px] mx-auto group">
-                <video src="${item.video}" controls playsinline preload="metadata" class="w-full h-auto max-h-[580px] object-contain mx-auto rounded-xl bg-black block" onplay="document.querySelectorAll('audio').forEach(a => { if(!a.paused) a.pause(); }); if(window.soundFX && window.soundFX.stopBGM) window.soundFX.stopBGM();"></video>
+              <!-- Video Player (Optimized Size for Horizontal Videos) -->
+              <div class="mt-4 rounded-2xl overflow-hidden border-2 border-[#9146FF]/85 bg-black/90 shadow-[0_0_35px_rgba(145,70,255,0.45)] relative w-full max-w-[640px] md:max-w-[720px] mx-auto group">
+                <video src="${item.video}" controls playsinline preload="metadata" class="w-full h-auto aspect-video max-h-[520px] object-contain mx-auto rounded-xl bg-black block" onplay="document.querySelectorAll('audio').forEach(a => { if(!a.paused) a.pause(); }); if(window.soundFX && window.soundFX.stopBGM) window.soundFX.stopBGM();"></video>
               </div>
 
               <!-- Fullscreen Action button -->
