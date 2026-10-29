@@ -428,6 +428,99 @@ Aquí seguimos... jamás te soltamos.
 };
 
 const DEFAULT_DEDICATIONS = [
+  /* ========================================================
+     APARTADO ESPECIAL: STREAMERS & COMPAÑEROS DE TWITCH
+     ======================================================== */
+  {
+    id: 'ded-anerius16',
+    user: 'Anerius16',
+    scenicBg: 'assets/images/fortnite-scenic-mountain.jpg',
+    scenicLocation: 'CUMBRE PANORÁMICA AL ATARDECER • FORTNITE',
+    watermarkTopRight: 'assets/images/fortnite-llama.svg',
+    watermarkBottomLeft: 'assets/images/victory-crown.svg',
+    fortniteTag: 'FORTNITE SQUAD ⚡',
+    platform: 'twitch',
+    role: 'STREAMER DE TWITCH & COMPAÑERA • MENSAJITO DE FELICITACIÓN 💜🎬',
+    rarity: 'streamer',
+    isStreamer: true,
+    avatar: 'assets/Iconos de perfiles/Anerius16.png',
+    twitchUrl: 'https://twitch.tv/anerius16',
+    twitchUser: 'Anerius16',
+    creatorCode: 'ANERIUS16',
+    type: 'video',
+    video: 'assets/Dedicatorias/Anerius16.mp4',
+    videoUrl: 'assets/Dedicatorias/Anerius16.mp4',
+    caption: 'Mensajito de felicitación en vídeo de Anerius16 con mucho cariño para Ariadna 💜',
+    message: `¡Hello Ari! Me han dicho que es tu cumpleaños, principalmente ¡muchísimas felicidades! 🎂✨
+
+A ver, cosas que contarte... yo me enrollo mucho y me han dicho que no puedo hablar mucho, así que voy al grano: principalmente estoy muy emocionada y muy alegre porque este año nos hemos empezado a hablar mucho más, nos hemos empezado a llevar muchísimo mejor, que eso me encanta, y es como que hemos ampliado nuestro rango de amistades entre todas.
+
+Es algo que a mí me gusta un montón. Te siento una persona muy real y alguien en quien de verdad puedo confiar, que en este mundo ya sabes que es muy difícil. ¡Así que muchísimas gracias por eso, feliz cumpleaños otra vez, espero que pases tu día de la mejor manera y que te den muchos regalos, que no nos merecemos menos! 💜🎉🎮`,
+    reactions: { gg: 238, shield: 148, crown: 310 },
+    date: 'Hoy a las 18:30'
+  },
+  {
+    id: 'ded-dang3rclips',
+    user: 'Dang3rclips',
+    scenicBg: 'assets/images/fortnite-scenic-lake.jpg',
+    scenicLocation: 'BALSA BOTÍN (LOOT LAKE) AL ANOCHECER • FORTNITE',
+    watermarkTopRight: 'assets/images/fortnite-battlebus.svg',
+    watermarkBottomLeft: 'assets/images/fortnite-pickaxe.svg',
+    fortniteTag: 'FORTNITE CLIPS ⚡',
+    platform: 'twitch',
+    role: 'STREAMER & COMPAÑERO DE TWITCH • MENSAJITO DE FELICITACIÓN 💜🎬',
+    rarity: 'streamer',
+    isStreamer: true,
+    avatar: 'assets/Iconos de perfiles/dang3rclips.jpeg',
+    twitchUrl: 'https://twitch.tv/dang3rclips',
+    twitchUser: 'dang3rclips',
+    creatorCode: 'DANG3R',
+    youtubeUrl: 'https://youtube.com/@dang3r',
+    type: 'video',
+    video: 'assets/Dedicatorias/dang3rclips.mp4',
+    videoUrl: 'assets/Dedicatorias/dang3rclips.mp4',
+    caption: 'Mensajito de felicitación en vídeo de Dang3rclips con mucho cariño para Ariadna 💜',
+    message: `¡Hola Ari! ¡Muchísimas felicidades por tu cumpleaños! 🎂👑
+
+Pasaba por aquí para desearte que pases un día increíble celebrando este nivel 25. Espero que vaya todo genial en esta nueva etapa, bendiciones gigantes para ti y para toda tu comunidad, que te lo mereces un montón por todo el curro y el corazón que le metes a cada directo.
+
+¡A seguir rompiéndola a lo grande y que cumplas muchísimos más! 🔥🎉🎮`,
+    reactions: { gg: 224, shield: 140, crown: 295 },
+    date: 'Hoy a las 18:45'
+  },
+  {
+    id: 'ded-teverdeconlimon',
+    user: 'TeverdeconLimon',
+    scenicBg: 'assets/images/fortnite-scenic-valley.jpg',
+    scenicLocation: 'VALLE DE PRADERAS & RÍOS AL ATARDECER • FORTNITE',
+    watermarkTopRight: 'assets/images/shield-potion.svg',
+    watermarkBottomLeft: 'assets/images/fortnite-llama.svg',
+    fortniteTag: 'SLURP ROYALE ⚡',
+    platform: 'twitch',
+    role: 'STREAMER DE TWITCH & COMPAÑERA • MENSAJITO DE FELICITACIÓN 💜🎬',
+    rarity: 'streamer',
+    isStreamer: true,
+    avatar: 'assets/Iconos de perfiles/TeverdeconLimon.png',
+    twitchUrl: 'https://twitch.tv/teverdeconlimon',
+    twitchUser: 'teverdeconlimon',
+    creatorCode: 'TEVERDE',
+    type: 'video',
+    video: 'assets/Dedicatorias/TeverdeconLimon.mp4',
+    videoUrl: 'assets/Dedicatorias/TeverdeconLimon.mp4',
+    caption: 'Mensajito de felicitación en vídeo de TeverdeconLimon con mucho cariño para Ariadna 💜',
+    message: `¡Hello, aquí la Té Verde! 🍋🍵✨
+
+Te deseo un súper feliz cumpleaños, Ari. Espero que hayas tenido un día precioso rodeada de tu gente y de toda tu comunidad.
+
+Quiero aprovechar también para felicitarte por todo lo que estás consiguiendo: se nota que disfrutas de verdad lo que haces, que le dedicas muchísimo tiempo, ganas y un cariño enorme. Espero que sigas creciendo sin parar porque te lo mereces, no solo por todo tu esfuerzo, sino por la gran persona que eres.
+
+¡Te mando un abrazo enorme, un besazo y a seguir cumpliendo muchos sueños! ¡Chaooo! 💜🎂`,
+    reactions: { gg: 232, shield: 144, crown: 304 },
+    date: 'Hoy a las 19:00'
+  },
+  /* ========================================================
+     SECCIÓN: DEDICATORIAS DE LA COMUNIDAD (CHAT & AMIGOS)
+     ======================================================== */
   {
     id: 'ded-ferdinang',
     user: 'Ferdinang',
@@ -554,96 +647,6 @@ Espero que este sea un día muy especial para ti.
 Un beso y un abrazo enorme a la distancia. 😘🫂💜`,
     reactions: { gg: 184, shield: 112, crown: 226 },
     date: 'Hoy a las 17:30'
-  },
-  /* ========================================================
-     APARTADO ESPECIAL: STREAMERS & COMPAÑEROS DE TWITCH
-     ======================================================== */
-  {
-    id: 'ded-anerius16',
-    user: 'Anerius16',
-    scenicBg: 'assets/images/fortnite-scenic-mountain.jpg',
-    scenicLocation: 'CUMBRE PANORÁMICA AL ATARDECER • FORTNITE',
-    watermarkTopRight: 'assets/images/fortnite-llama.svg',
-    watermarkBottomLeft: 'assets/images/victory-crown.svg',
-    fortniteTag: 'FORTNITE SQUAD ⚡',
-    platform: 'twitch',
-    role: 'STREAMER DE TWITCH & COMPAÑERA • VÍDEO DEDICATORIA 🎬',
-    rarity: 'streamer',
-    isStreamer: true,
-    avatar: 'assets/Iconos de perfiles/Anerius16.png',
-    twitchUrl: 'https://twitch.tv/anerius16',
-    twitchUser: 'Anerius16',
-    creatorCode: 'ANERIUS16',
-    type: 'video',
-    video: 'assets/Dedicatorias/Anerius16.mp4',
-    videoUrl: 'assets/Dedicatorias/Anerius16.mp4',
-    caption: 'Vídeo dedicatoria y felicitación especial de Anerius16 para Ariadna',
-    message: `¡Hello Ari! Me han dicho que es tu cumpleaños, principalmente ¡muchísimas felicidades! 🎂✨
-
-A ver, cosas que contarte... yo me enrollo mucho y me han dicho que no puedo hablar mucho, así que voy al grano: principalmente estoy muy emocionada y muy alegre porque este año nos hemos empezado a hablar mucho más, nos hemos empezado a llevar muchísimo mejor, que eso me encanta, y es como que hemos ampliado nuestro rango de amistades entre todas.
-
-Es algo que a mí me gusta un montón. Te siento una persona muy real y alguien en quien de verdad puedo confiar, que en este mundo ya sabes que es muy difícil. ¡Así que muchísimas gracias por eso, feliz cumpleaños otra vez, espero que pases tu día de la mejor manera y que te den muchos regalos, que no nos merecemos menos! 💜🎉🎮`,
-    reactions: { gg: 238, shield: 148, crown: 310 },
-    date: 'Hoy a las 18:30'
-  },
-  {
-    id: 'ded-dang3rclips',
-    user: 'Dang3rclips',
-    scenicBg: 'assets/images/fortnite-scenic-lake.jpg',
-    scenicLocation: 'BALSA BOTÍN (LOOT LAKE) AL ANOCHECER • FORTNITE',
-    watermarkTopRight: 'assets/images/fortnite-battlebus.svg',
-    watermarkBottomLeft: 'assets/images/fortnite-pickaxe.svg',
-    fortniteTag: 'FORTNITE CLIPS ⚡',
-    platform: 'twitch',
-    role: 'STREAMER & CREADOR DE CONTENIDO • VÍDEO DEDICATORIA 🎬',
-    rarity: 'streamer',
-    isStreamer: true,
-    avatar: 'assets/Iconos de perfiles/dang3rclips.jpeg',
-    twitchUrl: 'https://twitch.tv/dang3rclips',
-    twitchUser: 'dang3rclips',
-    creatorCode: 'DANG3R',
-    youtubeUrl: 'https://youtube.com/@dang3r',
-    type: 'video',
-    video: 'assets/Dedicatorias/dang3rclips.mp4',
-    videoUrl: 'assets/Dedicatorias/dang3rclips.mp4',
-    caption: 'Vídeo dedicatoria y felicitación especial de Dang3rclips para Ariadna',
-    message: `¡Hola Ari! ¡Muchísimas felicidades por tu cumpleaños! 🎂👑
-
-Pasaba por aquí para desearte que pases un día increíble celebrando este nivel 25. Espero que vaya todo genial en esta nueva etapa, bendiciones gigantes para ti y para toda tu comunidad, que te lo mereces un montón por todo el curro y el corazón que le metes a cada directo.
-
-¡A seguir rompiéndola a lo grande y que cumplas muchísimos más! 🔥🎉🎮`,
-    reactions: { gg: 224, shield: 140, crown: 295 },
-    date: 'Hoy a las 18:45'
-  },
-  {
-    id: 'ded-teverdeconlimon',
-    user: 'TeverdeconLimon',
-    scenicBg: 'assets/images/fortnite-scenic-valley.jpg',
-    scenicLocation: 'VALLE DE PRADERAS & RÍOS AL ATARDECER • FORTNITE',
-    watermarkTopRight: 'assets/images/shield-potion.svg',
-    watermarkBottomLeft: 'assets/images/fortnite-llama.svg',
-    fortniteTag: 'SLURP ROYALE ⚡',
-    platform: 'twitch',
-    role: 'STREAMER DE TWITCH & COMPAÑERA • VÍDEO DEDICATORIA 🎬',
-    rarity: 'streamer',
-    isStreamer: true,
-    avatar: 'assets/Iconos de perfiles/TeverdeconLimon.png',
-    twitchUrl: 'https://twitch.tv/teverdeconlimon',
-    twitchUser: 'teverdeconlimon',
-    creatorCode: 'TEVERDE',
-    type: 'video',
-    video: 'assets/Dedicatorias/TeverdeconLimon.mp4',
-    videoUrl: 'assets/Dedicatorias/TeverdeconLimon.mp4',
-    caption: 'Vídeo dedicatoria y felicitación especial de TeverdeconLimon para Ariadna',
-    message: `¡Hello, aquí la Té Verde! 🍋🍵✨
-
-Te deseo un súper feliz cumpleaños, Ari. Espero que hayas tenido un día precioso rodeada de tu gente y de toda tu comunidad.
-
-Quiero aprovechar también para felicitarte por todo lo que estás consiguiendo: se nota que disfrutas de verdad lo que haces, que le dedicas muchísimo tiempo, ganas y un cariño enorme. Espero que sigas creciendo sin parar porque te lo mereces, no solo por todo tu esfuerzo, sino por la gran persona que eres.
-
-¡Te mando un abrazo enorme, un besazo y a seguir cumpliendo muchos sueños! ¡Chaooo! 💜🎂`,
-    reactions: { gg: 232, shield: 144, crown: 304 },
-    date: 'Hoy a las 19:00'
   },
   /* ========================================================
      LISTA NORMAL DE LA COMUNIDAD (MARTA, LAURA Y CHAT)
@@ -856,7 +859,7 @@ Feliz cumpleaños, Ari. ♡ ¡Por muchos años más!`,
 
 class DedicationsManager {
   constructor() {
-    this.storageKey = 'imarixu_birthday_dedications_v26';
+    this.storageKey = 'imarixu_birthday_dedications_v28';
     this.dedications = this.loadDedications();
   }
 
@@ -895,6 +898,8 @@ class DedicationsManager {
       localStorage.removeItem('imarixu_birthday_dedications_v23');
       localStorage.removeItem('imarixu_birthday_dedications_v24');
       localStorage.removeItem('imarixu_birthday_dedications_v25');
+      localStorage.removeItem('imarixu_birthday_dedications_v26');
+      localStorage.removeItem('imarixu_birthday_dedications_v27');
     } catch (_) {}
     return [...DEFAULT_DEDICATIONS];
   }
@@ -987,6 +992,7 @@ class DedicationsManager {
     }
 
     let hasRenderedStreamerSectionHeader = false;
+    let hasRenderedCommunitySectionHeader = false;
 
     container.innerHTML = filtered.map(item => {
       // Special Streamer Card Rendering
@@ -1015,7 +1021,7 @@ class DedicationsManager {
                       COMPAÑEROS DE TWITCH
                     </h3>
                     <p class="text-xs sm:text-sm text-purple-200 mt-1 max-w-xl">
-                      El escuadrón de streamers y compañeros de Twitch que comparten partidas y risas con Ariadna se unen a la celebración con dedicatorias exclusivas en vídeo y sus redes oficiales.
+                      Mensajitos de felicitación de compañeros de Twitch que te quieren mucho: el escuadrón de streamers que comparten partidas, risas y directos con Ariadna se unen para felicitarla con mucho cariño en su día.
                     </p>
                   </div>
                 </div>
@@ -1059,7 +1065,7 @@ class DedicationsManager {
               <!-- Ribbon Badge: Styled with Fortnite Victory Gold & Twitch Purple -->
               <div class="absolute -top-3.5 right-4 sm:right-6 bg-gradient-to-r from-amber-400 via-purple-600 to-[#9146FF] text-black font-black text-[11px] uppercase tracking-wider px-3.5 py-1 rounded-md skew-x-[-10deg] shadow-[0_0_15px_rgba(244,196,48,0.5)] border border-yellow-200 flex items-center gap-1.5">
                 <svg class="w-3.5 h-3.5 fill-current text-black" viewBox="0 0 24 24"><path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714Z"/></svg>
-                <span class="font-burbank text-black tracking-wide">COMPAÑERO DE TWITCH 👑</span>
+                <span class="font-burbank text-black tracking-wide">MENSAJITO DE FELICITACIÓN 💜👑</span>
               </div>
 
               <!-- Streamer Header -->
@@ -1122,6 +1128,10 @@ class DedicationsManager {
 
               <!-- Message Quote Bubble (Fortnite Locker Aesthetic) -->
               <div class="relative bg-gradient-to-r from-purple-950/80 via-[#220c4a]/60 to-purple-950/80 border-l-4 border-yellow-400 border-y border-r border-purple-600/30 pl-4 pr-3 py-3.5 rounded-r-2xl my-4 shadow-inner">
+                <div class="flex items-center gap-1.5 text-xs text-yellow-300 font-hud font-bold mb-1.5 pl-2">
+                  <span>💌</span>
+                  <span>Mensajito de felicitación de un compañero de Twitch que te quiere mucho:</span>
+                </div>
                 <span class="text-2xl text-yellow-400/50 font-serif absolute top-1 left-1.5 select-none">“</span>
                 <p class="text-gray-100 text-sm md:text-base leading-relaxed font-sans font-medium whitespace-pre-line pl-2">
 ${item.message}
@@ -1135,7 +1145,7 @@ ${item.message}
 
               <!-- Fullscreen Action button -->
               <div class="mt-3 flex items-center justify-center gap-3">
-                <button onclick="openClipModal('${(item.caption || 'Vídeo de ' + item.user).replace(/'/g, "\\'")}', '${item.video}')" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-[#9146FF] to-purple-700 hover:from-[#772ce8] hover:to-purple-600 border border-purple-400/80 text-xs font-bold font-hud text-white shadow-[0_0_20px_rgba(145,70,255,0.4)] transition-all hover:scale-105">
+                <button onclick="openClipModal('${(item.caption || 'Mensajito de felicitación de ' + item.user).replace(/'/g, "\\'")}', '${item.video}')" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-[#9146FF] to-purple-700 hover:from-[#772ce8] hover:to-purple-600 border border-purple-400/80 text-xs font-bold font-hud text-white shadow-[0_0_20px_rgba(145,70,255,0.4)] transition-all hover:scale-105">
                   <span>🎬</span>
                   <span>Ver vídeo en pantalla completa</span>
                 </button>
@@ -1168,6 +1178,42 @@ ${item.message}
           </article>
         `;
       }
+      let communityApartadoHeader = '';
+      if (!hasRenderedCommunitySectionHeader && activeFilter === 'all') {
+        hasRenderedCommunitySectionHeader = true;
+        communityApartadoHeader = `
+          <!-- ========================================================
+               SECCIÓN: DEDICATORIAS DE LA COMUNIDAD (CHAT & AMIGOS)
+               ======================================================== -->
+          <div id="zona-comunidad-apartado" class="community-showcase-header my-10 relative overflow-hidden rounded-3xl p-6 sm:p-8 bg-gradient-to-r from-[#170a30] via-[#240e48] to-[#170a30] border-2 border-amber-400/60 shadow-[0_0_35px_rgba(245,158,11,0.25)]">
+            <div class="relative z-10 flex flex-col sm:flex-row items-center justify-between gap-5 text-center sm:text-left">
+              <div class="flex flex-col sm:flex-row items-center gap-4">
+                <div class="w-16 h-16 rounded-2xl bg-gradient-to-tr from-amber-500 to-red-500 flex items-center justify-center shadow-[0_0_25px_rgba(245,158,11,0.4)] shrink-0 border border-yellow-300">
+                  <span class="text-3xl">💜</span>
+                </div>
+                <div>
+                  <div class="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full bg-amber-400 text-black text-[11px] font-black tracking-wider uppercase mb-1 shadow">
+                    <span>💌</span> COMUNIDAD DE ARIADNA
+                  </div>
+                  <h3 class="font-burbank text-2xl sm:text-3xl text-yellow-300 uppercase tracking-wide">
+                    DEDICATORIAS DE LA COMUNIDAD
+                  </h3>
+                  <p class="text-xs sm:text-sm text-purple-200 mt-1 max-w-xl">
+                    Canciones originales, cartas, fanarts y felicitaciones de los moderadores, VIPs, subs y amigos del chat que te quieren muchísimo.
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-center gap-2 shrink-0">
+                <div class="px-4 py-2 rounded-xl bg-purple-950/80 border border-amber-400/50 text-xs font-mono text-purple-200 flex items-center gap-2 shadow-inner">
+                  <span class="w-2.5 h-2.5 rounded-full bg-amber-400 animate-ping"></span>
+                  <span class="font-bold text-yellow-300 font-hud">CHAT SQUAD</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        `;
+      }
+
       const cfg = this.getRarityConfig(item.rarity || 'rare');
 
       let mediaContent = '';
@@ -1356,7 +1402,7 @@ ${item.message}
         `;
       }
 
-      return `
+      return communityApartadoHeader + `
         <article class="feed-card relative bg-[#130b28]/90 backdrop-blur-md rounded-2xl p-5 md:p-6 border-2 ${cfg.border} ${cfg.glow} transition-all duration-300 hover:-translate-y-1" data-id="${item.id}">
           <!-- Angled Cut Ribbon Tag -->
           <div class="absolute -top-3.5 right-6 ${cfg.badgeBg} font-black text-[11px] uppercase tracking-wider px-3 py-0.5 rounded-md skew-x-[-10deg] shadow-md border border-black/40">
