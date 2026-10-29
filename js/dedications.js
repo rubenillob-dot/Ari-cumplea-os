@@ -464,31 +464,6 @@ Te he preparado esta canción con todo el cariño de parte de uno de tus suscrip
     date: 'Hoy a las 16:30'
   },
   {
-    id: 'ded-rubenillo',
-    user: 'Rubenillo',
-    platform: 'twitch',
-    role: 'MODERADOR • CANCIÓN ORIGINAL 🎵',
-    rarity: 'mythic',
-    avatar: 'assets/Iconos de perfiles/Rubenillo.webp',
-    type: 'song',
-    songKey: 'rubenillo',
-    songTitle: 'AQUÍ SEGUIMOS, ARI',
-    subtitle: 'Canción Original • Para Ariadna • <strong class="text-purple-300 font-bold">Rubenillo</strong>',
-    audioUrl: 'assets/Dedicatorias/Rubenillo.mp3',
-    durationText: '04:50',
-    image: 'assets/Dedicatorias/Rubenillo.png',
-    caption: 'Recuerdo especial de Rubenillo con Ariadna',
-    message: `Ari, familia... hoy cuelgo la placa de moderador un momento para hablaros simplemente desde el corazón.
-
-Mirar atrás y ver todo lo que hemos construido juntos este último año es increíble. Ari, gracias infinitas por darme la oportunidad de cuidar esta comunidad desde primera línea y confiar en mí para proteger este espacio. He visto de cerca tu esfuerzo incansable detrás de cada directo, y acompañarte hasta lograr la meta del tan soñado Partner de Twitch ha sido un orgullo inmenso.
-
-Ese 'check' morado no es solo una marca, es el reflejo de tu constancia y del refugio tan bonito que has creado para todos nosotros.
-
-Felicidades, Ari. Te lo has ganado a pulso. A por el siguiente nivel, porque esto acaba de empezar y aquí seguiremos, siempre cubriéndote las espaldas. 💜`,
-    reactions: { gg: 188, shield: 115, crown: 245 },
-    date: 'Hoy a las 16:15'
-  },
-    {
     id: 'ded-sito',
     user: 'Sito',
     platform: 'twitch',
@@ -586,6 +561,31 @@ Hoy solo deseo que la vida te regale todo lo bonito que mereces, que nunca te fa
 Feliz cumpleaños, Ari. ♡ ¡Por muchos años más!`,
     reactions: { gg: 58, shield: 37, crown: 79 },
     date: 'Hoy a las 17:00'
+  },
+  {
+    id: 'ded-rubenillo',
+    user: 'Rubenillo',
+    platform: 'twitch',
+    role: 'MODERADOR • CANCIÓN ORIGINAL 🎵',
+    rarity: 'mythic',
+    avatar: 'assets/Iconos de perfiles/Rubenillo.webp',
+    type: 'song',
+    songKey: 'rubenillo',
+    songTitle: 'AQUÍ SEGUIMOS, ARI',
+    subtitle: 'Canción Original • Para Ariadna • <strong class="text-purple-300 font-bold">Rubenillo</strong>',
+    audioUrl: 'assets/Dedicatorias/Rubenillo.mp3',
+    durationText: '04:50',
+    image: 'assets/Dedicatorias/Rubenillo.png',
+    caption: 'Recuerdo especial de Rubenillo con Ariadna',
+    message: `Ari, familia... hoy cuelgo la placa de moderador un momento para hablaros simplemente desde el corazón.
+
+Mirar atrás y ver todo lo que hemos construido juntos este último año es increíble. Ari, gracias infinitas por darme la oportunidad de cuidar esta comunidad desde primera línea y confiar en mí para proteger este espacio. He visto de cerca tu esfuerzo incansable detrás de cada directo, y acompañarte hasta lograr la meta del tan soñado Partner de Twitch ha sido un orgullo inmenso.
+
+Ese 'check' morado no es solo una marca, es el reflejo de tu constancia y del refugio tan bonito que has creado para todos nosotros.
+
+Felicidades, Ari. Te lo has ganado a pulso. A por el siguiente nivel, porque esto acaba de empezar y aquí seguiremos, siempre cubriéndote las espaldas. 💜`,
+    reactions: { gg: 188, shield: 115, crown: 245 },
+    date: 'Hoy a las 16:15'
   },
   {
     id: 'ded-3',
@@ -735,7 +735,7 @@ Feliz cumpleaños, Ari. ♡ ¡Por muchos años más!`,
 
 class DedicationsManager {
   constructor() {
-    this.storageKey = 'imarixu_birthday_dedications_v20';
+    this.storageKey = 'imarixu_birthday_dedications_v21';
     this.dedications = this.loadDedications();
   }
 
@@ -768,6 +768,7 @@ class DedicationsManager {
       localStorage.removeItem('imarixu_birthday_dedications_v17');
       localStorage.removeItem('imarixu_birthday_dedications_v18');
       localStorage.removeItem('imarixu_birthday_dedications_v19');
+      localStorage.removeItem('imarixu_birthday_dedications_v20');
     } catch (_) {}
     return [...DEFAULT_DEDICATIONS];
   }
