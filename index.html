@@ -1691,6 +1691,22 @@
         </p>
       </div>
 
+      <!-- Dedications Filter Tabs -->
+      <div class="flex items-center justify-center gap-2 sm:gap-3 flex-wrap mb-10">
+        <button onclick="filterDedications('all')" data-filter="all" class="dedication-filter-btn px-4 py-2 rounded-xl text-xs font-bold font-hud transition-all shadow-md bg-gradient-to-r from-yellow-400 to-amber-500 text-black border border-yellow-200 scale-105">
+          <span>🌟 Todos</span>
+        </button>
+        <button onclick="filterDedications('streamers')" data-filter="streamers" class="dedication-filter-btn px-4 py-2 rounded-xl text-xs font-bold font-hud transition-all bg-purple-950/60 hover:bg-purple-900 border border-purple-700/60 text-purple-200 hover:text-white">
+          <span>👑 Streamers Twitch (3)</span>
+        </button>
+        <button onclick="filterDedications('songs')" data-filter="songs" class="dedication-filter-btn px-4 py-2 rounded-xl text-xs font-bold font-hud transition-all bg-purple-950/60 hover:bg-purple-900 border border-purple-700/60 text-purple-200 hover:text-white">
+          <span>🎵 Canciones (4)</span>
+        </button>
+        <button onclick="filterDedications('fanarts')" data-filter="fanarts" class="dedication-filter-btn px-4 py-2 rounded-xl text-xs font-bold font-hud transition-all bg-purple-950/60 hover:bg-purple-900 border border-purple-700/60 text-purple-200 hover:text-white">
+          <span>🎨 Fanarts & Cartas</span>
+        </button>
+      </div>
+
       <!-- Feed Container (Vertical Timeline) -->
       <div id="dedications-feed" class="space-y-6">
         <!-- 0. FERDINANG (CANCIÓN OFICIAL CON LETRA SINCRONIZADA VERTICAL) -->
@@ -2657,6 +2673,502 @@ Un beso y un abrazo enorme a la distancia. 😘🫂💜
           </div>
         </article>
 
+        <!-- ========================================================
+             APARTADO ESPECIAL: COMPAÑEROS DE TWITCH & STREAMERS
+             ======================================================== -->
+        <div id="zona-streamers-apartado" class="streamers-showcase-header my-10 relative overflow-hidden rounded-3xl p-6 sm:p-8 bg-gradient-to-r from-[#240b4a] via-[#3d127c] to-[#240b4a] border-2 border-[#9146FF] shadow-[0_0_40px_rgba(145,70,255,0.5)]">
+          <div class="absolute -right-6 -bottom-6 w-40 h-40 opacity-10 pointer-events-none text-white">
+            <svg class="w-full h-full fill-current" viewBox="0 0 24 24"><path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714Z"/></svg>
+          </div>
+          <div class="relative z-10 flex flex-col sm:flex-row items-center justify-between gap-5 text-center sm:text-left">
+            <div class="flex flex-col sm:flex-row items-center gap-4">
+              <div class="w-16 h-16 rounded-2xl bg-[#9146FF] flex items-center justify-center shadow-[0_0_25px_rgba(145,70,255,0.65)] shrink-0 border border-purple-300">
+                <svg class="w-9 h-9 text-white fill-current" viewBox="0 0 24 24"><path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714Z"/></svg>
+              </div>
+              <div>
+                <div class="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full bg-yellow-400 text-black text-[11px] font-black tracking-wider uppercase mb-1 shadow">
+                  <span>👑</span> APARTADO ESPECIAL • ZONA STREAMERS
+                </div>
+                <h3 class="font-burbank text-2xl sm:text-3xl text-yellow-300 uppercase tracking-wide">
+                  COMPAÑEROS DE TWITCH
+                </h3>
+                <p class="text-xs sm:text-sm text-purple-200 mt-1 max-w-xl">
+                  El escuadrón de streamers y compañeros de Twitch que comparten partidas y risas con Ariadna se unen a la celebración con dedicatorias exclusivas en vídeo y sus redes oficiales.
+                </p>
+              </div>
+            </div>
+            <div class="flex items-center gap-2 shrink-0">
+              <div class="px-4 py-2 rounded-xl bg-purple-950/80 border border-purple-400/60 text-xs font-mono text-purple-200 flex items-center gap-2 shadow-inner">
+                <span class="w-2.5 h-2.5 rounded-full bg-[#9146FF] animate-ping"></span>
+                <span class="font-bold text-yellow-300 font-hud">TWITCH SQUAD</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- DEDICATORIA STREAMER VIP 1: ANERIUS16 -->
+        <article class="feed-card streamer-special-card relative rounded-3xl p-5 md:p-7 border-2 border-[#9146FF] shadow-[0_0_35px_rgba(145,70,255,0.4)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_45px_rgba(145,70,255,0.65)]" data-id="ded-anerius16">
+          <div class="absolute -top-3.5 right-6 bg-gradient-to-r from-[#9146FF] via-purple-600 to-amber-400 text-white font-black text-[11px] uppercase tracking-wider px-3.5 py-1 rounded-md skew-x-[-10deg] shadow-lg border border-yellow-300/40 flex items-center gap-1.5">
+            <svg class="w-3.5 h-3.5 fill-current text-yellow-300" viewBox="0 0 24 24"><path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714Z"/></svg>
+            <span>COMPAÑERO/A DE TWITCH 👑</span>
+          </div>
+
+          <div class="flex items-center gap-4 mb-4">
+            <div class="relative shrink-0">
+              <div class="w-16 h-16 rounded-full p-1 bg-gradient-to-tr from-[#9146FF] via-yellow-400 to-[#00f0ff] shadow-[0_0_20px_rgba(145,70,255,0.7)] animate-pulse-slow">
+                <img src="assets/Iconos de perfiles/Anerius16.png" alt="Anerius16" class="w-full h-full rounded-full object-cover border-2 border-[#130728]">
+              </div>
+              <span class="absolute -bottom-1 -right-1 bg-[#9146FF] border-2 border-white rounded-full p-1 shadow-md" title="Streamer Verificado en Twitch">
+                <svg class="w-3.5 h-3.5 text-white fill-current" viewBox="0 0 24 24"><path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714Z"/></svg>
+              </span>
+            </div>
+
+            <div class="flex-1 min-w-0">
+              <div class="flex items-center gap-2 flex-wrap">
+                <span class="font-username text-xl sm:text-2xl font-black text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 via-purple-100 to-white tracking-wide truncate">Anerius16</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-[#9146FF]/30 border border-[#9146FF] text-[#d8b4fe] text-[10px] font-hud font-bold shadow-sm">
+                  <span>🎮</span> STREAMER OFICIAL
+                </span>
+              </div>
+              <div class="flex items-center gap-2 text-xs text-purple-300 mt-1 flex-wrap">
+                <span class="font-bold text-yellow-400">STREAMER DE TWITCH & COMPAÑERA • VÍDEO DEDICATORIA 🎬</span>
+                <span class="text-purple-400/50">•</span>
+                <span class="text-gray-400 font-mono text-[11px]">Hoy a las 18:30</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Social Showcase Bar -->
+          <div class="mb-4 p-3 rounded-2xl bg-black/40 border border-[#9146FF]/40 flex items-center justify-between flex-wrap gap-2.5">
+            <div class="flex items-center gap-2 flex-wrap">
+              <a href="https://twitch.tv/anerius16" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-[#9146FF] hover:bg-[#772ce8] text-white text-xs font-hud font-bold shadow-[0_0_15px_rgba(145,70,255,0.4)] transition-all hover:scale-105" title="Visitar canal de Twitch de Anerius16">
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714Z"/></svg>
+                <span>Twitch: <span class="underline underline-offset-2">Anerius16</span></span>
+                <svg class="w-3 h-3 text-purple-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+              </a>
+
+              <div class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-purple-950/80 border border-yellow-400/50 text-xs font-hud text-yellow-300 shadow-sm" title="Código de Apoyo a Creador en Fortnite">
+                <span>🏷️</span>
+                <span>Código Epic: <strong class="text-white font-mono bg-yellow-500/20 px-1.5 py-0.5 rounded border border-yellow-400/40">ANERIUS16</strong></span>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-1.5 text-[11px] text-[#c084fc] font-mono">
+              <span class="w-2 h-2 rounded-full bg-[#9146FF] animate-ping"></span>
+              <span>Compañero de Streaming</span>
+            </div>
+          </div>
+
+          <div class="relative bg-black/35 border-l-4 border-yellow-400 pl-4 pr-3 py-3 rounded-r-2xl my-4">
+            <span class="text-2xl text-yellow-400/40 font-serif absolute top-1 left-1.5 select-none">“</span>
+            <p class="text-gray-100 text-sm md:text-base leading-relaxed font-sans font-medium whitespace-pre-line pl-2">
+¡Hello Ari! Me han dicho que es tu cumpleaños, principalmente ¡muchísimas felicidades! 🎂✨
+
+A ver, cosas que contarte... yo me enrollo mucho y me han dicho que no puedo hablar mucho, así que voy al grano: principalmente estoy muy emocionada y muy alegre porque este año nos hemos empezado a hablar mucho más, nos hemos empezado a llevar muchísimo mejor, que eso me encanta, y es como que hemos ampliado nuestro rango de amistades entre todas.
+
+Es algo que a mí me gusta un montón. Te siento una persona muy real y alguien en quien de verdad puedo confiar, que en este mundo ya sabes que es muy difícil. ¡Así que muchísimas gracias por eso, feliz cumpleaños otra vez, espero que pases tu día de la mejor manera y que te den muchos regalos, que no nos merecemos menos! 💜🎉🎮
+            </p>
+          </div>
+
+          <div class="mt-4 rounded-2xl overflow-hidden border-2 border-[#9146FF]/80 bg-black/80 shadow-[0_0_30px_rgba(145,70,255,0.35)] relative max-w-[360px] sm:max-w-[400px] mx-auto group">
+            <div class="absolute top-2.5 left-2.5 z-10 flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-black/75 backdrop-blur border border-[#9146FF]/50 text-[10px] font-hud font-bold text-white shadow pointer-events-none">
+              <span class="w-2 h-2 rounded-full bg-red-500 animate-pulse"></span>
+              <span>FELICITACIÓN EN DIRECTO</span>
+            </div>
+            <video src="assets/Dedicatorias/Anerius16.mp4" controls playsinline preload="metadata" class="w-full h-auto max-h-[580px] object-contain mx-auto rounded-xl bg-black block" onplay="document.querySelectorAll('audio').forEach(a => { if(!a.paused) a.pause(); }); if(window.soundFX && window.soundFX.stopBGM) window.soundFX.stopBGM();"></video>
+          </div>
+
+          <div class="mt-3 flex items-center justify-center gap-3">
+            <button onclick="openClipModal('Vídeo dedicatoria de Anerius16', 'assets/Dedicatorias/Anerius16.mp4')" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-[#9146FF] to-purple-700 hover:from-[#772ce8] hover:to-purple-600 border border-purple-400/80 text-xs font-bold font-hud text-white shadow-[0_0_20px_rgba(145,70,255,0.4)] transition-all hover:scale-105">
+              <span>🎬</span>
+              <span>Ver vídeo en pantalla completa</span>
+            </button>
+          </div>
+          <p class="text-xs text-yellow-200/80 italic mt-2 text-center">Vídeo dedicatoria y felicitación especial de Anerius16 para Ariadna</p>
+
+          <div class="mt-5 pt-4 border-t border-purple-900/60 flex items-center justify-between flex-wrap gap-2">
+            <div class="flex items-center gap-2">
+              <button onclick="handleReaction('ded-anerius16', 'gg', event)" class="reaction-btn flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-purple-950/70 hover:bg-purple-800/80 border border-purple-700/50 hover:border-yellow-400 text-xs font-bold text-yellow-300 transition-all active:scale-95">
+                <span class="font-black text-sm">GG</span>
+                <span class="counter-val text-white/90" id="cnt-ded-anerius16-gg">238</span>
+              </button>
+              <button onclick="handleReaction('ded-anerius16', 'shield', event)" class="reaction-btn flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-purple-950/70 hover:bg-cyan-950/80 border border-cyan-800/60 hover:border-cyan-400 text-xs font-bold text-cyan-300 transition-all active:scale-95">
+                <img src="assets/images/shield-potion.svg" class="w-4 h-4" alt="Mini">
+                <span class="counter-val text-white/90" id="cnt-ded-anerius16-shield">148</span>
+              </button>
+              <button onclick="handleReaction('ded-anerius16', 'crown', event)" class="reaction-btn flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-purple-950/70 hover:bg-amber-950/80 border border-amber-700/60 hover:border-amber-400 text-xs font-bold text-amber-300 transition-all active:scale-95">
+                <img src="assets/images/crown.svg" class="w-4 h-4" alt="Corona">
+                <span class="counter-val text-white/90" id="cnt-ded-anerius16-crown">310</span>
+              </button>
+            </div>
+            <a href="https://twitch.tv/anerius16" target="_blank" rel="noopener noreferrer" class="text-xs text-[#d8b4fe] hover:text-white font-mono flex items-center gap-1 hover:underline">
+              <svg class="w-3.5 h-3.5 fill-current text-[#9146FF]" viewBox="0 0 24 24"><path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714Z"/></svg>
+              <span>Canal oficial en Twitch</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- DEDICATORIA STREAMER VIP 2: DANG3RCLIPS -->
+        <article class="feed-card streamer-special-card relative rounded-3xl p-5 md:p-7 border-2 border-[#9146FF] shadow-[0_0_35px_rgba(145,70,255,0.4)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_45px_rgba(145,70,255,0.65)]" data-id="ded-dang3rclips">
+          <div class="absolute -top-3.5 right-6 bg-gradient-to-r from-[#9146FF] via-purple-600 to-amber-400 text-white font-black text-[11px] uppercase tracking-wider px-3.5 py-1 rounded-md skew-x-[-10deg] shadow-lg border border-yellow-300/40 flex items-center gap-1.5">
+            <svg class="w-3.5 h-3.5 fill-current text-yellow-300" viewBox="0 0 24 24"><path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714Z"/></svg>
+            <span>COMPAÑERO/A DE TWITCH 👑</span>
+          </div>
+
+          <div class="flex items-center gap-4 mb-4">
+            <div class="relative shrink-0">
+              <div class="w-16 h-16 rounded-full p-1 bg-gradient-to-tr from-[#9146FF] via-yellow-400 to-[#00f0ff] shadow-[0_0_20px_rgba(145,70,255,0.7)] animate-pulse-slow">
+                <img src="assets/Iconos de perfiles/dang3rclips.jpeg" alt="Dang3rclips" class="w-full h-full rounded-full object-cover border-2 border-[#130728]">
+              </div>
+              <span class="absolute -bottom-1 -right-1 bg-[#9146FF] border-2 border-white rounded-full p-1 shadow-md" title="Streamer Verificado en Twitch">
+                <svg class="w-3.5 h-3.5 text-white fill-current" viewBox="0 0 24 24"><path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714Z"/></svg>
+              </span>
+            </div>
+
+            <div class="flex-1 min-w-0">
+              <div class="flex items-center gap-2 flex-wrap">
+                <span class="font-username text-xl sm:text-2xl font-black text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 via-purple-100 to-white tracking-wide truncate">Dang3rclips</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-[#9146FF]/30 border border-[#9146FF] text-[#d8b4fe] text-[10px] font-hud font-bold shadow-sm">
+                  <span>🎮</span> STREAMER OFICIAL
+                </span>
+              </div>
+              <div class="flex items-center gap-2 text-xs text-purple-300 mt-1 flex-wrap">
+                <span class="font-bold text-yellow-400">STREAMER & CREADOR DE CONTENIDO • VÍDEO DEDICATORIA 🎬</span>
+                <span class="text-purple-400/50">•</span>
+                <span class="text-gray-400 font-mono text-[11px]">Hoy a las 18:45</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="mb-4 p-3 rounded-2xl bg-black/40 border border-[#9146FF]/40 flex items-center justify-between flex-wrap gap-2.5">
+            <div class="flex items-center gap-2 flex-wrap">
+              <a href="https://twitch.tv/dang3rclips" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-[#9146FF] hover:bg-[#772ce8] text-white text-xs font-hud font-bold shadow-[0_0_15px_rgba(145,70,255,0.4)] transition-all hover:scale-105" title="Visitar canal de Twitch de Dang3rclips">
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714Z"/></svg>
+                <span>Twitch: <span class="underline underline-offset-2">dang3rclips</span></span>
+                <svg class="w-3 h-3 text-purple-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+              </a>
+
+              <div class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-purple-950/80 border border-yellow-400/50 text-xs font-hud text-yellow-300 shadow-sm" title="Código de Apoyo a Creador en Fortnite">
+                <span>🏷️</span>
+                <span>Código Epic: <strong class="text-white font-mono bg-yellow-500/20 px-1.5 py-0.5 rounded border border-yellow-400/40">DANG3R</strong></span>
+              </div>
+
+              <a href="https://youtube.com/@dang3r" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-red-600/25 hover:bg-red-600/45 border border-red-500/60 text-red-200 hover:text-white text-xs font-hud font-bold transition-all hover:scale-105" title="Canal de YouTube">
+                <svg class="w-3.5 h-3.5 text-red-400 fill-current" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                <span>YouTube</span>
+              </a>
+            </div>
+
+            <div class="flex items-center gap-1.5 text-[11px] text-[#c084fc] font-mono">
+              <span class="w-2 h-2 rounded-full bg-[#9146FF] animate-ping"></span>
+              <span>Compañero de Streaming</span>
+            </div>
+          </div>
+
+          <div class="relative bg-black/35 border-l-4 border-yellow-400 pl-4 pr-3 py-3 rounded-r-2xl my-4">
+            <span class="text-2xl text-yellow-400/40 font-serif absolute top-1 left-1.5 select-none">“</span>
+            <p class="text-gray-100 text-sm md:text-base leading-relaxed font-sans font-medium whitespace-pre-line pl-2">
+¡Hola Ari! ¡Muchísimas felicidades por tu cumpleaños! 🎂👑
+
+Pasaba por aquí para desearte que pases un día increíble celebrando este nivel 25. Espero que vaya todo genial en esta nueva etapa, bendiciones gigantes para ti y para toda tu comunidad, que te lo mereces un montón por todo el curro y el corazón que le metes a cada directo.
+
+¡A seguir rompiéndola a lo grande y que cumplas muchísimos más! 🔥🎉🎮
+            </p>
+          </div>
+
+          <div class="mt-4 rounded-2xl overflow-hidden border-2 border-[#9146FF]/80 bg-black/80 shadow-[0_0_30px_rgba(145,70,255,0.35)] relative max-w-[360px] sm:max-w-[400px] mx-auto group">
+            <div class="absolute top-2.5 left-2.5 z-10 flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-black/75 backdrop-blur border border-[#9146FF]/50 text-[10px] font-hud font-bold text-white shadow pointer-events-none">
+              <span class="w-2 h-2 rounded-full bg-red-500 animate-pulse"></span>
+              <span>FELICITACIÓN EN DIRECTO</span>
+            </div>
+            <video src="assets/Dedicatorias/dang3rclips.mp4" controls playsinline preload="metadata" class="w-full h-auto max-h-[580px] object-contain mx-auto rounded-xl bg-black block" onplay="document.querySelectorAll('audio').forEach(a => { if(!a.paused) a.pause(); }); if(window.soundFX && window.soundFX.stopBGM) window.soundFX.stopBGM();"></video>
+          </div>
+
+          <div class="mt-3 flex items-center justify-center gap-3">
+            <button onclick="openClipModal('Vídeo dedicatoria de Dang3rclips', 'assets/Dedicatorias/dang3rclips.mp4')" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-[#9146FF] to-purple-700 hover:from-[#772ce8] hover:to-purple-600 border border-purple-400/80 text-xs font-bold font-hud text-white shadow-[0_0_20px_rgba(145,70,255,0.4)] transition-all hover:scale-105">
+              <span>🎬</span>
+              <span>Ver vídeo en pantalla completa</span>
+            </button>
+          </div>
+          <p class="text-xs text-yellow-200/80 italic mt-2 text-center">Vídeo dedicatoria y felicitación especial de Dang3rclips para Ariadna</p>
+
+          <div class="mt-5 pt-4 border-t border-purple-900/60 flex items-center justify-between flex-wrap gap-2">
+            <div class="flex items-center gap-2">
+              <button onclick="handleReaction('ded-dang3rclips', 'gg', event)" class="reaction-btn flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-purple-950/70 hover:bg-purple-800/80 border border-purple-700/50 hover:border-yellow-400 text-xs font-bold text-yellow-300 transition-all active:scale-95">
+                <span class="font-black text-sm">GG</span>
+                <span class="counter-val text-white/90" id="cnt-ded-dang3rclips-gg">224</span>
+              </button>
+              <button onclick="handleReaction('ded-dang3rclips', 'shield', event)" class="reaction-btn flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-purple-950/70 hover:bg-cyan-950/80 border border-cyan-800/60 hover:border-cyan-400 text-xs font-bold text-cyan-300 transition-all active:scale-95">
+                <img src="assets/images/shield-potion.svg" class="w-4 h-4" alt="Mini">
+                <span class="counter-val text-white/90" id="cnt-ded-dang3rclips-shield">140</span>
+              </button>
+              <button onclick="handleReaction('ded-dang3rclips', 'crown', event)" class="reaction-btn flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-purple-950/70 hover:bg-amber-950/80 border border-amber-700/60 hover:border-amber-400 text-xs font-bold text-amber-300 transition-all active:scale-95">
+                <img src="assets/images/crown.svg" class="w-4 h-4" alt="Corona">
+                <span class="counter-val text-white/90" id="cnt-ded-dang3rclips-crown">295</span>
+              </button>
+            </div>
+            <a href="https://twitch.tv/dang3rclips" target="_blank" rel="noopener noreferrer" class="text-xs text-[#d8b4fe] hover:text-white font-mono flex items-center gap-1 hover:underline">
+              <svg class="w-3.5 h-3.5 fill-current text-[#9146FF]" viewBox="0 0 24 24"><path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714Z"/></svg>
+              <span>Canal oficial en Twitch</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- DEDICATORIA STREAMER VIP 3: TEVERDECONLIMON -->
+        <article class="feed-card streamer-special-card relative rounded-3xl p-5 md:p-7 border-2 border-[#9146FF] shadow-[0_0_35px_rgba(145,70,255,0.4)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_45px_rgba(145,70,255,0.65)]" data-id="ded-teverdeconlimon">
+          <div class="absolute -top-3.5 right-6 bg-gradient-to-r from-[#9146FF] via-purple-600 to-amber-400 text-white font-black text-[11px] uppercase tracking-wider px-3.5 py-1 rounded-md skew-x-[-10deg] shadow-lg border border-yellow-300/40 flex items-center gap-1.5">
+            <svg class="w-3.5 h-3.5 fill-current text-yellow-300" viewBox="0 0 24 24"><path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714Z"/></svg>
+            <span>COMPAÑERO/A DE TWITCH 👑</span>
+          </div>
+
+          <div class="flex items-center gap-4 mb-4">
+            <div class="relative shrink-0">
+              <div class="w-16 h-16 rounded-full p-1 bg-gradient-to-tr from-[#9146FF] via-yellow-400 to-[#00f0ff] shadow-[0_0_20px_rgba(145,70,255,0.7)] animate-pulse-slow">
+                <img src="assets/Iconos de perfiles/TeverdeconLimon.png" alt="TeverdeconLimon" class="w-full h-full rounded-full object-cover border-2 border-[#130728]">
+              </div>
+              <span class="absolute -bottom-1 -right-1 bg-[#9146FF] border-2 border-white rounded-full p-1 shadow-md" title="Streamer Verificado en Twitch">
+                <svg class="w-3.5 h-3.5 text-white fill-current" viewBox="0 0 24 24"><path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714Z"/></svg>
+              </span>
+            </div>
+
+            <div class="flex-1 min-w-0">
+              <div class="flex items-center gap-2 flex-wrap">
+                <span class="font-username text-xl sm:text-2xl font-black text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 via-purple-100 to-white tracking-wide truncate">TeverdeconLimon</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-[#9146FF]/30 border border-[#9146FF] text-[#d8b4fe] text-[10px] font-hud font-bold shadow-sm">
+                  <span>🎮</span> STREAMER OFICIAL
+                </span>
+              </div>
+              <div class="flex items-center gap-2 text-xs text-purple-300 mt-1 flex-wrap">
+                <span class="font-bold text-yellow-400">STREAMER DE TWITCH & COMPAÑERA • VÍDEO DEDICATORIA 🎬</span>
+                <span class="text-purple-400/50">•</span>
+                <span class="text-gray-400 font-mono text-[11px]">Hoy a las 19:00</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="mb-4 p-3 rounded-2xl bg-black/40 border border-[#9146FF]/40 flex items-center justify-between flex-wrap gap-2.5">
+            <div class="flex items-center gap-2 flex-wrap">
+              <a href="https://twitch.tv/teverdeconlimon" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-[#9146FF] hover:bg-[#772ce8] text-white text-xs font-hud font-bold shadow-[0_0_15px_rgba(145,70,255,0.4)] transition-all hover:scale-105" title="Visitar canal de Twitch de TeverdeconLimon">
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714Z"/></svg>
+                <span>Twitch: <span class="underline underline-offset-2">teverdeconlimon</span></span>
+                <svg class="w-3 h-3 text-purple-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+              </a>
+            </div>
+
+            <div class="flex items-center gap-1.5 text-[11px] text-[#c084fc] font-mono">
+              <span class="w-2 h-2 rounded-full bg-[#9146FF] animate-ping"></span>
+              <span>Compañero de Streaming</span>
+            </div>
+          </div>
+
+          <div class="relative bg-black/35 border-l-4 border-yellow-400 pl-4 pr-3 py-3 rounded-r-2xl my-4">
+            <span class="text-2xl text-yellow-400/40 font-serif absolute top-1 left-1.5 select-none">“</span>
+            <p class="text-gray-100 text-sm md:text-base leading-relaxed font-sans font-medium whitespace-pre-line pl-2">
+¡Hello, aquí la Té Verde! 🍋🍵✨
+
+Te deseo un súper feliz cumpleaños, Ari. Espero que hayas tenido un día precioso rodeada de tu gente y de toda tu comunidad.
+
+Quiero aprovechar también para felicitarte por todo lo que estás consiguiendo: se nota que disfrutas de verdad lo que haces, que le dedicas muchísimo tiempo, ganas y un cariño enorme. Espero que sigas creciendo sin parar porque te lo mereces, no solo por todo tu esfuerzo, sino por la gran persona que eres.
+
+¡Te mando un abrazo enorme, un besazo y a seguir cumpliendo muchos sueños! ¡Chaooo! 💜🎂
+            </p>
+          </div>
+
+          <div class="mt-4 rounded-2xl overflow-hidden border-2 border-[#9146FF]/80 bg-black/80 shadow-[0_0_30px_rgba(145,70,255,0.35)] relative max-w-[360px] sm:max-w-[400px] mx-auto group">
+            <div class="absolute top-2.5 left-2.5 z-10 flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-black/75 backdrop-blur border border-[#9146FF]/50 text-[10px] font-hud font-bold text-white shadow pointer-events-none">
+              <span class="w-2 h-2 rounded-full bg-red-500 animate-pulse"></span>
+              <span>FELICITACIÓN EN DIRECTO</span>
+            </div>
+            <video src="assets/Dedicatorias/TeverdeconLimon.mp4" controls playsinline preload="metadata" class="w-full h-auto max-h-[580px] object-contain mx-auto rounded-xl bg-black block" onplay="document.querySelectorAll('audio').forEach(a => { if(!a.paused) a.pause(); }); if(window.soundFX && window.soundFX.stopBGM) window.soundFX.stopBGM();"></video>
+          </div>
+
+          <div class="mt-3 flex items-center justify-center gap-3">
+            <button onclick="openClipModal('Vídeo dedicatoria de TeverdeconLimon', 'assets/Dedicatorias/TeverdeconLimon.mp4')" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-[#9146FF] to-purple-700 hover:from-[#772ce8] hover:to-purple-600 border border-purple-400/80 text-xs font-bold font-hud text-white shadow-[0_0_20px_rgba(145,70,255,0.4)] transition-all hover:scale-105">
+              <span>🎬</span>
+              <span>Ver vídeo en pantalla completa</span>
+            </button>
+          </div>
+          <p class="text-xs text-yellow-200/80 italic mt-2 text-center">Vídeo dedicatoria y felicitación especial de TeverdeconLimon para Ariadna</p>
+
+          <div class="mt-5 pt-4 border-t border-purple-900/60 flex items-center justify-between flex-wrap gap-2">
+            <div class="flex items-center gap-2">
+              <button onclick="handleReaction('ded-teverdeconlimon', 'gg', event)" class="reaction-btn flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-purple-950/70 hover:bg-purple-800/80 border border-purple-700/50 hover:border-yellow-400 text-xs font-bold text-yellow-300 transition-all active:scale-95">
+                <span class="font-black text-sm">GG</span>
+                <span class="counter-val text-white/90" id="cnt-ded-teverdeconlimon-gg">232</span>
+              </button>
+              <button onclick="handleReaction('ded-teverdeconlimon', 'shield', event)" class="reaction-btn flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-purple-950/70 hover:bg-cyan-950/80 border border-cyan-800/60 hover:border-cyan-400 text-xs font-bold text-cyan-300 transition-all active:scale-95">
+                <img src="assets/images/shield-potion.svg" class="w-4 h-4" alt="Mini">
+                <span class="counter-val text-white/90" id="cnt-ded-teverdeconlimon-shield">144</span>
+              </button>
+              <button onclick="handleReaction('ded-teverdeconlimon', 'crown', event)" class="reaction-btn flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-purple-950/70 hover:bg-amber-950/80 border border-amber-700/60 hover:border-amber-400 text-xs font-bold text-amber-300 transition-all active:scale-95">
+                <img src="assets/images/crown.svg" class="w-4 h-4" alt="Corona">
+                <span class="counter-val text-white/90" id="cnt-ded-teverdeconlimon-crown">304</span>
+              </button>
+            </div>
+            <a href="https://twitch.tv/teverdeconlimon" target="_blank" rel="noopener noreferrer" class="text-xs text-[#d8b4fe] hover:text-white font-mono flex items-center gap-1 hover:underline">
+              <svg class="w-3.5 h-3.5 fill-current text-[#9146FF]" viewBox="0 0 24 24"><path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714Z"/></svg>
+              <span>Canal oficial en Twitch</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- ========================================================
+             LISTA NORMAL DE LA COMUNIDAD (MARTA, LAURA Y CHAT)
+             ======================================================== -->
+        <!-- DEDICATORIA: MARTA (DÚO LEGENDARIO • HABITACIÓN 3D & TARTA PERSONALIZADA) -->
+        <article class="feed-card relative bg-[#130b28]/90 backdrop-blur-md rounded-2xl p-5 md:p-6 border-2 border-amber-400 shadow-[0_0_20px_rgba(245,158,11,0.35)] transition-all duration-300 hover:-translate-y-1" data-id="ded-marta">
+          <div class="absolute -top-3.5 right-6 bg-gradient-to-r from-amber-500 to-red-500 text-black font-black text-[11px] uppercase tracking-wider px-3 py-0.5 rounded-md skew-x-[-10deg] shadow-md border border-black/40">
+            MÍTICO
+          </div>
+
+          <div class="flex items-center gap-3.5 mb-3">
+            <div class="relative">
+              <div class="w-13 h-13 rounded-full p-0.5 bg-gradient-to-tr from-amber-400 to-red-500 shadow-md">
+                <img src="assets/Iconos de perfiles/Marta.webp" alt="Marta" class="w-12 h-12 rounded-full object-cover border-2 border-[#130b28]">
+              </div>
+              <span class="absolute -bottom-1 -right-1 bg-purple-900 border border-purple-400 rounded-full p-0.5" title="twitch">
+                <svg class="w-3.5 h-3.5 text-purple-300" fill="currentColor" viewBox="0 0 24 24"><path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714Z"/></svg>
+              </span>
+            </div>
+
+            <div class="flex-1 min-w-0">
+              <div class="flex items-center gap-2 flex-wrap">
+                <span class="font-username text-lg font-bold text-purple-300 tracking-wide truncate">Marta</span>
+                <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-yellow-400/15 border border-yellow-400/40 text-yellow-300 text-[10px] font-hud font-bold">
+                  <span>🎮</span> DÚO LEGENDARIO
+                </span>
+              </div>
+              <div class="flex items-center gap-1.5 text-[11px] text-gray-400 mt-0.5">
+                <span class="inline-flex items-center gap-1 text-[#a970ff] font-bold" title="Twitch">
+                  <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714Z"/></svg>
+                  <span class="text-[10px] uppercase font-mono tracking-wider">Twitch</span>
+                </span>
+                <span class="text-purple-400/50">•</span>
+                <span>Hoy a las 17:45</span>
+              </div>
+            </div>
+          </div>
+
+          <p class="text-gray-200 text-sm md:text-base leading-relaxed font-sans font-medium whitespace-pre-line">
+¡Feliz cumpleaños Arixu! ❤️🎂 Hoy no es un día cualquiera, hoy celebramos a una persona increíble que con su energía, su risa y su forma única de ser hace que cada directo sea especial.
+
+Gracias por tantas risas en cada stream jugando juntas y los momentos más divertidos en dúo. ¡Para la mejor streamer del mundo, que este nuevo año te traiga todo lo bonito que mereces: salud, alegría, éxitos, más momentos épicos y todo lo que sueñes!
+
+¡Los Arixulitos siempre contigo! ¡Feliz cumpleaños! 💜✨
+          </p>
+
+          <div class="mt-4 rounded-xl overflow-hidden border-2 border-white/10 group cursor-pointer relative bg-black/40" onclick="openLightbox('assets/Dedicatorias/Marta.jpeg', 'Tarta 3D personalizada y felicitación especial de Marta para Ariadna')">
+            <img src="assets/Dedicatorias/Marta.jpeg" alt="Dedicatoria de Marta" class="w-full h-auto max-h-[650px] object-contain object-top mx-auto group-hover:scale-105 transition-transform duration-300" loading="lazy">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-3 pointer-events-none">
+              <span class="text-xs text-white/90 flex items-center gap-1 font-semibold">
+                <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/><path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"/></svg>
+                Ver imagen completa
+              </span>
+            </div>
+          </div>
+          <p class="text-xs text-yellow-200/80 italic mt-2">Tarta 3D personalizada y felicitación especial de Marta para Ariadna</p>
+
+          <div class="mt-5 pt-4 border-t border-purple-900/60 flex items-center justify-between flex-wrap gap-2">
+            <div class="flex items-center gap-2">
+              <button onclick="handleReaction('ded-marta', 'gg', event)" class="reaction-btn flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-purple-950/70 hover:bg-purple-800/80 border border-purple-700/50 hover:border-yellow-400 text-xs font-bold text-yellow-300 transition-all active:scale-95">
+                <span class="font-black text-sm">GG</span>
+                <span class="counter-val text-white/90" id="cnt-ded-marta-gg">186</span>
+              </button>
+              <button onclick="handleReaction('ded-marta', 'shield', event)" class="reaction-btn flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-purple-950/70 hover:bg-cyan-950/80 border border-cyan-800/60 hover:border-cyan-400 text-xs font-bold text-cyan-300 transition-all active:scale-95">
+                <img src="assets/images/shield-potion.svg" class="w-4 h-4" alt="Mini">
+                <span class="counter-val text-white/90" id="cnt-ded-marta-shield">124</span>
+              </button>
+              <button onclick="handleReaction('ded-marta', 'crown', event)" class="reaction-btn flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-purple-950/70 hover:bg-amber-950/80 border border-amber-700/60 hover:border-amber-400 text-xs font-bold text-amber-300 transition-all active:scale-95">
+                <img src="assets/images/crown.svg" class="w-4 h-4" alt="Corona">
+                <span class="counter-val text-white/90" id="cnt-ded-marta-crown">240</span>
+              </button>
+            </div>
+            <span class="text-[11px] text-purple-400/80 font-mono flex items-center gap-1">
+              <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+              En directo
+            </span>
+          </div>
+        </article>
+
+        <!-- DEDICATORIA: LAURA (COMUNIDAD TWITCH • CARTA ESPECIAL) -->
+        <article class="feed-card relative bg-[#130b28]/90 backdrop-blur-md rounded-2xl p-5 md:p-6 border-2 border-yellow-400 shadow-[0_0_20px_rgba(234,179,8,0.3)] transition-all duration-300 hover:-translate-y-1" data-id="ded-laura">
+          <div class="absolute -top-3.5 right-6 bg-gradient-to-r from-yellow-400 to-amber-500 text-black font-black text-[11px] uppercase tracking-wider px-3 py-0.5 rounded-md skew-x-[-10deg] shadow-md border border-black/40">
+            LEGENDARIO
+          </div>
+
+          <div class="flex items-center gap-3.5 mb-3">
+            <div class="relative">
+              <div class="w-13 h-13 rounded-full p-0.5 bg-gradient-to-tr from-purple-500 to-cyan-400 shadow-md">
+                <img src="assets/Iconos de perfiles/Laura.webp" alt="Laura" class="w-12 h-12 rounded-full object-cover border-2 border-[#130b28]">
+              </div>
+              <span class="absolute -bottom-1 -right-1 bg-purple-900 border border-purple-400 rounded-full p-0.5" title="twitch">
+                <svg class="w-3.5 h-3.5 text-purple-300" fill="currentColor" viewBox="0 0 24 24"><path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714Z"/></svg>
+              </span>
+            </div>
+
+            <div class="flex-1 min-w-0">
+              <div class="flex items-center gap-2 flex-wrap">
+                <span class="font-username text-lg font-bold text-purple-300 tracking-wide truncate">Laura</span>
+                <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-pink-500/15 border border-pink-400/40 text-pink-300 text-[10px] font-hud font-bold">
+                  <span>💌</span> CARTA ESPECIAL
+                </span>
+              </div>
+              <div class="flex items-center gap-1.5 text-[11px] text-gray-400 mt-0.5">
+                <span class="inline-flex items-center gap-1 text-[#a970ff] font-bold" title="Twitch">
+                  <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714Z"/></svg>
+                  <span class="text-[10px] uppercase font-mono tracking-wider">Twitch</span>
+                </span>
+                <span class="text-purple-400/50">•</span>
+                <span>Hoy a las 18:00</span>
+              </div>
+            </div>
+          </div>
+
+          <p class="text-gray-200 text-sm md:text-base leading-relaxed font-sans font-medium whitespace-pre-line">
+Ari, ♡
+
+Hoy celebras 25 años, y qué suerte la nuestra de que el mundo tenga personas tan bonitas como tú.
+
+Que este nuevo año te traiga todo lo bonito que mereces: salud, amor, éxito, muchos momentos felices y sueños que se hagan realidad.
+
+Disfruta mucho tu día, te lo mereces de verdad.
+
+¡Feliz 25! ♡
+          </p>
+
+          <div class="mt-4 rounded-xl overflow-hidden border-2 border-white/10 group cursor-pointer relative bg-black/40" onclick="openLightbox('assets/Dedicatorias/Laura.webp', 'Carta y dedicatoria manuscrita de Laura para Ariadna')">
+            <img src="assets/Dedicatorias/Laura.webp" alt="Dedicatoria de Laura" class="w-full h-auto max-h-[650px] object-contain object-top mx-auto group-hover:scale-105 transition-transform duration-300" loading="lazy">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-3 pointer-events-none">
+              <span class="text-xs text-white/90 flex items-center gap-1 font-semibold">
+                <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/><path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"/></svg>
+                Ver imagen completa
+              </span>
+            </div>
+          </div>
+          <p class="text-xs text-yellow-200/80 italic mt-2">Carta y dedicatoria manuscrita de Laura para Ariadna</p>
+
+          <div class="mt-5 pt-4 border-t border-purple-900/60 flex items-center justify-between flex-wrap gap-2">
+            <div class="flex items-center gap-2">
+              <button onclick="handleReaction('ded-laura', 'gg', event)" class="reaction-btn flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-purple-950/70 hover:bg-purple-800/80 border border-purple-700/50 hover:border-yellow-400 text-xs font-bold text-yellow-300 transition-all active:scale-95">
+                <span class="font-black text-sm">GG</span>
+                <span class="counter-val text-white/90" id="cnt-ded-laura-gg">168</span>
+              </button>
+              <button onclick="handleReaction('ded-laura', 'shield', event)" class="reaction-btn flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-purple-950/70 hover:bg-cyan-950/80 border border-cyan-800/60 hover:border-cyan-400 text-xs font-bold text-cyan-300 transition-all active:scale-95">
+                <img src="assets/images/shield-potion.svg" class="w-4 h-4" alt="Mini">
+                <span class="counter-val text-white/90" id="cnt-ded-laura-shield">106</span>
+              </button>
+              <button onclick="handleReaction('ded-laura', 'crown', event)" class="reaction-btn flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-purple-950/70 hover:bg-amber-950/80 border border-amber-700/60 hover:border-amber-400 text-xs font-bold text-amber-300 transition-all active:scale-95">
+                <img src="assets/images/crown.svg" class="w-4 h-4" alt="Corona">
+                <span class="counter-val text-white/90" id="cnt-ded-laura-crown">224</span>
+              </button>
+            </div>
+            <span class="text-[11px] text-purple-400/80 font-mono flex items-center gap-1">
+              <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+              En directo
+            </span>
+          </div>
+        </article>
+
         <!-- 2. LUSANITO (COMUNIDAD TWITCH) -->
         <article class="feed-card relative bg-[#130b28]/90 backdrop-blur-md rounded-2xl p-5 md:p-6 border-2 border-yellow-400 shadow-[0_0_20px_rgba(234,179,8,0.3)] transition-all duration-300 hover:-translate-y-1" data-id="ded-2">
           <div class="absolute -top-3.5 right-6 bg-gradient-to-r from-yellow-400 to-amber-500 text-black font-black text-[11px] uppercase tracking-wider px-3 py-0.5 rounded-md skew-x-[-10deg] shadow-md border border-black/40">
@@ -3139,61 +3651,6 @@ Aquí seguimos... jamás te soltamos.
               <button onclick="handleReaction('ded-4', 'crown', event)" class="reaction-btn flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-purple-950/70 hover:bg-amber-950/80 border border-amber-700/60 hover:border-amber-400 text-xs font-bold text-amber-300 transition-all active:scale-95">
                 <img src="assets/images/crown.svg" class="w-4 h-4" alt="Corona">
                 <span class="counter-val text-white/90" id="cnt-ded-4-crown">40</span>
-              </button>
-            </div>
-            <span class="text-[11px] text-purple-400/80 font-mono flex items-center gap-1">
-              <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
-              En directo
-            </span>
-          </div>
-        </article>
-
-        <!-- 5. MARTA (DÚO LEGENDARIO) -->
-        <article class="feed-card relative bg-[#130b28]/90 backdrop-blur-md rounded-2xl p-5 md:p-6 border-2 border-yellow-400 shadow-[0_0_20px_rgba(234,179,8,0.3)] transition-all duration-300 hover:-translate-y-1" data-id="ded-5">
-          <div class="absolute -top-3.5 right-6 bg-gradient-to-r from-yellow-400 to-amber-500 text-black font-black text-[11px] uppercase tracking-wider px-3 py-0.5 rounded-md skew-x-[-10deg] shadow-md border border-black/40">
-            LEGENDARIO
-          </div>
-          <div class="flex items-center gap-3.5 mb-3">
-            <div class="relative">
-              <div class="w-13 h-13 rounded-full p-0.5 bg-gradient-to-tr from-purple-500 to-cyan-400 shadow-md">
-                <div class="w-12 h-12 rounded-full bg-[#1b0c36] border-2 border-[#130b28] flex items-center justify-center text-purple-300/70" title="Sin foto">
-                  <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
-                </div>
-              </div>
-              <span class="absolute -bottom-1 -right-1 bg-purple-900 border border-purple-400 rounded-full p-0.5" title="twitch">
-                <svg class="w-3.5 h-3.5 text-purple-300" fill="currentColor" viewBox="0 0 24 24"><path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714Z"/></svg>
-              </span>
-            </div>
-            <div class="flex-1 min-w-0">
-              <div class="flex items-center gap-2 flex-wrap">
-                <span class="font-username text-lg font-bold text-purple-300 tracking-wide truncate">MARTA</span>
-              </div>
-              <div class="flex items-center gap-1.5 text-[11px] text-gray-400 mt-0.5">
-                <span class="inline-flex items-center gap-1 text-[#a970ff] font-bold" title="Twitch">
-                  <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714Z"/></svg>
-                  <span class="text-[10px] uppercase font-mono tracking-wider">Twitch</span>
-                </span>
-                <span class="text-purple-400/50">•</span>
-                <span>Ayer a las 22:18</span>
-              </div>
-            </div>
-          </div>
-          <p class="text-gray-200 text-sm md:text-base leading-relaxed font-sans font-medium whitespace-pre-line">
-            ¡Feliz cumpleaños Arixu! Aún recuerdo las risas en cada stream jugando juntas y los momentos más divertidos en dúo. ¡Los mejores momentos siempre! Pásalo genial con toda tu gente 💙❤️
-          </p>
-          <div class="mt-5 pt-4 border-t border-purple-900/60 flex items-center justify-between flex-wrap gap-2">
-            <div class="flex items-center gap-2">
-              <button onclick="handleReaction('ded-5', 'gg', event)" class="reaction-btn flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-purple-950/70 hover:bg-purple-800/80 border border-purple-700/50 hover:border-yellow-400 text-xs font-bold text-yellow-300 transition-all active:scale-95">
-                <span class="font-black text-sm">GG</span>
-                <span class="counter-val text-white/90" id="cnt-ded-5-gg">61</span>
-              </button>
-              <button onclick="handleReaction('ded-5', 'shield', event)" class="reaction-btn flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-purple-950/70 hover:bg-cyan-950/80 border border-cyan-800/60 hover:border-cyan-400 text-xs font-bold text-cyan-300 transition-all active:scale-95">
-                <img src="assets/images/shield-potion.svg" class="w-4 h-4" alt="Mini">
-                <span class="counter-val text-white/90" id="cnt-ded-5-shield">19</span>
-              </button>
-              <button onclick="handleReaction('ded-5', 'crown', event)" class="reaction-btn flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-purple-950/70 hover:bg-amber-950/80 border border-amber-700/60 hover:border-amber-400 text-xs font-bold text-amber-300 transition-all active:scale-95">
-                <img src="assets/images/crown.svg" class="w-4 h-4" alt="Corona">
-                <span class="counter-val text-white/90" id="cnt-ded-5-crown">54</span>
               </button>
             </div>
             <span class="text-[11px] text-purple-400/80 font-mono flex items-center gap-1">

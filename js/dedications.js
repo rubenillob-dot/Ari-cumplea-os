@@ -481,6 +481,31 @@ Te he preparado esta canción con todo el cariño de parte de uno de tus suscrip
     date: 'Hoy a las 16:45'
   },
   {
+    id: 'ded-rubenillo',
+    user: 'Rubenillo',
+    platform: 'twitch',
+    role: 'MODERADOR • CANCIÓN ORIGINAL 🎵',
+    rarity: 'mythic',
+    avatar: 'assets/Iconos de perfiles/Rubenillo.webp',
+    type: 'song',
+    songKey: 'rubenillo',
+    songTitle: 'AQUÍ SEGUIMOS, ARI',
+    subtitle: 'Canción Original • Para Ariadna • <strong class="text-purple-300 font-bold">Rubenillo</strong>',
+    audioUrl: 'assets/Dedicatorias/Rubenillo.mp3',
+    durationText: '04:50',
+    image: 'assets/Dedicatorias/Rubenillo.png',
+    caption: 'Recuerdo especial de Rubenillo con Ariadna',
+    message: `Ari, familia... hoy cuelgo la placa de moderador un momento para hablaros simplemente desde el corazón.
+
+Mirar atrás y ver todo lo que hemos construido juntos este último año es increíble. Ari, gracias infinitas por darme la oportunidad de cuidar esta comunidad desde primera línea y confiar en mí para proteger este espacio. He visto de cerca tu esfuerzo incansable detrás de cada directo, y acompañarte hasta lograr la meta del tan soñado Partner de Twitch ha sido un orgullo inmenso.
+
+Ese 'check' morado no es solo una marca, es el reflejo de tu constancia y del refugio tan bonito que has creado para todos nosotros.
+
+Felicidades, Ari. Te lo has ganado a pulso. A por el siguiente nivel, porque esto acaba de empezar y aquí seguiremos, siempre cubriéndote las espaldas. 💜`,
+    reactions: { gg: 188, shield: 115, crown: 245 },
+    date: 'Hoy a las 16:15'
+  },
+  {
     id: 'ded-errederamon',
     user: 'ErreDeRamon',
     platform: 'twitch',
@@ -530,17 +555,122 @@ Un beso y un abrazo enorme a la distancia. 😘🫂💜`,
     reactions: { gg: 184, shield: 112, crown: 226 },
     date: 'Hoy a las 17:30'
   },
+  /* ========================================================
+     APARTADO ESPECIAL: STREAMERS & COMPAÑEROS DE TWITCH
+     ======================================================== */
   {
-    id: 'ded-2',
-    user: 'LUSANITO',
+    id: 'ded-anerius16',
+    user: 'Anerius16',
     platform: 'twitch',
-    role: 'COMUNIDAD TWITCH',
+    role: 'STREAMER DE TWITCH & COMPAÑERA • VÍDEO DEDICATORIA 🎬',
+    rarity: 'streamer',
+    isStreamer: true,
+    avatar: 'assets/Iconos de perfiles/Anerius16.png',
+    twitchUrl: 'https://twitch.tv/anerius16',
+    twitchUser: 'Anerius16',
+    creatorCode: 'ANERIUS16',
+    type: 'video',
+    video: 'assets/Dedicatorias/Anerius16.mp4',
+    videoUrl: 'assets/Dedicatorias/Anerius16.mp4',
+    caption: 'Vídeo dedicatoria y felicitación especial de Anerius16 para Ariadna',
+    message: `¡Hello Ari! Me han dicho que es tu cumpleaños, principalmente ¡muchísimas felicidades! 🎂✨
+
+A ver, cosas que contarte... yo me enrollo mucho y me han dicho que no puedo hablar mucho, así que voy al grano: principalmente estoy muy emocionada y muy alegre porque este año nos hemos empezado a hablar mucho más, nos hemos empezado a llevar muchísimo mejor, que eso me encanta, y es como que hemos ampliado nuestro rango de amistades entre todas.
+
+Es algo que a mí me gusta un montón. Te siento una persona muy real y alguien en quien de verdad puedo confiar, que en este mundo ya sabes que es muy difícil. ¡Así que muchísimas gracias por eso, feliz cumpleaños otra vez, espero que pases tu día de la mejor manera y que te den muchos regalos, que no nos merecemos menos! 💜🎉🎮`,
+    reactions: { gg: 238, shield: 148, crown: 310 },
+    date: 'Hoy a las 18:30'
+  },
+  {
+    id: 'ded-dang3rclips',
+    user: 'Dang3rclips',
+    platform: 'twitch',
+    role: 'STREAMER & CREADOR DE CONTENIDO • VÍDEO DEDICATORIA 🎬',
+    rarity: 'streamer',
+    isStreamer: true,
+    avatar: 'assets/Iconos de perfiles/dang3rclips.jpeg',
+    twitchUrl: 'https://twitch.tv/dang3rclips',
+    twitchUser: 'dang3rclips',
+    creatorCode: 'DANG3R',
+    youtubeUrl: 'https://youtube.com/@dang3r',
+    type: 'video',
+    video: 'assets/Dedicatorias/dang3rclips.mp4',
+    videoUrl: 'assets/Dedicatorias/dang3rclips.mp4',
+    caption: 'Vídeo dedicatoria y felicitación especial de Dang3rclips para Ariadna',
+    message: `¡Hola Ari! ¡Muchísimas felicidades por tu cumpleaños! 🎂👑
+
+Pasaba por aquí para desearte que pases un día increíble celebrando este nivel 25. Espero que vaya todo genial en esta nueva etapa, bendiciones gigantes para ti y para toda tu comunidad, que te lo mereces un montón por todo el curro y el corazón que le metes a cada directo.
+
+¡A seguir rompiéndola a lo grande y que cumplas muchísimos más! 🔥🎉🎮`,
+    reactions: { gg: 224, shield: 140, crown: 295 },
+    date: 'Hoy a las 18:45'
+  },
+  {
+    id: 'ded-teverdeconlimon',
+    user: 'TeverdeconLimon',
+    platform: 'twitch',
+    role: 'STREAMER DE TWITCH & COMPAÑERA • VÍDEO DEDICATORIA 🎬',
+    rarity: 'streamer',
+    isStreamer: true,
+    avatar: 'assets/Iconos de perfiles/TeverdeconLimon.png',
+    twitchUrl: 'https://twitch.tv/teverdeconlimon',
+    twitchUser: 'teverdeconlimon',
+    type: 'video',
+    video: 'assets/Dedicatorias/TeverdeconLimon.mp4',
+    videoUrl: 'assets/Dedicatorias/TeverdeconLimon.mp4',
+    caption: 'Vídeo dedicatoria y felicitación especial de TeverdeconLimon para Ariadna',
+    message: `¡Hello, aquí la Té Verde! 🍋🍵✨
+
+Te deseo un súper feliz cumpleaños, Ari. Espero que hayas tenido un día precioso rodeada de tu gente y de toda tu comunidad.
+
+Quiero aprovechar también para felicitarte por todo lo que estás consiguiendo: se nota que disfrutas de verdad lo que haces, que le dedicas muchísimo tiempo, ganas y un cariño enorme. Espero que sigas creciendo sin parar porque te lo mereces, no solo por todo tu esfuerzo, sino por la gran persona que eres.
+
+¡Te mando un abrazo enorme, un besazo y a seguir cumpliendo muchos sueños! ¡Chaooo! 💜🎂`,
+    reactions: { gg: 232, shield: 144, crown: 304 },
+    date: 'Hoy a las 19:00'
+  },
+  /* ========================================================
+     LISTA NORMAL DE LA COMUNIDAD (MARTA, LAURA Y CHAT)
+     ======================================================== */
+  {
+    id: 'ded-marta',
+    user: 'Marta',
+    platform: 'twitch',
+    role: 'DÚO LEGENDARIO • FANART & DEDICATORIA 🎨',
+    rarity: 'mythic',
+    avatar: 'assets/Iconos de perfiles/Marta.webp',
+    type: 'image',
+    image: 'assets/Dedicatorias/Marta.jpeg',
+    caption: 'Tarta 3D personalizada y felicitación especial de Marta para Ariadna',
+    message: `¡Feliz cumpleaños Arixu! ❤️🎂 Hoy no es un día cualquiera, hoy celebramos a una persona increíble que con su energía, su risa y su forma única de ser hace que cada directo sea especial.
+
+Gracias por tantas risas en cada stream jugando juntas y los momentos más divertidos en dúo. ¡Para la mejor streamer del mundo, que este nuevo año te traiga todo lo bonito que mereces: salud, alegría, éxitos, más momentos épicos y todo lo que sueñes!
+
+¡Los Arixulitos siempre contigo! ¡Feliz cumpleaños! 💜✨`,
+    reactions: { gg: 186, shield: 124, crown: 240 },
+    date: 'Hoy a las 17:45'
+  },
+  {
+    id: 'ded-laura',
+    user: 'Laura',
+    platform: 'twitch',
+    role: 'COMUNIDAD TWITCH • CARTA ESPECIAL 💌',
     rarity: 'legendary',
-    avatar: 'assets/Iconos de perfiles/Lusanito.webp',
-    type: 'text',
-    message: 'Gracias Ari por ser como eres y crear la comunidad que tienes, no recuerdo cómo llegué aquí pero me alegro de haber descubierto tu canal. No sabes lo que indirectamente me has ayudado en los días malos que tenía con tus directos. Sigue así! Me alegra mucho ver como en un año has crecido tanto y sé que seguirás creciendo!!',
-    reactions: { gg: 89, shield: 45, crown: 112 },
-    date: 'Hoy a las 14:15'
+    avatar: 'assets/Iconos de perfiles/Laura.webp',
+    type: 'image',
+    image: 'assets/Dedicatorias/Laura.webp',
+    caption: 'Carta y dedicatoria manuscrita de Laura para Ariadna',
+    message: `Ari, ♡
+
+Hoy celebras 25 años, y qué suerte la nuestra de que el mundo tenga personas tan bonitas como tú.
+
+Que este nuevo año te traiga todo lo bonito que mereces: salud, amor, éxito, muchos momentos felices y sueños que se hagan realidad.
+
+Disfruta mucho tu día, te lo mereces de verdad.
+
+¡Feliz 25! ♡`,
+    reactions: { gg: 168, shield: 106, crown: 224 },
+    date: 'Hoy a las 18:00'
   },
   {
     id: 'ded-18',
@@ -563,29 +693,16 @@ Feliz cumpleaños, Ari. ♡ ¡Por muchos años más!`,
     date: 'Hoy a las 17:00'
   },
   {
-    id: 'ded-rubenillo',
-    user: 'Rubenillo',
+    id: 'ded-2',
+    user: 'LUSANITO',
     platform: 'twitch',
-    role: 'MODERADOR • CANCIÓN ORIGINAL 🎵',
-    rarity: 'mythic',
-    avatar: 'assets/Iconos de perfiles/Rubenillo.webp',
-    type: 'song',
-    songKey: 'rubenillo',
-    songTitle: 'AQUÍ SEGUIMOS, ARI',
-    subtitle: 'Canción Original • Para Ariadna • <strong class="text-purple-300 font-bold">Rubenillo</strong>',
-    audioUrl: 'assets/Dedicatorias/Rubenillo.mp3',
-    durationText: '04:50',
-    image: 'assets/Dedicatorias/Rubenillo.png',
-    caption: 'Recuerdo especial de Rubenillo con Ariadna',
-    message: `Ari, familia... hoy cuelgo la placa de moderador un momento para hablaros simplemente desde el corazón.
-
-Mirar atrás y ver todo lo que hemos construido juntos este último año es increíble. Ari, gracias infinitas por darme la oportunidad de cuidar esta comunidad desde primera línea y confiar en mí para proteger este espacio. He visto de cerca tu esfuerzo incansable detrás de cada directo, y acompañarte hasta lograr la meta del tan soñado Partner de Twitch ha sido un orgullo inmenso.
-
-Ese 'check' morado no es solo una marca, es el reflejo de tu constancia y del refugio tan bonito que has creado para todos nosotros.
-
-Felicidades, Ari. Te lo has ganado a pulso. A por el siguiente nivel, porque esto acaba de empezar y aquí seguiremos, siempre cubriéndote las espaldas. 💜`,
-    reactions: { gg: 188, shield: 115, crown: 245 },
-    date: 'Hoy a las 16:15'
+    role: 'COMUNIDAD TWITCH',
+    rarity: 'legendary',
+    avatar: 'assets/Iconos de perfiles/Lusanito.webp',
+    type: 'text',
+    message: 'Gracias Ari por ser como eres y crear la comunidad que tienes, no recuerdo cómo llegué aquí pero me alegro de haber descubierto tu canal. No sabes lo que indirectamente me has ayudado en los días malos que tenía con tus directos. Sigue así! Me alegra mucho ver como en un año has crecido tanto y sé que seguirás creciendo!!',
+    reactions: { gg: 89, shield: 45, crown: 112 },
+    date: 'Hoy a las 14:15'
   },
   {
     id: 'ded-3',
@@ -610,18 +727,6 @@ Felicidades, Ari. Te lo has ganado a pulso. A por el siguiente nivel, porque est
     message: '¡Feliz cumple Ari! Ver tus streams después de un día duro siempre me saca una sonrisa enorme. Que cumplas muchísimos más y que nunca falten los minis de 50 en tu inventario. ¡GG WP!',
     reactions: { gg: 35, shield: 52, crown: 40 },
     date: 'Hoy a las 11:45'
-  },
-  {
-    id: 'ded-5',
-    user: 'MARTA',
-    platform: 'twitch',
-    role: 'DÚO LEGENDARIO',
-    rarity: 'legendary',
-    avatar: '',
-    type: 'text',
-    message: '¡Feliz cumpleaños Arixu! Aún recuerdo las risas en cada stream jugando juntas y los momentos más divertidos en dúo. ¡Los mejores momentos siempre! Pásalo genial con toda tu gente 💙❤️',
-    reactions: { gg: 61, shield: 19, crown: 54 },
-    date: 'Ayer a las 22:18'
   },
   {
     id: 'ded-6',
@@ -735,7 +840,7 @@ Felicidades, Ari. Te lo has ganado a pulso. A por el siguiente nivel, porque est
 
 class DedicationsManager {
   constructor() {
-    this.storageKey = 'imarixu_birthday_dedications_v21';
+    this.storageKey = 'imarixu_birthday_dedications_v22';
     this.dedications = this.loadDedications();
   }
 
@@ -769,6 +874,7 @@ class DedicationsManager {
       localStorage.removeItem('imarixu_birthday_dedications_v18');
       localStorage.removeItem('imarixu_birthday_dedications_v19');
       localStorage.removeItem('imarixu_birthday_dedications_v20');
+      localStorage.removeItem('imarixu_birthday_dedications_v21');
     } catch (_) {}
     return [...DEFAULT_DEDICATIONS];
   }
@@ -801,6 +907,14 @@ class DedicationsManager {
 
   getRarityConfig(rarity) {
     switch (rarity) {
+      case 'streamer':
+        return {
+          label: 'STREAMER TWITCH 👑',
+          border: 'border-[#9146FF]',
+          bg: 'from-purple-900/40 via-[#9146FF]/20 to-amber-500/10',
+          badgeBg: 'bg-gradient-to-r from-[#9146FF] via-purple-600 to-amber-400 text-white',
+          glow: 'shadow-[0_0_35px_rgba(145,70,255,0.45)]'
+        };
       case 'mythic':
         return {
           label: 'MÍTICO',
@@ -837,11 +951,182 @@ class DedicationsManager {
     }
   }
 
-  renderFeed(containerId) {
+  renderFeed(containerId, activeFilter = 'all') {
     const container = document.getElementById(containerId);
     if (!container) return;
 
-    container.innerHTML = this.dedications.map(item => {
+    let filtered = this.dedications;
+    if (activeFilter === 'streamers') {
+      filtered = this.dedications.filter(d => d.isStreamer);
+    } else if (activeFilter === 'songs') {
+      filtered = this.dedications.filter(d => d.type === 'song');
+    } else if (activeFilter === 'fanarts') {
+      filtered = this.dedications.filter(d => d.type === 'image');
+    } else if (activeFilter === 'videos') {
+      filtered = this.dedications.filter(d => d.type === 'video');
+    }
+
+    let hasRenderedStreamerSectionHeader = false;
+
+    container.innerHTML = filtered.map(item => {
+      // Special Streamer Card Rendering
+      if (item.isStreamer) {
+        let streamerApartadoHeader = '';
+        if (!hasRenderedStreamerSectionHeader && (activeFilter === 'all' || activeFilter === 'streamers')) {
+          hasRenderedStreamerSectionHeader = true;
+          streamerApartadoHeader = `
+            <!-- ========================================================
+                 APARTADO ESPECIAL: COMPAÑEROS DE TWITCH & STREAMERS
+                 ======================================================== -->
+            <div id="zona-streamers-apartado" class="streamers-showcase-header my-10 relative overflow-hidden rounded-3xl p-6 sm:p-8 bg-gradient-to-r from-[#240b4a] via-[#3d127c] to-[#240b4a] border-2 border-[#9146FF] shadow-[0_0_40px_rgba(145,70,255,0.5)]">
+              <div class="absolute -right-6 -bottom-6 w-40 h-40 opacity-10 pointer-events-none text-white">
+                <svg class="w-full h-full fill-current" viewBox="0 0 24 24"><path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714Z"/></svg>
+              </div>
+              <div class="relative z-10 flex flex-col sm:flex-row items-center justify-between gap-5 text-center sm:text-left">
+                <div class="flex flex-col sm:flex-row items-center gap-4">
+                  <div class="w-16 h-16 rounded-2xl bg-[#9146FF] flex items-center justify-center shadow-[0_0_25px_rgba(145,70,255,0.65)] shrink-0 border border-purple-300">
+                    <svg class="w-9 h-9 text-white fill-current" viewBox="0 0 24 24"><path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714Z"/></svg>
+                  </div>
+                  <div>
+                    <div class="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full bg-yellow-400 text-black text-[11px] font-black tracking-wider uppercase mb-1 shadow">
+                      <span>👑</span> APARTADO ESPECIAL • ZONA STREAMERS
+                    </div>
+                    <h3 class="font-burbank text-2xl sm:text-3xl text-yellow-300 uppercase tracking-wide">
+                      COMPAÑEROS DE TWITCH
+                    </h3>
+                    <p class="text-xs sm:text-sm text-purple-200 mt-1 max-w-xl">
+                      El escuadrón de streamers y compañeros de Twitch que comparten partidas y risas con Ariadna se unen a la celebración con dedicatorias exclusivas en vídeo y sus redes oficiales.
+                    </p>
+                  </div>
+                </div>
+                <div class="flex items-center gap-2 shrink-0">
+                  <div class="px-4 py-2 rounded-xl bg-purple-950/80 border border-purple-400/60 text-xs font-mono text-purple-200 flex items-center gap-2 shadow-inner">
+                    <span class="w-2.5 h-2.5 rounded-full bg-[#9146FF] animate-ping"></span>
+                    <span class="font-bold text-yellow-300 font-hud">TWITCH SQUAD</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          `;
+        }
+
+        return streamerApartadoHeader + `
+          <!-- DEDICATORIA STREAMER VIP: ${item.user} -->
+          <article class="feed-card streamer-special-card relative rounded-3xl p-5 md:p-7 border-2 border-[#9146FF] shadow-[0_0_35px_rgba(145,70,255,0.4)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_45px_rgba(145,70,255,0.65)]" data-id="${item.id}">
+            <!-- Ribbon Badge -->
+            <div class="absolute -top-3.5 right-6 bg-gradient-to-r from-[#9146FF] via-purple-600 to-amber-400 text-white font-black text-[11px] uppercase tracking-wider px-3.5 py-1 rounded-md skew-x-[-10deg] shadow-lg border border-yellow-300/40 flex items-center gap-1.5">
+              <svg class="w-3.5 h-3.5 fill-current text-yellow-300" viewBox="0 0 24 24"><path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714Z"/></svg>
+              <span>COMPAÑERO/A DE TWITCH 👑</span>
+            </div>
+
+            <!-- Streamer Header -->
+            <div class="flex items-center gap-4 mb-4">
+              <div class="relative shrink-0">
+                <div class="w-16 h-16 rounded-full p-1 bg-gradient-to-tr from-[#9146FF] via-yellow-400 to-[#00f0ff] shadow-[0_0_20px_rgba(145,70,255,0.7)] animate-pulse-slow">
+                  <img src="${item.avatar}" alt="${item.user}" class="w-full h-full rounded-full object-cover border-2 border-[#130728]">
+                </div>
+                <span class="absolute -bottom-1 -right-1 bg-[#9146FF] border-2 border-white rounded-full p-1 shadow-md" title="Streamer Verificado en Twitch">
+                  <svg class="w-3.5 h-3.5 text-white fill-current" viewBox="0 0 24 24"><path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714Z"/></svg>
+                </span>
+              </div>
+
+              <div class="flex-1 min-w-0">
+                <div class="flex items-center gap-2 flex-wrap">
+                  <span class="font-username text-xl sm:text-2xl font-black text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 via-purple-100 to-white tracking-wide truncate">${item.user}</span>
+                  <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-[#9146FF]/30 border border-[#9146FF] text-[#d8b4fe] text-[10px] font-hud font-bold shadow-sm">
+                    <span>🎮</span> STREAMER OFICIAL
+                  </span>
+                </div>
+                <div class="flex items-center gap-2 text-xs text-purple-300 mt-1 flex-wrap">
+                  <span class="font-bold text-yellow-400">${item.role}</span>
+                  <span class="text-purple-400/50">•</span>
+                  <span class="text-gray-400 font-mono text-[11px]">${item.date}</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Social Media & Creator Networks Showcase Bar -->
+            <div class="mb-4 p-3 rounded-2xl bg-black/40 border border-[#9146FF]/40 flex items-center justify-between flex-wrap gap-2.5">
+              <div class="flex items-center gap-2 flex-wrap">
+                <!-- Twitch Button -->
+                <a href="${item.twitchUrl}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-[#9146FF] hover:bg-[#772ce8] text-white text-xs font-hud font-bold shadow-[0_0_15px_rgba(145,70,255,0.4)] transition-all hover:scale-105" title="Visitar canal de Twitch de ${item.user}">
+                  <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714Z"/></svg>
+                  <span>Twitch: <span class="underline underline-offset-2">${item.twitchUser || item.user}</span></span>
+                  <svg class="w-3 h-3 text-purple-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                </a>
+
+                ${item.creatorCode ? `
+                  <div class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-purple-950/80 border border-yellow-400/50 text-xs font-hud text-yellow-300 shadow-sm" title="Código de Apoyo a Creador en Fortnite">
+                    <span>🏷️</span>
+                    <span>Código Epic: <strong class="text-white font-mono bg-yellow-500/20 px-1.5 py-0.5 rounded border border-yellow-400/40">${item.creatorCode}</strong></span>
+                  </div>
+                ` : ''}
+
+                ${item.youtubeUrl ? `
+                  <a href="${item.youtubeUrl}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-red-600/25 hover:bg-red-600/45 border border-red-500/60 text-red-200 hover:text-white text-xs font-hud font-bold transition-all hover:scale-105" title="Canal de YouTube">
+                    <svg class="w-3.5 h-3.5 text-red-400 fill-current" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                    <span>YouTube</span>
+                  </a>
+                ` : ''}
+              </div>
+
+              <div class="flex items-center gap-1.5 text-[11px] text-[#c084fc] font-mono">
+                <span class="w-2 h-2 rounded-full bg-[#9146FF] animate-ping"></span>
+                <span>Compañero de Streaming</span>
+              </div>
+            </div>
+
+            <!-- Message Quote Bubble -->
+            <div class="relative bg-black/35 border-l-4 border-yellow-400 pl-4 pr-3 py-3 rounded-r-2xl my-4">
+              <span class="text-2xl text-yellow-400/40 font-serif absolute top-1 left-1.5 select-none">“</span>
+              <p class="text-gray-100 text-sm md:text-base leading-relaxed font-sans font-medium whitespace-pre-line pl-2">
+${item.message}
+              </p>
+            </div>
+
+            <!-- Video Player -->
+            <div class="mt-4 rounded-2xl overflow-hidden border-2 border-[#9146FF]/80 bg-black/80 shadow-[0_0_30px_rgba(145,70,255,0.35)] relative max-w-[360px] sm:max-w-[400px] mx-auto group">
+              <div class="absolute top-2.5 left-2.5 z-10 flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-black/75 backdrop-blur border border-[#9146FF]/50 text-[10px] font-hud font-bold text-white shadow pointer-events-none">
+                <span class="w-2 h-2 rounded-full bg-red-500 animate-pulse"></span>
+                <span>FELICITACIÓN EN DIRECTO</span>
+              </div>
+              <video src="${item.video}" controls playsinline preload="metadata" class="w-full h-auto max-h-[580px] object-contain mx-auto rounded-xl bg-black block" onplay="document.querySelectorAll('audio').forEach(a => { if(!a.paused) a.pause(); }); if(window.soundFX && window.soundFX.stopBGM) window.soundFX.stopBGM();"></video>
+            </div>
+
+            <!-- Fullscreen Action button -->
+            <div class="mt-3 flex items-center justify-center gap-3">
+              <button onclick="openClipModal('${(item.caption || 'Vídeo de ' + item.user).replace(/'/g, "\\'")}', '${item.video}')" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-[#9146FF] to-purple-700 hover:from-[#772ce8] hover:to-purple-600 border border-purple-400/80 text-xs font-bold font-hud text-white shadow-[0_0_20px_rgba(145,70,255,0.4)] transition-all hover:scale-105">
+                <span>🎬</span>
+                <span>Ver vídeo en pantalla completa</span>
+              </button>
+            </div>
+            ${item.caption ? `<p class="text-xs text-yellow-200/80 italic mt-2 text-center">${item.caption}</p>` : ''}
+
+            <!-- Reactions Bar -->
+            <div class="mt-5 pt-4 border-t border-purple-900/60 flex items-center justify-between flex-wrap gap-2">
+              <div class="flex items-center gap-2">
+                <button onclick="handleReaction('${item.id}', 'gg', event)" class="reaction-btn flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-purple-950/70 hover:bg-purple-800/80 border border-purple-700/50 hover:border-yellow-400 text-xs font-bold text-yellow-300 transition-all active:scale-95">
+                  <span class="font-black text-sm">GG</span>
+                  <span class="counter-val text-white/90" id="cnt-${item.id}-gg">${item.reactions.gg}</span>
+                </button>
+                <button onclick="handleReaction('${item.id}', 'shield', event)" class="reaction-btn flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-purple-950/70 hover:bg-cyan-950/80 border border-cyan-800/60 hover:border-cyan-400 text-xs font-bold text-cyan-300 transition-all active:scale-95">
+                  <img src="assets/images/shield-potion.svg" class="w-4 h-4" alt="Mini">
+                  <span class="counter-val text-white/90" id="cnt-${item.id}-shield">${item.reactions.shield}</span>
+                </button>
+                <button onclick="handleReaction('${item.id}', 'crown', event)" class="reaction-btn flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-purple-950/70 hover:bg-amber-950/80 border border-amber-700/60 hover:border-amber-400 text-xs font-bold text-amber-300 transition-all active:scale-95">
+                  <img src="assets/images/crown.svg" class="w-4 h-4" alt="Corona">
+                  <span class="counter-val text-white/90" id="cnt-${item.id}-crown">${item.reactions.crown}</span>
+                </button>
+              </div>
+
+              <a href="${item.twitchUrl}" target="_blank" rel="noopener noreferrer" class="text-xs text-[#d8b4fe] hover:text-white font-mono flex items-center gap-1 hover:underline">
+                <svg class="w-3.5 h-3.5 fill-current text-[#9146FF]" viewBox="0 0 24 24"><path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714Z"/></svg>
+                <span>Canal oficial en Twitch</span>
+              </a>
+            </div>
+          </article>
+        `;
+      }
       const cfg = this.getRarityConfig(item.rarity || 'rare');
 
       let mediaContent = '';
@@ -1692,3 +1977,22 @@ hoy y el año entero!
 
 
 
+
+/* ========================================================
+   COMMUNITY DEDICATIONS FILTER TABS HELPER
+   ======================================================== */
+window.currentDedicationFilter = 'all';
+window.filterDedications = function(filterCategory) {
+  window.currentDedicationFilter = filterCategory;
+  if (window.dedicationsManager) {
+    window.dedicationsManager.renderFeed('dedications-feed', filterCategory);
+  }
+  document.querySelectorAll('.dedication-filter-btn').forEach(btn => {
+    const f = btn.getAttribute('data-filter');
+    if (f === filterCategory) {
+      btn.className = 'dedication-filter-btn px-4 py-2 rounded-xl text-xs font-bold font-hud transition-all shadow-md bg-gradient-to-r from-yellow-400 to-amber-500 text-black border border-yellow-200 scale-105';
+    } else {
+      btn.className = 'dedication-filter-btn px-4 py-2 rounded-xl text-xs font-bold font-hud transition-all bg-purple-950/60 hover:bg-purple-900 border border-purple-700/60 text-purple-200 hover:text-white';
+    }
+  });
+};

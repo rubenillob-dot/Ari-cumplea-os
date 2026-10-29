@@ -683,4 +683,41 @@ body {
   background: rgba(244, 196, 48, 0.6);
 }
 
+/* ========================================================
+   STREAMER SPECIAL SECTION & TWITCH SQUAD CARDS
+   ======================================================== */
+.streamer-special-card {
+  position: relative;
+  background: linear-gradient(180deg, rgba(30, 11, 62, 0.96) 0%, rgba(18, 7, 38, 0.96) 50%, rgba(10, 3, 22, 0.98) 100%);
+  border: 2px solid #9146FF;
+  box-shadow: 0 0 35px rgba(145, 70, 255, 0.4), inset 0 0 20px rgba(145, 70, 255, 0.12);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.streamer-special-card:hover {
+  border-color: #c084fc;
+  box-shadow: 0 0 45px rgba(145, 70, 255, 0.65), inset 0 0 25px rgba(145, 70, 255, 0.22);
+  transform: translateY(-4px);
+}
+
+.streamer-badge-glow {
+  box-shadow: 0 0 20px rgba(145, 70, 255, 0.7);
+  animation: streamerBadgePulse 3s ease-in-out infinite alternate;
+}
+
+@keyframes streamerBadgePulse {
+  0% { box-shadow: 0 0 15px rgba(145, 70, 255, 0.5); }
+  100% { box-shadow: 0 0 28px rgba(244, 196, 48, 0.7); }
+}
+
+.streamer-live-dot {
+  animation: streamerLivePulse 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes streamerLivePulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.35; transform: scale(0.85); }
+}
+
+
 
