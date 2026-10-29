@@ -561,6 +561,11 @@ Un beso y un abrazo enorme a la distancia. 😘🫂💜`,
   {
     id: 'ded-anerius16',
     user: 'Anerius16',
+    scenicBg: 'assets/images/fortnite-scenic-mountain.jpg',
+    scenicLocation: 'CUMBRE PANORÁMICA AL ATARDECER • FORTNITE',
+    watermarkTopRight: 'assets/images/fortnite-llama.svg',
+    watermarkBottomLeft: 'assets/images/victory-crown.svg',
+    fortniteTag: 'FORTNITE SQUAD ⚡',
     platform: 'twitch',
     role: 'STREAMER DE TWITCH & COMPAÑERA • VÍDEO DEDICATORIA 🎬',
     rarity: 'streamer',
@@ -584,6 +589,11 @@ Es algo que a mí me gusta un montón. Te siento una persona muy real y alguien 
   {
     id: 'ded-dang3rclips',
     user: 'Dang3rclips',
+    scenicBg: 'assets/images/fortnite-scenic-lake.jpg',
+    scenicLocation: 'BALSA BOTÍN (LOOT LAKE) AL ANOCHECER • FORTNITE',
+    watermarkTopRight: 'assets/images/fortnite-battlebus.svg',
+    watermarkBottomLeft: 'assets/images/fortnite-pickaxe.svg',
+    fortniteTag: 'FORTNITE CLIPS ⚡',
     platform: 'twitch',
     role: 'STREAMER & CREADOR DE CONTENIDO • VÍDEO DEDICATORIA 🎬',
     rarity: 'streamer',
@@ -608,6 +618,11 @@ Pasaba por aquí para desearte que pases un día increíble celebrando este nive
   {
     id: 'ded-teverdeconlimon',
     user: 'TeverdeconLimon',
+    scenicBg: 'assets/images/fortnite-scenic-valley.jpg',
+    scenicLocation: 'VALLE DE PRADERAS & RÍOS AL ATARDECER • FORTNITE',
+    watermarkTopRight: 'assets/images/shield-potion.svg',
+    watermarkBottomLeft: 'assets/images/fortnite-llama.svg',
+    fortniteTag: 'SLURP ROYALE ⚡',
     platform: 'twitch',
     role: 'STREAMER DE TWITCH & COMPAÑERA • VÍDEO DEDICATORIA 🎬',
     rarity: 'streamer',
@@ -840,7 +855,7 @@ Feliz cumpleaños, Ari. ♡ ¡Por muchos años más!`,
 
 class DedicationsManager {
   constructor() {
-    this.storageKey = 'imarixu_birthday_dedications_v22';
+    this.storageKey = 'imarixu_birthday_dedications_v25';
     this.dedications = this.loadDedications();
   }
 
@@ -875,6 +890,9 @@ class DedicationsManager {
       localStorage.removeItem('imarixu_birthday_dedications_v19');
       localStorage.removeItem('imarixu_birthday_dedications_v20');
       localStorage.removeItem('imarixu_birthday_dedications_v21');
+      localStorage.removeItem('imarixu_birthday_dedications_v22');
+      localStorage.removeItem('imarixu_birthday_dedications_v23');
+      localStorage.removeItem('imarixu_birthday_dedications_v24');
     } catch (_) {}
     return [...DEFAULT_DEDICATIONS];
   }
@@ -1010,119 +1028,140 @@ class DedicationsManager {
           `;
         }
 
+        const topWatermark = item.watermarkTopRight || 'assets/images/fortnite-llama.svg';
+        const bottomWatermark = item.watermarkBottomLeft || 'assets/images/victory-crown.svg';
+        const fnTag = item.fortniteTag || 'FORTNITE CREATOR ⚡';
+
         return streamerApartadoHeader + `
-          <!-- DEDICATORIA STREAMER VIP: ${item.user} -->
-          <article class="feed-card streamer-special-card relative rounded-3xl p-5 md:p-7 border-2 border-[#9146FF] shadow-[0_0_35px_rgba(145,70,255,0.4)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_45px_rgba(145,70,255,0.65)]" data-id="${item.id}">
-            <!-- Ribbon Badge -->
-            <div class="absolute -top-3.5 right-6 bg-gradient-to-r from-[#9146FF] via-purple-600 to-amber-400 text-white font-black text-[11px] uppercase tracking-wider px-3.5 py-1 rounded-md skew-x-[-10deg] shadow-lg border border-yellow-300/40 flex items-center gap-1.5">
-              <svg class="w-3.5 h-3.5 fill-current text-yellow-300" viewBox="0 0 24 24"><path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714Z"/></svg>
-              <span>COMPAÑERO/A DE TWITCH 👑</span>
+          <!-- DEDICATORIA STREAMER VIP: ${item.user} (CON FONDO FORTNITE) -->
+          <article class="feed-card streamer-special-card relative rounded-3xl p-5 md:p-7 border-2 border-[#9146FF] shadow-[0_0_35px_rgba(145,70,255,0.45)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_50px_rgba(145,70,255,0.7)] group overflow-hidden" data-id="${item.id}">
+            <!-- Tactical Fortnite Corner Brackets -->
+            <div class="fortnite-corner-tl"></div>
+            <div class="fortnite-corner-br"></div>
+
+            <!-- Dynamic Fortnite Background Watermarks -->
+            <div class="absolute -top-4 -right-4 w-36 h-36 sm:w-44 sm:h-44 opacity-20 pointer-events-none select-none animate-fortnite-float z-0">
+              <img src="${topWatermark}" class="w-full h-full object-contain filter drop-shadow-[0_0_20px_rgba(168,85,247,0.8)]" alt="Fortnite Element">
+            </div>
+            <div class="absolute -bottom-5 -left-5 w-28 h-28 sm:w-36 sm:h-36 opacity-15 pointer-events-none select-none animate-fortnite-float-rev z-0">
+              <img src="${bottomWatermark}" class="w-full h-full object-contain filter drop-shadow-[0_0_16px_rgba(244,196,48,0.8)]" alt="Fortnite Element">
             </div>
 
-            <!-- Streamer Header -->
-            <div class="flex items-center gap-4 mb-4">
-              <div class="relative shrink-0">
-                <div class="w-16 h-16 rounded-full p-1 bg-gradient-to-tr from-[#9146FF] via-yellow-400 to-[#00f0ff] shadow-[0_0_20px_rgba(145,70,255,0.7)] animate-pulse-slow">
-                  <img src="${item.avatar}" alt="${item.user}" class="w-full h-full rounded-full object-cover border-2 border-[#130728]">
-                </div>
-                <span class="absolute -bottom-1 -right-1 bg-[#9146FF] border-2 border-white rounded-full p-1 shadow-md" title="Streamer Verificado en Twitch">
-                  <svg class="w-3.5 h-3.5 text-white fill-current" viewBox="0 0 24 24"><path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714Z"/></svg>
-                </span>
+            <!-- Scenic Fortnite Landscape Background Layer -->
+            <div class="fortnite-scenic-bg-layer">
+              <img src="${item.scenicBg || 'assets/images/fortnite-scenic-mountain.jpg'}" alt="Paisaje de Fortnite - ${item.user}">
+              <div class="fortnite-scenic-overlay"></div>
+            </div>
+
+            <div class="relative z-10">
+              <!-- Ribbon Badge: Styled with Fortnite Victory Gold & Twitch Purple -->
+              <div class="absolute -top-3.5 right-4 sm:right-6 bg-gradient-to-r from-amber-400 via-purple-600 to-[#9146FF] text-black font-black text-[11px] uppercase tracking-wider px-3.5 py-1 rounded-md skew-x-[-10deg] shadow-[0_0_15px_rgba(244,196,48,0.5)] border border-yellow-200 flex items-center gap-1.5">
+                <svg class="w-3.5 h-3.5 fill-current text-black" viewBox="0 0 24 24"><path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714Z"/></svg>
+                <span class="font-burbank text-black tracking-wide">COMPAÑERO DE TWITCH 👑</span>
               </div>
 
-              <div class="flex-1 min-w-0">
-                <div class="flex items-center gap-2 flex-wrap">
-                  <span class="font-username text-xl sm:text-2xl font-black text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 via-purple-100 to-white tracking-wide truncate">${item.user}</span>
-                  <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-[#9146FF]/30 border border-[#9146FF] text-[#d8b4fe] text-[10px] font-hud font-bold shadow-sm">
-                    <span>🎮</span> STREAMER OFICIAL
+              <!-- Streamer Header -->
+              <div class="flex items-center gap-4 mb-4">
+                <div class="relative shrink-0">
+                  <div class="w-16 h-16 rounded-full p-1 bg-gradient-to-tr from-[#9146FF] via-yellow-400 to-[#00f0ff] shadow-[0_0_20px_rgba(145,70,255,0.7)] animate-pulse-slow">
+                    <img src="${item.avatar}" alt="${item.user}" class="w-full h-full rounded-full object-cover border-2 border-[#130728]">
+                  </div>
+                  <span class="absolute -bottom-1 -right-1 bg-[#9146FF] border-2 border-white rounded-full p-1 shadow-md" title="Streamer Verificado en Twitch">
+                    <svg class="w-3.5 h-3.5 text-white fill-current" viewBox="0 0 24 24"><path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714Z"/></svg>
                   </span>
                 </div>
-                <div class="flex items-center gap-2 text-xs text-purple-300 mt-1 flex-wrap">
-                  <span class="font-bold text-yellow-400">${item.role}</span>
-                  <span class="text-purple-400/50">•</span>
-                  <span class="text-gray-400 font-mono text-[11px]">${item.date}</span>
+
+                <div class="flex-1 min-w-0">
+                  <div class="flex items-center gap-2 flex-wrap">
+                    <span class="font-username text-xl sm:text-2xl font-black text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 via-purple-100 to-white tracking-wide truncate">${item.user}</span>
+                    <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-gradient-to-r from-yellow-500/25 via-purple-600/30 to-amber-500/25 border border-yellow-400/60 text-yellow-300 text-[10px] font-hud font-bold shadow-sm">
+                      <img src="assets/images/fortnite-pickaxe.svg" class="w-3.5 h-3.5 inline" alt="Pickaxe">
+                      <span>${fnTag}</span>
+                    </span>
+                  </div>
+                  <div class="flex items-center gap-2 text-xs text-purple-300 mt-1 flex-wrap">
+                    <span class="font-bold text-yellow-400">${item.role}</span>
+                    <span class="text-purple-400/50">•</span>
+                    <span class="text-gray-400 font-mono text-[11px]">${item.date}</span>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <!-- Social Media & Creator Networks Showcase Bar -->
-            <div class="mb-4 p-3 rounded-2xl bg-black/40 border border-[#9146FF]/40 flex items-center justify-between flex-wrap gap-2.5">
-              <div class="flex items-center gap-2 flex-wrap">
-                <!-- Twitch Button -->
-                <a href="${item.twitchUrl}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-[#9146FF] hover:bg-[#772ce8] text-white text-xs font-hud font-bold shadow-[0_0_15px_rgba(145,70,255,0.4)] transition-all hover:scale-105" title="Visitar canal de Twitch de ${item.user}">
-                  <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714Z"/></svg>
-                  <span>Twitch: <span class="underline underline-offset-2">${item.twitchUser || item.user}</span></span>
-                  <svg class="w-3 h-3 text-purple-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
-                </a>
-
-                ${item.creatorCode ? `
-                  <div class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-purple-950/80 border border-yellow-400/50 text-xs font-hud text-yellow-300 shadow-sm" title="Código de Apoyo a Creador en Fortnite">
-                    <span>🏷️</span>
-                    <span>Código Epic: <strong class="text-white font-mono bg-yellow-500/20 px-1.5 py-0.5 rounded border border-yellow-400/40">${item.creatorCode}</strong></span>
-                  </div>
-                ` : ''}
-
-                ${item.youtubeUrl ? `
-                  <a href="${item.youtubeUrl}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-red-600/25 hover:bg-red-600/45 border border-red-500/60 text-red-200 hover:text-white text-xs font-hud font-bold transition-all hover:scale-105" title="Canal de YouTube">
-                    <svg class="w-3.5 h-3.5 text-red-400 fill-current" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-                    <span>YouTube</span>
+              <!-- Social Media & Creator Networks Showcase Bar (Fortnite Battle Pass HUD Style) -->
+              <div class="mb-4 p-3.5 rounded-2xl bg-gradient-to-r from-[#1b083b]/95 via-[#2b0d5c]/95 to-[#1b083b]/95 border border-yellow-400/40 shadow-[0_0_20px_rgba(145,70,255,0.25)] flex items-center justify-between flex-wrap gap-2.5">
+                <div class="flex items-center gap-2 flex-wrap">
+                  <!-- Twitch Button -->
+                  <a href="${item.twitchUrl}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-[#9146FF] hover:bg-[#772ce8] text-white text-xs font-hud font-bold shadow-[0_0_15px_rgba(145,70,255,0.4)] transition-all hover:scale-105" title="Visitar canal de Twitch de ${item.user}">
+                    <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714Z"/></svg>
+                    <span>Twitch: <span class="underline underline-offset-2">${item.twitchUser || item.user}</span></span>
+                    <svg class="w-3 h-3 text-purple-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
                   </a>
-                ` : ''}
+
+                  ${item.creatorCode ? `
+                    <div class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-purple-950/90 border border-yellow-400/60 text-xs font-hud text-yellow-300 shadow-md" title="Código de Apoyo a Creador en Fortnite">
+                      <img src="assets/images/vbuck.svg" class="w-4 h-4 inline-block drop-shadow" alt="V-Bucks">
+                      <span>Código Epic: <strong class="text-white font-mono bg-yellow-500/25 px-1.5 py-0.5 rounded border border-yellow-400/50">${item.creatorCode}</strong></span>
+                    </div>
+                  ` : ''}
+
+                  ${item.youtubeUrl ? `
+                    <a href="${item.youtubeUrl}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-red-600/30 hover:bg-red-600/50 border border-red-500/70 text-red-200 hover:text-white text-xs font-hud font-bold transition-all hover:scale-105" title="Canal de YouTube">
+                      <svg class="w-3.5 h-3.5 text-red-400 fill-current" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                      <span>YouTube</span>
+                    </a>
+                  ` : ''}
+                </div>
+
+                <div class="flex items-center gap-1.5 text-[11px] text-[#c084fc] font-mono">
+                  <span class="w-2.5 h-2.5 rounded-full bg-amber-400 animate-ping"></span>
+                  <span class="font-bold text-amber-300 font-hud">🌄 ${item.scenicLocation || 'PAISAJE DE FORTNITE'}</span>
+                </div>
               </div>
 
-              <div class="flex items-center gap-1.5 text-[11px] text-[#c084fc] font-mono">
-                <span class="w-2 h-2 rounded-full bg-[#9146FF] animate-ping"></span>
-                <span>Compañero de Streaming</span>
-              </div>
-            </div>
-
-            <!-- Message Quote Bubble -->
-            <div class="relative bg-black/35 border-l-4 border-yellow-400 pl-4 pr-3 py-3 rounded-r-2xl my-4">
-              <span class="text-2xl text-yellow-400/40 font-serif absolute top-1 left-1.5 select-none">“</span>
-              <p class="text-gray-100 text-sm md:text-base leading-relaxed font-sans font-medium whitespace-pre-line pl-2">
+              <!-- Message Quote Bubble (Fortnite Locker Aesthetic) -->
+              <div class="relative bg-gradient-to-r from-purple-950/80 via-[#220c4a]/60 to-purple-950/80 border-l-4 border-yellow-400 border-y border-r border-purple-600/30 pl-4 pr-3 py-3.5 rounded-r-2xl my-4 shadow-inner">
+                <span class="text-2xl text-yellow-400/50 font-serif absolute top-1 left-1.5 select-none">“</span>
+                <p class="text-gray-100 text-sm md:text-base leading-relaxed font-sans font-medium whitespace-pre-line pl-2">
 ${item.message}
-              </p>
-            </div>
-
-            <!-- Video Player -->
-            <div class="mt-4 rounded-2xl overflow-hidden border-2 border-[#9146FF]/80 bg-black/80 shadow-[0_0_30px_rgba(145,70,255,0.35)] relative max-w-[360px] sm:max-w-[400px] mx-auto group">
-              <div class="absolute top-2.5 left-2.5 z-10 flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-black/75 backdrop-blur border border-[#9146FF]/50 text-[10px] font-hud font-bold text-white shadow pointer-events-none">
-                <span class="w-2 h-2 rounded-full bg-red-500 animate-pulse"></span>
-                <span>FELICITACIÓN EN DIRECTO</span>
-              </div>
-              <video src="${item.video}" controls playsinline preload="metadata" class="w-full h-auto max-h-[580px] object-contain mx-auto rounded-xl bg-black block" onplay="document.querySelectorAll('audio').forEach(a => { if(!a.paused) a.pause(); }); if(window.soundFX && window.soundFX.stopBGM) window.soundFX.stopBGM();"></video>
-            </div>
-
-            <!-- Fullscreen Action button -->
-            <div class="mt-3 flex items-center justify-center gap-3">
-              <button onclick="openClipModal('${(item.caption || 'Vídeo de ' + item.user).replace(/'/g, "\\'")}', '${item.video}')" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-[#9146FF] to-purple-700 hover:from-[#772ce8] hover:to-purple-600 border border-purple-400/80 text-xs font-bold font-hud text-white shadow-[0_0_20px_rgba(145,70,255,0.4)] transition-all hover:scale-105">
-                <span>🎬</span>
-                <span>Ver vídeo en pantalla completa</span>
-              </button>
-            </div>
-            ${item.caption ? `<p class="text-xs text-yellow-200/80 italic mt-2 text-center">${item.caption}</p>` : ''}
-
-            <!-- Reactions Bar -->
-            <div class="mt-5 pt-4 border-t border-purple-900/60 flex items-center justify-between flex-wrap gap-2">
-              <div class="flex items-center gap-2">
-                <button onclick="handleReaction('${item.id}', 'gg', event)" class="reaction-btn flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-purple-950/70 hover:bg-purple-800/80 border border-purple-700/50 hover:border-yellow-400 text-xs font-bold text-yellow-300 transition-all active:scale-95">
-                  <span class="font-black text-sm">GG</span>
-                  <span class="counter-val text-white/90" id="cnt-${item.id}-gg">${item.reactions.gg}</span>
-                </button>
-                <button onclick="handleReaction('${item.id}', 'shield', event)" class="reaction-btn flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-purple-950/70 hover:bg-cyan-950/80 border border-cyan-800/60 hover:border-cyan-400 text-xs font-bold text-cyan-300 transition-all active:scale-95">
-                  <img src="assets/images/shield-potion.svg" class="w-4 h-4" alt="Mini">
-                  <span class="counter-val text-white/90" id="cnt-${item.id}-shield">${item.reactions.shield}</span>
-                </button>
-                <button onclick="handleReaction('${item.id}', 'crown', event)" class="reaction-btn flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-purple-950/70 hover:bg-amber-950/80 border border-amber-700/60 hover:border-amber-400 text-xs font-bold text-amber-300 transition-all active:scale-95">
-                  <img src="assets/images/crown.svg" class="w-4 h-4" alt="Corona">
-                  <span class="counter-val text-white/90" id="cnt-${item.id}-crown">${item.reactions.crown}</span>
-                </button>
+                </p>
               </div>
 
-              <a href="${item.twitchUrl}" target="_blank" rel="noopener noreferrer" class="text-xs text-[#d8b4fe] hover:text-white font-mono flex items-center gap-1 hover:underline">
-                <svg class="w-3.5 h-3.5 fill-current text-[#9146FF]" viewBox="0 0 24 24"><path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714Z"/></svg>
-                <span>Canal oficial en Twitch</span>
-              </a>
+              <!-- Video Player -->
+              <div class="mt-4 rounded-2xl overflow-hidden border-2 border-[#9146FF]/80 bg-black/85 shadow-[0_0_30px_rgba(145,70,255,0.4)] relative max-w-[360px] sm:max-w-[400px] mx-auto group">
+                <video src="${item.video}" controls playsinline preload="metadata" class="w-full h-auto max-h-[580px] object-contain mx-auto rounded-xl bg-black block" onplay="document.querySelectorAll('audio').forEach(a => { if(!a.paused) a.pause(); }); if(window.soundFX && window.soundFX.stopBGM) window.soundFX.stopBGM();"></video>
+              </div>
+
+              <!-- Fullscreen Action button -->
+              <div class="mt-3 flex items-center justify-center gap-3">
+                <button onclick="openClipModal('${(item.caption || 'Vídeo de ' + item.user).replace(/'/g, "\\'")}', '${item.video}')" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-[#9146FF] to-purple-700 hover:from-[#772ce8] hover:to-purple-600 border border-purple-400/80 text-xs font-bold font-hud text-white shadow-[0_0_20px_rgba(145,70,255,0.4)] transition-all hover:scale-105">
+                  <span>🎬</span>
+                  <span>Ver vídeo en pantalla completa</span>
+                </button>
+              </div>
+              ${item.caption ? `<p class="text-xs text-yellow-200/80 italic mt-2 text-center">${item.caption}</p>` : ''}
+
+              <!-- Reactions Bar -->
+              <div class="mt-5 pt-4 border-t border-purple-900/60 flex items-center justify-between flex-wrap gap-2">
+                <div class="flex items-center gap-2">
+                  <button onclick="handleReaction('${item.id}', 'gg', event)" class="reaction-btn flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-purple-950/70 hover:bg-purple-800/80 border border-purple-700/50 hover:border-yellow-400 text-xs font-bold text-yellow-300 transition-all active:scale-95">
+                    <span class="font-black text-sm">GG</span>
+                    <span class="counter-val text-white/90" id="cnt-${item.id}-gg">${item.reactions.gg}</span>
+                  </button>
+                  <button onclick="handleReaction('${item.id}', 'shield', event)" class="reaction-btn flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-purple-950/70 hover:bg-cyan-950/80 border border-cyan-800/60 hover:border-cyan-400 text-xs font-bold text-cyan-300 transition-all active:scale-95">
+                    <img src="assets/images/shield-potion.svg" class="w-4 h-4" alt="Mini">
+                    <span class="counter-val text-white/90" id="cnt-${item.id}-shield">${item.reactions.shield}</span>
+                  </button>
+                  <button onclick="handleReaction('${item.id}', 'crown', event)" class="reaction-btn flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-purple-950/70 hover:bg-amber-950/80 border border-amber-700/60 hover:border-amber-400 text-xs font-bold text-amber-300 transition-all active:scale-95">
+                    <img src="assets/images/crown.svg" class="w-4 h-4" alt="Corona">
+                    <span class="counter-val text-white/90" id="cnt-${item.id}-crown">${item.reactions.crown}</span>
+                  </button>
+                </div>
+
+                <a href="${item.twitchUrl}" target="_blank" rel="noopener noreferrer" class="text-xs text-[#d8b4fe] hover:text-white font-mono flex items-center gap-1 hover:underline">
+                  <svg class="w-3.5 h-3.5 fill-current text-[#9146FF]" viewBox="0 0 24 24"><path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714Z"/></svg>
+                  <span>Canal oficial en Twitch</span>
+                </a>
+              </div>
             </div>
           </article>
         `;
