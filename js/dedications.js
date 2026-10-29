@@ -322,6 +322,108 @@ hoy y el año entero!
 <strong class="text-yellow-300">¡Veinticinco primaveras! ¡Y que cumplas muchos más!</strong></p>
       </div>
     </div>
+  `,
+
+  rubenillo: `
+    <div class="space-y-3.5 text-sm sm:text-base text-gray-200 leading-relaxed font-sans p-1 select-text">
+      <div class="bg-purple-950/40 rounded-xl p-3 border border-purple-800/40">
+        <span class="font-burbank text-yellow-400 text-xs tracking-wider block mb-1 font-bold">[INTRO – HABLADO]</span>
+        <p class="whitespace-pre-line">Un día encendiste la cámara por primera vez...
+y sin saberlo, creaste un hogar para todos nosotros.
+Desde el otro lado de este cristal,
+hoy tu chat entero tiene algo que cantarte.
+Para ti, Ari.</p>
+      </div>
+
+      <div class="bg-purple-950/40 rounded-xl p-3 border border-purple-800/40">
+        <span class="font-burbank text-yellow-400 text-xs tracking-wider block mb-1 font-bold">[VERSO 1]</span>
+        <p class="whitespace-pre-line">Qué difícil es a veces mirar esta pantalla,
+querer saltar el cristal y no poder abrazarte.
+Ver cómo pasa el tiempo, cómo ganas las batallas,
+y sentir que nuestro premio es poder acompañarte.
+Toda esta comunidad que late a tu compás,
+sabe que detrás del micro hay alguien de verdad.</p>
+      </div>
+
+      <div class="bg-purple-950/40 rounded-xl p-3 border border-purple-800/40">
+        <span class="font-burbank text-yellow-400 text-xs tracking-wider block mb-1 font-bold">[PRE-ESTRIBILLO]</span>
+        <p class="whitespace-pre-line">Es cierto que hemos perdido a gente por el camino,
+hemos cambiado de piel y han llegado nombres nuevos.
+Pero mira bien el chat, es testigo del destino:
+hay quienes siguen aquí desde el primer segundo de tus juegos.</p>
+      </div>
+
+      <div class="bg-gradient-to-r from-amber-500/15 to-yellow-500/10 rounded-xl p-3.5 border border-yellow-500/40 shadow-sm">
+        <span class="font-burbank text-yellow-300 text-xs tracking-wider block mb-1 font-bold">[ESTRIBILLO]</span>
+        <p class="whitespace-pre-line font-medium text-white">Feliz cumple, Ari,
+disfruta quién eres.
+Mira lo que has construido,
+y abraaaaaaaza lo que tienes.
+Cumpliendo tus metas, sumando otro año,
+hagas lo que hagas... jamáaaaaaaas te soltamos.</p>
+      </div>
+
+      <div class="bg-purple-950/40 rounded-xl p-3 border border-purple-800/40">
+        <span class="font-burbank text-yellow-400 text-xs tracking-wider block mb-1 font-bold">[VERSO 2]</span>
+        <p class="whitespace-pre-line">Lloramos contigo aquella tarde al conseguir el Partner,
+y nos curaste el alma riendo con las bromas telefónicas.
+Te hemos visto brillar y coronarte en los torneos,
+escribiendo en cada directo tu propia historia icónica.
+¡Si es que ni un habanero del infierno te ha podido parar!
+Tienes el fuego en las venas y el mundo por conquistar.</p>
+      </div>
+
+      <div class="bg-purple-950/40 rounded-xl p-3 border border-purple-800/40">
+        <span class="font-burbank text-yellow-400 text-xs tracking-wider block mb-1 font-bold">[PRE-ESTRIBILLO]</span>
+        <p class="whitespace-pre-line">Si el mundo hace ruido y te fallan las fuerzas,
+recuerda la legión que te guarda la espalda.
+Aquí está tu gente, tu escudo, tu esencia,
+dispuestos a todo si el miedo te asalta.</p>
+      </div>
+
+      <div class="bg-gradient-to-r from-amber-500/15 to-yellow-500/10 rounded-xl p-3.5 border border-yellow-500/40 shadow-sm">
+        <span class="font-burbank text-yellow-300 text-xs tracking-wider block mb-1 font-bold">[ESTRIBILLO]</span>
+        <p class="whitespace-pre-line font-medium text-white">Feliz cumple, Ari,
+disfruta quién eres.
+Mira lo que has construido,
+y abraaaaaaaza lo que tienes.
+Cumpliendo tus metas, sumando otro año,
+hagas lo que hagas... jamáaaaaaaas te soltamos.</p>
+      </div>
+
+      <div class="bg-purple-950/40 rounded-xl p-3 border border-purple-800/40">
+        <span class="font-burbank text-yellow-400 text-xs tracking-wider block mb-1 font-bold">[PUENTE – CON FUERZA]</span>
+        <p class="whitespace-pre-line">¡No dejes de creer que puedes conseguir mucho más!
+¡Mira hacia atrás y mira a los lados!
+Sabes que hay mucha gente que va detrás de ti,
+que cada paso que das, lo damos agarrados.
+¡No dejes de creer, que no tienes techo!
+¡Que este ejército late directo en tu pecho!</p>
+      </div>
+
+      <div class="bg-gradient-to-r from-amber-500/15 to-yellow-500/10 rounded-xl p-3.5 border border-yellow-500/40 shadow-sm">
+        <span class="font-burbank text-yellow-300 text-xs tracking-wider block mb-1 font-bold">[ESTRIBILLO FINAL]</span>
+        <p class="whitespace-pre-line font-semibold text-white">Feliz cumple, Ari,
+disfruta quién eres.
+Mira lo que has construido,
+y abraaaaaaaza lo que tienes.
+Cumpliendo tus metas, sumando otro año...
+hagas lo que hagas... jamáaaaaaaas te soltamos.</p>
+      </div>
+
+      <div class="bg-purple-950/40 rounded-xl p-3 border border-purple-800/40">
+        <span class="font-burbank text-yellow-400 text-xs tracking-wider block mb-1 font-bold">[OUTRO – FINAL EMOTIVO]</span>
+        <p class="whitespace-pre-line">Porque esta casa que has levantado,
+es el mejor rincón donde nos hemos quedado.
+Aquí seguimos, Ari... aquí nos quedamos.
+Aquí seguimos, Ari... jamás te soltamos.
+Aquí seguimos, Ari... aquí nos quedamos.
+Aquí seguimos... jamás te soltamos.
+
+<em class="text-xs text-purple-300/80 block mt-1">(Un último acorde de guitarra, muy suave y largo, dejándolo sonar hasta que se apaga)</em>
+<strong class="text-yellow-300 text-sm block mt-1">Feliz cumple. 💜🎂</strong></p>
+      </div>
+    </div>
   `
 };
 
@@ -365,10 +467,15 @@ Te he preparado esta canción con todo el cariño de parte de uno de tus suscrip
     id: 'ded-rubenillo',
     user: 'Rubenillo',
     platform: 'twitch',
-    role: 'MODERADOR',
+    role: 'MODERADOR • CANCIÓN ORIGINAL 🎵',
     rarity: 'mythic',
     avatar: 'assets/Iconos de perfiles/Rubenillo.webp',
-    type: 'image',
+    type: 'song',
+    songKey: 'rubenillo',
+    songTitle: 'AQUÍ SEGUIMOS, ARI',
+    subtitle: 'Canción Original • Para Ariadna • <strong class="text-purple-300 font-bold">Rubenillo</strong>',
+    audioUrl: 'assets/Dedicatorias/Rubenillo.mp3',
+    durationText: '04:50',
     image: 'assets/Dedicatorias/Rubenillo.png',
     caption: 'Recuerdo especial de Rubenillo con Ariadna',
     message: `Ari, familia... hoy cuelgo la placa de moderador un momento para hablaros simplemente desde el corazón.
@@ -628,7 +735,7 @@ Feliz cumpleaños, Ari. ♡ ¡Por muchos años más!`,
 
 class DedicationsManager {
   constructor() {
-    this.storageKey = 'imarixu_birthday_dedications_v19';
+    this.storageKey = 'imarixu_birthday_dedications_v20';
     this.dedications = this.loadDedications();
   }
 
@@ -660,6 +767,7 @@ class DedicationsManager {
       localStorage.removeItem('imarixu_birthday_dedications_v16');
       localStorage.removeItem('imarixu_birthday_dedications_v17');
       localStorage.removeItem('imarixu_birthday_dedications_v18');
+      localStorage.removeItem('imarixu_birthday_dedications_v19');
     } catch (_) {}
     return [...DEFAULT_DEDICATIONS];
   }
@@ -817,7 +925,24 @@ ${item.message}
         const subtitle = item.subtitle || `Para Ariadna • <strong class="text-purple-300 font-bold">${item.user}</strong>`;
         const durText = item.durationText || '03:37';
 
+        let songImageHtml = '';
+        if (item.image) {
+          songImageHtml = `
+            <div class="mt-4 rounded-xl overflow-hidden border-2 border-white/10 group cursor-pointer relative" onclick="openLightbox('${item.image}', '${encodeURIComponent(item.caption || 'Recuerdo especial de ' + item.user)}')">
+              <img src="${item.image}" alt="Dedicatoria de ${item.user}" class="w-full h-64 sm:h-80 md:h-96 object-cover object-center group-hover:scale-105 transition-transform duration-300" loading="lazy">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-3 pointer-events-none">
+                <span class="text-xs text-white/90 flex items-center gap-1 font-semibold">
+                  <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/><path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"/></svg>
+                  Ver imagen completa
+                </span>
+              </div>
+            </div>
+            ${item.caption ? `<p class="text-xs text-yellow-200/80 italic mt-2">${item.caption}</p>` : ''}
+          `;
+        }
+
         mediaContent = `
+          ${songImageHtml}
           <div class="mt-5 rounded-2xl bg-[#0f0622]/95 border-2 border-yellow-400/80 p-4 sm:p-5 shadow-[0_0_25px_rgba(244,196,48,0.2)]">
             <!-- Audio element hidden -->
             <audio id="${songKey}-audio" src="${item.audioUrl}" preload="metadata"></audio>
@@ -879,6 +1004,10 @@ ${item.message}
                 <button id="${songKey}-toggle-lyrics-btn" onclick="toggleSongLyrics('${songKey}')" class="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl bg-purple-900/60 hover:bg-purple-800 border border-purple-600/70 text-xs font-bold font-hud text-purple-200 hover:text-white transition-all hover:scale-102">
                   <span>📜</span>
                   <span id="${songKey}-toggle-lyrics-text">Ver Letra</span>
+                </button>
+                <button onclick="downloadSongLyrics('${songKey}')" class="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl bg-purple-950/80 hover:bg-purple-900 border border-purple-700/60 text-xs font-bold font-hud text-yellow-300 hover:text-yellow-200 transition-all hover:scale-102" title="Descargar letra en .txt">
+                  <span>💾</span>
+                  <span>Descargar</span>
                 </button>
               </div>
 
@@ -1042,7 +1171,7 @@ function initSingleSongPlayer(songKey) {
 
   audio.addEventListener('timeupdate', () => {
     const curTime = audio.currentTime;
-    const duration = audio.duration || (songKey === 'sito' ? 294 : (songKey === 'livingbenidorm' ? 140.8 : 217.6));
+    const duration = audio.duration || (songKey === 'sito' ? 294 : (songKey === 'rubenillo' ? 289.6 : (songKey === 'livingbenidorm' ? 140.8 : 217.6)));
 
     // Update progress bar
     const progressEl = getProgEl();
@@ -1143,7 +1272,7 @@ window.toggleSongPlay = function(songKey) {
 window.skipSongAudio = function(songKey, sec) {
   const audio = document.getElementById(`${songKey}-audio`);
   if (!audio) return;
-  const dur = audio.duration || (songKey === 'sito' ? 294 : (songKey === 'livingbenidorm' ? 140.8 : 217.6));
+  const dur = audio.duration || (songKey === 'sito' ? 294 : (songKey === 'rubenillo' ? 289.6 : (songKey === 'livingbenidorm' ? 140.8 : 217.6)));
   audio.currentTime = Math.max(0, Math.min(dur, audio.currentTime + sec));
   if (window.soundFX && window.soundFX.playFortniteClick) {
     window.soundFX.playFortniteClick();
@@ -1157,7 +1286,7 @@ window.seekSongAudio = function(songKey, e) {
   const rect = container.getBoundingClientRect();
   const clickX = e.clientX - rect.left;
   const pct = Math.max(0, Math.min(1, clickX / rect.width));
-  const dur = audio.duration || (songKey === 'sito' ? 294 : (songKey === 'livingbenidorm' ? 140.8 : 217.6));
+  const dur = audio.duration || (songKey === 'sito' ? 294 : (songKey === 'rubenillo' ? 289.6 : (songKey === 'livingbenidorm' ? 140.8 : 217.6)));
   audio.currentTime = pct * dur;
 };
 
@@ -1196,7 +1325,89 @@ window.downloadSongLyrics = function(songKey) {
   let filename = '';
   let lyricsText = '';
 
-    if (songKey === 'sito') {
+  if (songKey === 'rubenillo') {
+    filename = 'Letra_Rubenillo_Aqui_Seguimos_Ari.txt';
+    lyricsText = `AQUÍ SEGUIMOS, ARI (FELIZ CUMPLEAÑOS)
+Dedicatoria especial de: Rubenillo (Moderador)
+
+[Intro]
+Un día encendiste la cámara por primera vez...
+y sin saberlo, creaste un hogar para todos nosotros.
+Desde el otro lado de este cristal,
+hoy tu chat entero tiene algo que cantarte.
+Para ti, Ari.
+
+[Verso 1]
+Qué difícil es a veces mirar esta pantalla,
+querer saltar el cristal y no poder abrazarte.
+Ver cómo pasa el tiempo, cómo ganas las batallas,
+y sentir que nuestro premio es poder acompañarte.
+Toda esta comunidad que late a tu compás,
+sabe que detrás del micro hay alguien de verdad.
+
+[Pre-estribillo]
+Es cierto que hemos perdido a gente por el camino,
+hemos cambiado de piel y han llegado nombres nuevos.
+Pero mira bien el chat, es testigo del destino:
+hay quienes siguen aquí desde el primer segundo de tus juegos.
+
+[Estribillo]
+Feliz cumple, Ari,
+disfruta quién eres.
+Mira lo que has construido,
+y abraaaaaaaza lo que tienes.
+Cumpliendo tus metas, sumando otro año,
+hagas lo que hagas... jamáaaaaaaas te soltamos.
+
+[Verso 2]
+Lloramos contigo aquella tarde al conseguir el Partner,
+y nos curaste el alma riendo con las bromas telefónicas.
+Te hemos visto brillar y coronarte en los torneos,
+escribiendo en cada directo tu propia historia icónica.
+¡Si es que ni un habanero del infierno te ha podido parar!
+Tienes el fuego en las venas y el mundo por conquistar.
+
+[Pre-estribillo]
+Si el mundo hace ruido y te fallan las fuerzas,
+recuerda la legión que te guarda la espalda.
+Aquí está tu gente, tu escudo, tu esencia,
+dispuestos a todo si el miedo te asalta.
+
+[Estribillo]
+Feliz cumple, Ari,
+disfruta quién eres.
+Mira lo que has construido,
+y abraaaaaaaza lo que tienes.
+Cumpliendo tus metas, sumando otro año,
+hagas lo que hagas... jamáaaaaaaas te soltamos.
+
+[Puente]
+¡No dejes de creer que puedes conseguir mucho más!
+¡Mira hacia atrás y mira a los lados!
+Sabes que hay mucha gente que va detrás de ti,
+que cada paso que das, lo damos agarrados.
+¡No dejes de creer, que no tienes techo!
+¡Que este ejército late directo en tu pecho!
+
+[Estribillo Final]
+Feliz cumple, Ari,
+disfruta quién eres.
+Mira lo que has construido,
+y abraaaaaaaza lo que tienes.
+Cumpliendo tus metas, sumando otro año...
+hagas lo que hagas... jamáaaaaaaas te soltamos.
+
+[Outro]
+Porque esta casa que has levantado,
+es el mejor rincón donde nos hemos quedado.
+Aquí seguimos, Ari... aquí nos quedamos.
+Aquí seguimos, Ari... jamás te soltamos.
+Aquí seguimos, Ari... aquí nos quedamos.
+Aquí seguimos... jamás te soltamos.
+(Un último acorde de guitarra, muy suave y largo, dejándolo sonar hasta que se apaga)
+Feliz cumple.
+`;
+  } else if (songKey === 'sito') {
     filename = 'Letra_Sito_Nuestra_Arichu.txt';
     lyricsText = `NUESTRA ARICHU (FELIZ CUMPLEAÑOS)
 Dedicatoria especial de: Sito (Dúo Legendario)
