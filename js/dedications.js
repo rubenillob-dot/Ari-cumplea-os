@@ -859,7 +859,7 @@ Feliz cumpleaños, Ari. ♡ ¡Por muchos años más!`,
 
 class DedicationsManager {
   constructor() {
-    this.storageKey = 'imarixu_birthday_dedications_v28';
+    this.storageKey = 'imarixu_birthday_dedications_v29';
     this.dedications = this.loadDedications();
   }
 
@@ -900,6 +900,7 @@ class DedicationsManager {
       localStorage.removeItem('imarixu_birthday_dedications_v25');
       localStorage.removeItem('imarixu_birthday_dedications_v26');
       localStorage.removeItem('imarixu_birthday_dedications_v27');
+      localStorage.removeItem('imarixu_birthday_dedications_v28');
     } catch (_) {}
     return [...DEFAULT_DEDICATIONS];
   }
@@ -1126,17 +1127,6 @@ class DedicationsManager {
                 </div>
               </div>
 
-              <!-- Message Quote Bubble (Fortnite Locker Aesthetic) -->
-              <div class="relative bg-gradient-to-r from-purple-950/80 via-[#220c4a]/60 to-purple-950/80 border-l-4 border-yellow-400 border-y border-r border-purple-600/30 pl-4 pr-3 py-3.5 rounded-r-2xl my-4 shadow-inner">
-                <div class="flex items-center gap-1.5 text-xs text-yellow-300 font-hud font-bold mb-1.5 pl-2">
-                  <span>💌</span>
-                  <span>Mensajito de felicitación de un compañero de Twitch que te quiere mucho:</span>
-                </div>
-                <span class="text-2xl text-yellow-400/50 font-serif absolute top-1 left-1.5 select-none">“</span>
-                <p class="text-gray-100 text-sm md:text-base leading-relaxed font-sans font-medium whitespace-pre-line pl-2">
-${item.message}
-                </p>
-              </div>
 
               <!-- Video Player -->
               <div class="mt-4 rounded-2xl overflow-hidden border-2 border-[#9146FF]/80 bg-black/85 shadow-[0_0_30px_rgba(145,70,255,0.4)] relative max-w-[360px] sm:max-w-[400px] mx-auto group">
