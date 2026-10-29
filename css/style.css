@@ -869,3 +869,46 @@ body {
     linear-gradient(180deg, rgba(16, 10, 26, 0.35) 0%, rgba(13, 8, 22, 0.65) 40%, rgba(8, 4, 14, 0.92) 100%);
   pointer-events: none;
 }
+
+
+/* ========================================================
+   UNIVERSAL THEMED CARD BACKGROUND LAYERS
+   ======================================================== */
+.feed-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.card-themed-bg-layer {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  border-radius: 1rem;
+  pointer-events: none;
+}
+
+.card-themed-bg-layer img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0.38;
+  filter: contrast(1.1) brightness(0.86) saturate(1.15);
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s ease;
+  transform: scale(1.03);
+}
+
+.feed-card:hover .card-themed-bg-layer img {
+  transform: scale(1.08);
+  opacity: 0.52;
+}
+
+.card-themed-overlay {
+  position: absolute;
+  inset: 0;
+  background: 
+    radial-gradient(ellipse 95% 70% at 50% 15%, rgba(145, 70, 255, 0.14) 0%, transparent 65%),
+    linear-gradient(180deg, rgba(14, 7, 28, 0.42) 0%, rgba(18, 9, 36, 0.74) 45%, rgba(10, 4, 20, 0.95) 100%);
+  pointer-events: none;
+}

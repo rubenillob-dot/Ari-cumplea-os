@@ -521,6 +521,7 @@ Quiero aprovechar también para felicitarte por todo lo que estás consiguiendo:
   {
     id: 'ded-ferdinang',
     user: 'Ferdinang',
+    bgImage: 'assets/images/bg-ferdinang-acoustic.jpg',
     platform: 'twitch',
     role: 'VIP & MOD • CANCIÓN ORIGINAL 🎵',
     rarity: 'mythic',
@@ -538,6 +539,7 @@ Quiero aprovechar también para felicitarte por todo lo que estás consiguiendo:
   {
     id: 'ded-livingbenidorm',
     user: 'LivingBenidorm',
+    bgImage: 'assets/images/bg-livingbenidorm-synthwave.jpg',
     platform: 'twitch',
     role: 'SUB 18 MESES • CANCIÓN ORIGINAL 🎵',
     rarity: 'mythic',
@@ -556,6 +558,7 @@ Te he preparado esta canción con todo el cariño de parte de uno de tus suscrip
   {
     id: 'ded-sito',
     user: 'Sito',
+    bgImage: 'assets/images/bg-sito-electro.jpg',
     platform: 'twitch',
     role: 'DÚO LEGENDARIO • CANCIÓN ORIGINAL 🎵',
     rarity: 'mythic',
@@ -573,6 +576,7 @@ Te he preparado esta canción con todo el cariño de parte de uno de tus suscrip
   {
     id: 'ded-rubenillo',
     user: 'Rubenillo',
+    bgImage: 'assets/images/bg-rubenillo-aurora.jpg',
     platform: 'twitch',
     role: 'MODERADOR • CANCIÓN ORIGINAL 🎵',
     rarity: 'mythic',
@@ -598,6 +602,7 @@ Felicidades, Ari. Te lo has ganado a pulso. A por el siguiente nivel, porque est
   {
     id: 'ded-errederamon',
     user: 'ErreDeRamon',
+    bgImage: 'assets/images/bg-errederamon-vortex.jpg',
     platform: 'twitch',
     role: 'TRYHARD DE ZONA • FANART EXCLUSIVO 🎨',
     rarity: 'mythic',
@@ -612,6 +617,7 @@ Felicidades, Ari. Te lo has ganado a pulso. A por el siguiente nivel, porque est
   {
     id: 'ded-bailen82',
     user: 'Bailen82',
+    bgImage: 'assets/images/bg-bailen82-victory.jpg',
     platform: 'twitch',
     role: 'COMUNIDAD TWITCH • NUEVA EPIC PARTNER 👑',
     rarity: 'mythic',
@@ -627,6 +633,7 @@ Felicidades, Ari. Te lo has ganado a pulso. A por el siguiente nivel, porque est
   {
     id: 'ded-chookity',
     user: 'Chookity',
+    bgImage: 'assets/images/bg-chookity-space.jpg',
     platform: 'twitch',
     role: 'COMUNIDAD TWITCH • VÍDEO DEDICATORIA 🎬',
     rarity: 'mythic',
@@ -651,6 +658,7 @@ Un beso y un abrazo enorme a la distancia. 😘🫂💜`,
   {
     id: 'ded-marta',
     user: 'Marta',
+    bgImage: 'assets/images/bg-marta-party.jpg',
     platform: 'twitch',
     role: 'DÚO LEGENDARIO • FANART & DEDICATORIA 🎨',
     rarity: 'mythic',
@@ -693,6 +701,7 @@ Disfruta mucho tu día, te lo mereces de verdad.
   {
     id: 'ded-18',
     user: 'Neus',
+    bgImage: 'assets/images/bg-neus-lavender.jpg',
     platform: 'twitch',
     role: 'COMUNIDAD TWITCH',
     rarity: 'epic',
@@ -713,6 +722,7 @@ Feliz cumpleaños, Ari. ♡ ¡Por muchos años más!`,
   {
     id: 'ded-2',
     user: 'LUSANITO',
+    bgImage: 'assets/images/bg-lusanito-beach.jpg',
     platform: 'twitch',
     role: 'COMUNIDAD TWITCH',
     rarity: 'legendary',
@@ -725,6 +735,7 @@ Feliz cumpleaños, Ari. ♡ ¡Por muchos años más!`,
   {
     id: 'ded-3',
     user: 'G4PALAU',
+    bgImage: 'assets/images/bg-g4palau-cyber.jpg',
     platform: 'twitch',
     role: 'VIP & MOD',
     rarity: 'epic',
@@ -737,6 +748,7 @@ Feliz cumpleaños, Ari. ♡ ¡Por muchos años más!`,
   {
     id: 'ded-4',
     user: 'BANQUITO',
+    bgImage: 'assets/images/bg-banquito-twitch.jpg',
     platform: 'twitch',
     role: 'TWITCH CHAT',
     rarity: 'rare',
@@ -749,6 +761,7 @@ Feliz cumpleaños, Ari. ♡ ¡Por muchos años más!`,
   {
     id: 'ded-6',
     user: 'Sleezzy',
+    bgImage: 'assets/images/bg-sleezzy-neonred.jpg',
     platform: 'twitch',
     role: 'VIP & TRYHARD',
     rarity: 'epic',
@@ -761,6 +774,7 @@ Feliz cumpleaños, Ari. ♡ ¡Por muchos años más!`,
   {
     id: 'ded-8',
     user: 'Hellkhan77',
+    bgImage: 'assets/images/bg-hellkhan-tactical.jpg',
     platform: 'twitch',
     role: 'SNIPER DE ÉLITE',
     rarity: 'mythic',
@@ -773,6 +787,7 @@ Feliz cumpleaños, Ari. ♡ ¡Por muchos años más!`,
   {
     id: 'ded-9',
     user: 'Abranzin',
+    bgImage: 'assets/images/bg-abranzin-autumn.jpg',
     platform: 'twitch',
     role: 'COMUNIDAD TWITCH',
     rarity: 'rare',
@@ -785,6 +800,7 @@ Feliz cumpleaños, Ari. ♡ ¡Por muchos años más!`,
   {
     id: 'ded-10',
     user: 'Dante',
+    bgImage: 'assets/images/bg-dante-amethyst.jpg',
     platform: 'twitch',
     role: 'MODERADOR TWITCH',
     rarity: 'epic',
@@ -797,6 +813,7 @@ Feliz cumpleaños, Ari. ♡ ¡Por muchos años más!`,
   {
     id: 'ded-11',
     user: 'GregorM',
+    bgImage: 'assets/images/bg-gregorm-ocean.jpg',
     platform: 'twitch',
     role: 'SUB VETERANO',
     rarity: 'legendary',
@@ -809,6 +826,7 @@ Feliz cumpleaños, Ari. ♡ ¡Por muchos años más!`,
   {
     id: 'ded-12',
     user: 'laabluue',
+    bgImage: 'assets/images/bg-laabluue-clouds.jpg',
     platform: 'twitch',
     role: 'COMUNIDAD TWITCH',
     rarity: 'rare',
@@ -821,6 +839,7 @@ Feliz cumpleaños, Ari. ♡ ¡Por muchos años más!`,
   {
     id: 'ded-14',
     user: 'Arcosmen01',
+    bgImage: 'assets/images/bg-arcosmen-fireworks.jpg',
     platform: 'twitch',
     role: 'DÚO DE CORONAS',
     rarity: 'legendary',
@@ -833,6 +852,7 @@ Feliz cumpleaños, Ari. ♡ ¡Por muchos años más!`,
   {
     id: 'ded-15',
     user: 'jaratos',
+    bgImage: 'assets/images/bg-jaratos-bokeh.jpg',
     platform: 'twitch',
     role: 'COMUNIDAD TWITCH',
     rarity: 'epic',
@@ -845,6 +865,7 @@ Feliz cumpleaños, Ari. ♡ ¡Por muchos años más!`,
   {
     id: 'ded-16',
     user: 'Joandix',
+    bgImage: 'assets/images/bg-joandix-retro.jpg',
     platform: 'twitch',
     role: 'COMUNIDAD TWITCH',
     rarity: 'legendary',
@@ -858,7 +879,7 @@ Feliz cumpleaños, Ari. ♡ ¡Por muchos años más!`,
 
 class DedicationsManager {
   constructor() {
-    this.storageKey = 'imarixu_birthday_dedications_v32';
+    this.storageKey = 'imarixu_birthday_dedications_v33';
     this.dedications = this.loadDedications();
   }
 
@@ -903,6 +924,7 @@ class DedicationsManager {
       localStorage.removeItem('imarixu_birthday_dedications_v29');
       localStorage.removeItem('imarixu_birthday_dedications_v30');
       localStorage.removeItem('imarixu_birthday_dedications_v31');
+      localStorage.removeItem('imarixu_birthday_dedications_v32');
     } catch (_) {}
     return [...DEFAULT_DEDICATIONS];
   }
@@ -1480,7 +1502,16 @@ ${item.message}
 
       return communityApartadoHeader + `
         <article class="feed-card relative bg-[#130b28]/90 backdrop-blur-md rounded-2xl p-5 md:p-6 border-2 ${cfg.border} ${cfg.glow} transition-all duration-300 hover:-translate-y-1" data-id="${item.id}">
-          <!-- Angled Cut Ribbon Tag -->
+          ${item.bgImage ? `
+            <!-- Themed Background Layer -->
+            <div class="card-themed-bg-layer">
+              <img src="${item.bgImage}" alt="Fondo dedicatoria ${item.user}">
+              <div class="card-themed-overlay"></div>
+            </div>
+          ` : ''}
+
+          <div class="relative z-10">
+            <!-- Angled Cut Ribbon Tag -->
           <div class="absolute -top-3.5 right-6 ${cfg.badgeBg} font-black text-[11px] uppercase tracking-wider px-3 py-0.5 rounded-md skew-x-[-10deg] shadow-md border border-black/40">
             ${cfg.label}
           </div>
@@ -1562,8 +1593,9 @@ ${item.message}
               En directo
             </span>
           </div>
-        </article>
-      `;
+        </div>
+      </article>
+    `;
     }).join('');
 
     // Initialize Spotify-style player and lyrics listeners
