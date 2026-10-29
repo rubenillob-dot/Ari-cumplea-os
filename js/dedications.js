@@ -428,6 +428,27 @@ Felicidades, Ari. Te lo has ganado a pulso. A por el siguiente nivel, porque est
     date: 'Hoy a las 17:20'
   },
   {
+    id: 'ded-chookity',
+    user: 'Chookity',
+    platform: 'twitch',
+    role: 'COMUNIDAD TWITCH • VÍDEO DEDICATORIA 🎬',
+    rarity: 'mythic',
+    avatar: 'assets/Iconos de perfiles/Chookity.webp',
+    type: 'video',
+    video: 'assets/Dedicatorias/Chookity.mp4',
+    videoUrl: 'assets/Dedicatorias/Chookity.mp4',
+    caption: 'Vídeo dedicatoria y felicitación especial de Chookity para Ariadna',
+    message: `¡Feliz cumpleaños, Ari! 🎂🎉✨
+
+Disfruta mucho tu día, sonríe, celebra y agradece por un año más de vida.
+Te deseo lo mejor, que Diosito te llene de bendiciones, te cuide siempre y te permita cumplir muchos sueños más.
+
+Espero que este sea un día muy especial para ti.
+Un beso y un abrazo enorme a la distancia. 😘🫂💜`,
+    reactions: { gg: 184, shield: 112, crown: 226 },
+    date: 'Hoy a las 17:30'
+  },
+  {
     id: 'ded-2',
     user: 'LUSANITO',
     platform: 'twitch',
@@ -607,7 +628,7 @@ Feliz cumpleaños, Ari. ♡ ¡Por muchos años más!`,
 
 class DedicationsManager {
   constructor() {
-    this.storageKey = 'imarixu_birthday_dedications_v18';
+    this.storageKey = 'imarixu_birthday_dedications_v19';
     this.dedications = this.loadDedications();
   }
 
@@ -638,6 +659,7 @@ class DedicationsManager {
       localStorage.removeItem('imarixu_birthday_dedications_v15');
       localStorage.removeItem('imarixu_birthday_dedications_v16');
       localStorage.removeItem('imarixu_birthday_dedications_v17');
+      localStorage.removeItem('imarixu_birthday_dedications_v18');
     } catch (_) {}
     return [...DEFAULT_DEDICATIONS];
   }
@@ -759,6 +781,21 @@ ${item.message}
             </div>
           </div>
           ${item.caption ? `<p class="text-xs text-yellow-200/80 italic mt-2">${item.caption}</p>` : ''}
+        `;
+      } else if (item.type === 'video' && (item.video || item.videoUrl)) {
+        const vidSrc = item.video || item.videoUrl;
+        const vidCap = (item.caption || `Vídeo dedicatoria de ${item.user}`).replace(/'/g, "\\'");
+        mediaContent = `
+          <div class="mt-4 rounded-2xl overflow-hidden border-2 border-purple-500/50 bg-black/70 shadow-[0_0_25px_rgba(168,85,247,0.25)] relative max-w-[340px] sm:max-w-[380px] mx-auto">
+            <video src="${vidSrc}" controls playsinline preload="metadata" class="w-full h-auto max-h-[580px] object-contain mx-auto rounded-xl bg-black block" onplay="document.querySelectorAll('audio').forEach(a => { if(!a.paused) a.pause(); }); if(window.soundFX && window.soundFX.stopBGM) window.soundFX.stopBGM();"></video>
+          </div>
+          <div class="mt-3 flex items-center justify-center gap-3">
+            <button onclick="openClipModal('${vidCap}', '${vidSrc}')" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-purple-800/70 hover:bg-purple-700 border border-purple-500/70 text-xs font-bold font-hud text-purple-200 hover:text-white transition-all hover:scale-105 shadow-md">
+              <span>🎬</span>
+              <span>Ver en pantalla completa</span>
+            </button>
+          </div>
+          ${item.caption ? `<p class="text-xs text-yellow-200/80 italic mt-2 text-center">${item.caption}</p>` : ''}
         `;
       } else if (item.type === 'clip') {
         mediaContent = `

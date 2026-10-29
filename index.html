@@ -2656,6 +2656,87 @@ Doble celebración para una grande. Que este nuevo año de vida venga lleno de �
           </div>
         </article>
 
+        <!-- DEDICATORIA: CHOOKITY (VÍDEO DEDICATORIA Y FELICITACIÓN) -->
+        <article class="feed-card relative bg-[#130b28]/90 backdrop-blur-md rounded-2xl p-5 md:p-6 border-2 border-amber-400 shadow-[0_0_20px_rgba(245,158,11,0.35)] transition-all duration-300 hover:-translate-y-1" data-id="ded-chookity">
+          <!-- Ribbon Tag -->
+          <div class="absolute -top-3.5 right-6 bg-gradient-to-r from-amber-500 to-red-500 text-black font-black text-[11px] uppercase tracking-wider px-3 py-0.5 rounded-md skew-x-[-10deg] shadow-md border border-black/40">
+            MÍTICO
+          </div>
+
+          <!-- User Header -->
+          <div class="flex items-center gap-3.5 mb-3">
+            <!-- Avatar with Rarity Ring -->
+            <div class="relative">
+              <div class="w-13 h-13 rounded-full p-0.5 bg-gradient-to-tr from-amber-400 to-red-500 shadow-md">
+                <img src="assets/Iconos de perfiles/Chookity.webp" alt="Chookity" class="w-12 h-12 rounded-full object-cover border-2 border-[#130b28]">
+              </div>
+              <span class="absolute -bottom-1 -right-1 bg-purple-900 border border-purple-400 rounded-full p-0.5" title="twitch">
+                <svg class="w-3.5 h-3.5 text-purple-300" fill="currentColor" viewBox="0 0 24 24"><path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714Z"/></svg>
+              </span>
+            </div>
+
+            <!-- Nickname -->
+            <div class="flex-1 min-w-0">
+              <div class="flex items-center gap-2 flex-wrap">
+                <span class="font-username text-lg font-bold text-purple-300 tracking-wide truncate">Chookity</span>
+              </div>
+              <div class="flex items-center gap-1.5 text-[11px] text-gray-400 mt-0.5">
+                <span class="inline-flex items-center gap-1 text-[#a970ff] font-bold" title="Twitch">
+                  <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714Z"/></svg>
+                  <span class="text-[10px] uppercase font-mono tracking-wider">Twitch</span>
+                </span>
+                <span class="text-purple-400/50">•</span>
+                <span>Hoy a las 17:30</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Message Body -->
+          <p class="text-gray-200 text-sm md:text-base leading-relaxed font-sans font-medium whitespace-pre-line">
+¡Feliz cumpleaños, Ari! 🎂🎉✨
+
+Disfruta mucho tu día, sonríe, celebra y agradece por un año más de vida.
+Te deseo lo mejor, que Diosito te llene de bendiciones, te cuide siempre y te permita cumplir muchos sueños más.
+
+Espero que este sea un día muy especial para ti.
+Un beso y un abrazo enorme a la distancia. 😘🫂💜
+          </p>
+
+          <!-- Media Attachment: Video Player -->
+          <div class="mt-4 rounded-2xl overflow-hidden border-2 border-purple-500/50 bg-black/70 shadow-[0_0_25px_rgba(168,85,247,0.25)] relative max-w-[340px] sm:max-w-[380px] mx-auto">
+            <video src="assets/Dedicatorias/Chookity.mp4" controls playsinline preload="metadata" class="w-full h-auto max-h-[580px] object-contain mx-auto rounded-xl bg-black block" onplay="document.querySelectorAll('audio').forEach(a => { if(!a.paused) a.pause(); }); if(window.soundFX && window.soundFX.stopBGM) window.soundFX.stopBGM();"></video>
+          </div>
+          <div class="mt-3 flex items-center justify-center gap-3">
+            <button onclick="openClipModal('Vídeo dedicatoria de Chookity', 'assets/Dedicatorias/Chookity.mp4')" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-purple-800/70 hover:bg-purple-700 border border-purple-500/70 text-xs font-bold font-hud text-purple-200 hover:text-white transition-all hover:scale-105 shadow-md">
+              <span>🎬</span>
+              <span>Ver en pantalla completa</span>
+            </button>
+          </div>
+          <p class="text-xs text-yellow-200/80 italic mt-2 text-center">Vídeo dedicatoria y felicitación especial de Chookity para Ariadna</p>
+
+          <!-- Interactive Reaction Counters -->
+          <div class="mt-5 pt-4 border-t border-purple-900/60 flex items-center justify-between flex-wrap gap-2">
+            <div class="flex items-center gap-2">
+              <button onclick="handleReaction('ded-chookity', 'gg', event)" class="reaction-btn flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-purple-950/70 hover:bg-purple-800/80 border border-purple-700/50 hover:border-yellow-400 text-xs font-bold text-yellow-300 transition-all active:scale-95">
+                <span class="font-black text-sm">GG</span>
+                <span class="counter-val text-white/90" id="cnt-ded-chookity-gg">184</span>
+              </button>
+              <button onclick="handleReaction('ded-chookity', 'shield', event)" class="reaction-btn flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-purple-950/70 hover:bg-cyan-950/80 border border-cyan-800/60 hover:border-cyan-400 text-xs font-bold text-cyan-300 transition-all active:scale-95">
+                <img src="assets/images/shield-potion.svg" class="w-4 h-4" alt="Mini">
+                <span class="counter-val text-white/90" id="cnt-ded-chookity-shield">112</span>
+              </button>
+              <button onclick="handleReaction('ded-chookity', 'crown', event)" class="reaction-btn flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-purple-950/70 hover:bg-amber-950/80 border border-amber-700/60 hover:border-amber-400 text-xs font-bold text-amber-300 transition-all active:scale-95">
+                <img src="assets/images/crown.svg" class="w-4 h-4" alt="Corona">
+                <span class="counter-val text-white/90" id="cnt-ded-chookity-crown">226</span>
+              </button>
+            </div>
+            <span class="text-[11px] text-purple-400/80 font-mono flex items-center gap-1">
+              <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+              En directo
+            </span>
+          </div>
+        </article>
+
         <!-- 2. LUSANITO (COMUNIDAD TWITCH) -->
         <article class="feed-card relative bg-[#130b28]/90 backdrop-blur-md rounded-2xl p-5 md:p-6 border-2 border-yellow-400 shadow-[0_0_20px_rgba(234,179,8,0.3)] transition-all duration-300 hover:-translate-y-1" data-id="ded-2">
           <div class="absolute -top-3.5 right-6 bg-gradient-to-r from-yellow-400 to-amber-500 text-black font-black text-[11px] uppercase tracking-wider px-3 py-0.5 rounded-md skew-x-[-10deg] shadow-md border border-black/40">
