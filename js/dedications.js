@@ -435,7 +435,6 @@ const DEFAULT_DEDICATIONS = [
     id: 'ded-anerius16',
     user: 'Anerius16',
     scenicBg: 'assets/images/fortnite-scenic-mountain.jpg',
-    scenicLocation: 'CUMBRE PANORÁMICA AL ATARDECER • FORTNITE',
     watermarkTopRight: 'assets/images/fortnite-llama.svg',
     watermarkBottomLeft: 'assets/images/victory-crown.svg',
     fortniteTag: 'FORTNITE SQUAD ⚡',
@@ -463,7 +462,6 @@ Es algo que a mí me gusta un montón. Te siento una persona muy real y alguien 
     id: 'ded-dang3rclips',
     user: 'Dang3rclips',
     scenicBg: 'assets/images/fortnite-scenic-lake.jpg',
-    scenicLocation: 'BALSA BOTÍN (LOOT LAKE) AL ANOCHECER • FORTNITE',
     watermarkTopRight: 'assets/images/fortnite-battlebus.svg',
     watermarkBottomLeft: 'assets/images/fortnite-pickaxe.svg',
     fortniteTag: 'FORTNITE CLIPS ⚡',
@@ -492,7 +490,6 @@ Pasaba por aquí para desearte que pases un día increíble celebrando este nive
     id: 'ded-teverdeconlimon',
     user: 'TeverdeconLimon',
     scenicBg: 'assets/images/fortnite-scenic-valley.jpg',
-    scenicLocation: 'VALLE DE PRADERAS & RÍOS AL ATARDECER • FORTNITE',
     watermarkTopRight: 'assets/images/shield-potion.svg',
     watermarkBottomLeft: 'assets/images/fortnite-llama.svg',
     fortniteTag: 'SLURP ROYALE ⚡',
@@ -859,7 +856,7 @@ Feliz cumpleaños, Ari. ♡ ¡Por muchos años más!`,
 
 class DedicationsManager {
   constructor() {
-    this.storageKey = 'imarixu_birthday_dedications_v30';
+    this.storageKey = 'imarixu_birthday_dedications_v31';
     this.dedications = this.loadDedications();
   }
 
@@ -902,6 +899,7 @@ class DedicationsManager {
       localStorage.removeItem('imarixu_birthday_dedications_v27');
       localStorage.removeItem('imarixu_birthday_dedications_v28');
       localStorage.removeItem('imarixu_birthday_dedications_v29');
+      localStorage.removeItem('imarixu_birthday_dedications_v30');
     } catch (_) {}
     return [...DEFAULT_DEDICATIONS];
   }
@@ -1120,11 +1118,6 @@ class DedicationsManager {
                       <span>YouTube</span>
                     </a>
                   ` : ''}
-                </div>
-
-                <div class="flex items-center gap-1.5 text-[11px] text-[#c084fc] font-mono">
-                  <span class="w-2.5 h-2.5 rounded-full bg-amber-400 animate-ping"></span>
-                  <span class="font-bold text-amber-300 font-hud">🌄 ${item.scenicLocation || 'PAISAJE DE FORTNITE'}</span>
                 </div>
               </div>
 
