@@ -574,32 +574,6 @@ Te he preparado esta canción con todo el cariño de parte de uno de tus suscrip
     date: 'Hoy a las 16:45'
   },
   {
-    id: 'ded-rubenillo',
-    user: 'Rubenillo',
-    bgImage: 'assets/images/bg-rubenillo-aurora.jpg',
-    platform: 'twitch',
-    role: 'MODERADOR • CANCIÓN ORIGINAL 🎵',
-    rarity: 'mythic',
-    avatar: 'assets/Iconos de perfiles/Rubenillo.webp',
-    type: 'song',
-    songKey: 'rubenillo',
-    songTitle: 'AQUÍ SEGUIMOS, ARI',
-    subtitle: 'Canción Original • Para Ariadna • <strong class="text-purple-300 font-bold">Rubenillo</strong>',
-    audioUrl: 'assets/Dedicatorias/Rubenillo.mp3',
-    durationText: '04:50',
-    image: 'assets/Dedicatorias/Rubenillo.png',
-    caption: 'Recuerdo especial de Rubenillo con Ariadna',
-    message: `Ari, familia... hoy cuelgo la placa de moderador un momento para hablaros simplemente desde el corazón.
-
-Mirar atrás y ver todo lo que hemos construido juntos este último año es increíble. Ari, gracias infinitas por darme la oportunidad de cuidar esta comunidad desde primera línea y confiar en mí para proteger este espacio. He visto de cerca tu esfuerzo incansable detrás de cada directo, y acompañarte hasta lograr la meta del tan soñado Partner de Twitch ha sido un orgullo inmenso.
-
-Ese 'check' morado no es solo una marca, es el reflejo de tu constancia y del refugio tan bonito que has creado para todos nosotros.
-
-Felicidades, Ari. Te lo has ganado a pulso. A por el siguiente nivel, porque esto acaba de empezar y aquí seguiremos, siempre cubriéndote las espaldas. 💜`,
-    reactions: { gg: 188, shield: 115, crown: 245 },
-    date: 'Hoy a las 16:15'
-  },
-  {
     id: 'ded-errederamon',
     user: 'ErreDeRamon',
     bgImage: 'assets/images/bg-errederamon-vortex.jpg',
@@ -675,51 +649,6 @@ Gracias por tantas risas en cada stream jugando juntas y los momentos más diver
     date: 'Hoy a las 17:45'
   },
   {
-    id: 'ded-laura',
-    user: 'Laura',
-    platform: 'twitch',
-    role: 'COMUNIDAD TWITCH • CARTA ESPECIAL 💌',
-    rarity: 'legendary',
-    isLaura: true,
-    elegantBg: 'assets/images/laura-elegant-bg.jpg',
-    avatar: 'assets/Iconos de perfiles/Laura.webp',
-    type: 'image',
-    image: 'assets/Dedicatorias/Laura.webp',
-    caption: 'Carta y dedicatoria manuscrita de Laura para Ariadna',
-    message: `Ari, ♡
-
-Hoy celebras 25 años, y qué suerte la nuestra de que el mundo tenga personas tan bonitas como tú.
-
-Que este nuevo año te traiga todo lo bonito que mereces: salud, amor, éxito, muchos momentos felices y sueños que se hagan realidad.
-
-Disfruta mucho tu día, te lo mereces de verdad.
-
-¡Feliz 25! ♡`,
-    reactions: { gg: 168, shield: 106, crown: 224 },
-    date: 'Hoy a las 18:00'
-  },
-  {
-    id: 'ded-18',
-    user: 'Neus',
-    bgImage: 'assets/images/bg-neus-lavender.jpg',
-    platform: 'twitch',
-    role: 'COMUNIDAD TWITCH',
-    rarity: 'epic',
-    avatar: 'assets/Iconos de perfiles/Neus.webp',
-    type: 'image',
-    image: 'assets/Dedicatorias/Neus.jpeg',
-    caption: 'Carta y recuerdo especial de Neus para Ariadna',
-    message: `Quién me iba a decir que, hace un año, cuando empecé en tu canal, acabarías convirtiéndote en alguien tan especial para mí. Porque, aunque para muchos seas simplemente su creadora, para mí eres mucho más que mi “jefa”.
-
-Te he cogido un cariño enorme y, aunque a veces tengamos nuestras diferencias, eso no cambia lo mucho que te quiero y te aprecio. Me alegro muchísimo de haber coincidido contigo y de poder formar parte de tu camino. Gracias por todos los momentos compartidos y por dejarme vivir este año a tu lado.
-
-Hoy solo deseo que la vida te regale todo lo bonito que mereces, que nunca te falten motivos para sonreír y que puedas cumplir cada uno de tus sueños.
-
-Feliz cumpleaños, Ari. ♡ ¡Por muchos años más!`,
-    reactions: { gg: 58, shield: 37, crown: 79 },
-    date: 'Hoy a las 17:00'
-  },
-  {
     id: 'ded-2',
     user: 'LUSANITO',
     bgImage: 'assets/images/bg-lusanito-beach.jpg',
@@ -737,10 +666,13 @@ Feliz cumpleaños, Ari. ♡ ¡Por muchos años más!`,
     user: 'G4PALAU',
     bgImage: 'assets/images/bg-g4palau-cyber.jpg',
     platform: 'twitch',
-    role: 'VIP & MOD',
+    role: 'VIP & MOD • VÍDEO DEDICATORIA 🎬',
     rarity: 'epic',
-    avatar: '',
-    type: 'text',
+    avatar: 'assets/Iconos de perfiles/G4Palau.webp',
+    type: 'video',
+    video: 'assets/Dedicatorias/G4Palau.mp4',
+    videoUrl: 'assets/Dedicatorias/G4Palau.mp4',
+    caption: 'Vídeo dedicatoria y felicitación especial de G4PALAU para Ariadna',
     message: 'No podía faltar recordar los mejores momentos de los directos. ¡Casi rompes los cascos del grito pero nos diste momentos legendarios moderando el chat! Feliz cumple capitana 🔥🚀',
     reactions: { gg: 74, shield: 63, crown: 91 },
     date: 'Hoy a las 13:02'
@@ -854,10 +786,12 @@ Feliz cumpleaños, Ari. ♡ ¡Por muchos años más!`,
     user: 'jaratos',
     bgImage: 'assets/images/bg-jaratos-bokeh.jpg',
     platform: 'twitch',
-    role: 'COMUNIDAD TWITCH',
+    role: 'COMUNIDAD TWITCH • FOTO DEDICATORIA 📸',
     rarity: 'epic',
-    avatar: '',
-    type: 'text',
+    avatar: 'assets/Iconos de perfiles/Jaratos.webp',
+    type: 'image',
+    image: 'assets/Dedicatorias/Jaratos.webp',
+    caption: 'Recuerdo y dedicatoria especial de jaratos para Ariadna',
     message: '¡Muchísimas felicidades Ari! Gracias por hacer directos tan divertidos y crear esta pedazo de comunidad. ¡Que este año te traiga muchísimas victorias y momentos inolvidables!',
     reactions: { gg: 51, shield: 36, crown: 68 },
     date: 'Ayer a las 17:30'
@@ -874,12 +808,121 @@ Feliz cumpleaños, Ari. ♡ ¡Por muchos años más!`,
     message: '¡Feliz cumpleaños Arixu! Siempre es un placer pasarse por el chat a compartir risas y buenas partidas. ¡A seguir disfrutando a tope y celebrando el nivel 25 como te mereces! 🎂👑',
     reactions: { gg: 64, shield: 42, crown: 88 },
     date: 'Ayer a las 16:45'
+  },
+  {
+    id: 'ded-piyuyin6',
+    user: 'Piyuyin6',
+    bgImage: 'assets/images/bg-arcosmen-fireworks.jpg',
+    platform: 'twitch',
+    role: 'COMUNIDAD TWITCH • VÍDEO DEDICATORIA 🎬',
+    rarity: 'mythic',
+    avatar: 'assets/Iconos de perfiles/Piyuyin6.webp',
+    type: 'video',
+    video: 'assets/Dedicatorias/Piyuyin6.mp4',
+    videoUrl: 'assets/Dedicatorias/Piyuyin6.mp4',
+    caption: 'Vídeo dedicatoria y felicitación especial de Piyuyin6 para Ariadna',
+    message: '¡Muchísimas felicidades Ari! 🎂🎉 Que disfrutes un montón de este día tan especial y que cumplas muchísimos más. ¡Gracias por regalarnos directos tan divertidos y por esta gran comunidad! 💜✨',
+    reactions: { gg: 148, shield: 91, crown: 196 },
+    date: 'Hoy a las 18:20'
+  },
+  {
+    id: 'ded-raquel',
+    user: 'Raquel',
+    bgImage: 'assets/images/bg-laabluue-clouds.jpg',
+    platform: 'twitch',
+    role: 'COMUNIDAD TWITCH • VÍDEO DEDICATORIA 🎬',
+    rarity: 'mythic',
+    avatar: 'assets/Iconos de perfiles/Raquel.webp',
+    type: 'video',
+    video: 'assets/Dedicatorias/Raquel.mp4',
+    videoUrl: 'assets/Dedicatorias/Raquel.mp4',
+    caption: 'Vídeo dedicatoria y felicitación especial de Raquel para Ariadna',
+    message: '¡Feliz cumpleaños Ari! 🎂👑 Gracias por tu alegría constante y por hacernos pasar momentos tan increíbles. Te deseo un nuevo año lleno de éxitos, felicidad y sueños cumplidos. ¡Te queremos mucho! 💜🎉',
+    reactions: { gg: 162, shield: 97, crown: 215 },
+    date: 'Hoy a las 18:35'
+  },
+  /* ========================================================
+     APARTADO ESPECIAL: EQUIPO DE MODERACIÓN (MODS)
+     ======================================================== */
+  {
+    id: 'ded-laura',
+    user: 'Laura',
+    platform: 'twitch',
+    role: 'MODERADORA TWITCH • CARTA ESPECIAL 💌',
+    rarity: 'legendary',
+    isMod: true,
+    isLaura: true,
+    elegantBg: 'assets/images/laura-elegant-bg.jpg',
+    avatar: 'assets/Iconos de perfiles/Laura.webp',
+    type: 'image',
+    image: 'assets/Dedicatorias/Laura.webp',
+    caption: 'Carta y dedicatoria manuscrita de Laura para Ariadna',
+    message: `Ari, ♡
+
+Hoy celebras 25 años, y qué suerte la nuestra de que el mundo tenga personas tan bonitas como tú.
+
+Que este nuevo año te traiga todo lo bonito que mereces: salud, amor, éxito, muchos momentos felices y sueños que se hagan realidad.
+
+Disfruta mucho tu día, te lo mereces de verdad.
+
+¡Feliz 25! ♡`,
+    reactions: { gg: 168, shield: 106, crown: 224 },
+    date: 'Hoy a las 18:00'
+  },
+  {
+    id: 'ded-18',
+    user: 'Neus',
+    bgImage: 'assets/images/bg-neus-lavender.jpg',
+    platform: 'twitch',
+    role: 'MODERADORA TWITCH • CARTA ESPECIAL 💌',
+    rarity: 'epic',
+    isMod: true,
+    avatar: 'assets/Iconos de perfiles/Neus.webp',
+    type: 'image',
+    image: 'assets/Dedicatorias/Neus.jpeg',
+    caption: 'Carta y recuerdo especial de Neus para Ariadna',
+    message: `Quién me iba a decir que, hace un año, cuando empecé en tu canal, acabarías convirtiéndote en alguien tan especial para mí. Porque, aunque para muchos seas simplemente su creadora, para mí eres mucho más que mi “jefa”.
+
+Te he cogido un cariño enorme y, aunque a veces tengamos nuestras diferencias, eso no cambia lo mucho que te quiero y te aprecio. Me alegro muchísimo de haber coincidido contigo y de poder formar parte de tu camino. Gracias por todos los momentos compartidos y por dejarme vivir este año a tu lado.
+
+Hoy solo deseo que la vida te regale todo lo bonito que mereces, que nunca te falten motivos para sonreír y que puedas cumplir cada uno de tus sueños.
+
+Feliz cumpleaños, Ari. ♡ ¡Por muchos años más!`,
+    reactions: { gg: 58, shield: 37, crown: 79 },
+    date: 'Hoy a las 17:00'
+  },
+  {
+    id: 'ded-rubenillo',
+    user: 'Rubenillo',
+    bgImage: 'assets/images/bg-rubenillo-aurora.jpg',
+    platform: 'twitch',
+    role: 'MODERADOR • CANCIÓN ORIGINAL 🎵',
+    rarity: 'mythic',
+    isMod: true,
+    avatar: 'assets/Iconos de perfiles/Rubenillo.webp',
+    type: 'song',
+    songKey: 'rubenillo',
+    songTitle: 'AQUÍ SEGUIMOS, ARI',
+    subtitle: 'Canción Original • Para Ariadna • <strong class="text-purple-300 font-bold">Rubenillo</strong>',
+    audioUrl: 'assets/Dedicatorias/Rubenillo.mp3',
+    durationText: '04:50',
+    image: 'assets/Dedicatorias/Rubenillo.png',
+    caption: 'Recuerdo especial de Rubenillo con Ariadna',
+    message: `Ari, familia... hoy cuelgo la placa de moderador un momento para hablaros simplemente desde el corazón.
+
+Mirar atrás y ver todo lo que hemos construido juntos este último año es increíble. Ari, gracias infinitas por darme la oportunidad de cuidar esta comunidad desde primera línea y confiar en mí para proteger este espacio. He visto de cerca tu esfuerzo incansable detrás de cada directo, y acompañarte hasta lograr la meta del tan soñado Partner de Twitch ha sido un orgullo inmenso.
+
+Ese 'check' morado no es solo una marca, es el reflejo de tu constancia y del refugio tan bonito que has creado para todos nosotros.
+
+Felicidades, Ari. Te lo has ganado a pulso. A por el siguiente nivel, porque esto acaba de empezar y aquí seguiremos, siempre cubriéndote las espaldas. 💜`,
+    reactions: { gg: 188, shield: 115, crown: 245 },
+    date: 'Hoy a las 16:15'
   }
 ];
 
 class DedicationsManager {
   constructor() {
-    this.storageKey = 'imarixu_birthday_dedications_v33';
+    this.storageKey = 'imarixu_birthday_dedications_v34';
     this.dedications = this.loadDedications();
   }
 
@@ -925,6 +968,7 @@ class DedicationsManager {
       localStorage.removeItem('imarixu_birthday_dedications_v30');
       localStorage.removeItem('imarixu_birthday_dedications_v31');
       localStorage.removeItem('imarixu_birthday_dedications_v32');
+      localStorage.removeItem('imarixu_birthday_dedications_v33');
     } catch (_) {}
     return [...DEFAULT_DEDICATIONS];
   }
@@ -1008,6 +1052,8 @@ class DedicationsManager {
     let filtered = this.dedications;
     if (activeFilter === 'streamers') {
       filtered = this.dedications.filter(d => d.isStreamer);
+    } else if (activeFilter === 'mods') {
+      filtered = this.dedications.filter(d => d.isMod);
     } else if (activeFilter === 'songs') {
       filtered = this.dedications.filter(d => d.type === 'song');
     } else if (activeFilter === 'fanarts') {
@@ -1018,6 +1064,7 @@ class DedicationsManager {
 
     let hasRenderedStreamerSectionHeader = false;
     let hasRenderedCommunitySectionHeader = false;
+    let hasRenderedModsSectionHeader = false;
 
     container.innerHTML = filtered.map(item => {
       // Special Streamer Card Rendering
@@ -1188,7 +1235,7 @@ class DedicationsManager {
         `;
       }
       let communityApartadoHeader = '';
-      if (!hasRenderedCommunitySectionHeader && activeFilter === 'all') {
+      if (!item.isStreamer && !item.isMod && !hasRenderedCommunitySectionHeader && activeFilter === 'all') {
         hasRenderedCommunitySectionHeader = true;
         communityApartadoHeader = `
           <!-- ========================================================
@@ -1216,6 +1263,42 @@ class DedicationsManager {
                 <div class="px-4 py-2 rounded-xl bg-purple-950/80 border border-amber-400/50 text-xs font-mono text-purple-200 flex items-center gap-2 shadow-inner">
                   <span class="w-2.5 h-2.5 rounded-full bg-amber-400 animate-ping"></span>
                   <span class="font-bold text-yellow-300 font-hud">CHAT SQUAD</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        `;
+      }
+
+      let modsApartadoHeader = '';
+      if (item.isMod && !hasRenderedModsSectionHeader && (activeFilter === 'all' || activeFilter === 'mods')) {
+        hasRenderedModsSectionHeader = true;
+        modsApartadoHeader = `
+          <!-- ========================================================
+               SECCIÓN: DEDICATORIAS DEL EQUIPO DE MODERACIÓN (MODS)
+               ======================================================== -->
+          <div id="zona-mods-apartado" class="mods-showcase-header my-10 relative overflow-hidden rounded-3xl p-6 sm:p-8 bg-gradient-to-r from-[#140827] via-[#210c44] to-[#140827] border-2 border-emerald-400/80 shadow-[0_0_35px_rgba(52,211,153,0.3)]">
+            <div class="relative z-10 flex flex-col sm:flex-row items-center justify-between gap-5 text-center sm:text-left">
+              <div class="flex flex-col sm:flex-row items-center gap-4">
+                <div class="w-16 h-16 rounded-2xl bg-gradient-to-tr from-emerald-500 via-teal-500 to-cyan-500 flex items-center justify-center shadow-[0_0_25px_rgba(52,211,153,0.5)] shrink-0 border border-emerald-300">
+                  <span class="text-3xl">🛡️</span>
+                </div>
+                <div>
+                  <div class="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full bg-emerald-400 text-black text-[11px] font-black tracking-wider uppercase mb-1 shadow">
+                    <span>⚔️</span> EQUIPO DE MODERACIÓN • MODS TWITCH
+                  </div>
+                  <h3 class="font-burbank text-2xl sm:text-3xl text-emerald-300 uppercase tracking-wide">
+                    DEDICATORIAS DE LOS MODS
+                  </h3>
+                  <p class="text-xs sm:text-sm text-purple-200 mt-1 max-w-xl">
+                    Las personas que están siempre en primera línea cuidando cada directo, cubriéndote la espalda y manteniendo la mejor energía en el chat. ¡Con todo su cariño para ti!
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-center gap-2 shrink-0">
+                <div class="px-4 py-2 rounded-xl bg-purple-950/80 border border-emerald-400/60 text-xs font-mono text-emerald-200 flex items-center gap-2 shadow-inner">
+                  <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-ping"></span>
+                  <span class="font-bold text-emerald-300 font-hud">MOD SQUAD ⚔️</span>
                 </div>
               </div>
             </div>
@@ -1412,7 +1495,7 @@ ${item.message}
       }
 
       if (item.id === 'ded-laura' || item.isLaura) {
-        return communityApartadoHeader + `
+        return (modsApartadoHeader || communityApartadoHeader) + `
           <!-- DEDICATORIA: LAURA (COMUNIDAD TWITCH • CARTA ESPECIAL - MINIMALISTA Y ELEGANTE) -->
           <article class="feed-card laura-elegant-card relative rounded-2xl p-5 md:p-6 transition-all duration-300 hover:-translate-y-1" data-id="${item.id}">
             <!-- Scenic Minimalist & Elegant Background Layer -->
@@ -1500,7 +1583,7 @@ ${item.message}
         `;
       }
 
-      return communityApartadoHeader + `
+      return (communityApartadoHeader || modsApartadoHeader) + `
         <article class="feed-card relative bg-[#130b28]/90 backdrop-blur-md rounded-2xl p-5 md:p-6 border-2 ${cfg.border} ${cfg.glow} transition-all duration-300 hover:-translate-y-1" data-id="${item.id}">
           ${item.bgImage ? `
             <!-- Themed Background Layer -->
