@@ -708,19 +708,6 @@ Gracias por tantas risas en cada stream jugando juntas y los momentos más diver
     date: 'Hoy a las 13:02'
   },
   {
-    id: 'ded-10',
-    user: 'Dante',
-    bgImage: 'assets/images/bg-dante-amethyst.jpg',
-    platform: 'twitch',
-    role: 'MODERADOR TWITCH',
-    rarity: 'epic',
-    avatar: '',
-    type: 'text',
-    message: '¡Muy feliz cumpleaños capitana! Cuidar el chat y ver cómo disfrutas de cada partida es un placer. Que este nuevo nivel te traiga muchísimos éxitos y alegrías.',
-    reactions: { gg: 65, shield: 50, crown: 88 },
-    date: 'Ayer a las 21:50'
-  },
-  {
     id: 'ded-15',
     user: 'jaratos',
     bgImage: 'assets/images/bg-jaratos-bokeh.jpg',
@@ -764,17 +751,7 @@ Gracias por tantas risas en cada stream jugando juntas y los momentos más diver
     video: 'assets/Dedicatorias/Raquel.mp4',
     videoUrl: 'assets/Dedicatorias/Raquel.mp4',
     caption: 'Vídeo dedicatoria y emotivas palabras de felicitación de Raquel para Ariadna 💜',
-    message: `¡Hola Ari! ¡Feliz cumpleaños! 🎂👑
-
-Hoy quería dedicarte unas palabras porque creo que te mereces algo más que solo un feliz cumpleaños.
-
-Seguramente estés acostumbrada a hacer reír a muchísima gente sin darte cuenta, a convertir un día normal en algo divertido, y a crear momentos que otras personas terminan recordando con una sonrisa... y quizás no siempre te pares a pensar en lo bonito que es eso. Porque detrás de una pantalla hay personas con diferentes historias, con días buenos y con días malos, pero tú tienes la capacidad de reunirlas y compartir con ellas momentos tan bonitos. Puede que para ti solo sea un directo más, una broma más o una tarde cualquiera, pero a veces las cosas más pequeñas son las que terminan teniendo un significado enorme.
-
-Espero que nunca olvides que lo que haces deja una huella especial. Además, ¡conseguiste el Twitch Partner! Tú estabas soñando con eso, vi cómo te esforzaste para lograrlo... estoy súper orgullosa, porque detrás de cada meta hay esfuerzo, tiempo y muchísima dedicación. Hoy puedes mirar atrás y ver todo lo que has conseguido, pero todavía te queda muchísimo por vivir. Ojalá este sea solamente el principio de una etapa llena de nuevas oportunidades, sueños cumplidos y momentos que te hagan sentir orgullosa de ti misma. Recuerda siempre que tu valor no depende de los seguidores, de las visitas ni de las estadísticas: antes de streamer eres una persona maravillosa que merece ser feliz, disfrutar de la vida y estar rodeada de personas que te quieran por quién eres.
-
-Espero que la vida te regale muchísimos motivos para sonreír, que nunca te falte gente que te apoye y que siempre encuentres algo que te ilusione. Y sobre todo, que nunca tengas que fingir que estás bien: tú también mereces que te cuiden, que te escuchen y que te recuerden lo mucho que vales.
-
-¡Feliz cumpleaños Ari! Felicidades por todo lo que has conseguido y por todo lo que todavía te queda por conseguir. ¡Te queremos muchísimo! 💜✨🎉`,
+    message: '',
     reactions: { gg: 198, shield: 136, crown: 284 },
     date: 'Hoy a las 18:35'
   },
@@ -902,7 +879,7 @@ Felicidades, Ari. Te lo has ganado a pulso. A por el siguiente nivel, porque est
 
 class DedicationsManager {
   constructor() {
-    this.storageKey = 'imarixu_birthday_dedications_v39';
+    this.storageKey = 'imarixu_birthday_dedications_v41';
     this.dedications = this.loadDedications();
   }
 
@@ -954,6 +931,8 @@ class DedicationsManager {
       localStorage.removeItem('imarixu_birthday_dedications_v36');
       localStorage.removeItem('imarixu_birthday_dedications_v37');
       localStorage.removeItem('imarixu_birthday_dedications_v38');
+      localStorage.removeItem('imarixu_birthday_dedications_v39');
+      localStorage.removeItem('imarixu_birthday_dedications_v40');
     } catch (_) {}
     return [...DEFAULT_DEDICATIONS];
   }
@@ -1629,12 +1608,12 @@ ${item.message}
             </div>
           </div>
 
-          ${item.layout === 'side-by-side' ? '' : `
+          ${item.layout === 'side-by-side' ? '' : (item.message ? `
             <!-- Message Body -->
             <p class="text-gray-200 text-sm md:text-base leading-relaxed font-sans font-medium whitespace-pre-line">
               ${item.message}
             </p>
-          `}
+          ` : '')}
 
           ${item.poem ? `
             <!-- Poema Especial -->
