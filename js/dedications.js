@@ -456,7 +456,6 @@ A ver, cosas que contarte... yo me enrollo mucho y me han dicho que no puedo hab
 
 Es algo que a mí me gusta un montón. Te siento una persona muy real y alguien en quien de verdad puedo confiar, que en este mundo ya sabes que es muy difícil. ¡Así que muchísimas gracias por eso, feliz cumpleaños otra vez, espero que pases tu día de la mejor manera y que te den muchos regalos, que no nos merecemos menos! 💜🎉🎮`,
     reactions: { gg: 238, shield: 148, crown: 310 },
-    date: 'Hoy a las 18:30'
   },
   {
     id: 'ded-dang3rclips',
@@ -484,7 +483,6 @@ Pasaba por aquí para desearte que pases un día increíble celebrando este nive
 
 ¡A seguir rompiéndola a lo grande y que cumplas muchísimos más! 🔥🎉🎮`,
     reactions: { gg: 224, shield: 140, crown: 295 },
-    date: 'Hoy a las 18:45'
   },
   {
     id: 'ded-teverdeconlimon',
@@ -513,7 +511,6 @@ Quiero aprovechar también para felicitarte por todo lo que estás consiguiendo:
 
 ¡Te mando un abrazo enorme, un besazo y a seguir cumpliendo muchos sueños! ¡Chaooo! 💜🎂`,
     reactions: { gg: 232, shield: 144, crown: 304 },
-    date: 'Hoy a las 19:00'
   },
   {
     id: 'ded-radossb',
@@ -542,7 +539,6 @@ Tienes una comunidad hermosa, pues obviamente como la streamer, ¡así de hermos
 
 ¡Pásalo súper bien, te mando un besito desde aquí y disfruta mucho! 💜🎉👑`,
     reactions: { gg: 245, shield: 152, crown: 318 },
-    date: 'Hoy a las 19:15'
   },
 
   /* ========================================================
@@ -564,7 +560,6 @@ Tienes una comunidad hermosa, pues obviamente como la streamer, ¡así de hermos
     durationText: '03:37',
     message: 'Un cuarto de siglo, 25 añicos muchísimas felicidades!! Que alegría haberte conocido y tener el privilegio de poder felicitarte, pues no sé cómo hiciste pero tal cual empecé a verte me enganchaste con tú carisma y alegría, con tu amabilidad y respeto, pero sobre todo y por encima de cualquiera cosa, como revientas en las partidas, como sabes moverte, me dejas alucinado. Solo voy a pedirte una cosa, que no cambies nunca, sino mis chistes serán peores, aviso, y que sigas así de feliz. Te queremos mucho!!!',
     reactions: { gg: 154, shield: 92, crown: 210 },
-    date: 'Hoy a las 16:00'
   },
   {
     id: 'ded-livingbenidorm',
@@ -583,7 +578,6 @@ Tienes una comunidad hermosa, pues obviamente como la streamer, ¡así de hermos
     message: `¡Muchas felicidades Ari! 🎂🎮 18 meses ya suscrito a tus directos, compartiendo risas, partidas sin construcción y grandes momentos en el chat.
 Te he preparado esta canción con todo el cariño de parte de uno de tus suscriptores. ¡Sube el volumen, cántala a tope y que cumplas muchísimos más, Mamixu! 👑💜`,
     reactions: { gg: 175, shield: 108, crown: 234 },
-    date: 'Hoy a las 16:30'
   },
   {
     id: 'ded-sito',
@@ -601,7 +595,6 @@ Te he preparado esta canción con todo el cariño de parte de uno de tus suscrip
     durationText: '04:54',
     message: `¡Muchas felicidades Arichu! ❤️🎂🎮 Que nunca cambies y sigas así de humilde, que te queremos muchísimo. Te dedico esta canción con todo el cariño del mundo de parte de tu dúo y de toda tu comunidad. ¡Y recordad todos: código ARIXU en la tienda de Fortnite! 🎉👑`,
     reactions: { gg: 198, shield: 135, crown: 260 },
-    date: 'Hoy a las 16:45'
   },
   {
     id: 'ded-errederamon',
@@ -616,7 +609,6 @@ Te he preparado esta canción con todo el cariño de parte de uno de tus suscrip
     caption: 'Fanart y felicitación especial de ErreDeRamon para Ariadna',
     message: '¡Felicidades campeona! 🎂👑💜 Sigue haciendo lo que haces, que es genial. Que todos tus deseos se hagan realidad en este nivel 25, Ari. ¡Que no se acaben nunca las risas, los sustos en directo y las coronas ganadas en el último segundo! ¡A celebrarlo a lo grande, te lo mereces! 🎉🎮',
     reactions: { gg: 172, shield: 104, crown: 218 },
-    date: 'Hoy a las 17:15'
   },
   {
     id: 'ded-bailen82',
@@ -632,7 +624,6 @@ Te he preparado esta canción con todo el cariño de parte de uno de tus suscrip
     caption: 'Doble celebración de Bailen82: ¡Cumpleaños y Nueva Epic Partner!',
     message: '¡Feliz cumpleaños Arixu y enhorabuena por ser nueva Epic Partner! 🎉👑 Doble celebración para una grande. Que este nuevo año de vida venga lleno de éxitos, risas y muchas victorias. ¡Sigue rompiéndola en cada partida y disfrutando de todo lo que has conseguido! 🎂🎈✨',
     reactions: { gg: 164, shield: 95, crown: 205 },
-    date: 'Hoy a las 17:20'
   },
   {
     id: 'ded-chookity',
@@ -654,7 +645,6 @@ Te deseo lo mejor, que Diosito te llene de bendiciones, te cuide siempre y te pe
 Espero que este sea un día muy especial para ti.
 Un beso y un abrazo enorme a la distancia. 😘🫂💜`,
     reactions: { gg: 184, shield: 112, crown: 226 },
-    date: 'Hoy a las 17:30'
   },
   /* ========================================================
      LISTA NORMAL DE LA COMUNIDAD (MARTA, LAURA Y CHAT)
@@ -676,7 +666,6 @@ Gracias por tantas risas en cada stream jugando juntas y los momentos más diver
 
 ¡Los Arixulitos siempre contigo! ¡Feliz cumpleaños! 💜✨`,
     reactions: { gg: 186, shield: 124, crown: 240 },
-    date: 'Hoy a las 17:45'
   },
   {
     id: 'ded-2',
@@ -689,7 +678,6 @@ Gracias por tantas risas en cada stream jugando juntas y los momentos más diver
     type: 'text',
     message: 'Gracias Ari por ser como eres y crear la comunidad que tienes, no recuerdo cómo llegué aquí pero me alegro de haber descubierto tu canal. No sabes lo que indirectamente me has ayudado en los días malos que tenía con tus directos. Sigue así! Me alegra mucho ver como en un año has crecido tanto y sé que seguirás creciendo!!',
     reactions: { gg: 89, shield: 45, crown: 112 },
-    date: 'Hoy a las 14:15'
   },
   {
     id: 'ded-3',
@@ -705,7 +693,6 @@ Gracias por tantas risas en cada stream jugando juntas y los momentos más diver
     caption: 'Vídeo dedicatoria y felicitación especial de G4PALAU para Ariadna',
     message: 'No podía faltar recordar los mejores momentos de los directos. ¡Casi rompes los cascos del grito pero nos diste momentos legendarios moderando el chat! Feliz cumple capitana 🔥🚀',
     reactions: { gg: 74, shield: 63, crown: 91 },
-    date: 'Hoy a las 13:02'
   },
   {
     id: 'ded-15',
@@ -720,7 +707,6 @@ Gracias por tantas risas en cada stream jugando juntas y los momentos más diver
     caption: 'Recuerdo y dedicatoria especial de jaratos para Ariadna',
     message: '¡Muchísimas felicidades Ari! Gracias por hacer directos tan divertidos y crear esta pedazo de comunidad. ¡Que este año te traiga muchísimas victorias y momentos inolvidables!',
     reactions: { gg: 51, shield: 36, crown: 68 },
-    date: 'Ayer a las 17:30'
   },
   {
     id: 'ded-piyuyin6',
@@ -736,7 +722,6 @@ Gracias por tantas risas en cada stream jugando juntas y los momentos más diver
     caption: 'Vídeo dedicatoria y felicitación especial de Piyuyin6 para Ariadna',
     message: '¡Muchísimas felicidades Ari! 🎂🎉 Que disfrutes un montón de este día tan especial y que cumplas muchísimos más. ¡Gracias por regalarnos directos tan divertidos y por esta gran comunidad! 💜✨',
     reactions: { gg: 148, shield: 91, crown: 196 },
-    date: 'Hoy a las 18:20'
   },
   {
     id: 'ded-raquel',
@@ -753,7 +738,6 @@ Gracias por tantas risas en cada stream jugando juntas y los momentos más diver
     caption: 'Vídeo dedicatoria y emotivas palabras de felicitación de Raquel para Ariadna 💜',
     message: '',
     reactions: { gg: 198, shield: 136, crown: 284 },
-    date: 'Hoy a las 18:35'
   },
   {
     id: 'ded-danielarodbau',
@@ -774,7 +758,6 @@ Te deseo lo mejor hoy y siempre, que la vida te bendiga en cada paso que das y c
 
 Nunca olvides lo buena que eres, no solo como persona, si no como streamer y como jugadora del fortnite. 👑✨🎮`,
     reactions: { gg: 158, shield: 96, crown: 212 },
-    date: 'Hoy a las 18:40'
   },
   {
     id: 'ded-lucia',
@@ -795,7 +778,6 @@ Aquí tienes a una comunidad que haría cualquier cosa por ti y aquí tienes a t
     poem: `Ari en Fortnite iba con impulso, chocó con un árbol y perdió el pulso.
 Quiso matar a uno, pero la mataron a ella, ¡Arixu jugando es una auténtica estrella! ⭐️`,
     reactions: { gg: 176, shield: 110, crown: 228 },
-    date: 'Hoy a las 18:45'
   },
 
   /* ========================================================
@@ -824,7 +806,6 @@ Disfruta mucho tu día, te lo mereces de verdad.
 
 ¡Feliz 25! ♡`,
     reactions: { gg: 168, shield: 106, crown: 224 },
-    date: 'Hoy a las 18:00'
   },
   {
     id: 'ded-18',
@@ -846,7 +827,6 @@ Hoy solo deseo que la vida te regale todo lo bonito que mereces, que nunca te fa
 
 Feliz cumpleaños, Ari. ♡ ¡Por muchos años más!`,
     reactions: { gg: 58, shield: 37, crown: 79 },
-    date: 'Hoy a las 17:00'
   },
   {
     id: 'ded-rubenillo',
@@ -871,13 +851,12 @@ Mirar atrás y ver todo lo que hemos construido juntos este último año es incr
 
 Pero hoy tenemos doble motivo de celebración: ¡muchísimas felicidades por esos 25! Todo lo que estás consiguiendo te lo has ganado a pulso. A por el siguiente nivel, porque esto acaba de empezar y aquí seguiremos, siempre cubriéndote las espaldas. ¡Disfruta muchísimo de tu día! 💜`,
     reactions: { gg: 188, shield: 115, crown: 245 },
-    date: 'Hoy a las 16:15'
   }
 ];
 
 class DedicationsManager {
   constructor() {
-    this.storageKey = 'imarixu_birthday_dedications_v42';
+    this.storageKey = 'imarixu_birthday_dedications_v43';
     this.dedications = this.loadDedications();
   }
 
@@ -932,6 +911,7 @@ class DedicationsManager {
       localStorage.removeItem('imarixu_birthday_dedications_v39');
       localStorage.removeItem('imarixu_birthday_dedications_v40');
       localStorage.removeItem('imarixu_birthday_dedications_v41');
+      localStorage.removeItem('imarixu_birthday_dedications_v42');
     } catch (_) {}
     return [...DEFAULT_DEDICATIONS];
   }
@@ -944,7 +924,6 @@ class DedicationsManager {
     const item = {
       id: 'user-ded-' + Date.now(),
       reactions: { gg: 1, shield: 1, crown: 1 },
-      date: 'Justo ahora',
       ...newDed
     };
     this.dedications.unshift(item);
@@ -1124,8 +1103,6 @@ class DedicationsManager {
                   </div>
                   <div class="flex items-center gap-2 text-xs text-purple-300 mt-1 flex-wrap">
                     <span class="font-bold text-yellow-400">${item.role}</span>
-                    <span class="text-purple-400/50">•</span>
-                    <span class="text-gray-400 font-mono text-[11px]">${item.date}</span>
                   </div>
                 </div>
               </div>
@@ -1503,8 +1480,6 @@ ${item.message}
                       <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714Z"/></svg>
                       <span class="text-[10px] uppercase font-mono tracking-wider">Twitch</span>
                     </span>
-                    <span class="text-purple-400/50">•</span>
-                    <span>${item.date}</span>
                   </div>
                 </div>
               </div>
@@ -1601,8 +1576,6 @@ ${item.message}
                   <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714Z"/></svg>
                   <span class="text-[10px] uppercase font-mono tracking-wider">Twitch</span>
                 </span>
-                <span class="text-purple-400/50">•</span>
-                <span>${item.date}</span>
               </div>
             </div>
           </div>
