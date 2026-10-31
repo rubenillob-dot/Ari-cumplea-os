@@ -756,15 +756,26 @@ Gracias por tantas risas en cada stream jugando juntas y los momentos más diver
     user: 'Raquel',
     bgImage: 'assets/images/bg-laabluue-clouds.jpg',
     platform: 'twitch',
-    role: 'COMUNIDAD TWITCH • VÍDEO DEDICATORIA 🎬',
+    role: 'COMUNIDAD TWITCH • VÍDEO DEDICATORIA 🎬💜',
     rarity: 'mythic',
+    videoLayout: 'horizontal',
     avatar: 'assets/Iconos de perfiles/Raquel.webp',
     type: 'video',
     video: 'assets/Dedicatorias/Raquel.mp4',
     videoUrl: 'assets/Dedicatorias/Raquel.mp4',
-    caption: 'Vídeo dedicatoria y felicitación especial de Raquel para Ariadna',
-    message: '¡Feliz cumpleaños Ari! 🎂👑 Gracias por tu alegría constante y por hacernos pasar momentos tan increíbles. Te deseo un nuevo año lleno de éxitos, felicidad y sueños cumplidos. ¡Te queremos mucho! 💜🎉',
-    reactions: { gg: 162, shield: 97, crown: 215 },
+    caption: 'Vídeo dedicatoria y emotivas palabras de felicitación de Raquel para Ariadna 💜',
+    message: `¡Hola Ari! ¡Feliz cumpleaños! 🎂👑
+
+Hoy quería dedicarte unas palabras porque creo que te mereces algo más que solo un feliz cumpleaños.
+
+Seguramente estés acostumbrada a hacer reír a muchísima gente sin darte cuenta, a convertir un día normal en algo divertido, y a crear momentos que otras personas terminan recordando con una sonrisa... y quizás no siempre te pares a pensar en lo bonito que es eso. Porque detrás de una pantalla hay personas con diferentes historias, con días buenos y con días malos, pero tú tienes la capacidad de reunirlas y compartir con ellas momentos tan bonitos. Puede que para ti solo sea un directo más, una broma más o una tarde cualquiera, pero a veces las cosas más pequeñas son las que terminan teniendo un significado enorme.
+
+Espero que nunca olvides que lo que haces deja una huella especial. Además, ¡conseguiste el Twitch Partner! Tú estabas soñando con eso, vi cómo te esforzaste para lograrlo... estoy súper orgullosa, porque detrás de cada meta hay esfuerzo, tiempo y muchísima dedicación. Hoy puedes mirar atrás y ver todo lo que has conseguido, pero todavía te queda muchísimo por vivir. Ojalá este sea solamente el principio de una etapa llena de nuevas oportunidades, sueños cumplidos y momentos que te hagan sentir orgullosa de ti misma. Recuerda siempre que tu valor no depende de los seguidores, de las visitas ni de las estadísticas: antes de streamer eres una persona maravillosa que merece ser feliz, disfrutar de la vida y estar rodeada de personas que te quieran por quién eres.
+
+Espero que la vida te regale muchísimos motivos para sonreír, que nunca te falte gente que te apoye y que siempre encuentres algo que te ilusione. Y sobre todo, que nunca tengas que fingir que estás bien: tú también mereces que te cuiden, que te escuchen y que te recuerden lo mucho que vales.
+
+¡Feliz cumpleaños Ari! Felicidades por todo lo que has conseguido y por todo lo que todavía te queda por conseguir. ¡Te queremos muchísimo! 💜✨🎉`,
+    reactions: { gg: 198, shield: 136, crown: 284 },
     date: 'Hoy a las 18:35'
   },
   {
@@ -891,7 +902,7 @@ Felicidades, Ari. Te lo has ganado a pulso. A por el siguiente nivel, porque est
 
 class DedicationsManager {
   constructor() {
-    this.storageKey = 'imarixu_birthday_dedications_v38';
+    this.storageKey = 'imarixu_birthday_dedications_v39';
     this.dedications = this.loadDedications();
   }
 
@@ -942,6 +953,7 @@ class DedicationsManager {
       localStorage.removeItem('imarixu_birthday_dedications_v35');
       localStorage.removeItem('imarixu_birthday_dedications_v36');
       localStorage.removeItem('imarixu_birthday_dedications_v37');
+      localStorage.removeItem('imarixu_birthday_dedications_v38');
     } catch (_) {}
     return [...DEFAULT_DEDICATIONS];
   }
@@ -1327,13 +1339,19 @@ ${item.message}
             </div>
           </div>
           ${item.caption ? `<p class="text-xs text-yellow-200/80 italic mt-2">${item.caption}</p>` : ''}
-        `;
-      } else if (item.type === 'video' && (item.video || item.videoUrl)) {
+        `;      } else if (item.type === 'video' && (item.video || item.videoUrl)) {
         const vidSrc = item.video || item.videoUrl;
-        const vidCap = (item.caption || `Vídeo dedicatoria de ${item.user}`).replace(/'/g, "\\'");
+        const vidCap = (item.caption || `Vídeo dedicatoria de ${item.user}`).replace(/'/g, "\'");
+        const isHorizontal = item.videoLayout === 'horizontal' || item.id === 'ded-raquel' || item.id === 'ded-3';
+        const containerClasses = isHorizontal 
+          ? "w-full max-w-[640px] md:max-w-[700px] mx-auto" 
+          : "max-w-[340px] sm:max-w-[380px] mx-auto";
+        const videoClasses = isHorizontal
+          ? "w-full h-auto aspect-video max-h-[500px] object-contain mx-auto rounded-xl bg-black block"
+          : "w-full h-auto max-h-[580px] object-contain mx-auto rounded-xl bg-black block";
         mediaContent = `
-          <div class="mt-4 rounded-2xl overflow-hidden border-2 border-purple-500/50 bg-black/70 shadow-[0_0_25px_rgba(168,85,247,0.25)] relative max-w-[340px] sm:max-w-[380px] mx-auto">
-            <video src="${vidSrc}" controls playsinline preload="metadata" class="w-full h-auto max-h-[580px] object-contain mx-auto rounded-xl bg-black block" onplay="document.querySelectorAll('audio').forEach(a => { if(!a.paused) a.pause(); }); if(window.soundFX && window.soundFX.stopBGM) window.soundFX.stopBGM();"></video>
+          <div class="mt-4 rounded-2xl overflow-hidden border-2 border-purple-500/50 bg-black/70 shadow-[0_0_25px_rgba(168,85,247,0.25)] relative ${containerClasses}">
+            <video src="${vidSrc}" controls playsinline preload="metadata" class="${videoClasses}" onplay="document.querySelectorAll('audio').forEach(a => { if(!a.paused) a.pause(); }); if(window.soundFX && window.soundFX.stopBGM) window.soundFX.stopBGM();"></video>
           </div>
           <div class="mt-3 flex items-center justify-center gap-3">
             <button onclick="openClipModal('${vidCap}', '${vidSrc}')" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-purple-800/70 hover:bg-purple-700 border border-purple-500/70 text-xs font-bold font-hud text-purple-200 hover:text-white transition-all hover:scale-105 shadow-md">
