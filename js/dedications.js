@@ -515,6 +515,36 @@ Quiero aprovechar también para felicitarte por todo lo que estás consiguiendo:
     reactions: { gg: 232, shield: 144, crown: 304 },
     date: 'Hoy a las 19:00'
   },
+  {
+    id: 'ded-radossb',
+    user: 'Radossb',
+    scenicBg: 'assets/images/twitch-fortnite-bg.jpg',
+    watermarkTopRight: 'assets/images/victory-crown.svg',
+    watermarkBottomLeft: 'assets/images/shield-potion.svg',
+    fortniteTag: 'FORTNITE SQUAD ⚡',
+    platform: 'twitch',
+    role: 'STREAMER DE TWITCH & COMPAÑERA • MENSAJITO DE FELICITACIÓN 💜🎬',
+    rarity: 'streamer',
+    isStreamer: true,
+    avatar: 'assets/Iconos de perfiles/Radossb.jpeg',
+    twitchUrl: 'https://twitch.tv/radossb',
+    twitchUser: 'radossb',
+    creatorCode: 'RADOS',
+    type: 'video',
+    video: 'assets/Dedicatorias/Radossb.mp4',
+    videoUrl: 'assets/Dedicatorias/Radossb.mp4',
+    caption: 'Mensajito de felicitación en vídeo de Radossb con mucho cariño para Ariadna 💜',
+    message: `¡Hola Arixu! 🎂✨
+
+Nada, que me ha dicho un pajarito que hoy es un día muy especial para ti, así que quería aprovechar para decirte que estoy muy contenta y muy feliz por todo lo que has conseguido este año, que sigas dándolo todo.
+
+Tienes una comunidad hermosa, pues obviamente como la streamer, ¡así de hermosa! Y nada, muchísimas felicidades, pásalo súper súper súper bien. Te mando un besito enorme, un abrazo, y me encantaría que en algún momento podamos conocernos.
+
+¡Pásalo súper bien, te mando un besito desde aquí y disfruta mucho! 💜🎉👑`,
+    reactions: { gg: 245, shield: 152, crown: 318 },
+    date: 'Hoy a las 19:15'
+  },
+
   /* ========================================================
      SECCIÓN: DEDICATORIAS DE LA COMUNIDAD (CHAT & AMIGOS)
      ======================================================== */
@@ -861,7 +891,7 @@ Felicidades, Ari. Te lo has ganado a pulso. A por el siguiente nivel, porque est
 
 class DedicationsManager {
   constructor() {
-    this.storageKey = 'imarixu_birthday_dedications_v37';
+    this.storageKey = 'imarixu_birthday_dedications_v38';
     this.dedications = this.loadDedications();
   }
 
@@ -911,6 +941,7 @@ class DedicationsManager {
       localStorage.removeItem('imarixu_birthday_dedications_v34');
       localStorage.removeItem('imarixu_birthday_dedications_v35');
       localStorage.removeItem('imarixu_birthday_dedications_v36');
+      localStorage.removeItem('imarixu_birthday_dedications_v37');
     } catch (_) {}
     return [...DEFAULT_DEDICATIONS];
   }
