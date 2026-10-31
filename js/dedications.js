@@ -867,11 +867,9 @@ Feliz cumpleaños, Ari. ♡ ¡Por muchos años más!`,
     caption: 'Recuerdo especial de Rubenillo con Ariadna',
     message: `Ari, familia... hoy cuelgo la placa de moderador un momento para hablaros simplemente desde el corazón.
 
-Mirar atrás y ver todo lo que hemos construido juntos este último año es increíble. Ari, gracias infinitas por darme la oportunidad de cuidar esta comunidad desde primera línea y confiar en mí para proteger este espacio. He visto de cerca tu esfuerzo incansable detrás de cada directo, y acompañarte hasta lograr la meta del tan soñado Partner de Twitch ha sido un orgullo inmenso.
+Mirar atrás y ver todo lo que hemos construido juntos este último año es increíble. Ari, gracias infinitas por darme la oportunidad de cuidar de esta comunidad desde primera línea y por confiar en mí para proteger este espacio. He visto de cerca tu esfuerzo incansable detrás de cada directo, y acompañarte hasta lograr la meta del tan soñado Partner de Twitch ha sido un orgullo inmenso. Ese 'check' morado no es solo una marca; es el reflejo de tu constancia y del refugio tan bonito que has creado para todos nosotros.
 
-Ese 'check' morado no es solo una marca, es el reflejo de tu constancia y del refugio tan bonito que has creado para todos nosotros.
-
-Felicidades, Ari. Te lo has ganado a pulso. A por el siguiente nivel, porque esto acaba de empezar y aquí seguiremos, siempre cubriéndote las espaldas. 💜`,
+Pero hoy tenemos doble motivo de celebración: ¡muchísimas felicidades por esos 25! Todo lo que estás consiguiendo te lo has ganado a pulso. A por el siguiente nivel, porque esto acaba de empezar y aquí seguiremos, siempre cubriéndote las espaldas. ¡Disfruta muchísimo de tu día! 💜`,
     reactions: { gg: 188, shield: 115, crown: 245 },
     date: 'Hoy a las 16:15'
   }
@@ -879,7 +877,7 @@ Felicidades, Ari. Te lo has ganado a pulso. A por el siguiente nivel, porque est
 
 class DedicationsManager {
   constructor() {
-    this.storageKey = 'imarixu_birthday_dedications_v41';
+    this.storageKey = 'imarixu_birthday_dedications_v42';
     this.dedications = this.loadDedications();
   }
 
@@ -933,6 +931,7 @@ class DedicationsManager {
       localStorage.removeItem('imarixu_birthday_dedications_v38');
       localStorage.removeItem('imarixu_birthday_dedications_v39');
       localStorage.removeItem('imarixu_birthday_dedications_v40');
+      localStorage.removeItem('imarixu_birthday_dedications_v41');
     } catch (_) {}
     return [...DEFAULT_DEDICATIONS];
   }
