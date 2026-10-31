@@ -678,58 +678,6 @@ Gracias por tantas risas en cada stream jugando juntas y los momentos más diver
     date: 'Hoy a las 13:02'
   },
   {
-    id: 'ded-4',
-    user: 'BANQUITO',
-    bgImage: 'assets/images/bg-banquito-twitch.jpg',
-    platform: 'twitch',
-    role: 'TWITCH CHAT',
-    rarity: 'rare',
-    avatar: '',
-    type: 'text',
-    message: '¡Feliz cumple Ari! Ver tus streams después de un día duro siempre me saca una sonrisa enorme. Que cumplas muchísimos más y que nunca falten los minis de 50 en tu inventario. ¡GG WP!',
-    reactions: { gg: 35, shield: 52, crown: 40 },
-    date: 'Hoy a las 11:45'
-  },
-  {
-    id: 'ded-6',
-    user: 'Sleezzy',
-    bgImage: 'assets/images/bg-sleezzy-neonred.jpg',
-    platform: 'twitch',
-    role: 'VIP & TRYHARD',
-    rarity: 'epic',
-    avatar: '',
-    type: 'text',
-    message: '¡Feliz cumpleaños Ari! Que este nivel 25 venga cargado de muchas coronas de victoria, snipes limpios y momentos inolvidables en stream. ¡A seguir rompiéndola!',
-    reactions: { gg: 53, shield: 31, crown: 77 },
-    date: 'Hoy a las 11:10'
-  },
-  {
-    id: 'ded-8',
-    user: 'Hellkhan77',
-    bgImage: 'assets/images/bg-hellkhan-tactical.jpg',
-    platform: 'twitch',
-    role: 'SNIPER DE ÉLITE',
-    rarity: 'mythic',
-    avatar: '',
-    type: 'text',
-    message: '¡Feliz cumple Ari! Por otro año más de rusheos épicos, victorias campales y clutches imposibles en final de zona. ¡Pásalo genial y disfruta al máximo de tu día!',
-    reactions: { gg: 70, shield: 44, crown: 95 },
-    date: 'Hoy a las 10:15'
-  },
-  {
-    id: 'ded-9',
-    user: 'Abranzin',
-    bgImage: 'assets/images/bg-abranzin-autumn.jpg',
-    platform: 'twitch',
-    role: 'COMUNIDAD TWITCH',
-    rarity: 'rare',
-    avatar: '',
-    type: 'text',
-    message: '¡Felicidades Ari! Qué alegría celebrar tus 25 años con toda la comunidad de Twitch. Gracias por alegrarnos las tardes con tu energía y buen rollo. ¡A por más!',
-    reactions: { gg: 38, shield: 26, crown: 49 },
-    date: 'Hoy a las 09:30'
-  },
-  {
     id: 'ded-10',
     user: 'Dante',
     bgImage: 'assets/images/bg-dante-amethyst.jpg',
@@ -741,45 +689,6 @@ Gracias por tantas risas en cada stream jugando juntas y los momentos más diver
     message: '¡Muy feliz cumpleaños capitana! Cuidar el chat y ver cómo disfrutas de cada partida es un placer. Que este nuevo nivel te traiga muchísimos éxitos y alegrías.',
     reactions: { gg: 65, shield: 50, crown: 88 },
     date: 'Ayer a las 21:50'
-  },
-  {
-    id: 'ded-11',
-    user: 'GregorM',
-    bgImage: 'assets/images/bg-gregorm-ocean.jpg',
-    platform: 'twitch',
-    role: 'SUB VETERANO',
-    rarity: 'legendary',
-    avatar: '',
-    type: 'text',
-    message: '¡Felices 25 Ari! Ya son muchos directos compartidos y partidas inolvidables. Que sigas brillando igual y que nunca falte el escudo ni las buenas partidas. ¡Felicidades!',
-    reactions: { gg: 57, shield: 34, crown: 73 },
-    date: 'Ayer a las 21:15'
-  },
-  {
-    id: 'ded-12',
-    user: 'laabluue',
-    bgImage: 'assets/images/bg-laabluue-clouds.jpg',
-    platform: 'twitch',
-    role: 'COMUNIDAD TWITCH',
-    rarity: 'rare',
-    avatar: '',
-    type: 'text',
-    message: '¡Felicidades Arixu! Eres una inspiración y una persona súper divertida. Que pases un cumpleaños maravilloso rodeada de todos los que te quieren. ¡Un abrazo enorme!',
-    reactions: { gg: 44, shield: 29, crown: 61 },
-    date: 'Ayer a las 20:40'
-  },
-  {
-    id: 'ded-14',
-    user: 'Arcosmen01',
-    bgImage: 'assets/images/bg-arcosmen-fireworks.jpg',
-    platform: 'twitch',
-    role: 'DÚO DE CORONAS',
-    rarity: 'legendary',
-    avatar: '',
-    type: 'text',
-    message: '¡Muchas felicidades Ari! Siempre es un gusto verte jugar y compartir stream con la mejor comunidad. ¡Que disfrutes al máximo de tu cumpleaños, reina de Twitch!',
-    reactions: { gg: 76, shield: 47, crown: 104 },
-    date: 'Ayer a las 18:00'
   },
   {
     id: 'ded-15',
@@ -795,19 +704,6 @@ Gracias por tantas risas en cada stream jugando juntas y los momentos más diver
     message: '¡Muchísimas felicidades Ari! Gracias por hacer directos tan divertidos y crear esta pedazo de comunidad. ¡Que este año te traiga muchísimas victorias y momentos inolvidables!',
     reactions: { gg: 51, shield: 36, crown: 68 },
     date: 'Ayer a las 17:30'
-  },
-  {
-    id: 'ded-16',
-    user: 'Joandix',
-    bgImage: 'assets/images/bg-joandix-retro.jpg',
-    platform: 'twitch',
-    role: 'COMUNIDAD TWITCH',
-    rarity: 'legendary',
-    avatar: '',
-    type: 'text',
-    message: '¡Feliz cumpleaños Arixu! Siempre es un placer pasarse por el chat a compartir risas y buenas partidas. ¡A seguir disfrutando a tope y celebrando el nivel 25 como te mereces! 🎂👑',
-    reactions: { gg: 64, shield: 42, crown: 88 },
-    date: 'Ayer a las 16:45'
   },
   {
     id: 'ded-piyuyin6',
@@ -840,6 +736,27 @@ Gracias por tantas risas en cada stream jugando juntas y los momentos más diver
     message: '¡Feliz cumpleaños Ari! 🎂👑 Gracias por tu alegría constante y por hacernos pasar momentos tan increíbles. Te deseo un nuevo año lleno de éxitos, felicidad y sueños cumplidos. ¡Te queremos mucho! 💜🎉',
     reactions: { gg: 162, shield: 97, crown: 215 },
     date: 'Hoy a las 18:35'
+  },
+  {
+    id: 'ded-danielarodbau',
+    user: 'DanielaRodbau',
+    bgImage: 'assets/images/bg-dante-amethyst.jpg',
+    platform: 'twitch',
+    role: 'COMUNIDAD TWITCH • FANART & DEDICATORIA 🎨',
+    rarity: 'mythic',
+    avatar: 'assets/Iconos de perfiles/DanielaRodbau.webp',
+    type: 'image',
+    image: 'assets/Dedicatorias/DanielaRodbau.webp',
+    caption: 'Dedicatoria y felicitación especial de DanielaRodbau para Ariadna',
+    message: `¡Feliz Cumpleaños, Ari! 🎂💜
+
+Espero de todo corazón que no solo este día la pases increíble, si no el resto de tus días. Que cada día sea motivo de celebración y un nuevo comienzo para seguir luchando, cumpliendo metas y seguir soñando.
+
+Te deseo lo mejor hoy y siempre, que la vida te bendiga en cada paso que das y cada año que te queda por cumplir.
+
+Nunca olvides lo buena que eres, no solo como persona, si no como streamer y como jugadora del fortnite. 👑✨🎮`,
+    reactions: { gg: 158, shield: 96, crown: 212 },
+    date: 'Hoy a las 18:40'
   },
   /* ========================================================
      APARTADO ESPECIAL: EQUIPO DE MODERACIÓN (MODS)
@@ -922,7 +839,7 @@ Felicidades, Ari. Te lo has ganado a pulso. A por el siguiente nivel, porque est
 
 class DedicationsManager {
   constructor() {
-    this.storageKey = 'imarixu_birthday_dedications_v34';
+    this.storageKey = 'imarixu_birthday_dedications_v36';
     this.dedications = this.loadDedications();
   }
 
@@ -969,6 +886,8 @@ class DedicationsManager {
       localStorage.removeItem('imarixu_birthday_dedications_v31');
       localStorage.removeItem('imarixu_birthday_dedications_v32');
       localStorage.removeItem('imarixu_birthday_dedications_v33');
+      localStorage.removeItem('imarixu_birthday_dedications_v34');
+      localStorage.removeItem('imarixu_birthday_dedications_v35');
     } catch (_) {}
     return [...DEFAULT_DEDICATIONS];
   }
