@@ -758,6 +758,28 @@ Nunca olvides lo buena que eres, no solo como persona, si no como streamer y com
     reactions: { gg: 158, shield: 96, crown: 212 },
     date: 'Hoy a las 18:40'
   },
+  {
+    id: 'ded-lucia',
+    user: 'Lucia',
+    bgImage: 'assets/images/bg-dante-amethyst.jpg',
+    platform: 'twitch',
+    role: 'COMUNIDAD TWITCH • POEMA & DEDICATORIA 💜',
+    rarity: 'mythic',
+    avatar: 'assets/Iconos de perfiles/Lucia.webp',
+    type: 'text',
+    message: `¡ Feliz cumpleaños Ari ! 💜
+
+Que cumplas muchos más y que nosotros lo veamos a través de los streams jajaja. Eres divertida, loca, especial… eres una chica a la que es agradable conocer, ver e incluso seguir y apoyar. Que nunca falten las risas contigo, los momentos tan buenos que pasamos y las veces que te chocas con las impulses 😂💜. 
+Por más victorias en fornite ( que falta hacen 😂 ) 
+Nunca cambies y sigue así de fantástica 💜
+Aquí tienes a una comunidad que haría cualquier cosa por ti y aquí tienes a tu gente, tu familia ( nosotros y los de sangre ) y tus amigos. Ojalá que llegue el día en que pueda conocerte, eres una chica de 10 💜. Aquí me tienes siempre que lo necesites, te quiero y te queremos 💜 Felicidades diosa Ari(xu) 🎂👑🎁`,
+    poemTitle: 'Ari y la partida 🕸️',
+    poem: `Ari en Fortnite iba con impulso, chocó con un árbol y perdió el pulso.
+Quiso matar a uno, pero la mataron a ella, ¡Arixu jugando es una auténtica estrella! ⭐️`,
+    reactions: { gg: 176, shield: 110, crown: 228 },
+    date: 'Hoy a las 18:45'
+  },
+
   /* ========================================================
      APARTADO ESPECIAL: EQUIPO DE MODERACIÓN (MODS)
      ======================================================== */
@@ -839,7 +861,7 @@ Felicidades, Ari. Te lo has ganado a pulso. A por el siguiente nivel, porque est
 
 class DedicationsManager {
   constructor() {
-    this.storageKey = 'imarixu_birthday_dedications_v36';
+    this.storageKey = 'imarixu_birthday_dedications_v37';
     this.dedications = this.loadDedications();
   }
 
@@ -888,6 +910,7 @@ class DedicationsManager {
       localStorage.removeItem('imarixu_birthday_dedications_v33');
       localStorage.removeItem('imarixu_birthday_dedications_v34');
       localStorage.removeItem('imarixu_birthday_dedications_v35');
+      localStorage.removeItem('imarixu_birthday_dedications_v36');
     } catch (_) {}
     return [...DEFAULT_DEDICATIONS];
   }
@@ -1563,6 +1586,19 @@ ${item.message}
               ${item.message}
             </p>
           `}
+
+          ${item.poem ? `
+            <!-- Poema Especial -->
+            <div class="mt-4 rounded-2xl p-4 sm:p-5 bg-gradient-to-br from-purple-950/80 via-[#200c3b]/90 to-purple-900/60 border border-purple-400/50 shadow-[0_0_25px_rgba(168,85,247,0.25)] relative overflow-hidden">
+              <div class="flex items-center gap-2 mb-2.5 text-yellow-300 font-hud text-xs sm:text-sm font-bold uppercase tracking-wider">
+                <span class="text-base">📜</span>
+                <span>${item.poemTitle || 'Poema'}</span>
+              </div>
+              <p class="text-sm sm:text-base font-sans italic text-purple-100 leading-relaxed whitespace-pre-line border-l-2 border-yellow-400 pl-3.5 py-0.5">
+${item.poem}
+              </p>
+            </div>
+          ` : ''}
 
           <!-- Media attachment (if any) -->
           ${mediaContent}
