@@ -540,6 +540,74 @@ Tienes una comunidad hermosa, pues obviamente como la streamer, ¡así de hermos
 ¡Pásalo súper bien, te mando un besito desde aquí y disfruta mucho! 💜🎉👑`,
     reactions: { gg: 245, shield: 152, crown: 318 },
   },
+  {
+    id: 'ded-danielarodbau',
+    user: 'DanielaRodbau',
+    scenicBg: 'assets/images/twitch-fortnite-bg.jpg',
+    watermarkTopRight: 'assets/images/victory-crown.svg',
+    watermarkBottomLeft: 'assets/images/fortnite-llama.svg',
+    fortniteTag: 'FORTNITE SQUAD ⚡',
+    platform: 'twitch',
+    role: 'STREAMER DE TWITCH & COMPAÑERA • MENSAJITO DE FELICITACIÓN 💜🎬',
+    rarity: 'streamer',
+    isStreamer: true,
+    avatar: 'assets/Iconos de perfiles/DanielaRodbau.webp',
+    twitchUrl: 'https://twitch.tv/danielarodbau',
+    twitchUser: 'DanielaRodbau',
+    creatorCode: 'RODBAU',
+    type: 'image',
+    image: 'assets/Dedicatorias/DanielaRodbau.webp',
+    caption: 'Dedicatoria y felicitación especial de DanielaRodbau para Ariadna',
+    message: '',
+    reactions: { gg: 158, shield: 96, crown: 212 },
+  },
+  {
+    id: 'ded-ache',
+    user: 'Ache',
+    scenicBg: 'assets/images/fortnite-scenic-valley.jpg',
+    watermarkTopRight: 'assets/images/fortnite-battlebus.svg',
+    watermarkBottomLeft: 'assets/images/shield-potion.svg',
+    fortniteTag: 'FORTNITE SQUAD ⚡',
+    platform: 'twitch',
+    role: 'STREAMER & COMPAÑERO DE TWITCH • MENSAJITO DE FELICITACIÓN 💜🎬',
+    rarity: 'streamer',
+    isStreamer: true,
+    avatar: 'assets/Iconos de perfiles/Ache.png',
+    twitchUrl: 'https://twitch.tv/ache',
+    twitchUser: 'ache',
+    creatorCode: 'ACHE',
+    type: 'video',
+    video: 'assets/Dedicatorias/Ache.mp4',
+    videoUrl: 'assets/Dedicatorias/Ache.mp4',
+    caption: 'Mensajito de felicitación en vídeo de Ache con mucho cariño para Ariadna 💜',
+    message: `¡Felicidades Ari! 🎂🔥
+Un fuerte abrazo y que pases un día increíble celebrando este cumpleaños número 25. ¡A seguir dándolo todo en Fortnite y en stream! 🎮👑`,
+    reactions: { gg: 240, shield: 155, crown: 320 },
+  },
+  {
+    id: 'ded-thegrefg',
+    user: 'TheGrefg',
+    scenicBg: 'assets/images/twitch-fortnite-bg.jpg',
+    watermarkTopRight: 'assets/images/victory-crown.svg',
+    watermarkBottomLeft: 'assets/images/fortnite-llama.svg',
+    fortniteTag: 'ICON SERIES ⚡',
+    platform: 'twitch',
+    role: 'STREAMER DE TWITCH & ICON SERIES • MENSAJITO DE FELICITACIÓN 💜👑',
+    rarity: 'streamer',
+    isStreamer: true,
+    avatar: 'assets/Iconos de perfiles/Thegrefg.jpeg',
+    twitchUrl: 'https://twitch.tv/thegrefg',
+    twitchUser: 'TheGrefg',
+    creatorCode: 'THEGREFG',
+    youtubeUrl: 'https://youtube.com/@TheGrefg',
+    type: 'video',
+    video: 'assets/Dedicatorias/Thegrefg.mp4',
+    videoUrl: 'assets/Dedicatorias/Thegrefg.mp4',
+    caption: 'Mensajito de felicitación en vídeo de TheGrefg con mucho cariño para Ariadna 💜',
+    message: `¡Hola Ari! ¡Muchísimas felicidades por tu cumpleaños! 🎂👑
+Te mando un abrazote enorme, que disfrutes muchísimo este día tan especial con toda tu gente y tu comunidad. ¡A seguir rompiéndola a lo grande en Twitch y que cumplas muchos más! ⚡🎉🎮`,
+    reactions: { gg: 350, shield: 210, crown: 480 },
+  },
 
   /* ========================================================
      SECCIÓN: DEDICATORIAS DE LA COMUNIDAD (CHAT & AMIGOS)
@@ -691,7 +759,7 @@ Gracias por tantas risas en cada stream jugando juntas y los momentos más diver
     video: 'assets/Dedicatorias/G4Palau.mp4',
     videoUrl: 'assets/Dedicatorias/G4Palau.mp4',
     caption: 'Vídeo dedicatoria y felicitación especial de G4PALAU para Ariadna',
-    message: 'No podía faltar recordar los mejores momentos de los directos. ¡Casi rompes los cascos del grito pero nos diste momentos legendarios moderando el chat! Feliz cumple capitana 🔥🚀',
+    message: '',
     reactions: { gg: 74, shield: 63, crown: 91 },
   },
   {
@@ -705,7 +773,7 @@ Gracias por tantas risas en cada stream jugando juntas y los momentos más diver
     type: 'image',
     image: 'assets/Dedicatorias/Jaratos.webp',
     caption: 'Recuerdo y dedicatoria especial de jaratos para Ariadna',
-    message: '¡Muchísimas felicidades Ari! Gracias por hacer directos tan divertidos y crear esta pedazo de comunidad. ¡Que este año te traiga muchísimas victorias y momentos inolvidables!',
+    message: '',
     reactions: { gg: 51, shield: 36, crown: 68 },
   },
   {
@@ -738,26 +806,6 @@ Gracias por tantas risas en cada stream jugando juntas y los momentos más diver
     caption: 'Vídeo dedicatoria y emotivas palabras de felicitación de Raquel para Ariadna 💜',
     message: '',
     reactions: { gg: 198, shield: 136, crown: 284 },
-  },
-  {
-    id: 'ded-danielarodbau',
-    user: 'DanielaRodbau',
-    bgImage: 'assets/images/bg-dante-amethyst.jpg',
-    platform: 'twitch',
-    role: 'COMUNIDAD TWITCH • FANART & DEDICATORIA 🎨',
-    rarity: 'mythic',
-    avatar: 'assets/Iconos de perfiles/DanielaRodbau.webp',
-    type: 'image',
-    image: 'assets/Dedicatorias/DanielaRodbau.webp',
-    caption: 'Dedicatoria y felicitación especial de DanielaRodbau para Ariadna',
-    message: `¡Feliz Cumpleaños, Ari! 🎂💜
-
-Espero de todo corazón que no solo este día la pases increíble, si no el resto de tus días. Que cada día sea motivo de celebración y un nuevo comienzo para seguir luchando, cumpliendo metas y seguir soñando.
-
-Te deseo lo mejor hoy y siempre, que la vida te bendiga en cada paso que das y cada año que te queda por cumplir.
-
-Nunca olvides lo buena que eres, no solo como persona, si no como streamer y como jugadora del fortnite. 👑✨🎮`,
-    reactions: { gg: 158, shield: 96, crown: 212 },
   },
   {
     id: 'ded-lucia',
@@ -796,15 +844,7 @@ Quiso matar a uno, pero la mataron a ella, ¡Arixu jugando es una auténtica est
     type: 'image',
     image: 'assets/Dedicatorias/Laura.webp',
     caption: 'Carta y dedicatoria manuscrita de Laura para Ariadna',
-    message: `Ari, ♡
-
-Hoy celebras 25 años, y qué suerte la nuestra de que el mundo tenga personas tan bonitas como tú.
-
-Que este nuevo año te traiga todo lo bonito que mereces: salud, amor, éxito, muchos momentos felices y sueños que se hagan realidad.
-
-Disfruta mucho tu día, te lo mereces de verdad.
-
-¡Feliz 25! ♡`,
+    message: '',
     reactions: { gg: 168, shield: 106, crown: 224 },
   },
   {
@@ -856,7 +896,7 @@ Pero hoy tenemos doble motivo de celebración: ¡muchísimas felicidades por eso
 
 class DedicationsManager {
   constructor() {
-    this.storageKey = 'imarixu_birthday_dedications_v43';
+    this.storageKey = 'imarixu_birthday_dedications_v46';
     this.dedications = this.loadDedications();
   }
 
@@ -912,6 +952,9 @@ class DedicationsManager {
       localStorage.removeItem('imarixu_birthday_dedications_v40');
       localStorage.removeItem('imarixu_birthday_dedications_v41');
       localStorage.removeItem('imarixu_birthday_dedications_v42');
+      localStorage.removeItem('imarixu_birthday_dedications_v43');
+      localStorage.removeItem('imarixu_birthday_dedications_v44');
+      localStorage.removeItem('imarixu_birthday_dedications_v45');
     } catch (_) {}
     return [...DEFAULT_DEDICATIONS];
   }
@@ -1134,18 +1177,39 @@ class DedicationsManager {
               </div>
 
 
-              <!-- Video Player (Optimized Size for Horizontal Videos) -->
-              <div class="mt-4 rounded-2xl overflow-hidden border-2 border-[#9146FF]/85 bg-black/90 shadow-[0_0_35px_rgba(145,70,255,0.45)] relative w-full max-w-[640px] md:max-w-[720px] mx-auto group">
-                <video src="${item.video}" controls playsinline preload="metadata" class="w-full h-auto aspect-video max-h-[520px] object-contain mx-auto rounded-xl bg-black block" onplay="document.querySelectorAll('audio').forEach(a => { if(!a.paused) a.pause(); }); if(window.soundFX && window.soundFX.stopBGM) window.soundFX.stopBGM();"></video>
-              </div>
+              ${(!item.video && item.message) ? `
+                <p class="text-gray-200 text-sm md:text-base leading-relaxed font-sans font-medium whitespace-pre-line mb-4 bg-purple-950/40 p-4 rounded-xl border border-purple-800/40">
+${item.message}
+                </p>
+              ` : ''}
 
-              <!-- Fullscreen Action button -->
-              <div class="mt-3 flex items-center justify-center gap-3">
-                <button onclick="openClipModal('${(item.caption || 'Mensajito de felicitación de ' + item.user).replace(/'/g, "\\'")}', '${item.video}')" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-[#9146FF] to-purple-700 hover:from-[#772ce8] hover:to-purple-600 border border-purple-400/80 text-xs font-bold font-hud text-white shadow-[0_0_20px_rgba(145,70,255,0.4)] transition-all hover:scale-105">
-                  <span>🎬</span>
-                  <span>Ver vídeo en pantalla completa</span>
-                </button>
-              </div>
+              ${item.video ? `
+                <!-- Video Player (Optimized Size for Horizontal Videos) -->
+                <div class="mt-4 rounded-2xl overflow-hidden border-2 border-[#9146FF]/85 bg-black/90 shadow-[0_0_35px_rgba(145,70,255,0.45)] relative w-full max-w-[640px] md:max-w-[720px] mx-auto group">
+                  <video src="${item.video}" controls playsinline preload="metadata" class="w-full h-auto aspect-video max-h-[520px] object-contain mx-auto rounded-xl bg-black block" onplay="document.querySelectorAll('audio').forEach(a => { if(!a.paused) a.pause(); }); if(window.soundFX && window.soundFX.stopBGM) window.soundFX.stopBGM();"></video>
+                </div>
+
+                <!-- Fullscreen Action button -->
+                <div class="mt-3 flex items-center justify-center gap-3">
+                  <button onclick="openClipModal('${(item.caption || 'Mensajito de felicitación de ' + item.user).replace(/'/g, "\\'")}', '${item.video}')" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-[#9146FF] to-purple-700 hover:from-[#772ce8] hover:to-purple-600 border border-purple-400/80 text-xs font-bold font-hud text-white shadow-[0_0_20px_rgba(145,70,255,0.4)] transition-all hover:scale-105">
+                    <span>🎬</span>
+                    <span>Ver vídeo en pantalla completa</span>
+                  </button>
+                </div>
+              ` : ''}
+
+              ${item.image ? `
+                <!-- Media Attachment: Image -->
+                <div class="mt-4 rounded-xl overflow-hidden border-2 border-white/10 group cursor-pointer relative bg-black/40" onclick="openLightbox('${item.image}', '${encodeURIComponent(item.caption || 'Dedicatoria y felicitación especial de ' + item.user + ' para Ariadna')}')">
+                  <img src="${item.image}" alt="Dedicatoria de ${item.user}" class="w-full h-auto max-h-[650px] object-contain object-top mx-auto group-hover:scale-105 transition-transform duration-300" loading="lazy">
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-3 pointer-events-none">
+                    <span class="text-xs text-white/90 flex items-center gap-1 font-semibold">
+                      <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/><path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"/></svg>
+                      Ver imagen completa
+                    </span>
+                  </div>
+                </div>
+              ` : ''}
               ${item.caption ? `<p class="text-xs text-yellow-200/80 italic mt-2 text-center">${item.caption}</p>` : ''}
 
               <!-- Reactions Bar -->
@@ -1484,10 +1548,12 @@ ${item.message}
                 </div>
               </div>
 
+              ${item.message ? `
               <!-- Message Body -->
               <p class="text-amber-50/95 text-sm md:text-base leading-relaxed font-sans font-medium whitespace-pre-line">
 ${item.message}
               </p>
+              ` : ''}
 
               <!-- Image container -->
               <div class="mt-4 rounded-xl overflow-hidden border border-amber-300/30 group cursor-pointer relative bg-black/40 shadow-[0_0_25px_rgba(245,215,160,0.15)]" onclick="openLightbox('${item.image}', '${(item.caption || '').replace(/'/g, "\\'")}')">
