@@ -327,8 +327,82 @@ hoy y el año entero!
   noopolad: `
     <div class="space-y-3.5 text-sm sm:text-base text-gray-200 leading-relaxed font-sans p-1 select-text">
       <div class="bg-purple-950/40 rounded-xl p-3 border border-purple-800/40">
-        <span class="font-burbank text-yellow-400 text-xs tracking-wider block mb-1 font-bold">[MENSAJE DE NOOPOLAD]</span>
-        <p class="whitespace-pre-line">Ari.. mi queridisima Ari, primero quiero desearte un MUY Feliz cumpleaños! segundo agradecerte por todos estos meses hermosos que me diste, sos una persona INCREIBLE , te lo digo solo con lo que siento atraves de esa pantalla que nos separa todos los dias,  gracias por la confianza que tuviste en mi desde tan poco tiempo en el canal, por dejarme cuidar a tus arixulitos que es esa hermosa comunidad que contruiste y todo lo bueno que generas dia a dia, quiero que sepas que aunque muchos quedaron por el camino tenes Muchos mas que estan desde el dia 1 y seguiran estando, yo no tuve la suerte de estar de el dia 1 pero si la de llegar un dia a tu canal !! me hiciste conocer gente hermosa a travez de tu canal y eso se agradece. Te quiero mucho te deseo todo lo mejor siempre que cumplas muy muy feliz 🤍</p>
+        <span class="font-burbank text-yellow-400 text-xs tracking-wider block mb-1 font-bold">[INTRO – HABLADO]</span>
+        <p class="whitespace-pre-line">Hoy no es un directo cualquiera,
+hoy celebra su cumple una streamer de primera.
+Desde Argentina hasta España,
+noopolad tiene algo que decirte, Ari…
+¡Feliz cumpleaños!</p>
+      </div>
+
+      <div class="bg-purple-950/40 rounded-xl p-3 border border-purple-800/40">
+        <span class="font-burbank text-yellow-400 text-xs tracking-wider block mb-1 font-bold">[VERSO 1]</span>
+        <p class="whitespace-pre-line">Todo empezó en Fortnite, entrando de sorpresa,
+stream sniper positivo, esa era mi destreza.
+En la temporada de los vagones comenzó la conexión,
+sin saber que aquel encuentro se quedaría en el corazón.
+
+De partida en partida, me fui haciendo un lugar,
+entre risas y directos, me empecé a acomodar.
+Yo venía de otro país, pero eso nunca importó,
+porque en tu chat encontré cariño y una familia que me abrazó.</p>
+      </div>
+
+      <div class="bg-purple-950/40 rounded-xl p-3 border border-purple-800/40">
+        <span class="font-burbank text-yellow-400 text-xs tracking-wider block mb-1 font-bold">[PREESTRIBILLO]</span>
+        <p class="whitespace-pre-line">Y poco a poco fui ganando tu confianza,
+hasta que llegó ese MOD que todavía me da esperanza.
+De perseguirte por el mapa a cuidar tu comunidad,
+quién diría que aquel comienzo se convertiría en amistad.</p>
+      </div>
+
+      <div class="bg-gradient-to-r from-amber-500/15 to-yellow-500/10 rounded-xl p-3.5 border border-yellow-500/40 shadow-sm">
+        <span class="font-burbank text-yellow-300 text-xs tracking-wider block mb-1 font-bold">[ESTRIBILLO — PEGADIZO Y EMOTIVO]</span>
+        <p class="whitespace-pre-line font-medium text-white">¡Feliz cumpleaños, Arixu, hoy te toca celebrar!
+Que se cumplan tus sueños, que no pares de brillar.
+Desde España hasta Argentina, que se escuche esta canción,
+porque sos mi streamer favorita, te lo digo de corazón.</p>
+      </div>
+
+      <div class="bg-purple-950/40 rounded-xl p-3 border border-purple-800/40">
+        <span class="font-burbank text-yellow-400 text-xs tracking-wider block mb-1 font-bold">[VERSO 2]</span>
+        <p class="whitespace-pre-line">Yo era el sniper del stream, aparecía sin avisar,
+pero siempre con buena onda, solo quería hacerte jugar.
+Con el tiempo aquel extraño se hizo parte del lugar,
+y ese chat que me dio cariño hoy también puedo cuidar.
+
+Y hubo un día inolvidable que no voy a olvidar,
+cuando llegó ese gran momento: ¡el Partner de Twitch, a celebrar!
+Yo estuve ahí presente, compartiendo la emoción,
+porque verte conseguirlo fue una enorme satisfacción.</p>
+      </div>
+
+      <div class="bg-purple-950/40 rounded-xl p-3 border border-purple-800/40">
+        <span class="font-burbank text-yellow-400 text-xs tracking-wider block mb-1 font-bold">[VERSO 3]</span>
+        <p class="whitespace-pre-line">Y hoy no vengo con un snipe ni a caer en tu partida,
+vengo a darte las gracias por tantos buenos momentos de mi vida.
+Por hacerme sentir parte, por la confianza que me diste,
+por todo ese cariño y por la comunidad que construiste.
+
+No hace falta estar cerca para poder apreciar
+a una persona que, sin saberlo, te puede alegrar.
+Y aunque esta canción no tenga una victoria magistral,
+hoy mi regalo es decirte lo que siento de verdad.</p>
+      </div>
+
+      <div class="bg-gradient-to-r from-emerald-500/15 to-teal-500/10 rounded-xl p-3.5 border border-emerald-400/50 shadow-sm">
+        <span class="font-burbank text-emerald-300 text-xs tracking-wider block mb-1 font-bold">[OUTRO – MENSAJE FINAL]</span>
+        <p class="whitespace-pre-line font-medium text-white">Feliz cumpleaños, Ari.
+
+Gracias por abrirme las puertas de tu comunidad,
+por confiar en mí y dejarme formar parte de esta historia.
+
+Sos mi streamer favorita, por lejos.
+Te quiero mucho, Ari.
+
+¡Y que vengan muchos años más de directos, risas y momentos juntos!
+
+¡Feliz cumpleaños! ❤️🎂</p>
       </div>
     </div>
   `,
@@ -892,14 +966,14 @@ Feliz cumpleaños, Ari. ♡ ¡Por muchos años más!`,
     user: 'Noopolad',
     bgImage: 'assets/images/bg-dante-amethyst.jpg',
     platform: 'twitch',
-    role: 'MODERADOR TWITCH • NOTA DE VOZ 🎙️',
+    role: 'MODERADOR TWITCH • CANCIÓN ORIGINAL 🎵',
     rarity: 'mythic',
     isMod: true,
     avatar: 'assets/Iconos de perfiles/Noopolad.webp',
     type: 'song',
     songKey: 'noopolad',
     songTitle: 'FELIZ CUMPLEAÑOS, ARI',
-    subtitle: 'Nota de Voz • Para Ariadna • <strong class="text-purple-300 font-bold">Noopolad</strong>',
+    subtitle: 'Canción Original • Para Ariadna • <strong class="text-purple-300 font-bold">Noopolad</strong>',
     audioUrl: 'assets/Dedicatorias/Noopolad.mp3',
     durationText: '07:48',
     message: `Ari.. mi queridisima Ari, primero quiero desearte un MUY Feliz cumpleaños! segundo agradecerte por todos estos meses hermosos que me diste, sos una persona INCREIBLE , te lo digo solo con lo que siento atraves de esa pantalla que nos separa todos los dias,  gracias por la confianza que tuviste en mi desde tan poco tiempo en el canal, por dejarme cuidar a tus arixulitos que es esa hermosa comunidad que contruiste y todo lo bueno que generas dia a dia, quiero que sepas que aunque muchos quedaron por el camino tenes Muchos mas que estan desde el dia 1 y seguiran estando, yo no tuve la suerte de estar de el dia 1 pero si la de llegar un dia a tu canal !! me hiciste conocer gente hermosa a travez de tu canal y eso se agradece. Te quiero mucho te deseo todo lo mejor siempre que cumplas muy muy feliz 🤍`,
@@ -933,7 +1007,7 @@ Pero hoy tenemos doble motivo de celebración: ¡muchísimas felicidades por eso
 
 class DedicationsManager {
   constructor() {
-    this.storageKey = 'imarixu_birthday_dedications_v54';
+    this.storageKey = 'imarixu_birthday_dedications_v55';
     this.dedications = this.loadDedications();
   }
 
@@ -1000,6 +1074,7 @@ class DedicationsManager {
       localStorage.removeItem('imarixu_birthday_dedications_v51');
       localStorage.removeItem('imarixu_birthday_dedications_v52');
       localStorage.removeItem('imarixu_birthday_dedications_v53');
+      localStorage.removeItem('imarixu_birthday_dedications_v54');
     } catch (_) {}
     return [...DEFAULT_DEDICATIONS];
   }
@@ -1538,7 +1613,7 @@ ${item.message}
                 ` : ''}
                 <button id="${songKey}-toggle-lyrics-btn" onclick="toggleSongLyrics('${songKey}')" class="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl bg-purple-900/60 hover:bg-purple-800 border border-purple-600/70 text-xs font-bold font-hud text-purple-200 hover:text-white transition-all hover:scale-102">
                   <span>📜</span>
-                  <span id="${songKey}-toggle-lyrics-text">${songKey === 'noopolad' ? 'Ver Mensaje' : 'Ver Letra'}</span>
+                  <span id="${songKey}-toggle-lyrics-text">Ver Letra</span>
                 </button>
               </div>
 
@@ -1947,7 +2022,7 @@ window.toggleSongLyrics = function(songKey) {
   wrapper.classList.toggle('hidden');
   const isHidden = wrapper.classList.contains('hidden');
   if (textEl) {
-    textEl.textContent = isHidden ? (songKey === 'noopolad' ? 'Ver Mensaje' : 'Ver Letra') : (songKey === 'noopolad' ? 'Ocultar Mensaje' : 'Ocultar Letra');
+    textEl.textContent = isHidden ? 'Ver Letra' : 'Ocultar Letra';
   }
   if (window.soundFX && window.soundFX.playFortniteClick) {
     window.soundFX.playFortniteClick();
