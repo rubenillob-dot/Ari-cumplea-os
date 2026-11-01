@@ -621,6 +621,18 @@ Te mando un abrazote enorme, que disfrutes muchísimo este día tan especial con
      SECCIÓN: DEDICATORIAS DE LA COMUNIDAD (CHAT & AMIGOS)
      ======================================================== */
   {
+    id: 'ded-luisico',
+    user: 'Luisico',
+    bgImage: 'assets/images/bg-dante-amethyst.jpg',
+    platform: 'twitch',
+    role: 'COMUNIDAD TWITCH 💜',
+    rarity: 'mythic',
+    avatar: 'assets/Iconos de perfiles/Luisico.webp',
+    type: 'text',
+    message: `Llevo ya unos cuantos meses compartiendo momentos contigo, y la verdad es que es un verdadero placer poder estar aquí hoy para celebrar este día a tu lado. Que este día tan especial te traiga muchísima alegría y que disfrutes al máximo cada instante. ¡Muchas felicidades!`,
+    reactions: { gg: 135, shield: 88, crown: 172 },
+  },
+  {
     id: 'ded-ferdinang',
     user: 'Ferdinang',
     bgImage: 'assets/images/bg-ferdinang-acoustic.jpg',
@@ -835,7 +847,6 @@ Aquí tienes a una comunidad que haría cualquier cosa por ti y aquí tienes a t
 Quiso matar a uno, pero la mataron a ella, ¡Arixu jugando es una auténtica estrella! ⭐️`,
     reactions: { gg: 176, shield: 110, crown: 228 },
   },
-
   /* ========================================================
      APARTADO ESPECIAL: EQUIPO DE MODERACIÓN (MODS)
      ======================================================== */
@@ -922,7 +933,7 @@ Pero hoy tenemos doble motivo de celebración: ¡muchísimas felicidades por eso
 
 class DedicationsManager {
   constructor() {
-    this.storageKey = 'imarixu_birthday_dedications_v52';
+    this.storageKey = 'imarixu_birthday_dedications_v54';
     this.dedications = this.loadDedications();
   }
 
@@ -987,6 +998,8 @@ class DedicationsManager {
       localStorage.removeItem('imarixu_birthday_dedications_v49');
       localStorage.removeItem('imarixu_birthday_dedications_v50');
       localStorage.removeItem('imarixu_birthday_dedications_v51');
+      localStorage.removeItem('imarixu_birthday_dedications_v52');
+      localStorage.removeItem('imarixu_birthday_dedications_v53');
     } catch (_) {}
     return [...DEFAULT_DEDICATIONS];
   }
