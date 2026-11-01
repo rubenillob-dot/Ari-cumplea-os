@@ -324,6 +324,14 @@ hoy y el año entero!
     </div>
   `,
 
+  noopolad: `
+    <div class="space-y-3.5 text-sm sm:text-base text-gray-200 leading-relaxed font-sans p-1 select-text">
+      <div class="bg-purple-950/40 rounded-xl p-3 border border-purple-800/40">
+        <span class="font-burbank text-yellow-400 text-xs tracking-wider block mb-1 font-bold">[MENSAJE DE NOOPOLAD]</span>
+        <p class="whitespace-pre-line">Ari.. mi queridisima Ari, primero quiero desearte un MUY Feliz cumpleaños! segundo agradecerte por todos estos meses hermosos que me diste, sos una persona INCREIBLE , te lo digo solo con lo que siento atraves de esa pantalla que nos separa todos los dias,  gracias por la confianza que tuviste en mi desde tan poco tiempo en el canal, por dejarme cuidar a tus arixulitos que es esa hermosa comunidad que contruiste y todo lo bueno que generas dia a dia, quiero que sepas que aunque muchos quedaron por el camino tenes Muchos mas que estan desde el dia 1 y seguiran estando, yo no tuve la suerte de estar de el dia 1 pero si la de llegar un dia a tu canal !! me hiciste conocer gente hermosa a travez de tu canal y eso se agradece. Te quiero mucho te deseo todo lo mejor siempre que cumplas muy muy feliz 🤍</p>
+      </div>
+    </div>
+  `,
   rubenillo: `
     <div class="space-y-3.5 text-sm sm:text-base text-gray-200 leading-relaxed font-sans p-1 select-text">
       <div class="bg-purple-950/40 rounded-xl p-3 border border-purple-800/40">
@@ -869,6 +877,24 @@ Feliz cumpleaños, Ari. ♡ ¡Por muchos años más!`,
     reactions: { gg: 58, shield: 37, crown: 79 },
   },
   {
+    id: 'ded-noopolad',
+    user: 'Noopolad',
+    bgImage: 'assets/images/bg-dante-amethyst.jpg',
+    platform: 'twitch',
+    role: 'MODERADOR TWITCH • NOTA DE VOZ 🎙️',
+    rarity: 'mythic',
+    isMod: true,
+    avatar: 'assets/Iconos de perfiles/Noopolad.webp',
+    type: 'song',
+    songKey: 'noopolad',
+    songTitle: 'FELIZ CUMPLEAÑOS, ARI',
+    subtitle: 'Nota de Voz • Para Ariadna • <strong class="text-purple-300 font-bold">Noopolad</strong>',
+    audioUrl: 'assets/Dedicatorias/Noopolad.mp3',
+    durationText: '07:48',
+    message: `Ari.. mi queridisima Ari, primero quiero desearte un MUY Feliz cumpleaños! segundo agradecerte por todos estos meses hermosos que me diste, sos una persona INCREIBLE , te lo digo solo con lo que siento atraves de esa pantalla que nos separa todos los dias,  gracias por la confianza que tuviste en mi desde tan poco tiempo en el canal, por dejarme cuidar a tus arixulitos que es esa hermosa comunidad que contruiste y todo lo bueno que generas dia a dia, quiero que sepas que aunque muchos quedaron por el camino tenes Muchos mas que estan desde el dia 1 y seguiran estando, yo no tuve la suerte de estar de el dia 1 pero si la de llegar un dia a tu canal !! me hiciste conocer gente hermosa a travez de tu canal y eso se agradece. Te quiero mucho te deseo todo lo mejor siempre que cumplas muy muy feliz 🤍`,
+    reactions: { gg: 142, shield: 98, crown: 195 },
+  },
+  {
     id: 'ded-rubenillo',
     user: 'Rubenillo',
     bgImage: 'assets/images/bg-rubenillo-aurora.jpg',
@@ -896,7 +922,7 @@ Pero hoy tenemos doble motivo de celebración: ¡muchísimas felicidades por eso
 
 class DedicationsManager {
   constructor() {
-    this.storageKey = 'imarixu_birthday_dedications_v46';
+    this.storageKey = 'imarixu_birthday_dedications_v52';
     this.dedications = this.loadDedications();
   }
 
@@ -955,6 +981,12 @@ class DedicationsManager {
       localStorage.removeItem('imarixu_birthday_dedications_v43');
       localStorage.removeItem('imarixu_birthday_dedications_v44');
       localStorage.removeItem('imarixu_birthday_dedications_v45');
+      localStorage.removeItem('imarixu_birthday_dedications_v46');
+      localStorage.removeItem('imarixu_birthday_dedications_v47');
+      localStorage.removeItem('imarixu_birthday_dedications_v48');
+      localStorage.removeItem('imarixu_birthday_dedications_v49');
+      localStorage.removeItem('imarixu_birthday_dedications_v50');
+      localStorage.removeItem('imarixu_birthday_dedications_v51');
     } catch (_) {}
     return [...DEFAULT_DEDICATIONS];
   }
@@ -1395,6 +1427,21 @@ ${item.message}
             </div>
           </div>
         `;
+      } else if (item.type === 'audio') {
+        const audioSrc = item.audio || item.audioUrl;
+        mediaContent = `
+          <div class="mt-4 p-4 rounded-2xl bg-[#0f0622]/90 border-2 border-emerald-400/70 shadow-[0_0_20px_rgba(52,211,153,0.25)]">
+            <div class="flex items-center gap-2 mb-2.5 text-xs font-hud font-bold text-emerald-300">
+              <span class="text-base">🎙️</span>
+              <span>${item.audioCaption || 'Nota de voz de ' + item.user}</span>
+            </div>
+            <audio controls preload="metadata" class="w-full h-11 rounded-xl bg-white/95 text-black shadow-inner" onplay="document.querySelectorAll('audio').forEach(a => { if(a !== this && !a.paused) a.pause(); }); if(window.soundFX && window.soundFX.stopBGM) window.soundFX.stopBGM();">
+              <source src="${audioSrc}" type="audio/mpeg">
+              <source src="${audioSrc.replace(/\\.mp3$/, '.mpeg')}" type="audio/mpeg">
+              Tu navegador no soporta el reproductor de audio.
+            </audio>
+          </div>
+        `;
       } else if (item.type === 'song') {
         const songKey = item.songKey || (item.id === 'ded-ferdinang' ? 'ferdinang' : item.id.replace('ded-', ''));
         const subtitle = item.subtitle || `Para Ariadna • <strong class="text-purple-300 font-bold">${item.user}</strong>`;
@@ -1478,11 +1525,7 @@ ${item.message}
                 ` : ''}
                 <button id="${songKey}-toggle-lyrics-btn" onclick="toggleSongLyrics('${songKey}')" class="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl bg-purple-900/60 hover:bg-purple-800 border border-purple-600/70 text-xs font-bold font-hud text-purple-200 hover:text-white transition-all hover:scale-102">
                   <span>📜</span>
-                  <span id="${songKey}-toggle-lyrics-text">Ver Letra</span>
-                </button>
-                <button onclick="downloadSongLyrics('${songKey}')" class="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl bg-purple-950/80 hover:bg-purple-900 border border-purple-700/60 text-xs font-bold font-hud text-yellow-300 hover:text-yellow-200 transition-all hover:scale-102" title="Descargar letra en .txt">
-                  <span>💾</span>
-                  <span>Descargar</span>
+                  <span id="${songKey}-toggle-lyrics-text">${songKey === 'noopolad' ? 'Ver Mensaje' : 'Ver Letra'}</span>
                 </button>
               </div>
 
@@ -1756,7 +1799,7 @@ function initSingleSongPlayer(songKey) {
 
   audio.addEventListener('timeupdate', () => {
     const curTime = audio.currentTime;
-    const duration = audio.duration || (songKey === 'sito' ? 294 : (songKey === 'rubenillo' ? 289.6 : (songKey === 'livingbenidorm' ? 140.8 : 217.6)));
+    const duration = audio.duration || (songKey === 'sito' ? 294 : (songKey === 'rubenillo' ? 289.6 : (songKey === 'noopolad' ? 468.1 : (songKey === 'livingbenidorm' ? 140.8 : 217.6))));
 
     // Update progress bar
     const progressEl = getProgEl();
@@ -1857,7 +1900,7 @@ window.toggleSongPlay = function(songKey) {
 window.skipSongAudio = function(songKey, sec) {
   const audio = document.getElementById(`${songKey}-audio`);
   if (!audio) return;
-  const dur = audio.duration || (songKey === 'sito' ? 294 : (songKey === 'rubenillo' ? 289.6 : (songKey === 'livingbenidorm' ? 140.8 : 217.6)));
+  const dur = audio.duration || (songKey === 'sito' ? 294 : (songKey === 'rubenillo' ? 289.6 : (songKey === 'noopolad' ? 468.1 : (songKey === 'livingbenidorm' ? 140.8 : 217.6))));
   audio.currentTime = Math.max(0, Math.min(dur, audio.currentTime + sec));
   if (window.soundFX && window.soundFX.playFortniteClick) {
     window.soundFX.playFortniteClick();
@@ -1871,7 +1914,7 @@ window.seekSongAudio = function(songKey, e) {
   const rect = container.getBoundingClientRect();
   const clickX = e.clientX - rect.left;
   const pct = Math.max(0, Math.min(1, clickX / rect.width));
-  const dur = audio.duration || (songKey === 'sito' ? 294 : (songKey === 'rubenillo' ? 289.6 : (songKey === 'livingbenidorm' ? 140.8 : 217.6)));
+  const dur = audio.duration || (songKey === 'sito' ? 294 : (songKey === 'rubenillo' ? 289.6 : (songKey === 'noopolad' ? 468.1 : (songKey === 'livingbenidorm' ? 140.8 : 217.6))));
   audio.currentTime = pct * dur;
 };
 
@@ -1891,7 +1934,7 @@ window.toggleSongLyrics = function(songKey) {
   wrapper.classList.toggle('hidden');
   const isHidden = wrapper.classList.contains('hidden');
   if (textEl) {
-    textEl.textContent = isHidden ? 'Ver Letra' : 'Ocultar Letra';
+    textEl.textContent = isHidden ? (songKey === 'noopolad' ? 'Ver Mensaje' : 'Ver Letra') : (songKey === 'noopolad' ? 'Ocultar Mensaje' : 'Ocultar Letra');
   }
   if (window.soundFX && window.soundFX.playFortniteClick) {
     window.soundFX.playFortniteClick();
@@ -1904,9 +1947,75 @@ window.skipFerdinangAudio = (sec) => window.skipSongAudio('ferdinang', sec);
 window.seekFerdinangAudio = (e) => window.seekSongAudio('ferdinang', e);
 window.seekSongTo = (sec) => window.seekSongVerse('ferdinang', sec);
 window.toggleLyricsPanel = () => window.toggleSongLyrics('ferdinang');
-window.downloadFerdinangLyrics = () => window.downloadSongLyrics('ferdinang');
+window.downloadFerdinangLyrics = () => window.downloadSongAudio('ferdinang');
 
-window.downloadSongLyrics = function(songKey) {
+/* ========================================================
+   AUDIO SONG DOWNLOAD HELPER
+   ======================================================== */
+window.downloadSongAudio = function(songKey) {
+  const songFiles = {
+    ferdinang: {
+      url: 'assets/Dedicatorias/Ferdinang.mp3',
+      filename: 'Ferdinang - Felicidades Ari.mp3'
+    },
+    livingbenidorm: {
+      url: 'assets/Dedicatorias/LivingBenidorm.mp3',
+      filename: 'LivingBenidorm - Ey Arixu.mp3'
+    },
+    sito: {
+      url: 'assets/Dedicatorias/Sito.m4a',
+      filename: 'Sito - Nuestra Arichu.m4a'
+    },
+    rubenillo: {
+      url: 'assets/Dedicatorias/Rubenillo.mp3',
+      filename: 'Rubenillo - Aqui Seguimos Ari.mp3'
+    }
+  };
+
+  const info = songFiles[songKey] || {};
+  let url = info.url;
+  let filename = info.filename || (songKey + '.mp3');
+
+  if (!url) {
+    const audioEl = document.getElementById(songKey + '-audio');
+    if (audioEl && audioEl.src) {
+      url = audioEl.src;
+    }
+  }
+
+  if (!url) return;
+
+  // Use fetch and blob so browser forces download without opening a new tab
+  fetch(url)
+    .then(response => {
+      if (!response.ok) throw new Error('Fetch failed');
+      return response.blob();
+    })
+    .then(blob => {
+      const blobUrl = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = blobUrl;
+      a.download = filename;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      setTimeout(() => URL.revokeObjectURL(blobUrl), 2000);
+    })
+    .catch(() => {
+      // Direct download fallback without target="_blank"
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = filename;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+    });
+};
+
+// Backwards compatibility alias
+window.downloadSongLyrics = window.downloadSongAudio;
+
+window.downloadSongLyricsText = function(songKey) {
   let filename = '';
   let lyricsText = '';
 

@@ -1706,7 +1706,7 @@
           <span>👑 Streamers Twitch (7)</span>
         </button>
         <button onclick="filterDedications('mods')" data-filter="mods" class="dedication-filter-btn px-4 py-2 rounded-xl text-xs font-bold font-hud transition-all bg-purple-950/60 hover:bg-purple-900 border border-purple-700/60 text-purple-200 hover:text-white">
-          <span>🛡️ Moderadores (3)</span>
+          <span>🛡️ Moderadores (4)</span>
         </button>
         <button onclick="filterDedications('songs')" data-filter="songs" class="dedication-filter-btn px-4 py-2 rounded-xl text-xs font-bold font-hud transition-all bg-purple-950/60 hover:bg-purple-900 border border-purple-700/60 text-purple-200 hover:text-white">
           <span>🎵 Canciones (4)</span>
@@ -4277,6 +4277,156 @@ Feliz cumpleaños, Ari. ♡ ¡Por muchos años más!
           </div>
         </article>
 
+        <!-- DEDICATORIA: NOOPOLAD (MODERADOR TWITCH • NOTA DE VOZ ESPECIAL) -->
+        <article class="feed-card relative bg-[#130b28]/90 backdrop-blur-md rounded-2xl p-5 md:p-6 border-2 border-emerald-400 shadow-[0_0_20px_rgba(52,211,153,0.3)] transition-all duration-300 hover:-translate-y-1" data-id="ded-noopolad">
+          <!-- Themed Background Layer -->
+          <div class="card-themed-bg-layer">
+            <img src="assets/images/bg-dante-amethyst.jpg" alt="Fondo dedicatoria">
+            <div class="card-themed-overlay"></div>
+          </div>
+
+          <div class="relative z-10">
+            <!-- Ribbon Tag -->
+            <div class="absolute -top-3.5 right-6 bg-gradient-to-r from-emerald-400 to-teal-500 text-black font-black text-[11px] uppercase tracking-wider px-3 py-0.5 rounded-md skew-x-[-10deg] shadow-md border border-black/40">
+              MODERADOR
+            </div>
+
+            <!-- User Header -->
+            <div class="flex items-center gap-3.5 mb-3">
+              <!-- Avatar with Rarity Ring -->
+              <div class="relative">
+                <div class="w-13 h-13 rounded-full p-0.5 bg-gradient-to-tr from-emerald-400 to-teal-400 shadow-md">
+                  <img src="assets/Iconos de perfiles/Noopolad.webp" alt="Noopolad" class="w-12 h-12 rounded-full object-cover border-2 border-[#130b28]">
+                </div>
+                <span class="absolute -bottom-1 -right-1 bg-purple-900 border border-emerald-400 rounded-full p-0.5" title="twitch">
+                  <svg class="w-3.5 h-3.5 text-emerald-300" fill="currentColor" viewBox="0 0 24 24"><path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714Z"/></svg>
+                </span>
+              </div>
+
+              <!-- Nickname -->
+              <div class="flex-1 min-w-0">
+                <div class="flex items-center gap-2 flex-wrap">
+                  <span class="font-username text-lg font-bold text-emerald-300 tracking-wide truncate">Noopolad</span>
+                  <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-emerald-400/15 border border-emerald-300/40 text-emerald-300 text-[10px] font-hud font-bold"><span>🛡️</span> MODERADOR</span>
+                </div>
+                <div class="flex items-center gap-1.5 text-[11px] text-gray-400 mt-0.5">
+                  <span class="inline-flex items-center gap-1 text-[#a970ff] font-bold" title="Twitch">
+                    <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714Z"/></svg>
+                    <span class="text-[10px] uppercase font-mono tracking-wider">Twitch</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Message Body -->
+            <p class="text-gray-200 text-sm md:text-base leading-relaxed font-sans font-medium whitespace-pre-line">
+Ari.. mi queridisima Ari, primero quiero desearte un MUY Feliz cumpleaños! segundo agradecerte por todos estos meses hermosos que me diste, sos una persona INCREIBLE , te lo digo solo con lo que siento atraves de esa pantalla que nos separa todos los dias,  gracias por la confianza que tuviste en mi desde tan poco tiempo en el canal, por dejarme cuidar a tus arixulitos que es esa hermosa comunidad que contruiste y todo lo bueno que generas dia a dia, quiero que sepas que aunque muchos quedaron por el camino tenes Muchos mas que estan desde el dia 1 y seguiran estando, yo no tuve la suerte de estar de el dia 1 pero si la de llegar un dia a tu canal !! me hiciste conocer gente hermosa a travez de tu canal y eso se agradece. Te quiero mucho te deseo todo lo mejor siempre que cumplas muy muy feliz 🤍
+            </p>
+
+            <!-- Media attachment: Player & Vertical Lyrics (Same design as Rubenillo) -->
+            <div class="mt-5 rounded-2xl bg-[#0f0622]/95 border-2 border-yellow-400/80 p-4 sm:p-5 shadow-[0_0_25px_rgba(244,196,48,0.2)]">
+              <!-- Audio element hidden -->
+              <audio id="noopolad-audio" src="assets/Dedicatorias/Noopolad.mp3" preload="metadata"></audio>
+
+              <!-- Main Player Controls Row -->
+              <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+                
+                <!-- Vinyl Avatar + Track Info -->
+                <div class="flex items-center gap-3.5 w-full md:w-auto">
+                  <div class="relative w-14 h-14 sm:w-16 sm:h-16 shrink-0">
+                    <div id="noopolad-vinyl-disc" class="w-full h-full rounded-full bg-gradient-to-tr from-black via-zinc-900 to-black p-1 border-2 border-zinc-700 shadow-xl flex items-center justify-center transition-transform">
+                      <div class="w-6 h-6 sm:w-8 sm:h-8 rounded-full overflow-hidden border border-yellow-400 shadow">
+                        <img src="assets/Iconos de perfiles/Noopolad.webp" alt="Noopolad" class="w-full h-full object-cover">
+                      </div>
+                    </div>
+                    <span id="noopolad-player-status-badge" class="absolute -bottom-1 -right-1 bg-yellow-400 text-black text-[9px] font-black px-1.5 py-0.5 rounded uppercase shadow font-mono">PAUSA</span>
+                  </div>
+
+                  <div class="min-w-0">
+                    <h4 class="font-burbank text-lg sm:text-xl text-yellow-300 truncate tracking-wide">FELIZ CUMPLEAÑOS, ARI</h4>
+                    <p class="text-xs text-purple-200 truncate font-sans">Nota de Voz • Para Ariadna • <strong class="text-purple-300 font-bold">Noopolad</strong></p>
+                  </div>
+                </div>
+
+                <!-- Controls + Timeline Scrubber -->
+                <div class="flex flex-col items-center w-full md:max-w-md">
+                  <div class="flex items-center justify-center gap-3 mb-2">
+                    <button onclick="skipSongAudio('noopolad', -10)" class="px-2.5 py-1.5 rounded-xl bg-purple-950/80 hover:bg-purple-900 border border-purple-700/70 text-yellow-300 transition-all hover:scale-105 active:scale-95" title="Retroceder 10 segundos">
+                      <span class="text-xs font-mono font-black">⏪ -10s</span>
+                    </button>
+
+                    <button id="noopolad-play-btn" onclick="toggleSongPlay('noopolad')" class="px-5 py-2 rounded-2xl bg-gradient-to-r from-yellow-400 to-amber-500 hover:from-yellow-300 hover:to-amber-400 text-black font-burbank text-base flex items-center gap-2 shadow-[0_0_20px_rgba(244,196,48,0.5)] hover:scale-105 active:scale-95 transition-all duration-200 border border-yellow-200">
+                      <span id="noopolad-play-icon" class="text-lg">▶</span>
+                      <span id="noopolad-play-text" class="font-black uppercase tracking-wider">REPRODUCIR</span>
+                    </button>
+
+                    <button onclick="skipSongAudio('noopolad', 10)" class="px-2.5 py-1.5 rounded-xl bg-purple-950/80 hover:bg-purple-900 border border-purple-700/70 text-yellow-300 transition-all hover:scale-105 active:scale-95" title="Avanzar 10 segundos">
+                      <span class="text-xs font-mono font-black">+10s ⏩</span>
+                    </button>
+                  </div>
+
+                  <div class="w-full flex items-center gap-2.5">
+                    <span id="noopolad-time-current" class="text-[11px] font-mono text-yellow-300 font-bold w-10 text-right">00:00</span>
+                    <div class="relative flex-1 h-2 bg-black/70 rounded-full cursor-pointer group" id="noopolad-progress-container" onclick="seekSongAudio('noopolad', event)">
+                      <div id="noopolad-progress-bar" class="h-full bg-gradient-to-r from-orange-500 to-yellow-400 rounded-full w-0 transition-all duration-100 shadow-[0_0_10px_rgba(244,196,48,0.7)]"></div>
+                    </div>
+                    <span id="noopolad-time-total" class="text-[11px] font-mono text-gray-400 w-10">07:48</span>
+                  </div>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="flex items-center gap-2 w-full md:w-auto justify-end flex-wrap">
+                  <button id="noopolad-toggle-lyrics-btn" onclick="toggleSongLyrics('noopolad')" class="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl bg-purple-900/60 hover:bg-purple-800 border border-purple-600/70 text-xs font-bold font-hud text-purple-200 hover:text-white transition-all hover:scale-102">
+                    <span>📜</span>
+                    <span id="noopolad-toggle-lyrics-text">Ver Mensaje</span>
+                  </button>
+                </div>
+
+              </div>
+
+              <!-- STATIC LYRICS VIEW (Hidden by default, expands vertically on click) -->
+              <div id="noopolad-lyrics-wrapper" class="hidden mt-4 pt-4 border-t border-purple-800/60 transition-all duration-300">
+                <div class="flex items-center justify-between pb-2 mb-3 border-b border-purple-900/40 text-xs text-gray-400">
+                  <span class="font-burbank text-yellow-300 text-sm tracking-wide">📜 MENSAJE DE LA NOTA DE VOZ</span>
+                  <span class="text-[11px] font-mono text-purple-300/70">Transcripción oficial</span>
+                </div>
+
+                <div id="noopolad-lyrics-list" class="max-h-80 sm:max-h-96 overflow-y-auto px-2 py-1 lyrics-scrollbar">
+                  <div class="space-y-3.5 text-sm sm:text-base text-gray-200 leading-relaxed font-sans p-1 select-text">
+                    <div class="bg-purple-950/40 rounded-xl p-3 border border-purple-800/40">
+                      <span class="font-burbank text-yellow-400 text-xs tracking-wider block mb-1 font-bold">[MENSAJE DE NOOPOLAD]</span>
+                      <p class="whitespace-pre-line">Ari.. mi queridisima Ari, primero quiero desearte un MUY Feliz cumpleaños! segundo agradecerte por todos estos meses hermosos que me diste, sos una persona INCREIBLE , te lo digo solo con lo que siento atraves de esa pantalla que nos separa todos los dias,  gracias por la confianza que tuviste en mi desde tan poco tiempo en el canal, por dejarme cuidar a tus arixulitos que es esa hermosa comunidad que contruiste y todo lo bueno que generas dia a dia, quiero que sepas que aunque muchos quedaron por el camino tenes Muchos mas que estan desde el dia 1 y seguiran estando, yo no tuve la suerte de estar de el dia 1 pero si la de llegar un dia a tu canal !! me hiciste conocer gente hermosa a travez de tu canal y eso se agradece. Te quiero mucho te deseo todo lo mejor siempre que cumplas muy muy feliz 🤍</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Interactive Reactions -->
+            <div class="mt-5 pt-4 border-t border-purple-900/60 flex items-center justify-between flex-wrap gap-2">
+              <div class="flex items-center gap-2">
+                <button onclick="handleReaction('ded-noopolad', 'gg', event)" class="reaction-btn flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-purple-950/70 hover:bg-purple-800/80 border border-purple-700/50 hover:border-yellow-400 text-xs font-bold text-yellow-300 transition-all active:scale-95">
+                  <span class="font-black text-sm">GG</span>
+                  <span class="counter-val text-white/90" id="cnt-ded-noopolad-gg">142</span>
+                </button>
+                <button onclick="handleReaction('ded-noopolad', 'shield', event)" class="reaction-btn flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-purple-950/70 hover:bg-cyan-950/80 border border-cyan-800/60 hover:border-cyan-400 text-xs font-bold text-cyan-300 transition-all active:scale-95">
+                  <img src="assets/images/shield-potion.svg" class="w-4 h-4" alt="Mini">
+                  <span class="counter-val text-white/90" id="cnt-ded-noopolad-shield">98</span>
+                </button>
+                <button onclick="handleReaction('ded-noopolad', 'crown', event)" class="reaction-btn flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-purple-950/70 hover:bg-amber-950/80 border border-amber-700/60 hover:border-amber-400 text-xs font-bold text-amber-300 transition-all active:scale-95">
+                  <img src="assets/images/crown.svg" class="w-4 h-4" alt="Corona">
+                  <span class="counter-val text-white/90" id="cnt-ded-noopolad-crown">195</span>
+                </button>
+              </div>
+              <span class="text-[11px] text-purple-400/80 font-mono flex items-center gap-1">
+                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+                En directo
+              </span>
+            </div>
+          </div>
+        </article>
+
         <!-- DEDICATORIA: RUBENILLO (MODERADOR • CANCIÓN ORIGINAL Y RECUERDO) -->
         <article class="feed-card relative bg-[#130b28]/90 backdrop-blur-md rounded-2xl p-5 md:p-6 border-2 border-amber-400 shadow-[0_0_20px_rgba(245,158,11,0.35)] transition-all duration-300 hover:-translate-y-1" data-id="ded-rubenillo">
           <!-- Themed Background Layer -->
@@ -4393,10 +4543,6 @@ Pero hoy tenemos doble motivo de celebración: ¡muchísimas felicidades por eso
                 <button id="rubenillo-toggle-lyrics-btn" onclick="toggleSongLyrics('rubenillo')" class="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl bg-purple-900/60 hover:bg-purple-800 border border-purple-600/70 text-xs font-bold font-hud text-purple-200 hover:text-white transition-all hover:scale-102">
                   <span>📜</span>
                   <span id="rubenillo-toggle-lyrics-text">Ver Letra</span>
-                </button>
-                <button onclick="downloadSongLyrics('rubenillo')" class="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl bg-purple-950/80 hover:bg-purple-900 border border-purple-700/60 text-xs font-bold font-hud text-yellow-300 hover:text-yellow-200 transition-all hover:scale-102" title="Descargar letra en .txt">
-                  <span>💾</span>
-                  <span>Descargar</span>
                 </button>
               </div>
 
